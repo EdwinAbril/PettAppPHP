@@ -7,7 +7,7 @@
     <body>
     	<?php
 
-    	$cod=$_GET["envidat"];
+    	$cod=$_GET["cod"];
 
     	?>
         <h1>Animal</h1>
@@ -31,7 +31,7 @@
 	}
 	
 	if(isset($_POST['botonfunci'])){
-		require_once("../Controlador/Controlador_Actualizar_Funcionario.php");
+		require_once("../Controlador/Controlador_Actualizar_Animal.php");
 		$cod=$_GET["envidat"];
 		$tel=$_POST['nombre'];
 		$nom=$_POST['tipo'];

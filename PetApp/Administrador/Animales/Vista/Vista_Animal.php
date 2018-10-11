@@ -11,7 +11,7 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   	<script>
   		function Enviar($cod){
-		window.location="Modificar_Animal.php?envidat="+$cod;
+		window.location="Modificar_Animal.php?cod="+$cod;
 		}
 	</script>
 </head>
@@ -54,7 +54,7 @@ echo "
 	<form action="Modificar_Animal.php">
 	<?php
 	echo "
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' onclick='Enviar(".$Ani[0].");'><th>";
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' onclick='Enviar(".$Ani[0].")'><th>";
 	?>
 	</form>
 	<?php
