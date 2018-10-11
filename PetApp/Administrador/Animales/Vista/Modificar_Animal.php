@@ -32,7 +32,7 @@
 	
 	if(isset($_POST['botonfunci'])){
 		require_once("../Controlador/Controlador_Actualizar_Animal.php");
-		$cod=$_GET["envidat"];
+		$cod=$_GET["cod"];
 		$tel=$_POST['nombre'];
 		$nom=$_POST['tipo'];
 		$cor=$_POST['edad'];

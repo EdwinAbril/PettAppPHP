@@ -1,9 +1,10 @@
 <?php
-	    $cod=$_GET["envidat"];
-		$tel=$_POST['telefono'];
-		$nom=$_POST['nombre'];
-		$cor=$_POST['correo'];
-		$cla=$_POST['clave'];
+	    $cod=$_GET["cod"];
+		$tel=$_POST['nombre'];
+		$nom=$_POST['tipo'];
+		$cor=$_POST['edad'];
+		$cla=$_POST['raza'];
+		
 	require_once("../Modelo/Modelo_Animal.php");
 	$mostrar= new MetodoAnimal();
 	$resultado=$mostrar->ModificarAnimal($cod,$tel,$nom,$cor,$cla);
