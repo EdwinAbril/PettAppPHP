@@ -12,10 +12,19 @@ class MetodoComentarios{
 	return $consulta;
 	}
 
-	public function ModificarComentarios($cedula,$telefono,$nombre,$correo,$clave){
+	
+	public function Mostrar_1_Comentario($cod){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?,?)";
+	$sql="select * from comentarios where codigo_comentario='$cod'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+	public function ModificarComentarios($codigo,$fecha,$cuerpo,$adopcion){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call Modificar_Funcionario(?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
 	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
 	$cedula_p=$cedula;

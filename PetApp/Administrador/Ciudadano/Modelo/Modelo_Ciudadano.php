@@ -12,17 +12,25 @@ class MetodoCiudadano{
 	return $consulta;
 	}
 
-	public function ModificarCiudadano($cedula,$telefono,$nombre,$correo,$clave){
+	public function Mostrar_1_Ciudadano($ced){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?,?)";
+	$sql="select * from ciudadano where cedula='$ced'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+	public function ModificarCiudadano($cedula,$nombre,$telefono,$direccion,$correo){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call act_usuario_Admin(?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
+	$consulta->bind_param('sssss',$cedula_p,$nombre_p,$telefono_p,$direccion_p,$correo_p);
 	$cedula_p=$cedula;
-	$telefono_p=$telefono;
 	$nombre_p=$nombre;
+	$telefono_p=$telefono;
+	$direccion_p=$direccion;
 	$correo_p=$correo;
-	$clave_p=$clave;
 	$consulta->execute();
 	$mensa="Usuario Modificado";
 	return $mensa;
