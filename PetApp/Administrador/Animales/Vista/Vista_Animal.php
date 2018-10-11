@@ -51,7 +51,6 @@ echo "
 	<th scope='col'>".$Ani[3]."</th>
 	<th scope='col'>".$Ani[4]."</th>";
 	?>
-	<form action="Modificar_Animal.php">
 	<?php
 	echo "
 	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' onclick='Enviar(".$Ani[0].")'><th>";
