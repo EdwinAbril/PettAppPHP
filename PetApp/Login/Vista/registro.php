@@ -14,15 +14,15 @@
 		<h1>PetApp</h1>
 		</center>
 	</header>
-	<div id="Ingreso">
+	<div id="Ingreso" src="Imagenes/user">
 		<form action="" method="Post"  id="LogIn">
 			<center>
 			<h1>Ingresar</h1>
-			<input type="text" name="Usuario" value="" placeholder="Usuario">
-			<input type="password" name="Clave" value="" placeholder="Clave">
+			<input type="text" name="Usuario" value="" placeholder="Usuario" required="">
+			<input type="password" name="Clave" value="" placeholder="Clave" required="">
 			<br>
 			<br>
-			<input type="submit" name="Entrar" value="Iniciar Sesion" class="btn btn-primary">
+			<input type="submit" name="Entrar" value="Iniciar Sesion" class="btn btn-primary" >
 			</center>
 		</form>
 	</div>

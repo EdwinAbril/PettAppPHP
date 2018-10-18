@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['consulta'])){
-	$result=insertar();
+	$resulta=insertar();
 	require_once("../Vista/Vista_Insertar.php");	
 }
 
@@ -9,11 +9,20 @@ function insertar(){
 	$ta=$_POST['tipo'];
 	$ea=$_POST['edad'];
 	$ra=$_POST['raza'];
+	$nombre=$_FILES['imagen']['name'];
+    $tipo=$_FILES['imagen']['type'];
+    $tamaño=$_FILES['imagen']['size'];
+	if ($nombre!=null && $tamaño<=1000000) {
+        $hoy=date("d_m_y");
+        $nombre=$hoy.$nombre;
+        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PetApp/Foto_animal/';
+        move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre);
+    }
 	require_once("../Modelo/Modelo_Animal.php");
 	$mostrar=new MetodoAnimal();
-	$result=$mostrar->InsertarAnimal($na,$ta,$ea,$ra);
+	$resulta=$mostrar->InsertarAnimal($na,$ta,$ea,$ra,$nombre);
 
-	return $result;
+	return $resulta;
 }
 
 ?>

@@ -68,7 +68,7 @@ class MetodoAnimal{
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
-	public function InsertarAnimal($na,$ta,$ea,$ra){
+	public function InsertarAnimal($na,$ta,$ea,$ra,$fot){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_Animal($na);
@@ -79,19 +79,19 @@ class MetodoAnimal{
 			$mensa="El animal ya Existe";
 		}
 		else{
-		$sql="call inser_animal_Admin(?,?,?,?)";
+		$sql="call inser_animal_Admin(?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('ssss',$na_p,$ta_p,$ea_p,$ra_p);
+			$consulta->bind_param('sssss',$na_p,$ta_p,$ea_p,$ra_p,$fot_p);
 			$na_p=$na;
 			$ta_p=$ta;
 			$ea_p=$ea;
 			$ra_p=$ra;
+			$fot_p=$fot;
 			$consulta->execute();
 			$mensa="Animal Ingresado";
 		}
 		return $mensa;
 	}
-
 }
 
 ?>
