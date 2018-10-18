@@ -19,7 +19,9 @@
 
 
 <div class="container" name="tabla">
+	<form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+</form>
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 <center><h1 class="display-3">Animal</h1></center>
 <?php
