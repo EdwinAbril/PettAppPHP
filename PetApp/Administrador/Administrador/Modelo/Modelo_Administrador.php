@@ -33,6 +33,15 @@ class MetodoAdministrador{
 	return $mensa;
 	}
 
+	public function EliminarAdministrador($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call bor_admin_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Administrador Eliminado";
+	return $mensaje; 
+}
+
 }
 
 ?>
