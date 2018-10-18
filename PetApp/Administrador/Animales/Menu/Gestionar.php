@@ -20,6 +20,7 @@
     <img src="logos/Animales.png" id="Avatar"><BR><BR><BR><BR>
   </div> 
   <div class="row ">
+    <form action="../Vista/Vista_Insertar.php">
     <div class="col-sm-3 col-xs-12" >
       <div class="panel panel-default text-center" id="divinsert">
         <div class="panel-heading">
@@ -31,14 +32,15 @@
         </div>
       </div>      
     </div>
-    <form action="../Vista/Vista_Animal.php">     
-    <div class="col-sm-3 col-xs-12">
+  </form>
+    <form action="../Controlador/Controlador_Consultar.php" method="Post">
+      <div class="col-sm-3 col-xs-12">
       <div class="panel panel-default text-center"  id="divconsulta">
         <div class="panel-heading">
           <h1>Consultar</h1>
         </div>
         <div class="panel-body"><center>
-          <input type="image" name="Veterinaria" src="logos/Consultar.png"  class="img-responsive slideanim"  id="logoconsultar"></center>
+          <input type="image" name="Consultar" src="logos/Consultar.png"  class="img-responsive slideanim"  id="logoconsultar"></center>
         </div>
       </div>      
     </div>
