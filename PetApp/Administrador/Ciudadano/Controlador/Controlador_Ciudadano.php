@@ -1,13 +1,4 @@
 <?php
-if (isset($_POST['consultar'])) {
-require_once("../Modelo/Modelo_Ciudadano.php");
-$mostrar= new MetodoCiudadano();
-$resultado=$mostrar->MostrarCiudadano();
-require_once("../Vista/Vista_Ciudadano.php");
-}
-
-
-
 if (isset($_POST['consulta'])) {
 
 	$ced=$_POST['cedula'];
