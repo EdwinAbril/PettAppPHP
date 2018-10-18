@@ -9,11 +9,6 @@
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  	<script>
-  		function EnviarDato($cod){
-		window.location="Modificar_Administrador.php?envidat="+$cod+"";
-		}
-	</script>
 </head>
 
 <body>
@@ -53,7 +48,10 @@ echo "
 	?>
 	<?php
 	echo "
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' onclick='EnviarDato(".$Adm[0].")'><th>";
+	<form method='POST' action='Modificar_Administrador.php'>
+	<input type='hidden' name='usu' value='".$Adm[0]."'>
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>
+	</form>";
 	?>
 	<?php
 	echo "

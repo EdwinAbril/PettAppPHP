@@ -10,11 +10,7 @@
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  	<script>
-  		function EnviarDato($cod){
-		window.location="Modificar_Funcionario.php?envidat="+$cod;
-		}
-	</script>
+  	
 </head>
 
 <body>
@@ -56,11 +52,16 @@ echo "
 	<th scope='col'>".$Fun[2]."</th>
 	<th scope='col'>".$Fun[3]."</th>
 	<th scope='col'>".$Fun[4]."</th>
-	<th scope='col'>".$Fun[5]."</th>";
+	<th scope='col'>".$Fun[5]."</th>
+	
+	";
 	?>
 	<?php
 	echo "
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' onclick='EnviarDato(".$Fun[0].");'><th>";
+	<form method='POST' action='Modificar_Funcionario.php'>
+	<input type='hidden' name='cod' value='".$Fun[0]."'>
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' ><th>
+	</form>";
 	?>
 	<?php
 	echo "

@@ -7,7 +7,7 @@
     <body>
     	<?php
 
-    	$cod=$_GET["envidat"];
+    	$cod=$_POST["cod"];
 
     	?>
         <h1>Funcionario</h1>
@@ -20,7 +20,8 @@
 	echo "
 
 	<tr>
-	<form action='' method='Post'>   
+	<form action='../Controlador/Controlador_Actualizar_Funcionario.php' method='Post'>
+	<input type='hidden' name='cod' value='".$Fun[0]."'>   
 	<p>Telefono</p><input type='text' name='telefono' value='".$Fun[1]."'><BR>
     <p>Nombre</p><input type='text' name='nombre'  value='".$Fun[2]."'><BR>
     <p>Correo</p><input type='text' name='correo'  value='".$Fun[3]."'><BR>
@@ -31,18 +32,8 @@
 	}
 	
 	if(isset($_POST['botonfunci'])){
-		require_once("../Controlador/Controlador_Actualizar_Funcionario.php");
-		$cod=$_GET["envidat"];
-		$tel=$_POST['telefono'];
-		$nom=$_POST['nombre'];
-		$cor=$_POST['correo'];
-		$cla=$_POST['clave'];
-		$mostrar= new MetodoFuncionario();
-
-		$mensaje=$mostrar->ModificarFuncionario($cod,$tel,$nom,$cor,$cla);
-
 		echo"<script type='text/javascript'>;
-		alert('".$mensaje."');
+		alert('".$result."');
 		</script>";
 
 	}
