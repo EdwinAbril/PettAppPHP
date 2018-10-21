@@ -2,36 +2,35 @@
 
 require_once ("../../../Conexion.php");
 
-class MetodoFuncionario{
+class MetodoVeterinaria{
 	
 
 
 		public function Mostrar_1_usuario($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-		$sql="select * from usuario_funcionario where cedula_fun='$usu'";
+	$sql="select * from usuario_veterinaria where nombre_usuario='$usu'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
 
-			public function  InsertarUsuario($ced,$nom,$cla){
+		public function  InsertarUsuario($nom,$cla){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_usuario($ced);
+		$result=$this->Mostrar_1_usuario($nom);
 		if ($result->num_rows>0) {
-			$mensa="El Usuario del Funcionario ya ha sido registrado";
+			$mensa="El Usuario de la Veterinaria ya ha sido registrado";
 		
 		}
 		else{
-			$sql="call inser_usu_vet(?,?,?,?)";
+			$sql="call inser_usu_vet(?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssi',$ced_p,$nom_p,$cla_p,$rol_p);
-			$ced_p=$ced;
+			$consulta->bind_param('ssi',$nom_p,$cla_p,$rol_p);
 			$nom_p=$nom;
 			$cla_p=$cla;
 			$rol_p=2;
 			$consulta->execute();
-			$mensa="Usuario del Funcionario insertado correctamente";
+			$mensa="Usuario de la Veterinaria insertado correctamente";
 		}
 		return $mensa;
 

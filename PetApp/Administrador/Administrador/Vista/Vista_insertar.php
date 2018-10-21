@@ -1,11 +1,11 @@
 <?php
-require_once("../Controlador/Controlador_Funcionario.php");
+require_once("../Controlador/Controlador_insertar.php");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Insertar Usuario del Funcionario</title>
+	<title>Insertar Usuario del Administrador</title>
 </head>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,11 +15,10 @@ require_once("../Controlador/Controlador_Funcionario.php");
 <body>
 	<div class="insertar">
 	<h1>Insertar Usuario</h1>
- <form action="../Controlador/Controlador_Funcionario.php" method="Post">
- 	<p><label>Cedula </label></p><input type="number" name="cedula">
-    	<p><label>Nombre</label></p><input type="text" name="nombre">
-    	<p><label>Clave</label></p><input type="password" name="clave">
-    	<input type="submit" name="consultaf" value="Insertar Nuevo Usuario">
+ <form action="../Controlador/Controlador_insertar.php" method="Post" required="">
+ 	<p><label>Nombre de Usuario </label></p><input type="text" name="nombre" required="">
+    	<p><label>Clave</label></p><input type="password" name="clave" required="">
+    	<input type="submit" name="consulta" value="Insertar Nuevo Usuario">
     </form>
 </div>
     <?php

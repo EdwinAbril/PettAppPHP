@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['consultaf'])){
+if (isset($_POST['consulta'])){
 	$result=insertar();
 	require_once("../Vista/Vista_Insertar_Funcionario.php");	
 }
@@ -10,7 +10,7 @@ function insertar(){
 	$cla=$_POST['clave'];
 	require_once("../Modelo/Modelo_Funcionario.php");
 	$mostrar=new MetodoFuncionario();
-	$result=$mostrar->InsertarFuncionario($ced,$nom,$cla);
+	$result=$mostrar->InsertarUsuario($ced,$nom,$cla);
 
 	return $result;
 }
