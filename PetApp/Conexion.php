@@ -3,10 +3,10 @@ class conectarproyecto{
 private $servidor="localhost";
 private $usuario="root";
 <<<<<<< HEAD
-private $pass="camilo57";
+private $pass="0000";
 =======
 private $pass="16072011e";
->>>>>>> c8a465215f4cfa090d663f698e3a833d6f281414
+>>>>>>> 35e7741cd69f23285607747e5dc556d54d4abd28
 private $bd="proyecto";
 
 public function conexion(){
