@@ -5,7 +5,7 @@
 		$resulta=eliminar();
 		require_once("../Vista/Vista_Usuario.php");
 	}
-
+	
 function eliminar(){
 		$cod=$_POST["cdusu"];
 	require_once("../Modelo/Modelo_Usuario.php");
