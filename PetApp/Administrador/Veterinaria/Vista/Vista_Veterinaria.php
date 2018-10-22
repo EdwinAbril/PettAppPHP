@@ -20,7 +20,7 @@
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 <center><h1 class="display-3">Veterinaria</h1></center>
 <?php
-require_once("../Controlador/Controlador_Veterinaria.php");
+require_once("../Controlador/Controlador_Consultar.php");
 echo "
 	<table class='table'>
 	<thead class='thead-dark'>
