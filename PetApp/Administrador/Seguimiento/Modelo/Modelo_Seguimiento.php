@@ -12,22 +12,28 @@ class MetodoSeguimiento{
 	return $consulta;
 	}
 
-	public function ModificarSeguimiento($cedula,$telefono,$nombre,$correo,$clave){
+	public function ModificarSeguimiento($codigo,$postulacion){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?,?)";
+	$sql="call FunModificar_Seguimiento(?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
-	$cedula_p=$cedula;
-	$telefono_p=$telefono;
-	$nombre_p=$nombre;
-	$correo_p=$correo;
-	$clave_p=$clave;
+	$consulta->bind_param('ii',$codigo_p,$postulacion_p);
+	$codigo_p=$codigo;
+	$postulacion_p=$postulacion;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
+	$mensa="Seguimiento Modificado";
 	return $mensa;
 	}
-		public function Mostrar_1_usuario($usu){
+	
+	public function Mostrar_1_Seguimiento($usu){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from seguimiento where codigo_seguimiento='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+	public function Mostrar_1_Seguimiento_1($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
 	$sql="select * from seguimiento where cod_postula='$usu'";
@@ -35,10 +41,10 @@ class MetodoSeguimiento{
 	return $consulta;
 	}
 
-		public function  InsertarUsuario($cod){
+		public function  InsertarSeguimiento($cod){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_usuario($cod);
+		$result=$this->Mostrar_1_Seguimiento_1($cod);
 		if ($result->num_rows>0) {
 			$mensa="El seguimiento ya ha sido realizado";
 		

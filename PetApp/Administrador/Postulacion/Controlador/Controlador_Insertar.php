@@ -1,18 +1,18 @@
 <?php
 if (isset($_POST['consulta'])){
-	$resulta=insertar();
+	$result=insertar();
 	require_once("../Vista/Vista_Insertar.php");	
 }
 
 function insertar(){
-	$tc=$_POST['telefono'];
-	$dc=$_POST['direccion'];
-	$tf=$_POST['fijo'];
+	$tel=$_POST['telefono'];
+	$dir=$_POST['direccion'];
+	$fij=$_POST['fijo'];
 	$nombre=$_FILES['certificado']['name'];
     $tipo=$_FILES['certificado']['type'];
     $tamaño=$_FILES['certificado']['size'];
-    $ced=$_POST['cedula'];
-    $cod=$_POST['codigo'];
+    $ce=$_POST['cedula'];
+    $ca=$_POST['codigo'];
 	if ($nombre!=null && $tamaño<=1000000) {
         $hoy=date("d_m_y");
         $nombre=$hoy.$nombre;
@@ -21,9 +21,9 @@ function insertar(){
     }
 	require_once("../Modelo/Modelo_Postulacion.php");
 	$mostrar=new MetodoPostulacion();
-	$resulta=$mostrar->InsertarPostulacion($tc,$dc,$tf,$nombre,$ced,$cod);
+	$result=$mostrar->InsertarPostulacion($tel,$dir,$fij,$nombre,$ce,$ca);
 
-	return $resulta;
+	return $result;
 }
 
 ?>

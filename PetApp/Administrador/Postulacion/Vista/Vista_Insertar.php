@@ -9,7 +9,7 @@
  	<p><label>Telefono</label></p><input type="number" name="telefono">
     	<p><label>Direccion</label></p><input type="text" name="direccion">
     	<p><label>Telefono Fijo</label></p><input type="number" name="fijo">
-    	<p><label>Certificado Laboral</label></p><input type="file" name="certificado" accept="pdf">
+    	<p><label>Certificado Laboral</label></p><input type="file" name="certificado" accept="aplicattion/pdf">
     	<p><label>Cedula</label></p><input type="number" name="cedula"></label>
         <p><label>Codigo del animal</label></p><input type="number" name="codigo">
     	<input type="submit" name="consulta" value="Realizar Postulacion">
@@ -18,7 +18,7 @@
 if(isset($_POST['consulta']))
 {
 	echo "<script type='text/javascript'>;
-	alert('".$resulta."');
+	alert('".$result."');
 	</script>";
 }
 

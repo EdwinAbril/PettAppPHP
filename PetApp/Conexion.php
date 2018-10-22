@@ -2,7 +2,7 @@
 class conectarproyecto{
 private $servidor="localhost";
 private $usuario="root";
-private $pass="0000";
+private $pass="16072011e";
 private $bd="proyecto";
 
 public function conexion(){

@@ -43,12 +43,13 @@ echo "
 	<th scope='col'>".$Seg[0]."</th>
 	<th scope='col'>".$Seg[1]."</th>";
 	?>
-	<form action="Modificar_Seguimiento.php">
 	<?php
 	echo "
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>";
+	<form method='POST' action='Modificar_Seguimiento.php'>
+	<input type='hidden' name='usu' value='".$Seg[0]."'>
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>
+	</form>";
 	?>
-	</form>
 	<?php
 	echo "
 	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>

@@ -15,7 +15,7 @@ class MetodoVeterinaria{
 	public function ModificarVeterinaria($cedula,$telefono,$nombre,$correo,$clave){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?,?)";
+	$sql="call act_veter_Admin(?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
 	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
 	$cedula_p=$cedula;
