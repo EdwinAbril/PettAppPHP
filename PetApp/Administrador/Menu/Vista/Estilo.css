@@ -49,6 +49,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61c2e6', end
 
 #divadmin{
 	max-width: 350px;
+	padding: 0px;
 }
 
 #divadopcion{
