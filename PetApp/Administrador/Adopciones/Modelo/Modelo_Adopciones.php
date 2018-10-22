@@ -32,8 +32,17 @@ class MetodoAdopciones{
 	$seguimiento_p=$seguimiento;
 	$consulta->execute();
 	$mensa="Usuario Modificado";
-	return $mensa;
+	return $mensa;	
 	}
+
+public function EliminarAdopciones($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call VetEliminar_Adopcion('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Adopcion Eliminada";
+	return $mensaje; 
+}
 
 }
 
