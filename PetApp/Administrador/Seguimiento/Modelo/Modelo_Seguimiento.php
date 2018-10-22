@@ -60,6 +60,17 @@ class MetodoSeguimiento{
 		return $mensa;
 
 	}
+
+	public function EliminarSeguimiento($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call FunEliminar_Seguimiento('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Seguimiento Eliminado";
+	return $mensaje; 
+}
+
+
 }
 
 ?>

@@ -64,9 +64,18 @@ echo "
 	?>
 	<?php
 	echo "
+	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
+	<input type='hidden' name='codma' value='".$Mas[0]."'>
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>
+	</form>
 	</tr>
 	";
+	}
+	if(isset($_POST['eliminar'])){
+		echo"<script type='text/javascript'>;
+		alert('".$resulta."');
+		</script>";
+
 	}
 	echo "</table>";
 

@@ -56,20 +56,25 @@ echo "
 	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>
 	</form>";
 	?>
-	</form>
+	
 	<?php
 	echo "
+	<form method='POST' action='../Controlador/Eliminar_Animal.php'>
+	<input type='hidden' name='cdani' value='".$Ani[0]."'>
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>
-	</tr>
-	";
+	</form>
+	</tr>";
+	}
+	if(isset($_POST['eliminar'])){
+		echo"<script type='text/javascript'>;
+		alert('".$resulta."');
+		</script>";
+
 	}
 	echo "</table>";
 
-
-
 ?>
 
-</form>
 </div>
 </body>
 </html>

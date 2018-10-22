@@ -34,6 +34,16 @@ class MetodoDenuncias{
 	$mensa="Usuario Modificado";
 	return $mensa;
 	}
+
+public function EliminarDenuncias($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call FunEliminar_Denuncia('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Denuncia Eliminada";
+	return $mensaje; 
+}
+
 }
 
 ?>
