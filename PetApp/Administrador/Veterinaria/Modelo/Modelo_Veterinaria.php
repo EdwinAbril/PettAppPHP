@@ -59,6 +59,17 @@ class MetodoVeterinaria{
 		return $mensa;
 
 	}
+
+	public function EliminarVeterinaria($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call bor_veter_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Veterinaria Eliminada";
+	return $mensaje; 
+
+}
+
 }
 
 ?>
