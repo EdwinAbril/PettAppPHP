@@ -27,6 +27,33 @@ class MetodoSeguimiento{
 	$mensa="Usuario Modificado";
 	return $mensa;
 	}
+		public function Mostrar_1_usuario($usu){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from seguimiento where cod_postula='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+		public function  InsertarUsuario($cod){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_usuario($cod);
+		if ($result->num_rows>0) {
+			$mensa="El seguimiento ya ha sido realizado";
+		
+		}
+		else{
+			$sql="call inser_seg(?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('i',$cod_p);
+			$cod_p=$cod;
+			$consulta->execute();
+			$mensa="Seguimiento Ingresado correctamente";
+		}
+		return $mensa;
+
+	}
 }
 
 ?>
