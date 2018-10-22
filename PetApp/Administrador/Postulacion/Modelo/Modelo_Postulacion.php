@@ -28,17 +28,28 @@ class MetodoPostulacion{
 	$mensa="Postulacion Modificada";
 	return $mensa;
 	}
+
 	public function Mostrar_1_Postulacion($to){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from postulacion where codigo_postulacion='$to'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+	
+	public function Mostrar_1_Postulacion_1($to){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
 	$sql="select * from postulacion where cedu='to'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
+
+
 	public function InsertarPostulacion($tc,$dc,$tf,$cer,$ced,$cod){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_Postulacion($ced);
+		$result=$this->Mostrar_1_Postulacion_1($ced);
 	
 		if ($result->num_rows>0) {
 			$mensa="La Postulacion ya ha sido realizada";

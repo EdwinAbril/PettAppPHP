@@ -1,4 +1,4 @@
-<?php
+o<?php
 require_once("../Controlador/Controlador_Ciudadano.php");
 ?>
 
