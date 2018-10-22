@@ -35,7 +35,7 @@ class MetodoEventos{
 	$mensa="Evento Modificado";
 	return $mensa;
 	}
-<<<<<<< HEAD
+
 	public function Mostrar_1_evento_1($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
@@ -66,7 +66,7 @@ class MetodoEventos{
 		return $mensa;
 
 	}
-=======
+
 
 	public function EliminarEventos($d){
 	$conectar= new conectarproyecto();
@@ -77,7 +77,6 @@ class MetodoEventos{
 	return $mensaje; 
 }
 
->>>>>>> c8a465215f4cfa090d663f698e3a833d6f281414
 }
 
 ?>
