@@ -43,6 +43,21 @@ class MetodoCiudadano{
 		return $mensa;
 
 	}
+	public function ModificarCiudadano($cedula,$nombre,$telefono,$direccion,$correo){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call act_usuario_Admin(?,?,?,?,?)";
+	$consulta=$conexion->prepare($sql);
+	$consulta->bind_param('sssss',$cedula_p,$nombre_p,$telefono_p,$direccion_p,$correo_p);
+	$cedula_p=$cedula;
+	$nombre_p=$nombre;
+	$telefono_p=$telefono;
+	$direccion_p=$direccion;
+	$correo_p=$correo;
+	$consulta->execute();
+	$mensa="Usuario Modificado";
+	return $mensa;
+	}
 }
 
 ?>

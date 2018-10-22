@@ -12,19 +12,20 @@ class MetodoPostulacion{
 	return $consulta;
 	}
 
-	public function ModificarPostulacion($cedula,$telefono,$nombre,$correo,$clave){
+	public function ModificarPostulacion($codigo,$telefono,$direcion,$telfij,$certificado,$cedula){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?,?)";
+	$sql="call usuario_postulacion_actu(?,?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
-	$cedula_p=$cedula;
+	$consulta->bind_param('isssss',$codigo_p,$telefono_p,$direcion_p,$telfij_p,$certificado_p,$cedula_p);
+	$codigo_p=$codigo;
 	$telefono_p=$telefono;
-	$nombre_p=$nombre;
-	$correo_p=$correo;
-	$clave_p=$clave;
+	$direcion_p=$direcion;
+	$telfij_p=$telfij;
+	$certificado_p=$certificado;
+	$cedula_p=$cedula;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
+	$mensa="Postulacion Modificada";
 	return $mensa;
 	}
 	public function Mostrar_1_Postulacion($to){

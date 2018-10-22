@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Funcionario</title>
+        <title>Administrador</title>
     </head>
     <body>
     	<?php
@@ -10,7 +10,7 @@
     	$cod=$_POST["usu"];
 
     	?>
-        <h1>Funcionario</h1>
+        <h1>Administrador</h1>
 
         <p>Usuario</p><?php echo $cod?><BR>
 

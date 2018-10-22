@@ -12,17 +12,24 @@ class MetodoDenuncias{
 	return $consulta;
 	}
 
-	public function ModificarDenuncias($cedula,$telefono,$nombre,$correo,$clave){
+	public function Mostrar_1_Denuncia($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?,?)";
+	$sql="select * from denuncia where codigo_denuncia='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+	public function ModificarDenuncias($codigo,$fecha,$descripcion,$cedula){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call VetModificar_Denuncias(?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
+	$consulta->bind_param('isss',$codigo_p,$fecha_p,$descripcion_p,$cedula_p);
+	$codigo_p=$codigo;
+	$fecha_p=$fecha;
+	$descripcion_p=$descripcion;
 	$cedula_p=$cedula;
-	$telefono_p=$telefono;
-	$nombre_p=$nombre;
-	$correo_p=$correo;
-	$clave_p=$clave;
 	$consulta->execute();
 	$mensa="Usuario Modificado";
 	return $mensa;

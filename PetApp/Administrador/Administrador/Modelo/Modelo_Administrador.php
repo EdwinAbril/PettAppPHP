@@ -41,35 +41,6 @@ class MetodoAdministrador{
 	$mensaje="Administrador Eliminado";
 	return $mensaje; 
 }
-	public function Mostrar_1_usuario($usu){
-	$conectar= new conectarproyecto();
-	$conexion= $conectar->conexion();
-	$sql="select * from usuarios where usuario='$usu'";
-	$consulta=mysqli_query($conexion,$sql);
-	return $consulta;
-	}
-
-		public function  InsertarUsuario($us,$cla){
-		$conectar=new conectarproyecto();
-		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_usuario($us);
-		if ($result->num_rows>0) {
-			$mensa="El Usuario del Administrador ya ha sido registrado";
-		
-		}
-		else{
-			$sql="call inser_admin_Admin(?,?,?)";
-			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('ssi',$u_p,$c_p,$r_p);
-			$u_p=$us;
-			$c_p=$cla;
-			$r_p=1;
-			$consulta->execute();
-			$mensa="Usuario del Administrador insertado correctamente";
-		}
-		return $mensa;
-
-	}
 
 }
 
