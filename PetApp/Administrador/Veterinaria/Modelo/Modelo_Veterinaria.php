@@ -25,7 +25,7 @@ class MetodoVeterinaria{
 	$clave_p=$clave;
 	$consulta->execute();
 	$mensa="Usuario Modificado";
-	return $mensa;
+	return $mens;
 	}
 		public function Mostrar_1_Veterinaria($n){
 	$conectar= new conectarproyecto();
