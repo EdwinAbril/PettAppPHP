@@ -58,6 +58,25 @@ class MetodoPostulacion{
 		}
 		return $mensa;
 	}
+
+	public function EliminarPostulacion($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion(); 
+	$sql="call usuario_postulacion_elim('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Postulacion Eliminada";
+	return $mensaje; 
+}
+
+public function EliminarPostulacion($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call VetEliminar_Adopcion('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Postulacion Eliminada";
+	return $mensaje; 
+}
+
 }
 
 ?>

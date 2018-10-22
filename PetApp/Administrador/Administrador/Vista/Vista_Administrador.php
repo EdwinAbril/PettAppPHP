@@ -70,5 +70,4 @@ echo "
 	}
 	echo "</table>";
 
-
 ?>

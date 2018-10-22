@@ -38,6 +38,16 @@ class MetodoMascotas{
 	$mensa="Mascota Modificada";
 	return $mensa;
 	}
+
+	public function EliminarMascotas($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call bor_mascota_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Mascota Eliminada";
+	return $mensaje; 
+}
+
 }
 
 ?>

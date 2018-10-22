@@ -35,6 +35,16 @@ class MetodoComentarios{
 	$mensa="Comentario Modificado";
 	return $mensa;
 	}
+
+public function EliminarComentarios($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call FunEliminar_Comentarios('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Comentario Eliminado";
+	return $mensaje; 
+}
+
 }
 
 ?>
