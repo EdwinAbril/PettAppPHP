@@ -20,7 +20,7 @@ class MetodoCiudadano{
 	return $consulta;
 	}
 
-		public function  Insertarciudadano($c,$n,$t,$d,$co){
+		public function  Insertarciudadano($c,$n,$t,$d,$co,$us){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_Ciudadano($c);
@@ -29,14 +29,15 @@ class MetodoCiudadano{
 		
 		}
 		else{
-			$sql="call inser_usuario_Admin(?,?,?,?,?)";
+			$sql="call inser_usuario_Admin(?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssss',$c_p,$n_p,$t_p,$d_p,$co_p);
+			$consulta->bind_param('sssss',$c_p,$n_p,$t_p,$d_p,$co_p,$us_p);
 			$c_p=$c;
 			$n_p=$n;
 			$t_p=$t;
 			$d_P=$d;
 			$co_p=$co;
+			$us_p=$us;
 			$consulta->execute();
 			$mensa="Ciudadano insertado correctamente";
 		}

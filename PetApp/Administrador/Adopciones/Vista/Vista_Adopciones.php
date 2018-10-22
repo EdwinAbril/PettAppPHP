@@ -9,8 +9,15 @@
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  	<script>
+  		function Enviar($adopcion){
+		window.location="Modificar_Adopciones.php?envidat="+$adopcion;
+		}
+	</script>
 </head>
 <body>
+
+
 	<form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
@@ -44,16 +51,22 @@ echo "
 	?>
 	<?php
 	echo "
-	<form method='POST' action='Modificar_Adopciones.php'>
-	<input type='hidden' name='usu' value='".$Ado[0]."'>
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-	</form>";
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' onclick='Enviar(".$Ado[0].")'></th>";
 	?>
 	<?php
 	echo "
-	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
+	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
+	<input type='hidden' name='coda' value='".$Ado[0]."'>
+	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>
+	</form>
 	</tr>
 	";
+	}
+	if(isset($_POST['eliminar'])){
+		echo"<script type='text/javascript'>;
+		alert('".$resulta."');
+		</script>";
+
 	}
 	echo "</table>";
 
