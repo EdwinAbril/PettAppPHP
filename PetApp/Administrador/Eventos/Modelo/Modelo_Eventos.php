@@ -35,6 +35,7 @@ class MetodoEventos{
 	$mensa="Evento Modificado";
 	return $mensa;
 	}
+<<<<<<< HEAD
 	public function Mostrar_1_evento_1($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
@@ -65,6 +66,18 @@ class MetodoEventos{
 		return $mensa;
 
 	}
+=======
+
+	public function EliminarEventos($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call FunEliminar_Eventos('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Eventos Eliminada";
+	return $mensaje; 
+}
+
+>>>>>>> c8a465215f4cfa090d663f698e3a833d6f281414
 }
 
 ?>

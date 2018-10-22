@@ -28,18 +28,43 @@ class MetodoPostulacion{
 	$mensa="Postulacion Modificada";
 	return $mensa;
 	}
+<<<<<<< HEAD
+
+	public function Mostrar_1_Postulacion($to){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from postulacion where codigo_postulacion='$to'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+	
+	public function Mostrar_1_Postulacion_1($to){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from postulacion where cedu='to'";
+=======
 	public function Mostrar_1_postulacion($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
 	$sql="select * from postulacion where cedu='$usu'";
+>>>>>>> 7254ff85cb5e6f6df9644027a54020ba6136890b
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
 
+<<<<<<< HEAD
+
+	public function InsertarPostulacion($tc,$dc,$tf,$cer,$ced,$cod){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_Postulacion_1($ced);
+	
+=======
 		public function  Insertarpostulacion($tel,$dir,$fij,$cl,$ce,$ca){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_postulacion($ce);
+>>>>>>> 7254ff85cb5e6f6df9644027a54020ba6136890b
 		if ($result->num_rows>0) {
 			$mensa="La postulacion ya ha sido realizada";
 		
@@ -60,6 +85,25 @@ class MetodoPostulacion{
 		return $mensa;
 
 	}
+
+	public function EliminarPostulacion($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion(); 
+	$sql="call usuario_postulacion_elim('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Postulacion Eliminada";
+	return $mensaje; 
+}
+
+public function EliminarPostulacion($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call VetEliminar_Adopcion('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Postulacion Eliminada";
+	return $mensaje; 
+}
+
 }
 
 ?>

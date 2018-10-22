@@ -57,6 +57,17 @@ class MetodoUsuario{
 		return $mensa;
 
 	}
+
+	public function EliminarUsuario($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call borrar_usuario_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Usuario Eliminado";
+	return $mensaje; 
+
+}
+
 }
 
 ?>

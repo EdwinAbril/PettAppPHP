@@ -59,6 +59,16 @@ class MetodoCiudadano{
 	$mensa="Usuario Modificado";
 	return $mensa;
 	}
+
+public function EliminarCiudadano($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();       
+	$sql="call borrar_usuario_admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Ciudadano Eliminado";
+	return $mensaje; 
+}
+
 }
 
 ?>
