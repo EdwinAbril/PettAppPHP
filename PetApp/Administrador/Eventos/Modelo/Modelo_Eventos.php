@@ -12,19 +12,27 @@ class MetodoEventos{
 	return $consulta;
 	}
 
-	public function ModificarEventos($cedula,$telefono,$nombre,$correo,$clave){
+	public function Mostrar_1_Evento($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?,?)";
+	$sql="select * from jornada where codigo_jornada='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+	public function ModificarEventos($codigo,$fecha,$lugar,$duracion,$descripcion){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call FunModificar_Eventos(?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
-	$cedula_p=$cedula;
-	$telefono_p=$telefono;
-	$nombre_p=$nombre;
-	$correo_p=$correo;
-	$clave_p=$clave;
+	$consulta->bind_param('issss',$codigo_p,$fecha_p,$lugar_p,$duracion_p,$descripcion_p);
+	$codigo_p=$codigo;
+	$fecha_p=$fecha;
+	$lugar_p=$lugar;
+	$duracion_p=$duracion;
+	$descripcion_p=$descripcion;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
+	$mensa="Evento Modificado";
 	return $mensa;
 	}
 }

@@ -20,7 +20,7 @@
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 <center><h1 class="display-3">Ciudadano</h1></center>
 <?php
-require_once("../Controlador/Controlador_Ciudadano.php");
+require_once("../Controlador/Controlador_Vista.php");
 echo "
 	<table class='table'>
 	<thead class='thead-dark'>
@@ -48,12 +48,13 @@ echo "
 	<th scope='col'>".$Ciu[3]."</th>
 	<th scope='col'>".$Ciu[4]."</th>";
 	?>
-	<form action="Modificar_Ciudadano.php">
 	<?php
 	echo "
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>";
+	<form method='POST' action='Modificar_Ciudadano.php'>
+	<input type='hidden' name='usu' value='".$Ciu[0]."'>
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>
+	</form>";
 	?>
-	</form>
 	<?php
 	echo "
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>

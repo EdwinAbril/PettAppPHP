@@ -9,11 +9,7 @@
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  	<script>
-  		function Enviar($cod){
-		window.location="Modificar_Animal.php?cod="+$cod;
-		}
-	</script>
+  	
 </head>
 <body>
 
@@ -25,7 +21,7 @@
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 <center><h1 class="display-3">Animal</h1></center>
 <?php
-require_once("../Controlador/Controlador_Animal.php");
+require_once("../Controlador/Controlador_Consultar.php");
 echo "
 	<table class='table'>
 	<thead class='thead-dark'>
@@ -55,7 +51,10 @@ echo "
 	?>
 	<?php
 	echo "
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' onclick='Enviar(".$Ani[0].")'><th>";
+	<form method='POST' action='Modificar_Animal.php'>
+	<input type='hidden' name='usu' value='".$Ani[0]."'>
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>
+	</form>";
 	?>
 	</form>
 	<?php

@@ -21,18 +21,32 @@
     <br><h2>GESTIONAR</h2><br><br>
     <br>
   </div>
+   
 
-  <form action="../../Adopciones/Vista/Vista_Adopciones.php">
- <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divadopcion">
+  <form action="../../Administrador/Vista/Vista_Administrador.php">
+<div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center" id="divciudadano">
         <div class="panel-heading">
-          <h1>Adopcion</h1>
+          <h1>Administrador</h1>
         </div>
         <div class="panel-body"><center>
-          <input type="image" name="Adopcion" src="logos/Adopcion.png" class="img-responsive slideanim" id="logoimagen"></center>
+          <input type="image" name="Eventos" src="logos/Admin.png" class="img-responsive slideanim" id="logoimagen"></center>
         </div>
       </div>      
-    </div>
+    </div> 
+  </form>
+
+  <form action="../../Adopciones/Vista/Vista_Adopciones.php">
+<div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading">
+          <h1>Adopciones</h1>
+        </div>
+        <div class="panel-body"><center>
+          <input type="image" name="Eventos" src="logos/Adopcion.png" class="img-responsive slideanim" id="logoimagen"></center>
+        </div>
+      </div>      
+    </div> 
   </form>
     
     <form action="../../Animales/Vista/Vista_Animal.php">

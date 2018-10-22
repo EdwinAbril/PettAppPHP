@@ -47,12 +47,13 @@ echo "
 	<th scope='col'>".$Com[2]."</th>
 	<th scope='col'>".$Com[3]."</th>";
 	?>
-	<form action="Modificar_Denuncias.php">
 	<?php
 	echo "
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>";
+	<form method='POST' action='Modificar_Denuncias.php'>
+	<input type='hidden' name='usu' value='".$Com[0]."'>
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>
+	</form>";
 	?>
-	</form>
 	<?php
 	echo "
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>

@@ -55,9 +55,18 @@ echo "
 	?>
 	<?php
 	echo "
-	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
+	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
+	<input type='hidden' name='coda' value='".$Ado[0]."'>
+	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>
+	</form>
 	</tr>
 	";
+	}
+	if(isset($_POST['eliminar'])){
+		echo"<script type='text/javascript'>;
+		alert('".$resulta."');
+		</script>";
+
 	}
 	echo "</table>";
 

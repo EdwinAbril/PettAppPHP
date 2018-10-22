@@ -7,7 +7,7 @@
     <body>
     	<?php
 
-    	$cod=$_GET["cod"];
+    	$cod=$_POST["usu"];
 
     	?>
         <h1>Animal</h1>
@@ -20,8 +20,9 @@
 	echo "
 
 	<tr>
-	<form action='' method='Post'>   
-	<p>Nombre</p><input type='text' name='nombre' value='".$Ani[1]."'><BR>
+	<form action='../Controlador/Controlador_Actualizar_Animal.php' method='Post'>
+	<input type='hidden' name='usu' value='".$Ani[0]."'>   
+    <p>Nombre</p><input type='text' name='nombre' value='".$Ani[1]."'><BR>
     <p>Tipo</p><input type='text' name='tipo'  value='".$Ani[2]."'><BR>
     <p>Edad</p><input type='text' name='edad'  value='".$Ani[3]."'><BR>
     <p>Raza</p><input type='text' name='raza'  value='".$Ani[4]."'><BR><BR>
@@ -31,18 +32,8 @@
 	}
 	
 	if(isset($_POST['botonfunci'])){
-		require_once("../Controlador/Controlador_Actualizar_Animal.php");
-		$cod=$_GET["cod"];
-		$tel=$_POST['nombre'];
-		$nom=$_POST['tipo'];
-		$cor=$_POST['edad'];
-		$cla=$_POST['raza'];
-		$mostrar= new MetodoAnimal();
-
-		$mensaje=$mostrar->ModificarAnimal($cod,$tel,$nom,$cor,$cla);
-
 		echo"<script type='text/javascript'>;
-		alert('".$mensaje."');
+		alert('".$result."');
 		</script>";
 
 	}
