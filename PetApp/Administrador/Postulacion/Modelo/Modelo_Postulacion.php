@@ -27,35 +27,37 @@ class MetodoPostulacion{
 	$mensa="Usuario Modificado";
 	return $mensa;
 	}
-	public function Mostrar_1_Postulacion($to){
+	public function Mostrar_1_postulacion($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from postulacion where cedu='to'";
+	$sql="select * from postulacion where cedu='$usu'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
-	public function InsertarPostulacion($tc,$dc,$tf,$cer,$ced,$cod){
+
+		public function  Insertarpostulacion($tel,$dir,$fij,$cl,$ce,$ca){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_Postulacion($ced);
-	
+		$result=$this->Mostrar_1_postulacion($ce);
 		if ($result->num_rows>0) {
-			$mensa="La Postulacion ya ha sido realizada";
+			$mensa="La postulacion ya ha sido realizada";
+		
 		}
 		else{
-		$sql="call usuario_postulacion_inser(?,?,?,?,?,?)";
+			$sql="call usuario_postulacion_inser(?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssssi',$tc_p,$dc_p,$tf_p,$cer_p,$ced_p,$cod_p);
-			$tc_p=$tc;
-			$dc_p=$dc;
-			$tf_p=$tf;
-			$cer_p=$cer;
-			$ced_p=$ced;
-			$cod_p=$cod;
+			$consulta->bind_param('sssssi',$tel_p,$dir_p,$fij_p,$cl_p,$ce_p,$ca_p);
+			$tel_p=$tel;
+			$dir_p=$dir;
+			$fij_p=$fij;
+			$cl_p=$cl;
+			$ce_p=$ce;
+			$ca_p=$ca;
 			$consulta->execute();
-			$mensa="Postulacion Realizada";
+			$mensa="Postulacion realizada correctamente";
 		}
 		return $mensa;
+
 	}
 }
 
