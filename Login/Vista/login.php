@@ -26,9 +26,9 @@
 			<ul class="menu">
 		<li><a href="#">Incio</a></li>
 		<li><a href="#">Adopta</a></li>
-		<li><a href="http://localhost/PetApp/Login/Vista/Galeria.php">Galeria</a></li>
+		<li><a href="Galeria.php">Galeria</a></li>
 		<li><a href="#">Contacto</a></li>
-		<li><a href="http://localhost/PetApp/Login/Vista/registro.php">Login</a></li>
+		<li><a href="registro.php">Login</a></li>
 </ul>
 	</nav>
 </div>
