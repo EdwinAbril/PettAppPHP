@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="Galerias.css">
 <body>
 		<a class="cerrar1" href="login.php">X</a>
-<h1>Galeria de Nuestras Imagenes</h1>
+<h1>Galeria de Nuestras Imagenes probadno</h1>
 <ul class="galeria">
 <li><a href="#img1"><img src="Galeria/Imagen1.jpeg"></a> </li>
 <li><a href="#img2"><img src="Galeria/Imagen2.jpeg"></a> </li>
