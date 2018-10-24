@@ -12,21 +12,42 @@ class MetodoMascotas{
 	return $consulta;
 	}
 
-	public function ModificarMascotas($cedula,$telefono,$nombre,$correo,$clave){
+	public function Mostrar_1_Mascota($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?,?)";
+	$sql="select * from mascota where codigo_mascota='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+	public function ModificarMascotas($codigo,$nombre,$descendencia,$estado,$tipo,$edad,$raza,$cedula){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call usuario_mascota_actu(?,?,?,?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
-	$cedula_p=$cedula;
-	$telefono_p=$telefono;
+	$consulta->bind_param('isssssss',$codigo_p,$nombre_p,$descendencia_p,$estado_p,$tipo_p,$edad_p,$raza_p,$cedula_p);
+	$codigo_p=$codigo;
 	$nombre_p=$nombre;
-	$correo_p=$correo;
-	$clave_p=$clave;
+	$descendencia_p=$descendencia;
+	$estado_p=$estado;
+	$tipo_p=$tipo;
+	$edad_p=$edad;
+	$raza_p=$raza;
+	$cedula_p=$cedula;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
+	$mensa="Mascota Modificada";
 	return $mensa;
 	}
+
+	public function EliminarMascotas($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call bor_mascota_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Mascota Eliminada";
+	return $mensaje; 
+}
+
 }
 
 ?>

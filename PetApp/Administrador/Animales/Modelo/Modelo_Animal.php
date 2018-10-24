@@ -36,7 +36,6 @@ class MetodoAnimal{
 	return $mensa;
 	}
 
-
 	public function Mostrar_1_Animal1($to){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
@@ -92,6 +91,17 @@ class MetodoAnimal{
 		}
 		return $mensa;
 	}
+
+
+	public function EliminarAnimal($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call bor_animal_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Animal Eliminado";
+	return $mensaje; 
+}
+
 }
 
 ?>

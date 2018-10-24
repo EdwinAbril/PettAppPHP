@@ -20,7 +20,7 @@
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 <center><h1 class="display-3">Veterinaria</h1></center>
 <?php
-require_once("../Controlador/Controlador_Veterinaria.php");
+require_once("../Controlador/Controlador_Consultar.php");
 echo "
 	<table class='table'>
 	<thead class='thead-dark'>
@@ -59,9 +59,18 @@ echo "
 	</form>
 	<?php
 	echo "
+	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
+	<input type='hidden' name='cdvet' value='".$Vet[0]."'>
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>
+	</form>
 	</tr>
 	";
+	}
+	if(isset($_POST['eliminar'])){
+		echo"<script type='text/javascript'>;
+		alert('".$resulta."');
+		</script>";
+
 	}
 	echo "</table>";
 

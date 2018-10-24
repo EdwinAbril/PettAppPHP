@@ -1,4 +1,4 @@
-<?php
+o<?php
 require_once("../Controlador/Controlador_Ciudadano.php");
 ?>
 
@@ -21,6 +21,7 @@ require_once("../Controlador/Controlador_Ciudadano.php");
     	<p><label>Telefono</label></p><input type="number" name="telefono">
     	<p><label>Direccion</label></p><input type="text" name="direccion">
     	<p><label>Correo Electronico</label></p><input type="text" name="correo">
+    	<p><label>Nombre de Usuario</label></p><input type="text" name="usuario">
     	<input type="submit" name="consulta" value="Insertar Nuevo Ciudadano">
     </form>
 </div>
@@ -32,7 +33,8 @@ if(isset($_POST['consulta']))
 	$tel=$_POST['telefono'];
 	$dir=$_POST['direccion'];
 	$cor=$_POST['correo'];
-	$mensaje=$mostrar->InsertarCiudadano($ced,$nom,$tel,$dir,$cor);
+	$us=$_POST['usuario'];
+	$mensaje=$mostrar->InsertarCiudadano($ced,$nom,$tel,$dir,$cor,$us);
 	echo "<script type='text/javascript'>;
 	alert('".$mensaje."');
 	</script>";

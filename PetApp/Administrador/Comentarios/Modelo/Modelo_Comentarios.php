@@ -21,21 +21,30 @@ class MetodoComentarios{
 	return $consulta;
 	}
 
-	public function ModificarComentarios($codigo,$fecha,$cuerpo,$adopcion){
+	public function ModificarComentarios($fecha,$cuerpo,$adopcion,$codigo){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?)";
+	$sql="call usuario_comentarios_actu(?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
-	$cedula_p=$cedula;
-	$telefono_p=$telefono;
-	$nombre_p=$nombre;
-	$correo_p=$correo;
-	$clave_p=$clave;
+	$consulta->bind_param('ssii',$fecha_p,$cuerpo_p,$adopcion_p,$codigo_p);
+	$fecha_p=$fecha;
+	$cuerpo_p=$cuerpo;
+	$adopcion_p=$adopcion;
+	$codigo_p=$codigo;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
+	$mensa="Comentario Modificado";
 	return $mensa;
 	}
+
+public function EliminarComentarios($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call FunEliminar_Comentarios('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Comentario Eliminado";
+	return $mensaje; 
+}
+
 }
 
 ?>

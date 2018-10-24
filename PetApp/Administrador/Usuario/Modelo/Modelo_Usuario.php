@@ -27,6 +27,47 @@ class MetodoUsuario{
 	$mensa="Usuario Modificado";
 	return $mensa;
 	}
+		public function Mostrar_1_usuario($usu){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from registro_usuario where cedula_ciu='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+		public function  InsertarUsuario($ced,$nom,$cla){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_usuario($ced);
+		if ($result->num_rows>0) {
+			$mensa="El Usuario del Ciudadano ya ha sido registrado";
+		
+		}
+		else{
+			$sql="call insertar_usuario_Admin(?,?,?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('sssi',$ced_p,$nom_p,$cla_p,$rol_p);
+			$ced_p=$ced;
+			$nom_p=$nom;
+			$cla_p=$cla;
+			$rol_p=4;
+			$consulta->execute();
+			$mensa="Usuario del Ciudadano insertado correctamente";
+		}
+		return $mensa;
+
+	}
+
+	public function EliminarUsuario($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call borrar_usuario_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Usuario Eliminado";
+	return $mensaje; 
+
+}
+
 }
 
 ?>

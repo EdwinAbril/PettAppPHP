@@ -55,17 +55,27 @@ echo "
 	<th scope='col'>".$Mas[6]."</th>
 	<th scope='col'>".$Mas[7]."</th>";
 	?>
-	<form action="Modificar_Mascotas.php">
 	<?php
 	echo "
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>";
+	<form method='POST' action='Modificar_Mascotas.php'>
+	<input type='hidden' name='usu' value='".$Mas[0]."'>
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>
+	</form>";
 	?>
-	</form>
 	<?php
 	echo "
+	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
+	<input type='hidden' name='codma' value='".$Mas[0]."'>
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>
+	</form>
 	</tr>
 	";
+	}
+	if(isset($_POST['eliminar'])){
+		echo"<script type='text/javascript'>;
+		alert('".$resulta."');
+		</script>";
+
 	}
 	echo "</table>";
 

@@ -1,11 +1,11 @@
 <?php
-require_once("../Controlador/Controlador_Veterinaria.php");
+require_once("../Controlador/Controlador_Usuario.php");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Insertar Veterinaria</title>
+	<title>Insertar Usuario del Ciudadano</title>
 </head>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,28 +14,21 @@ require_once("../Controlador/Controlador_Veterinaria.php");
   <link rel="stylesheet" type="text/css" href="Estilo.css">
 <body>
 	<div class="insertar">
-	<h1>Insertar Veterinaria</h1>
- <form action="" method="Post">
- 	<p><label>Nit </label></p><input type="text" name="nit">
-    	<p><label>Telefono</label></p><input type="number" name="telefono">
+	<h1>Insertar Usuario</h1>
+ <form action="../Controlador/Controlador_Usuario.php" method="Post">
+ 	<p><label>Cedula </label></p><input type="number" name="cedula">
     	<p><label>Nombre</label></p><input type="text" name="nombre">
-    	<p><label>Direccion</label></p><input type="text" name="direccion">
     	<p><label>Clave</label></p><input type="password" name="clave">
-    	<input type="submit" name="consulta" value="Insertar Nueva Veterinaria">
+    	<input type="submit" name="consulta" value="Insertar Nuevo Usuario">
     </form>
 </div>
     <?php
 if(isset($_POST['consulta']))
 {
-	$nit=$_POST['nit'];
-	$tel=$_POST['telefono'];
-	$nom=$_POST['nombre'];
-	$dir=$_POST['direccion'];
-	$cla=$_POST['clave'];
-	$mensaje=$mostrar->Insertarveterinaria($nit,$tel,$nom,$dir,$cla);
-	echo "<script type='text/javascript'>;
-	alert('".$mensaje."');
+echo "<script type='text/javascript'>;
+	alert('".$result."');
 	</script>";
+	
 }
 
     ?>

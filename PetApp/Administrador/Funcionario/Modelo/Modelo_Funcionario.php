@@ -36,6 +36,15 @@ class MetodoFuncionario{
 	return $mensa;
 	}
 
+public function EliminarFuncionario($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call Eliminar_Funcionario('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Funcionario Eliminado"; 
+	return $mensaje; 
+}
+
 	
 }
 
