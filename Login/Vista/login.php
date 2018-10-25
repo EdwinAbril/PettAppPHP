@@ -2,16 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width,  user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">
 	<title>Pet App</title>
-	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="Estilo.css">
 	<link rel="stylesheet" href="Imagenes/fonts/style.css" >
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="main.js"></script>
-	 <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js" ></script>
+  <script src="js/main.js" ></script>
+
 </head>
 <body>
 <header >	
@@ -46,33 +49,36 @@
 		</ul>
 	</div>
 
-     
-  <div class="row slideanim">
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-          <div class="panel-heading" id="panel">
+
+  <div class="row slideanim" >
+
+  <div class="col-sm-4 col-xs-12" id="caja1" >
+    <div class="panel panel-default text-center">
+        <div class="panel-heading">
           <h1>Adopcion</h1>
-           <h5>Como Adopto?</h5>
-        </div>
-        <div class="panel-body">
+            <h5>Como Adopto?</h5>
+            </div>
+            <div id="caja2">
+            </div>
+          <div class="panel-body" id="imagen">
           <!--  AQUI VA LA IMAGEN DEL EVENTO -->
-          <img src="Imagenes/adopcion.jpeg" class="img-responsive slideanim" >
-        </div>
-      </div>      
-    </div>  
+        <img src="Imagenes/adopcion.jpeg" class="img-responsive slideanim" >
+     </div>
+    </div>      
+  </div>  
       
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
           <div class="panel-heading" id="panel">
           <h1>Veterinarias</h1>
            <h5>Veterinarias Vinculadas</h5>
-         
         </div>
         <div class="panel-body">
           <img src="Imagenes/veterinaria.jpeg" class="img-responsive slideanim">
         </div>
       </div>      
-    </div>       
+    </div>     
+
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
           <div class="panel-heading" id="panel">
