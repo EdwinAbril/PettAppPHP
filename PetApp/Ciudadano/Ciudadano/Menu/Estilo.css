@@ -1,0 +1,87 @@
+
+body{
+	font-family:Rockwell;
+}
+
+#Avatar{
+	margin-top:25px;
+	align-self:center;
+}
+
+header{ 
+	background: rgba(255,255,255,1);
+	background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(240,237,240,1) 42%, rgba(212,212,212,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(42%, rgba(240,237,240,1)), color-stop(100%, rgba(212,212,212,1)));
+	background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(240,237,240,1) 42%, rgba(212,212,212,1) 100%);
+	background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(240,237,240,1) 42%, rgba(212,212,212,1) 100%);
+	background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(240,237,240,1) 42%, rgba(212,212,212,1) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(240,237,240,1) 42%, rgba(212,212,212,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d4d4d4', GradientType=1 );
+    font-weight: bold; 
+    padding: 50px;
+    text-align: center;
+ } 
+    
+#pricing{
+	background: rgba(177,221,250,1);
+background: -moz-linear-gradient(left, rgba(177,221,250,1) 0%, rgba(101,203,240,1) 42%, rgba(42,184,250,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(177,221,250,1)), color-stop(42%, rgba(101,203,240,1)), color-stop(100%, rgba(42,184,250,1)));
+background: -webkit-linear-gradient(left, rgba(177,221,250,1) 0%, rgba(101,203,240,1) 42%, rgba(42,184,250,1) 100%);
+background: -o-linear-gradient(left, rgba(177,221,250,1) 0%, rgba(101,203,240,1) 42%, rgba(42,184,250,1) 100%);
+background: -ms-linear-gradient(left, rgba(177,221,250,1) 0%, rgba(101,203,240,1) 42%, rgba(42,184,250,1) 100%);
+background: linear-gradient(to right, rgba(177,221,250,1) 0%, rgba(101,203,240,1) 42%, rgba(42,184,250,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ddfa', endColorstr='#2ab8fa', GradientType=1 );
+}
+
+#divinsert{
+	max-width: 300px;
+}
+
+
+#divconsulta{
+	max-width: 300px;
+}
+
+
+#divactuali{
+	max-width: 300px;
+}
+
+
+#diveli{
+	max-width: 300px;
+}
+
+
+#divciudadano{
+	max-width: 350px;
+}
+
+#divadoptar{
+	max-width: 350px;
+}
+
+
+.container{
+	max-width: 100%;
+	min-width: 40%;
+}
+
+footer{
+	margin:0px;
+	text-align:center;
+	clear:both;
+	background-color: white;
+	position: relative;
+	margin-top: 100%;
+}
+
+@media screen and (max-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (min-width:1024px) {
+    /* reglas CSS */
+}

@@ -28,7 +28,7 @@
     <p>Tipo</p><input type='text' name='tip'  value='".$Mas[4]."'><BR></BR>
     <p>Edad</p><input type='text' name='eda'  value='".$Mas[5]."'><BR></BR>
     <p>Raza</p><input type='text' name='raz'  value='".$Mas[6]."'><BR></BR>
-    <p>Cedula</p><input type='text' name='ced'  value='".$Mas[7]."'><BR></BR>
+    <p>Cedula</p>".$Mas[7]."<BR></BR>
     <input type='submit' name='botonfunci' value='Modificar'>
     </form>";
 	}

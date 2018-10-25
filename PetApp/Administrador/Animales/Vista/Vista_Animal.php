@@ -18,6 +18,9 @@
 	<form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
+<form action="Vista_Insertar.php">
+  <input type="submit" name="nuevo" value="Insertar Nuevo Animal" class="btn btn-outline-dark" id="nuevo">
+</form>
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 <center><h1 class="display-3">Animal</h1></center>
 <?php
@@ -32,6 +35,7 @@ echo "
 	<th scope='col'>Tipo</th>
 	<th scope='col'>Edad</th>
 	<th scope='col'>Raza</th>
+	<th scope='col'>Imagen</th>
 	<th scope='col'></th>
 	<th scope='col'></th>
 	<th scope='col'></th>
@@ -47,7 +51,8 @@ echo "
 	<th scope='col'>".$Ani[1]."</th>
 	<th scope='col'>".$Ani[2]."</th>
 	<th scope='col'>".$Ani[3]."</th>
-	<th scope='col'>".$Ani[4]."</th>";
+	<th scope='col'>".$Ani[4]."</th>
+	<th><img src='../../../Animales_fotos/".$Ani[5]."' width='30' heigth='30'> </th>";
 	?>
 	<?php
 	echo "

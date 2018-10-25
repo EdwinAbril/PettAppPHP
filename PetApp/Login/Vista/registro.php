@@ -15,7 +15,7 @@
 		</center>
 	</header>
 	<div id="Ingreso" src="Imagenes/user">
-		<form action="" method="Post"  id="LogIn">
+		<form action="registro.php" method="Post"  id="LogIn">
 			<center>
 			<h1>Ingresar</h1>
 			<input type="text" name="Usuario" value="" placeholder="Usuario" required="">
@@ -25,6 +25,41 @@
 			<input type="submit" name="Entrar" value="Iniciar Sesion" class="btn btn-primary" >
 			</center>
 		</form>
+		<?php
+
+session_start();
+if (isset($_POST['Entrar'])) {
+	require_once("Modelo/Modelo_Login.php");
+	$us=$_POST['Usuario'];
+	$co=$_POST['Clave'];
+	$obj= new MetodoLogin();
+	$con=$obj->Login($us,$co);
+	$num=$con->num_rows;
+	if ($num>0){
+		while($sql_d=$con->fetch_assoc()){
+			if ($sql_d['rol_login']==1) {
+				$_SESSION["Usuario"]=$sql_d['nombre_usuario'];
+				header("Location:../../Administrador/Menu/Vista/Administrador.php");
+			}
+			else if ($sql_d['rol_login']==2) {
+				$_SESSION["Usuario"]=$sql_d['nombre_usuario'];
+				header("Location:../../Funcionario/Menu/Vista/Funcionario.php");
+			}
+			else if ($sql_d['rol_login']==3) {
+				$_SESSION["Usuario"]=$sql_d['nombre_usuario'];
+				header("Location:../../Veterinaria/Menu/Vista/Veterinaria.php");
+			}
+			else if ($sql_d['rol_login']==4) {
+				$_SESSION["Usuario"]=$sql_d['nombre_usuario'];
+				header("Location:../../Ciudadano/Ciudadano/Menu/Ciudadano.php");
+			}
+		}
+	}
+	else{
+		echo "Usted No Es Un Usuario Registrado";
+	}	
+}
+?>
 	</div>
 	<div>
 		

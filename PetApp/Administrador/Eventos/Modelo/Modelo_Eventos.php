@@ -53,7 +53,7 @@ class MetodoEventos{
 		
 		}
 		else{
-			$sql="call Insertar_Eventos(?,?,?,?)";
+			$sql="call FunInsertar_Eventos(?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
 			$consulta->bind_param('ssss',$fec_p,$lug_p,$dur_p,$des_p);
 			$fec_p=$fec;

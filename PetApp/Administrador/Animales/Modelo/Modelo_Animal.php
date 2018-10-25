@@ -23,7 +23,7 @@ class MetodoAnimal{
 	public function ModificarAnimal($codigo,$nombre,$tipo,$edad,$raza){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call VetModificar_Animal(?,?,?,?,?)";
+	$sql="call act_animal_Admin(?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
 	$consulta->bind_param('issss',$codigo_p,$nombre_p,$tipo_p,$edad_p,$raza_p);
 	$codigo_p=$codigo;

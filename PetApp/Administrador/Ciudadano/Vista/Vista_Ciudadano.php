@@ -14,6 +14,9 @@
 
 
 <div class="container" name="tabla">
+	 <form action="Vista_Insertar.php">
+  <input type="submit" name="nuevo" value="Insertar Nuevo Ciudadano" class="btn btn-outline-dark" id="nuevo">
+</form>
   <form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
@@ -39,7 +42,7 @@ echo "
 	";
 while($Ciu=mysqli_fetch_row($resultado)){
 echo "
-
+	
 	<tr>
 
 	<th scope='col'>".$Ciu[0]."</th>
@@ -47,6 +50,13 @@ echo "
 	<th scope='col'>".$Ciu[2]."</th>
 	<th scope='col'>".$Ciu[3]."</th>
 	<th scope='col'>".$Ciu[4]."</th>";
+	?>
+	<?php
+	echo "
+	<form method='POST' action='Modificar_Ciudadano.php'>
+	<input type='hidden' name='usu' value='".$Ciu[0]."'>
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>
+	</form>"; 
 	?>
 	<?php
 	echo "
