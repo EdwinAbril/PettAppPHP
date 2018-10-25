@@ -44,6 +44,38 @@ public function EliminarFuncionario($d){
 	$mensaje="Funcionario Eliminado"; 
 	return $mensaje; 
 }
+		public function Mostrar_1_funcionario_1($usu){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from funcionario where cedula_funcionario='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+		public function  InsertarFuncionario($ced,$tel,$nom,$cor,$cla){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_funcionario_1($ced);
+		if ($result->num_rows>0) {
+			$mensa="El Funcionario ya ha sido registrado";
+		
+		}
+		else{
+			$sql="call inser_fun_Admin(?,?,?,?,?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('sssssi',$ced_p,$tel_p,$nom_p,$cor_p,$cla_p,$rol_p);
+			$ced_p=$ced;
+			$tel_p=$tel;
+			$nom_p=$nom;
+			$cor_p=$cor;
+			$cla_p=$cla;
+			$rol_p=2;
+			$consulta->execute();
+			$mensa="Funcionario insertado correctamente";
+		}
+		return $mensa;
+
+	}
 
 	
 }

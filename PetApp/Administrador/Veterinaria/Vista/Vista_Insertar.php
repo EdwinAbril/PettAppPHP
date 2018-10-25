@@ -6,16 +6,22 @@ require_once("../Controlador/Controlador_Veterinaria.php");
 <html>
 <head>
 	<title>Insertar Veterinaria</title>
+	       <meta charset="utf-8">
+    <link rel="stylesheet" href="Estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="Estilo.css">
+
 <body>
+		    <form action="Vista_Veterinaria.php">
+  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+</form>
 	<div class="insertar">
 	<h1>Insertar Veterinaria</h1>
- <form action="" method="Post">
+ <form action="../Controlador/Controlador_Veterinaria.php" method="Post">
  	<p><label>Nit </label></p><input type="text" name="nit">
     	<p><label>Telefono</label></p><input type="number" name="telefono">
     	<p><label>Nombre</label></p><input type="text" name="nombre">
@@ -27,15 +33,10 @@ require_once("../Controlador/Controlador_Veterinaria.php");
     <?php
 if(isset($_POST['consulta']))
 {
-	$nit=$_POST['nit'];
-	$tel=$_POST['telefono'];
-	$nom=$_POST['nombre'];
-	$dir=$_POST['direccion'];
-	$cla=$_POST['clave'];
-	$mensaje=$mostrar->Insertarveterinaria($nit,$tel,$nom,$dir,$cla);
-	echo "<script type='text/javascript'>;
-	alert('".$mensaje."');
+echo "<script type='text/javascript'>;
+	alert('".$result."');
 	</script>";
+	
 }
 
     ?>

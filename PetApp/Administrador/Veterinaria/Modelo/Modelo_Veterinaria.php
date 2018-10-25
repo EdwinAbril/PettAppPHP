@@ -50,7 +50,7 @@ class MetodoVeterinaria{
 			$n_p=$ni;
 			$t_p=$t;
 			$no_p=$nom;
-			$d_P=$d;
+			$d_p=$d;
 			$cl_p=$cl;
 			$r_p=3;
 			$consulta->execute();

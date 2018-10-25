@@ -4,6 +4,11 @@ float: left;
 #sal{
 float: right;
 }
+#nuevo{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
 
 @media screen and (max-width: 500px){
 	table{
