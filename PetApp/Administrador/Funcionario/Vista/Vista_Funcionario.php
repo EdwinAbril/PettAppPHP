@@ -14,7 +14,9 @@
 </head>
 
 <body>
-
+<form action="Vista_Insertar.php">
+  <input type="submit" name="nuevo" value="Insertar Nuevo Funcionario" class="btn btn-outline-dark" id="nuevo">
+  	</form>
 
 <div class="container" name="tabla">
 	<form action="../../Menu/Vista/Administrador.php">

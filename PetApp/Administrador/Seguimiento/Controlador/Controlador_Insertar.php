@@ -9,7 +9,7 @@ function insertar(){
 
 	require_once("../Modelo/Modelo_Seguimiento.php");
 	$mostrar=new MetodoSeguimiento();
-	$result=$mostrar->InsertarUsuario($cod);
+	$result=$mostrar->InsertarSeguimiento($cod);
 
 	return $result;
 }

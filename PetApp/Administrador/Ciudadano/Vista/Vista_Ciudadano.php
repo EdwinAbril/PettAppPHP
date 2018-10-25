@@ -14,6 +14,9 @@
 
 
 <div class="container" name="tabla">
+	 <form action="Vista_Insertar.php">
+  <input type="submit" name="nuevo" value="Insertar Nuevo Ciudadano" class="btn btn-outline-dark" id="nuevo">
+</form>
   <form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
