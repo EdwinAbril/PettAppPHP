@@ -33,7 +33,6 @@ echo "
 	<th scope='col'>Telefono</th>
 	<th scope='col'>Nombre</th>
 	<th scope='col'>Correo</th>
-	<th scope='col'>Clave</th>
 	<th scope='col'>Rol</th>
 	<th scope='col'></th>
 	<th scope='col'></th>
@@ -52,7 +51,6 @@ echo "
 	<th scope='col'>".$Fun[2]."</th>
 	<th scope='col'>".$Fun[3]."</th>
 	<th scope='col'>".$Fun[4]."</th>
-	<th scope='col'>".$Fun[5]."</th>
 	
 	";
 	?>

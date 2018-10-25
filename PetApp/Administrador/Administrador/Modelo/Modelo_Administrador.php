@@ -7,7 +7,7 @@ class MetodoAdministrador{
 	public function MostrarAdministrador(){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from usuarios";
+	$sql="select * from login_usuarios where rol_login=1";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
@@ -15,7 +15,7 @@ class MetodoAdministrador{
 	public function Mostrar_1_Administrador($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from usuarios where usuario='$usu'";
+	$sql="select * from login_usuarios where nombre_usuario='$usu'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
