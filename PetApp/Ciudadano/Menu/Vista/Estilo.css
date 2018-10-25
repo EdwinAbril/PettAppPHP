@@ -1,0 +1,125 @@
+
+body{
+	font-family:Rockwell;
+}
+
+#Avatar{
+	margin-top:25px;
+	align-self:center;
+}
+
+header{
+    background-image: url("Imagenes/Banner.jpg");  
+    font-weight: bold; 
+    padding: 50px;
+    text-align: center;
+ } 
+    
+#pricing{
+background: rgba(97,194,230,1);
+background: -moz-linear-gradient(left, rgba(97,194,230,1) 0%, rgba(113,206,239,1) 0%, rgba(43,227,227,1) 40%, rgba(83,217,206,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(97,194,230,1)), color-stop(0%, rgba(113,206,239,1)), color-stop(40%, rgba(43,227,227,1)), color-stop(100%, rgba(83,217,206,1)));
+background: -webkit-linear-gradient(left, rgba(97,194,230,1) 0%, rgba(113,206,239,1) 0%, rgba(43,227,227,1) 40%, rgba(83,217,206,1) 100%);
+background: -o-linear-gradient(left, rgba(97,194,230,1) 0%, rgba(113,206,239,1) 0%, rgba(43,227,227,1) 40%, rgba(83,217,206,1) 100%);
+background: -ms-linear-gradient(left, rgba(97,194,230,1) 0%, rgba(113,206,239,1) 0%, rgba(43,227,227,1) 40%, rgba(83,217,206,1) 100%);
+background: linear-gradient(to right, rgba(97,194,230,1) 0%, rgba(113,206,239,1) 0%, rgba(43,227,227,1) 40%, rgba(83,217,206,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61c2e6', endColorstr='#53d9ce', GradientType=1 )
+}
+
+#divinsert{
+	max-width: 300px;
+}
+
+
+#divconsulta{
+	max-width: 300px;
+}
+
+
+#divactuali{
+	max-width: 300px;
+}
+
+
+#diveli{
+	max-width: 300px;
+}
+
+
+
+#divadmin{
+	max-width: 350px;
+	padding: 0px;
+}
+
+#divadopcion{
+	max-width: 350px;
+}
+
+#divanimal{
+	max-width: 350px;
+}
+
+#divciudadano{
+	max-width: 350px;
+}
+
+#divcoment{
+	max-width: 350px;
+}
+
+#divdenuncias{
+	max-width: 350px;
+}
+
+#diveventos{
+	max-width: 350px;
+}
+
+#divfuncionario{
+	max-width: 350px;
+}
+
+#divmascotas{
+	max-width: 350px;
+}
+
+#divpostulacion{
+	max-width: 350px;
+}
+
+#divseguimiento{
+	max-width: 350px;
+}
+
+#divusuario{
+	max-width: 350px;
+}
+
+#divvet{
+	max-width: 350px;
+}
+
+.container{
+	max-width: 100%;
+	min-width: 40%;
+}
+
+footer{
+	margin:0px;
+	text-align:center;
+	clear:both;
+	background-color: white;
+	position: relative;
+	margin-top: 100%;
+}
+
+@media screen and (max-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (min-width:1024px) {
+    /* reglas CSS */
+}

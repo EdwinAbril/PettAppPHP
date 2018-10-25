@@ -14,10 +14,7 @@
 
 
 <div class="container" name="tabla">
-	 <form action="Vista_Insertar.php">
-  <input type="submit" name="nuevo" value="Insertar Nuevo Ciudadano" class="btn btn-outline-dark" id="nuevo">
-</form>
-  <form action="../../Menu/Vista/Administrador.php">
+  <form action="../Menu/Ciudadano.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
@@ -59,6 +56,7 @@ echo "
 	</form>"; 
 	?>
 	<?php
+	/*
 	echo "
 	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
 	<input type='hidden' name='ced' value='".$Ciu[0]."'>
@@ -71,10 +69,10 @@ echo "
 		echo"<script type='text/javascript'>;
 		alert('".$resulta."');
 		</script>";
+		*/
 
 	}
 	echo "</table>";
-
 
 
 ?>
