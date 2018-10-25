@@ -79,8 +79,6 @@ class MetodoPostulacion{
 	return $mensaje; 
 }
 
-
-
 }
 
 ?>
