@@ -15,7 +15,7 @@ function insertar(){
 	if ($nombre!=null && $tamaño<=1000000) {
         $hoy=date("d_m_y");
         $nombre=$hoy.$nombre;
-        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/GitHub/PettAppPHP/PetApp/Administrador/Evidencias_Denuncias/';
+        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Administrador/Evidencias_Denuncias/';
         move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre);
     }
 	require_once("../Modelo/Modelo_Denuncias.php");
