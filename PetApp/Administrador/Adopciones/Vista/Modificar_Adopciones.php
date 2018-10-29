@@ -2,15 +2,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Adopciones</title>
+        <title>Adopcion</title>
     </head>
     <body>
+
+    	<form action="../Vista/Vista_Adopciones.php">
+    	<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+    	</form>
+
     	<?php
 
-    	$cod=$_GET["envidat"];
+    	$cod=$_POST["usu"];
 
     	?>
-        <h1>Adopciones</h1>
+        <h1>Adopcion</h1>
 
         <p>Codigo</p><?php echo $cod?><BR>
 
@@ -20,25 +25,19 @@
 	echo "
 
 	<tr>
-	<form action='' method='Post'>   
+	<form action='../Controlador/Controlador_Actualizar_Adopciones.php' method='Post'>
+	<input type='hidden' name='usu' value='".$Ado[0]."'>   
 	<p>Animal</p><input type='text' name='animal' value='".$Ado[1]."'><BR>
     <p>Seguimiento</p><input type='text' name='seguimiento'  value='".$Ado[2]."'><BR>
-    
+    <p>Mensaje</p><input type='text' name='mensaje'  value='".$Ado[3]."'><BR>
+
     <input type='submit' name='botonfunci' value='Modificar'>
     </form>";
 	}
 	
 	if(isset($_POST['botonfunci'])){
-		require_once("../Controlador/Controlador_Actualizar_Adopciones.php");
-		$cod=$_GET["envidat"];
-		$tel=$_POST['animal'];
-		$nom=$_POST['seguimiento'];
-		$mostrar= new MetodoAdopciones();
-
-		$mensaje=$mostrar->ModificarAdopcion($cod,$tel,$nom);
-
 		echo"<script type='text/javascript'>;
-		alert('".$mensaje."');
+		alert('".$result."');
 		</script>";
 
 	}

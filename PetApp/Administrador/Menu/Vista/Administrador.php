@@ -10,9 +10,15 @@
 </head>
 <body>
 	<header id="encabezado">
+    <form action="../../../Login/Vista/registro.php">
+    <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
+    </form>
+
 		<h1>Administrador</h1>
 		<img src="Imagenes/Admin2.png" id="Avatar" >
 	</header>
+
+  
 
   <center>
 	<div id="pricing" class="container-fluid">

@@ -16,20 +16,24 @@ require_once("../Controlador/Controlador_Veterinaria.php");
 </head>
 
 <body>
-		    <form action="Vista_Veterinaria.php">
+		    <form action="../Vista/Vista_Veterinaria.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
-	<div class="insertar">
+<center>
+	<div id="insertar">
 	<h1>Insertar Veterinaria</h1>
  <form action="../Controlador/Controlador_Veterinaria.php" method="Post">
- 	<p><label>Nit </label></p><input type="text" name="nit">
-    	<p><label>Telefono</label></p><input type="number" name="telefono">
-    	<p><label>Nombre</label></p><input type="text" name="nombre">
-    	<p><label>Direccion</label></p><input type="text" name="direccion">
-    	<p><label>Clave</label></p><input type="password" name="clave">
-    	<input type="submit" name="consulta" value="Insertar Nueva Veterinaria">
+ 	<p><label>Nit </label></p><input type="text" name="nit" required="">
+    	<p><label>Telefono</label></p><input type="number" name="telefono" required="">
+    	<p><label>Nombre</label></p><input type="text" name="nombre" required="">
+    	<p><label>Direccion</label></p><input type="text" name="direccion" required="">
+    	<p><label>Clave</label></p><input type="password" name="clave" required="">
+           </br>
+    </br>
+    	<input type="submit" name="consulta" value="Insertar Nueva Veterinaria" class="btn btn-primary">
     </form>
 </div>
+</center>
     <?php
 if(isset($_POST['consulta']))
 {

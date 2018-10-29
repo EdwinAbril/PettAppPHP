@@ -56,7 +56,7 @@ if (isset($_POST['Entrar'])) {
 		}
 	}
 	else{
-		echo "Usted No Es Un Usuario Registrado";
+		echo "<h3 color='white' ><Center>Usted No Es Un Usuario Registrado</Center></h3>";
 	}	
 }
 ?>

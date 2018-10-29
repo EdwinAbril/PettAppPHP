@@ -5,6 +5,11 @@
         <title>Comentarios</title>
     </head>
     <body>
+
+        <form action="../Vista/Vista_Comentarios.php">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+        </form>
+
     	<?php
 
     	$cod=$_POST["usu"];

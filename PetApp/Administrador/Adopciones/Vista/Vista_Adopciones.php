@@ -9,12 +9,7 @@
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  	<script>
-  		function Enviar($adopcion){
-		window.location="Modificar_Adopciones.php?envidat="+$adopcion;
-		}
-	</script>
-</head>
+  	</head>
 <body>
 
 
@@ -33,6 +28,7 @@ echo "
 	<th scope='col'>Adopcion</th>
 	<th scope='col'>Animal</th>
 	<th scope='col'>Seguimiento</th>
+	<th scope='col'>Mensaje</th>
 	<th scope='col'></th>
 	<th scope='col'></th>
 	<th scope='col'></th>
@@ -47,11 +43,15 @@ echo "
 
 	<th scope='col'>".$Ado[0]."</th>
 	<th scope='col'>".$Ado[1]."</th>
-	<th scope='col'>".$Ado[2]."</th>";
+	<th scope='col'>".$Ado[2]."</th>
+	<th scope='col'>".$Ado[3]."</th>";
 	?>
 	<?php
 	echo "
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' onclick='Enviar(".$Ado[0].")'></th>";
+	<form method='POST' action='Modificar_Adopciones.php'>
+	<input type='hidden' name='usu' value='".$Ado[0]."'>
+	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'><th>
+	</form>";
 	?>
 	<?php
 	echo "

@@ -5,6 +5,11 @@
         <title>Mascotas</title>
     </head>
     <body>
+
+        <form action="../Vista/Vista_Mascotas.php">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+        </form>
+
     	<?php
 
     	$cod=$_POST["usu"];
@@ -28,6 +33,7 @@
     <p>Tipo</p><input type='text' name='tip'  value='".$Mas[4]."'><BR></BR>
     <p>Edad</p><input type='text' name='eda'  value='".$Mas[5]."'><BR></BR>
     <p>Raza</p><input type='text' name='raz'  value='".$Mas[6]."'><BR></BR>
+    <input type='hidden' name='ced' value='".$Mas[7]."'>
     <p>Cedula</p>".$Mas[7]."<BR></BR>
     <input type='submit' name='botonfunci' value='Modificar'>
     </form>";
