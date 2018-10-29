@@ -13,7 +13,7 @@
 <body>
 
 
-<div class="container" name="tabla">
+<div name="tabla">
 	 <form action="Vista_Insertar.php">
   <input type="submit" name="nuevo" value="Insertar Nuevo Ciudadano" class="btn btn-outline-dark" id="nuevo">
 </form>
@@ -34,6 +34,7 @@ echo "
 	<th scope='col'>Telefono</th>
 	<th scope='col'>Direccion</th>
 	<th scope='col'>Correo</th>
+	<th scope='col'></th>
 	<th scope='col'></th>
 	<th scope='col'></th>
 	<th scope='col'></th>

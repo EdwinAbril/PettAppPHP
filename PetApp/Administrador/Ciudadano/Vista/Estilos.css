@@ -5,9 +5,9 @@ float: left;
 float: right;
 }
 #nuevo{
-	position: absolute;
-	top: 10px;
-	left: 10px;
+	float: left;
+	margin-top: 50px;	
+	margin-left: 5px;
 }
 #insertar{
    padding: 50px;
@@ -23,6 +23,7 @@ float: right;
 	width: 150px;
 	height: 30px;
 }
+
 
 @media screen and (max-width:1200px){
 	table{

@@ -13,7 +13,7 @@
 <body>
 
 
-<div class="container" name="tabla">
+<div name="tabla">
 	<form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 	</form>

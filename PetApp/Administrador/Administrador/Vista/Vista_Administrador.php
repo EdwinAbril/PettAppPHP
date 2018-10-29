@@ -4,6 +4,7 @@
 	<title>Administrador</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="Estilos.css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -12,7 +13,7 @@
 
 <body>
 	<form action="Vista_insertar.php">
-  <input type="submit" name="nuevo" value="Insertar Nuevo Administrador" class="btn btn-outline-dark" id="vol">
+  <input type="submit" name="nuevo" value="Insertar Nuevo Administrador" class="btn btn-outline-dark" id="nuevo">
 </form>
 
 <div class="container" name="tabla">

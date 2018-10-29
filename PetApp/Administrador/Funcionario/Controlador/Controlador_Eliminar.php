@@ -1,9 +1,11 @@
+<link rel="stylesheet" href="../Vista/Estilos.css">
 <?php
 	  
 	if (isset($_POST['eliminar']))
 	{
 		$resulta=eliminar();
 		require_once("../Vista/Vista_Funcionario.php");
+		header('Location:../Vista/Vista_Funcionario.php');
 	}
 
 function eliminar(){

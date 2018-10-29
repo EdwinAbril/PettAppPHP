@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../Vista/Estilos.css">
 <?php
 require_once("../Modelo/Modelo_Funcionario.php");
 $mostrar= new MetodoFuncionario();
