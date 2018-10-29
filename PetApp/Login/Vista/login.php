@@ -16,7 +16,7 @@
 
 </head>
 <body>
-	
+
 <header >	
 		<div class="logotipo">
 		<h1>Pet App</h1>
@@ -50,7 +50,7 @@
 	<br>
 	<br>
 
-  <div class="row slideanim" >
+  <div class="row slideanim" id="modulos">
 
   <div class="col-sm-4 col-xs-12" id="caja1" >
     <div class="panel panel-default text-center">
