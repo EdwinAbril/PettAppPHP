@@ -50,7 +50,7 @@ class MetodoSeguimiento{
 		
 		}
 		else{
-			$sql="call inser_seg(?)";
+			$sql="call FunInsertar_Seguimiento(?)";
 			$consulta=$conexion->prepare($sql);
 			$consulta->bind_param('i',$cod_p);
 			$cod_p=$cod;

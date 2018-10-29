@@ -11,10 +11,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-        <form action="Vista_Denuncias.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
-</form>
-	<h1>Insertar Animal</h1>
+        <form action="../Vista/Vista_Denuncias.php">
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+    </form>
+	<h1>Insertar Denuncia</h1>
  <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
  	<p><label>Fecha De la Denuncia</label></p><input type="date" name="fecha">
     	<p><label>Tipo de Denuncia</label></p><input type="text" name="tipo">

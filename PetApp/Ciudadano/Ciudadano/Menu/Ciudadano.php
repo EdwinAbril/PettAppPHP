@@ -11,6 +11,9 @@
 <body>
   
 	<header id="encabezado">
+    <form action="../../../Login/Vista/registro.php">
+    <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
+    </form>
 		<h1>Ciudadano</h1>
 		<img src="Logos/Avatar.png" id="Avatar" >
 	</header>

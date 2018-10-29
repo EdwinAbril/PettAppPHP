@@ -20,19 +20,18 @@ class MetodoFuncionario{
 	return $consulta;
 	}
 
-	public function ModificarFuncionario($cedula,$telefono,$nombre,$correo,$clave){
+	public function ModificarFuncionario($cedula,$telefono,$nombre,$correo){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?,?)";
+	$sql="call Modificar_Funcionario(?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('sssss',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
+	$consulta->bind_param('ssss',$cedula_p,$telefono_p,$nombre_p,$correo_p);
 	$cedula_p=$cedula;
 	$telefono_p=$telefono;
 	$nombre_p=$nombre;
 	$correo_p=$correo;
-	$clave_p=$clave;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
+	$mensa="Funcionario Modificado";
 	return $mensa;
 	}
 

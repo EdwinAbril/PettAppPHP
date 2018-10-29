@@ -38,7 +38,7 @@ class MetodoDenuncias{
 public function EliminarDenuncias($d){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call FunEliminar_Denuncia('$d')";
+	$sql="call VetEliminar_Denuncia('$d')";
 	$consulta=mysqli_query($conexion,$sql);
 	$mensaje="Denuncia Eliminada";
 	return $mensaje; 
@@ -59,7 +59,7 @@ public function EliminarDenuncias($d){
 			$mensa="La Denuncia ya ha sido realizada";
 		}
 		else{
-		$sql="call inser_denuncia(?,?,?,?,?)";
+		$sql="call VetInsertar_Denuncias(?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
 			$consulta->bind_param('sssss',$fec_p,$des_p,$ced_p,$men_p,$fot_p);
 			$fec_p=$fec;

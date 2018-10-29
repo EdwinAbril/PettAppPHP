@@ -42,7 +42,7 @@ class MetodoMascotas{
 	public function EliminarMascotas($d){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call bor_mascota_Admin('$d')";
+	$sql="call usuario_mascota_elim('$d')";
 	$consulta=mysqli_query($conexion,$sql);
 	$mensaje="Mascota Eliminada";
 	return $mensaje; 

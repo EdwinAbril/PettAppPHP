@@ -39,7 +39,7 @@ class MetodoComentarios{
 public function EliminarComentarios($d){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call FunEliminar_Comentarios('$d')";
+	$sql="call usuario_comentarios_elim('$d')";
 	$consulta=mysqli_query($conexion,$sql);
 	$mensaje="Comentario Eliminado";
 	return $mensaje; 

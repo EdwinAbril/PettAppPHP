@@ -5,6 +5,11 @@
         <title>Funcionario</title>
     </head>
     <body>
+
+        <form action="../Vista/Vista_Funcionario.php">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+        </form>
+
     	<?php
 
     	$cod=$_POST["cod"];
@@ -25,8 +30,6 @@
 	<p>Telefono</p><input type='text' name='telefono' value='".$Fun[1]."'><BR>
     <p>Nombre</p><input type='text' name='nombre'  value='".$Fun[2]."'><BR>
     <p>Correo</p><input type='text' name='correo'  value='".$Fun[3]."'><BR>
-    <p>Clave</p><input type='text' name='clave'  value='".$Fun[4]."'><BR><BR>
-    
     <input type='submit' name='botonfunci' value='Modificar'>
     </form>";
 	}
