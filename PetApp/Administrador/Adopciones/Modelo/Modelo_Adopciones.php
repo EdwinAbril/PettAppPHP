@@ -43,6 +43,28 @@ public function EliminarAdopciones($d){
 	$mensaje="Adopcion Eliminada";
 	return $mensaje; 
 }
+	public function  InsertarAdopciones($coda,$cods,$men){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_adopcion($coda);
+		if ($result->num_rows>0) {
+			$mensa="La Adopcion ya ha sido realizada";
+		
+		}
+		else{
+			$sql="call insertar_usuario_Admin(?,?,?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('sssi',$ced_p,$nom_p,$cla_p,$rol_p);
+			$ced_p=$ced;
+			$nom_p=$nom;
+			$cla_p=$cla;
+			$rol_p=4;
+			$consulta->execute();
+			$mensa="Usuario del Ciudadano insertado correctamente";
+		}
+		return $mensa;
+
+	}
 
 }
 

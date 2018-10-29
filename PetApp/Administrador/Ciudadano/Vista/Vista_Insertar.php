@@ -16,10 +16,11 @@ require_once("../Controlador/Controlador_Ciudadano.php");
 </head>
 	
 <body>
-	    <form action="Vista_Ciudadano.php">
+	    <form action="../Vista/Vista_Ciudadano.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
-	<div class="insertar">
+<center>
+	<div id="insertar">
 	<h1>Insertar Ciudadano</h1>
  <form action="" method="Post">
  	<p><label>Cedula</label></p><input type="number" name="cedula">
@@ -28,9 +29,12 @@ require_once("../Controlador/Controlador_Ciudadano.php");
     	<p><label>Direccion</label></p><input type="text" name="direccion">
     	<p><label>Correo Electronico</label></p><input type="text" name="correo">
     	<p><label>Nombre de Usuario</label></p><input type="text" name="usuario">
-    	<input type="submit" name="consulta" value="Insertar Nuevo Ciudadano">
+    	</br>
+    </br>
+    	<input type="submit" name="consulta" value="Insertar Nuevo Ciudadano"  class="btn btn-primary">
     </form>
 </div>
+</center>
     <?php
 if(isset($_POST['consulta']))
 {

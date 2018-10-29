@@ -2,41 +2,41 @@
 
 require_once ("../../../Conexion.php");
 
-class MetodoVeterinarias{
+class MetodoUsCiudadano{
 		
-	public function MostrarVeterinarias(){
+	public function MostrarCiudadano(){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from usuario_veterinaria";
+	$sql="select * from login_usuarios";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
 
-		public function Mostrar_1_veterinaria($ni){
+		public function Mostrar_1_ciudadano($ced){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from usuario_veterinaria where nit_veterinaria='$ni'";
+	$sql="select * from login_usuarios where rol_login='$ced'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
 
-		public function  InsertarUsuarioVeterinaria($use,$cla){
+		public function  InsertarUsuarioCiudadano($use,$cla){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_veterinaria($use);
+		$result=$this->Mostrar_1_ciudadano($use);
 		if ($result->num_rows>0) {
-			$mensa="El Usuario de Veterinaria ya ha sido registrado";
+			$mensa="El Nombre de usuario ya existe";
 		
 		}
 		else{
-			$sql="call inser_usu_vet(?,?,?)";
+			$sql="call inser_usu_ciud(?,?,?)";
 			$consulta=$conexion->prepare($sql);
 			$consulta->bind_param('ssi',$nom_p,$cla_p,$rol_p);
 			$nom_p=$use;
 			$cla_p=$cla;
-			$rol_p=3;
+			$rol_p=4;
 			$consulta->execute();
-			$mensa="Usuario de la Veterinaria insertado correctamente";
+			$mensa="Usuario registrado Correctamente";
 		}
 		return $mensa;
 

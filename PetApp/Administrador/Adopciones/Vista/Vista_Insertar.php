@@ -1,12 +1,8 @@
-<?php
-require_once("../Controlador/Controlador_Insertar.php");
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Insertar Seguimiento</title>
-         <meta charset="utf-8">
+	<title>Adopciones</title>
+      <meta charset="utf-8">
     <link rel="stylesheet" href="Estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -14,31 +10,25 @@ require_once("../Controlador/Controlador_Insertar.php");
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-    <form action="../Vista/Vista_Seguimiento.php">
+<body>
+        <form action="Vista_Adopciones.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
-<body>
-    <center>
-	<div id="insertar">
-	<h1>Insertar Seguimiento</h1>
- <form action="../Controlador/Controlador_Insertar.php" method="Post">
- 	<p><label>Codigo de la Postulacion </label></p><input type="number" name="codigo">
-        </br>
-    </br>
-    	<input type="submit" name="consulta" value="Insertar Nuevo Seguimiento" class="btn btn-primary">
+	<h1>Postulacion</h1>
+ <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
+ 	<p><label>Codigo  del Animal</label></p><input type="number" name="animal">
+    	<p><label>Codigo del Seguimiento</label></p><input type="code" name="seguimiento">
+    	<p><label>Respuesta</label></p><input type="text" name="respuesta">
+    	<input type="submit" name="consulta" value="Enviar Adopcion">
     </form>
-</div>
-</center>
     <?php
 if(isset($_POST['consulta']))
 {
-echo "<script type='text/javascript'>;
+	echo "<script type='text/javascript'>;
 	alert('".$result."');
 	</script>";
-	
 }
 
     ?>
-
 </body>
 </html>
