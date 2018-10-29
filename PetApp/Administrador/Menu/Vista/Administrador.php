@@ -172,11 +172,11 @@
     </div> 
   </form>
 
-<form action="../../Usuario/Vista/Vista_Usuario.php">
+<form action="../../USUARIOS/USUARIOS.php">
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divusuario">
         <div class="panel-heading">
-          <h1>Usuario</h1>
+          <h1>Usuarios</h1>
         </div>
         <div class="panel-body"><center>
           <input type="image" name="Veterinaria" src="logos/Usuario.png"  class="img-responsive slideanim" id="logoimagen"></center>

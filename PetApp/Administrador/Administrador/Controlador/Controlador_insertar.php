@@ -1,3 +1,5 @@
+ <link rel="stylesheet" href="../Vista/Estilos.css">
+
 <?php
 if (isset($_POST['consulta'])){
 	$result=insertar();

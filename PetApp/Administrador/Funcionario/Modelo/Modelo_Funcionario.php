@@ -51,7 +51,7 @@ public function EliminarFuncionario($d){
 	return $consulta;
 	}
 
-		public function  InsertarFuncionario($ced,$tel,$nom,$cor,$cla){
+		public function  InsertarFuncionario($ced,$tel,$nom,$cor){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_funcionario_1($ced);
@@ -60,14 +60,13 @@ public function EliminarFuncionario($d){
 		
 		}
 		else{
-			$sql="call inser_fun_Admin(?,?,?,?,?,?)";
+			$sql="call Insertar_Funcionario(?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssssi',$ced_p,$tel_p,$nom_p,$cor_p,$cla_p,$rol_p);
+			$consulta->bind_param('ssssi',$ced_p,$tel_p,$nom_p,$cor_p,$rol_p);
 			$ced_p=$ced;
 			$tel_p=$tel;
 			$nom_p=$nom;
 			$cor_p=$cor;
-			$cla_p=$cla;
 			$rol_p=2;
 			$consulta->execute();
 			$mensa="Funcionario insertado correctamente";

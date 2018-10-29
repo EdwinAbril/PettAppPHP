@@ -27,7 +27,6 @@ require_once("../Controlador/Controlador_Insertar.php");
         <p><label>Telefono</label></p><input type="number" name="telefono" required="">
         <p><label>Nombre</label></p><input type="text" name="nombre" required="">
             <p><label>Correo</label></p><input type="mail" name="correo" required="">
-        <p><label>Clave De Usuario</label></p><input type="password" name="clave" required="">
             </br>
     </br>
         <input type="submit" name="consulta" value="Insertar Nuevo Usuario" class="btn btn-primary">

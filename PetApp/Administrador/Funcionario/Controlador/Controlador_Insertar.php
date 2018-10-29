@@ -1,3 +1,4 @@
+ <link rel="stylesheet" href="../Vista/Estilos.css">
 <?php
 if (isset($_POST['consulta'])){
 	$result=insertar();
@@ -9,10 +10,9 @@ function insertar(){
 	$tel=$_POST['telefono'];
 	$nom=$_POST['nombre'];
 	$cor=$_POST['correo'];
-	$cla=$_POST['clave'];
 	require_once("../Modelo/Modelo_Funcionario.php");
 	$mostrar=new MetodoFuncionario();
-	$result=$mostrar->InsertarFuncionario($ced,$tel,$nom,$cor,$cla);
+	$result=$mostrar->InsertarFuncionario($ced,$tel,$nom,$cor);
 
 	return $result;
 }

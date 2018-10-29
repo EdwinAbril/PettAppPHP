@@ -41,6 +41,26 @@ class MetodoFuncionarios{
 		return $mensa;
 
 	}
+			public function  InsertarUsuarioFuncionario2($use){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_funcionario($use);
+		if ($result->num_rows>0) {
+			$mensa="El Usuario de Funcionario ya ha sido registrado";
+		
+		}
+		else{
+			$sql="call inser_fun_func(?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('si',$nom_p,$rol_p);
+			$nom_p=$use;
+			$rol_p=2;
+			$consulta->execute();
+		$mensa="Usuario de Funcionario insertado correctamente";
+		}
+	
+return $mensa;
+	}
 }
 
 ?>
