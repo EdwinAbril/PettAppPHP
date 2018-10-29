@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Insertar Denuncia</title>
+	<title>Insertar Denuncias</title>
         <meta charset="utf-8">
     <link rel="stylesheet" href="Estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
