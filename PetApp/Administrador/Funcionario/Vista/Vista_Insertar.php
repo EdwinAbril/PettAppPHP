@@ -16,20 +16,24 @@ require_once("../Controlador/Controlador_Insertar.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </head>
 <body>
-       <form action="Vista_Funcionario.php">
+       <form action="../Vista/Vista_Funcionario.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
-    <div class="insertar">
+<center>
+    <div id="insertar">
     <h1>Insertar Funcionario</h1>
  <form action="../Controlador/Controlador_Insertar.php" method="Post">
-    <p><label>Cedula </label></p><input type="number" name="cedula">
-        <p><label>Telefono</label></p><input type="number" name="telefono">
-        <p><label>Nombre</label></p><input type="text" name="nombre">
-            <p><label>Correo</label></p><input type="mail" name="correo">
-        <p><label>Clave De Usuario</label></p><input type="password" name="clave">
-        <input type="submit" name="consulta" value="Insertar Nuevo Usuario">
+    <p><label>Cedula </label></p><input type="number" name="cedula" required="">
+        <p><label>Telefono</label></p><input type="number" name="telefono" required="">
+        <p><label>Nombre</label></p><input type="text" name="nombre" required="">
+            <p><label>Correo</label></p><input type="mail" name="correo" required="">
+        <p><label>Clave De Usuario</label></p><input type="password" name="clave" required="">
+            </br>
+    </br>
+        <input type="submit" name="consulta" value="Insertar Nuevo Usuario" class="btn btn-primary">
     </form>
 </div>
+</center>
     <?php
 if(isset($_POST['consulta']))
 {

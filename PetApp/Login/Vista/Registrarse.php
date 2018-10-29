@@ -1,3 +1,8 @@
+<?php
+require_once("Controlador/Controlador_Insertar.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,19 +17,14 @@
 
 	<div id="contenedor">
 	<div id="Registrar">
-		<form action="" method="Post">
+
+		<form action="Controlador/Controlador_Insertar.php" method="Post">
 			<center>
 			<h1>Registrarse</h1>
-			<input type="text" name=Nombre value="" placeholder="Nombre"></label>
-			<br>
-			<br>
 			<input type="text" name="Usuario" value="" placeholder="Usuario"></label>
 			<br>
 			<br>
 			<input type="password" name="clave" value="" placeholder="Clave" ></label>
-			<br>
-			<br>
-			<input type="text" name="clave" value="" placeholder="Codigo" ></label>
 			<br>
 			<br>
 			<input type="submit" name="Entrar" value="Registrarse" class="btn btn-primary">

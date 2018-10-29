@@ -1,5 +1,5 @@
 <?php
-require_once("../Controlador/Controlador_Funcionario.php");
+require_once("../Controlador/Controlador_Insertar.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,15 +13,21 @@ require_once("../Controlador/Controlador_Funcionario.php");
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="Estilo.css">
 <body>
-  <div class="insertar">
+   <form action="Vista_Administrador.php">
+  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+</form>
+<center>
+  <div id="insertar">
   <h1>Insertar Usuario</h1>
- <form action="../Controlador/Controlador_Funcionario.php" method="Post">
+ <form action="../Controlador/Controlador_Insertar.php" method="Post">
   <p><label>Cedula </label></p><input type="number" name="cedula">
-      <p><label>Nombre</label></p><input type="text" name="nombre">
       <p><label>Clave</label></p><input type="password" name="clave">
-      <input type="submit" name="consulta" value="Insertar Nuevo Usuario">
+    </br>
+    </br>
+      <input type="submit" name="consulta" value="Insertar Nuevo Usuario" class="btn btn-primary">
     </form>
 </div>
+</center>
     <?php
 if(isset($_POST['consulta']))
 {
