@@ -15,7 +15,7 @@
   <input type="submit" name="nuevo" value="Insertar Nueva Veterinaria" class="btn btn-outline-dark" id="nuevo">
   	</form>
 
-<div class="container" name="tabla">
+<div name="tabla">
 	<form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
   	</form>
@@ -32,7 +32,6 @@ echo "
 	<th scope='col'>Telefono</th>
 	<th scope='col'>Nombre</th>
 	<th scope='col'>Direccion</th>
-	<th scope='col'>Clave</th>
 	<th scope='col'>Rol</th>
 	<th scope='col'></th>
 	<th scope='col'></th>
@@ -50,8 +49,7 @@ echo "
 	<th scope='col'>".$Vet[1]."</th>
 	<th scope='col'>".$Vet[2]."</th>
 	<th scope='col'>".$Vet[3]."</th>
-	<th scope='col'>".$Vet[4]."</th>
-	<th scope='col'>".$Vet[5]."</th>";
+	<th scope='col'>".$Vet[4]."</th>";
 	?>
 	<form action="Modificar_Veterinaria.php">
 	<?php

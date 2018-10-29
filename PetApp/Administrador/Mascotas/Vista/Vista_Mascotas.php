@@ -12,10 +12,10 @@
 </head>
 <body>
 	<form action="Vista_Insertar.php">
-  <input type="submit" name="nuevo" value="Insertar Nueva Mascota" class="btn btn-outline-dark" id="nuev">
+  <input type="submit" name="nuevo" value="Insertar Nueva Mascota" class="btn btn-outline-dark" id="nuevo">
   	</form>
 
-<div class="container" name="tabla">
+<div name="tabla">
 	<form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
   	</form>
