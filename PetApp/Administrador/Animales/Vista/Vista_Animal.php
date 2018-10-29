@@ -35,6 +35,7 @@ echo "
 	<th scope='col'>Tipo</th>
 	<th scope='col'>Edad</th>
 	<th scope='col'>Raza</th>
+	<th scope='col'>Imagen</th>
 	<th scope='col'></th>
 	<th scope='col'></th>
 	<th scope='col'></th>
@@ -50,7 +51,8 @@ echo "
 	<th scope='col'>".$Ani[1]."</th>
 	<th scope='col'>".$Ani[2]."</th>
 	<th scope='col'>".$Ani[3]."</th>
-	<th scope='col'>".$Ani[4]."</th>";
+	<th scope='col'>".$Ani[4]."</th>
+	<th><img src='../../../Animales_fotos/".$Ani[5]."' width='30' heigth='30'> </th>";
 	?>
 	<?php
 	echo "
