@@ -7,7 +7,11 @@ body{
 	margin-top:25px;
 	align-self:center;
 }
-
+#nuevo{
+	float: left;
+	margin-top: 10px;	
+	margin-left: 3px;
+}
 header{
     background-image: url("Imagenes/Banner.jpg");  
     font-weight: bold; 

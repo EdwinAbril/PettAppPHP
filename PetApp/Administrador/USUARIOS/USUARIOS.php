@@ -13,7 +13,9 @@
     <form action="../../../Login/Vista/registro.php">
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
     </form>
-
+   <form action="../Menu/Vista/Administrador.php">
+  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="nuevo">
+</form>
 		<h1>Creacion De Usuarios</h1>
 		<img src="Imagenes/Admin2.png" id="Avatar" >
 	</header>

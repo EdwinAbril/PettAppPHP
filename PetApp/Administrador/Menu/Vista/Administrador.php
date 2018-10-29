@@ -32,7 +32,7 @@
   <form action="../../Administrador/Vista/Vista_Administrador.php">
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading">
+        <div class="panel-heading" id="verde">
           <h1>Administrador</h1>
         </div>
         <div class="panel-body"><center>
@@ -45,7 +45,7 @@
   <form action="../../Adopciones/Vista/Vista_Adopciones.php">
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading">
+        <div class="panel-heading" id="verde">
           <h1>Adopciones</h1>
         </div>
         <div class="panel-body"><center>
@@ -57,8 +57,8 @@
     
     <form action="../../Animales/Vista/Vista_Animal.php">
     <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divanimal">
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
           <h1>Animales</h1>
         </div>
         <div class="panel-body"><center>
@@ -71,7 +71,7 @@
 <form action="../../Ciudadano/Vista/Vista_Ciudadano.php">
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading">
+        <div class="panel-heading" id="verde">
           <h1>Ciudadano</h1>
         </div>
         <div class="panel-body"><center>
@@ -83,8 +83,8 @@
 
 <form action="../../Comentarios/Vista/Vista_Comentarios.php">
 <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divcoment">
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
           <h1>Comentarios</h1>
         </div>
         <div class="panel-body"><center>
@@ -96,8 +96,8 @@
 
 <form action="../../Denuncias/Vista/Vista_Denuncias.php">
 <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divdenuncias">
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
           <h1>Denuncias</h1>
         </div>
         <div class="panel-body"><center>
@@ -109,8 +109,8 @@
 
 <form action="../../Eventos/Vista/Vista_Eventos.php">
 <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="diveventos">
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
           <h1>Eventos</h1>
         </div>
         <div class="panel-body"><center>
@@ -122,8 +122,8 @@
 
     <form action="../../Funcionario/Vista/Vista_Funcionario.php">
     <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divfuncionario">
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
           <h1>Funcionario</h1>
         </div>
         <div class="panel-body"><center>
@@ -135,8 +135,8 @@
 
 <form action="../../Mascotas/Vista/Vista_Mascotas.php">
 <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divmascotas">
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
           <h1>Mascotas</h1>
         </div>
         <div class="panel-body"><center>
@@ -148,8 +148,8 @@
 
 <form action="../../Postulacion/Vista/Vista_Postulacion.php">
 <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divpostulacion">
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
           <h1>Postulacion</h1>
         </div>
         <div class="panel-body"><center>
@@ -161,8 +161,8 @@
 
 <form action="../../Seguimiento/Vista/Vista_Seguimiento.php">
 <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divseguimiento"> 
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano"> 
+        <div class="panel-heading" id="verde">
           <h1>Seguimiento</h1>
         </div>
         <div class="panel-body"><center>
@@ -174,8 +174,8 @@
 
 <form action="../../USUARIOS/USUARIOS.php">
 <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divusuario">
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
           <h1>Usuarios</h1>
         </div>
         <div class="panel-body"><center>
@@ -187,8 +187,8 @@
 
 <form action="../../Veterinaria/Vista/Vista_Veterinaria.php">
 <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divvet">
-        <div class="panel-heading">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
           <h1>Veterinaria</h1>
         </div>
         <div class="panel-body"><center>
