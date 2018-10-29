@@ -5,9 +5,9 @@ float: left;
 float: right;
 }
 #nuevo{
-	position: absolute;
-	top: 10px;
-	left: 10px;
+	float: left;
+	margin-top: 50px;	
+	margin-left: 5px;
 }
 #insertar{
    padding: 50px;
@@ -30,6 +30,8 @@ float: right;
 		width: 80%;
 	}
 	   #insertar{
+  
+ 
     background: white;
     margin-top: 80px;
     border-radius: 20px 20px 20px 20px;
@@ -42,5 +44,3 @@ float: right;
 	top: 5px;
 	left: 5px;
 }
-
-

@@ -8,6 +8,7 @@
 
 header{
 	width:100%;
+	height: 190px;
 	overflow:hidden;
 	background:green;
 
@@ -111,6 +112,7 @@ header nav s:hover{
 
 .slider{
 width: 100%;
+height: 550px;
 margin: auto;
 overflow: hidden;
 }
@@ -132,6 +134,7 @@ overflow: hidden;
 .slider img{
 
 	width:100%;
+	height: 550px;
 }
 .boton-menu{
 	display: none;
@@ -177,16 +180,86 @@ h1{
     
 }
 
-
 #imagen{
 	position: relative;
 }
+#imagen2{
+	position: relative;
+}
+#imagen3{
+	position: relative;
+}
+
 #caja2{
-    background-color: green; 
+    background-color: white; 
+    width: auto;
+    height:300px;
+    padding: 15px;
+    position: relative;
+}
+
+#caja4{
+    background-color: white; 
+    width: auto;
+    height:300px;
+    padding: 15px;
+    position: relative;
+}
+
+#caja6{
+    background-color: white; 
+    width: auto;
+    height:300px;
+    padding: 15px;
+    position: relative;
+}
+
+
+#info{
+	cursor: pointer;
+	margin-top:50px;
+	float: right;
+}
+
+#info2{
+	cursor: pointer;
+	margin-top:50px;
+	float: right;
+}
+
+#info3{
+	cursor: pointer;
+	margin-top:50px;
+	float: right;
+}
+
+p{	
+	text-align: left;
+	font-size: 16px;
+}
+
+a{	
+	cursor: pointer;
+	align-self: right;
+}
+
+
+#caja4{
+    background-color: white; 
     width:448px;
     height:300px;
+    padding: 15px;
+    position: relative;
+}
+
+#caja6{
+    background-color: white; 
+    width:448px;
+    height:300px;
+    padding: 15px;
     position: relative;
 } 
+
 #contenedor1{
 	position: absolute;
 }
@@ -194,16 +267,21 @@ h1{
 .panel-heading{
     background-color:green;
 }
+
 #panel{
  background-color:green;
  color: white;
 }
+
 .panel-body{
     
     padding:0px;
     background-color:#DFF4BA;
 }
 
+#modulos{
+	padding: 10px;
+}
 
 .img-responsive slideanim{
     max-width:100%;
@@ -265,5 +343,19 @@ text-decoration: none;
     
 }
 
+.slider{
+width: 100%;
+height: 280px;
+margin: auto;
+overflow: hidden;
 }
+
+.slider img{
+
+	width:100%;
+	height: 280px;
+}
+
+}
+
 

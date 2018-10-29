@@ -6,20 +6,20 @@
 	<title>Pet App</title>
 	<link rel="stylesheet" href="Estilo.css">
 	<link rel="stylesheet" href="Imagenes/fonts/style.css" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-white.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="main.js"></script>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="js/jquery-3.3.1.min.js" ></script>
-  <script src="js/main.js" ></script>
+  	<script src="js/jquery-3.3.1.min.js" ></script>
+  	<script src="js/main.js" ></script>
 
 </head>
 <body>
+
 <header >	
 		<div class="logotipo">
-	<h1>Pet App</h1>
+		<h1>Pet App</h1>
 		</div>
 		<div class="navegacion">
 			<div class="boton-menu">
@@ -44,21 +44,26 @@
 			<s><img src="img/banner2.jpg" alt=""></s>
 			<s><img src="img/banner3.jpg" alt=""></s>
 			<s><img src="img/banner4.jpeg" alt=""></s>
-
-
 		</ul>
 	</div>
 
+	<br>
+	<br>
 
-  <div class="row slideanim" >
+  <div class="row slideanim" id="modulos">
 
   <div class="col-sm-4 col-xs-12" id="caja1" >
     <div class="panel panel-default text-center">
-        <div class="panel-heading">
+        <div class="panel-heading" id="panel">
+        	<img src="Imagenes/info.png" height="30" width="30" id="info" > 
           <h1>Adopcion</h1>
             <h5>Como Adopto?</h5>
             </div>
             <div id="caja2">
+            	<br>
+            	<p>En este modulo usted podrá dar hogar a un animal que lo necesita, La alcaldia municipal de Mosquera Cundinamarca, le ofrece la posibilidad de escoger el animal que usted quiera adoptar, y asi contribuir de manera responsable a la salud ambiental y el desarrollo del municipio </p><br><br>
+            	<a>saber más</a>
+
             </div>
           <div class="panel-body" id="imagen">
           <!--  AQUI VA LA IMAGEN DEL EVENTO -->
@@ -67,31 +72,63 @@
     </div>      
   </div>  
       
-    <div class="col-sm-4 col-xs-12">
+    <div class="col-sm-4 col-xs-12" id="caja3">
       <div class="panel panel-default text-center">
           <div class="panel-heading" id="panel">
+          	<img src="Imagenes/info.png" height="30" width="30" id="info2" >
           <h1>Veterinarias</h1>
            <h5>Veterinarias Vinculadas</h5>
         </div>
-        <div class="panel-body">
+        <div id="caja4">
+        	<br>
+            	<p>En este modulo usted podrá ubicar las diferentes veterinarias del municipio que contribuyen al cuidado animal y a las cuales usted podra acudir en caso de que su mascota requiera atencion</p><br><br>
+            	<a>saber más</a>
+        </div>
+        <div class="panel-body" id="imagen2">
           <img src="Imagenes/veterinaria.jpeg" class="img-responsive slideanim">
         </div>
       </div>      
     </div>     
 
-    <div class="col-sm-4 col-xs-12">
+    <div class="col-sm-4 col-xs-12" id="caja5">
       <div class="panel panel-default text-center">
           <div class="panel-heading" id="panel">
+          	<img src="Imagenes/info.png" height="30" width="30" id="info3" >
           <h1>Eventos</h1>
            <h5>Informate</h5>
         </div>
-        <div class="panel-body">
-          <img src="Imagenes/eventos.jpeg" class="img-responsive slideanim">
+        <div id="caja6">
+           <br>
+            	<p>En este modulo usted podrá informarse acerca de las jornadas de ciudado animal que realiza el municipio, aqui podra observar una descripcion detallada ademas de la fecha, la hora y el lugar en el que se realizarn  </p><br><br>
+            	<a>saber más</a>
+        </div>
+        <div class="panel-body" id="imagen3">
+          <img src="Imagenes/Jornadas.jpeg" class="img-responsive slideanim">
         </div>
       </div>      
     </div>    
   </div>
 
+
+    <footer id="myFooter">
+        <div class="container">
+            <ul>
+                <li><a href="#">Alcaldia de Mosquera</a></li>
+                <li><a href="#">Contactenos</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Terms of service</a></li>
+            </ul>
+        <p class="footer-copyright">© 2018 Copyright</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
+        </div>
+</footer>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
 
 </body>
 </html>

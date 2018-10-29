@@ -2,7 +2,7 @@
 
 require_once ("../../../Conexion.php");
 
-class MetodoVeterinaria{
+class MetodoCiudadano{
 	
 	public function MostrarCiudadano(){
 	$conectar= new conectarproyecto();
