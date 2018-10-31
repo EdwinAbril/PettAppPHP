@@ -14,7 +14,7 @@
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
     </form>
 
-		<h1>Administrador</h1>
+		<h1>Administradora</h1>
 		<img src="Imagenes/Admin2.png" id="Avatar" >
 	</header>
 
