@@ -99,7 +99,7 @@
         </div>
         <div id="caja6">
            <br>
-            	<p>En este modulo usted podrá informarse acerca de las jornadas de ciudado animal que realiza el municipio, aqui podra observar una descripcion detallada ademas de la fecha, la hora y el lugar en el que se realizarn  </p><br><br>
+            	<p>En este modulo usted podrá informarse acerca de las jornadas de ciudado animal que realiza el municipio, aqui podra observar una descripcion detallada ademas de la fecha, la hora y el lugar en el que se realizaran  </p><br><br>
             	<a>saber más</a>
         </div>
         <div class="panel-body" id="imagen3">
