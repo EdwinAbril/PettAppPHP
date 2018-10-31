@@ -1,3 +1,4 @@
+ <link rel="stylesheet" href="../Vista/Estilos.css">
 <?php
 if (isset($_POST['consulta'])){
 	$result=insertar();
@@ -11,6 +12,7 @@ function insertar(){
 	require_once("../Modelo/Modelo_Usuario.php");
 	$mostrar=new MetodoUsuario();
 	$result=$mostrar->InsertarUsuario($ced,$nom,$cla);
+	$result=$mostrar->InsertarUsuario2($nom);
 
 	return $result;
 }

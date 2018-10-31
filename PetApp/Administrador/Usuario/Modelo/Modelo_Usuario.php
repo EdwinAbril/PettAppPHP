@@ -57,6 +57,25 @@ class MetodoUsuario{
 		return $mensa;
 
 	}
+		public function  InsertarUsuario2($nom){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_usuario($nom);
+		if ($result->num_rows>0) {
+			$mensa="El Usuario del Ciudadano ya ha sido registrado";
+		
+		}
+		else{
+			$sql="call inser_fun_ciud(?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('s',$nom_p);
+			$nom_p=$nom;
+			$consulta->execute();
+			$mensa="Usuario del Ciudadano insertado correctamente";
+		}
+		return $mensa;
+
+	}
 
 	public function EliminarUsuario($d){
 	$conectar= new conectarproyecto();

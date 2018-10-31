@@ -15,8 +15,6 @@
 
     <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
     </form>
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
-</form>
 <center>
     <div id="insertar" >
 	<h1>Insertar Denuncia</h1>

@@ -1,3 +1,5 @@
+
+    <link rel="stylesheet" href="../Vista/Estilos.css">
 <?php
 if (isset($_POST['consulta'])){
 	$resulta=insertar();
@@ -18,7 +20,7 @@ function insertar(){
 
         $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Animales_fotos/';
 
-        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/GitHub/PettAppPHP/PetApp/Animales_fotos/';
+        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Animales_fotos/';
 
         move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre);
     }
