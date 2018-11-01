@@ -1,0 +1,65 @@
+
+body{
+	font-family:Rockwell;
+}
+
+#Avatar{
+	margin-top:25px;
+	align-self:center;
+}
+
+header{
+    background-image: url("Imagenes/Banner.jpg");  
+    font-weight: bold; 
+    padding: 50px;
+    text-align: center;
+ } 
+    
+#pricing{
+	background-image: url("Imagenes/Fondo2.jpg"); 
+}
+
+
+#divinsert{
+	max-width: 300px;
+}
+
+
+#divconsulta{
+	max-width: 300px;
+}
+
+
+#divactuali{
+	max-width: 300px;
+}
+
+
+#diveli{
+	max-width: 300px;
+}
+
+
+.container{
+	max-width: 100%;
+	min-width: 40%;
+}
+
+footer{
+	margin:0px;
+	text-align:center;
+	clear:both;
+	background-color: white;
+	position: relative;
+	margin-top: 100%;
+}
+
+@media screen and (max-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (min-width:1024px) {
+    /* reglas CSS */
+}
