@@ -27,10 +27,14 @@
 	<tr>
 	<form action='../Controlador/Controlador_Actualizar_Animal.php' method='Post'>
 	<input type='hidden' name='usu' value='".$Ani[0]."'>   
-    <p>Nombre</p><input type='text' name='nombre' value='".$Ani[1]."'><BR>
-    <p>Tipo</p><input type='text' name='tipo'  value='".$Ani[2]."'><BR>
-    <p>Edad</p><input type='text' name='edad'  value='".$Ani[3]."'><BR>
-    <p>Raza</p><input type='text' name='raza'  value='".$Ani[4]."'><BR><BR>
+    <p>Nombre</p><input type='text' name='nombre' value='".$Ani[1]."'>
+    <p>Tipo</p><input type='text' name='tipo'  value='".$Ani[2]."'>
+    <p>Edad</p><input type='text' name='edad'  value='".$Ani[3]."'>
+    <p>Raza</p><input type='text' name='raza'  value='".$Ani[4]."'>
+
+    <p>Tamaño</p><input type='text' name='tama'  value='".$Ani[6]."'>
+    <p>Genero</p><input type='text' name='gene'  value='".$Ani[7]."'>
+    <p>Color</p><input type='text' name='colo'  value='".$Ani[8]."'>
     
     <input type='submit' name='botonfunci' value='Modificar'>
     </form>";

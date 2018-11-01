@@ -20,17 +20,20 @@ class MetodoAnimal{
 	return $consulta;
 	}
 
-	public function ModificarAnimal($codigo,$nombre,$tipo,$edad,$raza){
+	public function ModificarAnimal($codigo,$nombre,$tipo,$edad,$raza,$tamaño,$genero,$color){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call act_animal_Admin(?,?,?,?,?)";
+	$sql="call act_animal_Admin(?,?,?,?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('issss',$codigo_p,$nombre_p,$tipo_p,$edad_p,$raza_p);
+	$consulta->bind_param('isssssss',$codigo_p,$nombre_p,$tipo_p,$edad_p,$raza_p,$tamaño_p,$genero_p,$color_p);
 	$codigo_p=$codigo;
 	$nombre_p=$nombre;
 	$tipo_p=$tipo;
 	$edad_p=$edad;
 	$raza_p=$raza;
+	$tamaño_p=$tamaño;
+	$genero_p=$genero;
+	$color_p=$color;
 	$consulta->execute();
 	$mensa="Usuario Modificado";
 	return $mensa;
