@@ -14,6 +14,9 @@ function insertar(){
 	$nombre=$_FILES['imagen']['name'];
     $tipo=$_FILES['imagen']['type'];
     $tamaño=$_FILES['imagen']['size'];
+    $tam=$_POST['tamaño'];
+    $gen=$_POST['genero'];
+    $col=$_POST['color'];
 	if ($nombre!=null && $tamaño<=1000000) {
         $hoy=date("d_m_y");
         $nombre=$hoy.$nombre;
@@ -26,7 +29,7 @@ function insertar(){
     }
 	require_once("../Modelo/Modelo_Animal.php");
 	$mostrar=new MetodoAnimal();
-	$resulta=$mostrar->InsertarAnimal($na,$ta,$ea,$ra,$nombre);
+	$resulta=$mostrar->InsertarAnimal($na,$ta,$ea,$ra,$nombre,$tam,$gen,$col);
 
 	return $resulta;
 }

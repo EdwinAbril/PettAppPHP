@@ -22,6 +22,9 @@
     	<p><label>Tipo de Animal</label></p><input type="text" name="tipo" class="form-control" required="">
     	<p><label>Edad del Animal</label></p><input type="text" name="edad" class="form-control" required="">
     	<p><label>Raza del Animal</label></p><input type="text" name="raza" class="form-control" required="">
+        <p><label>Tamaño del Animal</label></p><input type="text" name="tamaño" class="form-control" required="">
+        <p><label>Genero</label></p><input type="text" name="genero" class="form-control" required="">
+        <p><label>Color del Animal</label></p><input type="text" name="color" class="form-control" required="">
     	<p><label>Foto del Animal</label></p><center><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></center></label>
     </br>
     </br>
