@@ -12,9 +12,10 @@ require_once("../Controlador/Controlador_Insertar.php");
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="Estilos.css">
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  
 <body>
-    <form action="Vista_Administrador.php">
+    <form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
 <center>
@@ -33,7 +34,7 @@ require_once("../Controlador/Controlador_Insertar.php");
 if(isset($_POST['consulta']))
 {
 echo "<script type='text/javascript'>;
-  alert('".$result."');
+  swal('".$result."', '', 'success');
   </script>";
   
 }

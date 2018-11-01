@@ -10,6 +10,7 @@ function insertar(){
 	require_once("../Modelo/Modelo_Veterinaria.php");
 	$mostrar=new MetodoVeterinarias();
 	$result=$mostrar->InsertarUsuarioVeterinaria($us,$cla);
+	$result=$mostrar->InsertarUsuarioVeterinaria2($us);
 	return $result;
 }
 ?>

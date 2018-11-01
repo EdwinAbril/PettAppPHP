@@ -13,6 +13,7 @@ require_once("../Controlador/Controlador_Ciudadano.php");
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 	
 <body>
@@ -46,7 +47,7 @@ if(isset($_POST['consulta']))
 	$us=$_POST['usuario'];
 	$mensaje=$mostrar->InsertarCiudadano($ced,$nom,$tel,$dir,$cor,$us);
 	echo "<script type='text/javascript'>;
-	alert('".$mensaje."');
+	swal('".$mensaje."', '', 'success');
 	</script>";
 }
 

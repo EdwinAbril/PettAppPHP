@@ -45,7 +45,7 @@ class MetodoAdministrador{
 		public function Mostrar_1_Administrador_1($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from usuarios where nom_usuario='$usu'";
+	$sql="select * from login_usuarios where nombre_usuario='$usu'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
