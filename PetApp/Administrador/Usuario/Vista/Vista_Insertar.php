@@ -16,7 +16,6 @@ require_once("../Controlador/Controlador_Usuario.php");
 	<div class="insertar">
 	<h1>Insertar Usuario</h1>
  <form action="../Controlador/Controlador_Usuario.php" method="Post">
- 	<p><label>Cedula </label></p><input type="number" name="cedula">
     	<p><label>Nombre</label></p><input type="text" name="nombre">
     	<p><label>Clave</label></p><input type="password" name="clave">
     	<input type="submit" name="consulta" value="Insertar Nuevo Usuario">
