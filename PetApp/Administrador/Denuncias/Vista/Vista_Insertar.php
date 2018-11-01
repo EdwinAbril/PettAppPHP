@@ -10,24 +10,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body id="fondox">
         <form action="../Vista/Vista_Denuncias.php">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
+        </form>
 
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
-    </form>
-<center>
-    <div id="insertar" >
+    <div id="padre">
+    <div id="insertar" class="form-group">
 	<h1>Insertar Denuncia</h1>
- <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
- 	<p><label>Fecha De la Denuncia</label></p><input type="date" name="fecha" required="">
-    	<p><label>Tipo de Denuncia</label></p><input type="text" name="tipo" required="">
-    	<p><label>Cedula del Denunciante</label></p><input type="number" name="cedula" required="">
-    	<p><label>Denuncia</label></p><input type="text" name="denuncia" required="">
-    	<p><label>Foto</label></p><center><input type="file" name="imagen" id="quitar" accept="image/png,image/jpeg,image/jpg"></center></label>
-           </br>
-    </br>
+    <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
+ 	    <label>Fecha De la Denuncia</label><input type="date" name="fecha" required="" class="form-control">
+    	<label>Tipo de Denuncia</label><input type="text" name="tipo" required="" class="form-control">
+    	<label>Cedula del Denunciante</label><input type="number" name="cedula" required="" class="form-control">
+    	<label>Denuncia</label><input type="text" name="denuncia" required="" class="form-control">
+    	<div id="foto">
+        <label>Foto</label><input type="file" name="imagen" id="quitar" accept="image/png,image/jpeg,image/jpg" class="form-control-file">
+        </div>
+        <div class="form-group" id="bot">
     	<input type="submit" name="consulta" value="Realizar Denuncia" class="btn btn-primary">
+        </div>
     </form>
+</div>
 </div>
 </center>
     <?php
