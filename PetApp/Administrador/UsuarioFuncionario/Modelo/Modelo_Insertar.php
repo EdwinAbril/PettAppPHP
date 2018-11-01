@@ -20,6 +20,14 @@ class MetodoFuncionarios{
 	return $consulta;
 	}
 
+	public function Mostrar_2_funcionario($ced){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$sql="select * from funcionario where cedula_funcionario='$ced'";
+		$consulta=mysqli_query($conexion,$sql);
+		return $consulta;
+	}
+
 		public function  InsertarUsuarioFuncionario($use,$cla){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
@@ -44,7 +52,7 @@ class MetodoFuncionarios{
 			public function  InsertarUsuarioFuncionario2($use){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_funcionario($use);
+		$result=$this->Mostrar_2_funcionario($use);
 		if ($result->num_rows>0) {
 			$mensa="El Usuario de Funcionario ya ha sido registrado";
 		

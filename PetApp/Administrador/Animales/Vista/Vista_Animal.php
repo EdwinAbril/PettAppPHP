@@ -18,7 +18,7 @@
 	<form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
-<form action="Vista_Insertar.php">
+<form action="../Vista/Vista_Insertar.php">
   <input type="submit" name="nuevo" value="Insertar Nuevo Animal" class="btn btn-outline-dark" id="nuevo">
 </form>
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">

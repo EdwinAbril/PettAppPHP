@@ -30,24 +30,24 @@ class MetodoUsuario{
 		public function Mostrar_1_usuario($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from registro_usuario where cedula_ciu='$usu'";
+	$sql="select * from login_usuarios where nombre_usuario='$usu'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
 
-		public function  InsertarUsuario($ced,$nom,$cla){
+	
+		public function  InsertarUsuario($nom,$cla){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_usuario($ced);
+		$result=$this->Mostrar_1_usuario($nom);
 		if ($result->num_rows>0) {
 			$mensa="El Usuario del Ciudadano ya ha sido registrado";
 		
 		}
 		else{
-			$sql="call insertar_usuario_Admin(?,?,?,?)";
+			$sql="call inser_usu_ciud(?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssi',$ced_p,$nom_p,$cla_p,$rol_p);
-			$ced_p=$ced;
+			$consulta->bind_param('ssi',$nom_p,$cla_p,$rol_p);
 			$nom_p=$nom;
 			$cla_p=$cla;
 			$rol_p=4;
@@ -57,25 +57,7 @@ class MetodoUsuario{
 		return $mensa;
 
 	}
-		public function  InsertarUsuario2($nom){
-		$conectar=new conectarproyecto();
-		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_usuario($nom);
-		if ($result->num_rows>0) {
-			$mensa="El Usuario del Ciudadano ya ha sido registrado";
-		
-		}
-		else{
-			$sql="call inser_fun_ciud(?)";
-			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('s',$nom_p);
-			$nom_p=$nom;
-			$consulta->execute();
-			$mensa="Usuario del Ciudadano insertado correctamente";
-		}
-		return $mensa;
 
-	}
 
 	public function EliminarUsuario($d){
 	$conectar= new conectarproyecto();

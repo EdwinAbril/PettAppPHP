@@ -6,14 +6,11 @@ if (isset($_POST['consulta'])){
 }
 
 function insertar(){
-	$ced=$_POST['cedula'];
 	$nom=$_POST['nombre'];
 	$cla=$_POST['clave'];
 	require_once("../Modelo/Modelo_Usuario.php");
 	$mostrar=new MetodoUsuario();
-	$result=$mostrar->InsertarUsuario($ced,$nom,$cla);
-	$result=$mostrar->InsertarUsuario2($nom);
-
+	$result=$mostrar->InsertarUsuario($nom,$cla);
 	return $result;
 }
 ?>
