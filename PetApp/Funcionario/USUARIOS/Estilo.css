@@ -1,0 +1,124 @@
+
+body{
+	font-family:Rockwell;
+}
+
+#Avatar{
+	margin-top:25px;
+	align-self:center;
+}
+#nuevo{
+	float: left;
+	margin-top: 10px;	
+	margin-left: 3px;
+}
+header{
+    background-image: url("Imagenes/Banner.jpg");  
+    font-weight: bold; 
+    padding: 50px;
+    text-align: center;
+ } 
+    
+#diciu{
+	background-color: green;
+	color: white;
+}
+
+#divinsert{
+	max-width: 300px;
+}
+
+
+#divconsulta{
+	max-width: 300px;
+}
+
+
+#divactuali{
+	max-width: 300px;
+}
+
+
+#diveli{
+	max-width: 300px;
+}
+
+
+
+#divadmin{
+	max-width: 350px;
+	padding: 0px;
+}
+
+#divadopcion{
+	max-width: 350px;
+}
+
+#divanimal{
+	max-width: 350px;
+}
+
+#divciudadano{
+	max-width: 350px;
+
+}
+
+#divcoment{
+	max-width: 350px;
+}
+
+#divdenuncias{
+	max-width: 350px;
+}
+
+#diveventos{
+	max-width: 350px;
+}
+
+#divfuncionario{
+	max-width: 350px;
+}
+
+#divmascotas{
+	max-width: 350px;
+}
+
+#divpostulacion{
+	max-width: 350px;
+}
+
+#divseguimiento{
+	max-width: 350px;
+}
+
+#divusuario{
+	max-width: 350px;
+}
+
+#divvet{
+	max-width: 350px;
+}
+
+.container{
+	max-width: 100%;
+	min-width: 40%;
+}
+
+footer{
+	margin:0px;
+	text-align:center;
+	clear:both;
+	background-color: white;
+	position: relative;
+	margin-top: 100%;
+}
+
+@media screen and (max-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (min-width:1024px) {
+    /* reglas CSS */
+}

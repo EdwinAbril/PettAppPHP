@@ -31,7 +31,7 @@
 
   
 
-  <form action="../../../Adopciones/Vista/Vista_Adopciones.php">
+  <form action="../../Adopciones/Vista/Vista_Adopciones.php">
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divciudadano">
         <div class="panel-heading" id="verde">
@@ -159,19 +159,6 @@
         </div>
       </div>      
     </div> 
-  </form>
-
-<form action="../../USUARIOS/USUARIOS.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Usuarios</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Veterinaria" src="logos/Usuario.png"  class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
   </form>
 
 <form action="../../Veterinaria/Vista/Vista_Veterinaria.php">
