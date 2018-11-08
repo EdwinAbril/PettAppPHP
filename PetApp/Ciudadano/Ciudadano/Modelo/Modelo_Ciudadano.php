@@ -31,11 +31,11 @@ class MetodoCiudadano{
 		else{
 			$sql="call inser_usuario_Admin(?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssss',$c_p,$n_p,$t_p,$d_p,$co_p,$us_p);
+			$consulta->bind_param('ssssss',$c_p,$n_p,$t_p,$d_p,$co_p,$us_p);
 			$c_p=$c;
 			$n_p=$n;
 			$t_p=$t;
-			$d_P=$d;
+			$d_p=$d;
 			$co_p=$co;
 			$us_p=$us;
 			$consulta->execute();
@@ -56,14 +56,14 @@ class MetodoCiudadano{
 	$direccion_p=$direccion;
 	$correo_p=$correo;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
+	$mensa="Ciudadano Modificado";
 	return $mensa;
 	}
 
 public function EliminarCiudadano($d){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();       
-	$sql="call borrar_usuario_admin('$d')";
+	$sql="call bor_usuario_admin('$d')";
 	$consulta=mysqli_query($conexion,$sql);
 	$mensaje="Ciudadano Eliminado";
 	return $mensaje; 

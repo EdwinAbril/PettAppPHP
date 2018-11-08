@@ -15,14 +15,18 @@
 
 <div name="tabla">
 	<form action="../../Menu/Vista/Administrador.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
-</form>
-<form action="../Vista/Vista_Insertar.php">
-  <input type="submit" name="nuevo" value="Insertar Nuevo Animal" class="btn btn-outline-dark" id="nuevo">
-</form>
-  <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
-<center><h1 class="display-4">Animal</h1></center>
-<?php
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="voler">
+    </form>
+
+    <form action="Vista_insertar.php">
+        <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="inser">
+    </form>
+
+    <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
+    <center><h1 class="display-4">Animal</h1></center>
+
+    <?php
+    
 	require_once("../Controlador/Controlador_Consultar.php");
 	while($Ani=mysqli_fetch_row($resultado)){
 		?>

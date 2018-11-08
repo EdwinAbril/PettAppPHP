@@ -2,13 +2,15 @@
 	background-image: url("Imagenes/Administrador.jpg")
 }
 
-#vol{
-float: left;	
+#volver{
+	position: absolute;
+	top: 5px;
+	left: 5px;
 }
 #sal{
 float: right;
 }
-#nuevo{
+#inser{
 	float: left;
 	margin-top: 50px;	
 	margin-left: 5px;

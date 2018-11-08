@@ -12,15 +12,20 @@
   	</head>
 <body>
 
-
 	<form action="../../Menu/Vista/Administrador.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
-</form>
-  <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
-<center><h1 class="display-4">Adopciones</h1></center>
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="voler">
+	</form>
+
+	<form action="Vista_insertar.php">
+  		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="inser">
+	</form>
+
+  	<input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
+	<center><h1 class="display-4">Adopciones</h1></center>
+
 <?php
-require_once("../Controlador/Controlador_Adopciones.php");
-while($Ado=mysqli_fetch_row($resultado)){
+	require_once("../Controlador/Controlador_Adopciones.php");
+	while($Ado=mysqli_fetch_row($resultado)){
 ?>
 		<div id="centro">
         <div class="caja1">
@@ -88,8 +93,7 @@ while($Ado=mysqli_fetch_row($resultado)){
 	}
 	echo "</table>";
 
-
-
 ?>
+
 </body>
 </html>

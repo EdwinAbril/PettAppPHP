@@ -35,7 +35,7 @@ class MetodoAnimal{
 	$genero_p=$genero;
 	$color_p=$color;
 	$consulta->execute();
-	$mensa="Animal Modificado";
+	$mensa="Usuario Modificado";
 	return $mensa;
 	}
 

@@ -13,26 +13,29 @@ require_once("../Controlador/Controlador_Ciudadano.php");
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 	
-<body>
+<body id="fondox">
 	    <form action="../Vista/Vista_Ciudadano.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+  <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
-<center>
-	<div id="insertar">
+<div id="padre">
+    <div id="insertar" class="form-group">
+
 	<h1>Insertar Ciudadano</h1>
- <form action="" method="Post">
- 	<p><label>Cedula</label></p><input type="number" name="cedula">
-    	<p><label>Nombre</label></p><input type="text" name="nombre">
-    	<p><label>Telefono</label></p><input type="number" name="telefono">
-    	<p><label>Direccion</label></p><input type="text" name="direccion">
-    	<p><label>Correo Electronico</label></p><input type="text" name="correo">
-    	<p><label>Nombre de Usuario</label></p><input type="text" name="usuario">
-    	</br>
-    </br>
+    <form action="" method="Post">
+ 	    <label>Cedula</label><input type="number" name="cedula" class="form-control">
+    	<label>Nombre</label><input type="text" name="nombre" class="form-control">
+    	<label>Telefono</label><input type="number" name="telefono" class="form-control">
+    	<label>Direccion</label><input type="text" name="direccion" class="form-control">
+    	<label>Correo Electronico</label><input type="text" name="correo" class="form-control">
+    	<label>Nombre de Usuario</label><input type="text" name="usuario" class="form-control">
+        <div class="form-group" id="bot">
     	<input type="submit" name="consulta" value="Insertar Nuevo Ciudadano"  class="btn btn-primary">
+        </div>
     </form>
+</div>
 </div>
 </center>
     <?php
@@ -46,7 +49,7 @@ if(isset($_POST['consulta']))
 	$us=$_POST['usuario'];
 	$mensaje=$mostrar->InsertarCiudadano($ced,$nom,$tel,$dir,$cor,$us);
 	echo "<script type='text/javascript'>;
-	alert('".$mensaje."');
+	swal('".$mensaje."', '', 'success');
 	</script>";
 }
 

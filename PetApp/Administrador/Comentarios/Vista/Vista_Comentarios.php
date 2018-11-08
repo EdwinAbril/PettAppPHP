@@ -11,11 +11,18 @@
 
 </head>
 <body>
+
 	<form action="../../Menu/Vista/Administrador.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="voler">
 	</form>
+
+	<form action="Vista_insertar.php">
+  		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="inser">
+	</form>
+	
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 	<h1 class="display-4">Comentarios</h1>
+	
 <?php
 require_once("../Controlador/Controlador_Comentarios.php");
 while($Com=mysqli_fetch_row($resultado)){
