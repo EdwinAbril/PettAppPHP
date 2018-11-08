@@ -63,27 +63,26 @@ require_once("../Controlador/Controlador_Funcionario.php");
                         <th>Correo</th>
                         <th>".$Fun[3]."</th>
                         </tr>
-                        <tr>";
-				?>
-				<?php
-				echo "
+                        <tr>
+
+
 				<form method='POST' action='Modificar_Funcionario.php'>
 				<input type='hidden' name='cod' value='".$Fun[0]."'>
 				<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' ></th>
-				</form>";
-				?>
-				<?php
-				echo "
+				</form>
+
 				<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
 				<input type='hidden' name='codfu' value='".$Fun[0]."'>
 				<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
 				</form>
-				</tr>
+				</tr> 
 				";
+
 				?>
 				</table>
 			    </div>
 			    </div>
+				
 				<?php
 				}
 				if(isset($_POST['eliminar'])){
@@ -92,8 +91,6 @@ require_once("../Controlador/Controlador_Funcionario.php");
 					</script>";
 
 				}
-				echo "</table>";
-
 ?>
 
 </body>

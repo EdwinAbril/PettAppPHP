@@ -66,10 +66,8 @@ while($Vet=mysqli_fetch_row($resultado)){
 	<form method='POST' action='Modificar_Administrador.php'>
 	<input type='hidden' name='usu' value='".$Vet[0]."'>
 	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-	</form>";
-	?>
-	<?php
-	echo "
+	</form>
+
 	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
 	<input type='hidden' name='cdvet' value='".$Vet[0]."'>
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>
@@ -88,10 +86,7 @@ while($Vet=mysqli_fetch_row($resultado)){
 		</script>";
 
 	}
-	echo "</table>";
-
-
-
+	
 ?>
 </body>
 </html>

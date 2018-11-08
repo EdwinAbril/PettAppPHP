@@ -77,17 +77,13 @@ while($Mas=mysqli_fetch_row($resultado)){
                         <th>Cedula</th>
                         <th>".$Mas[7]."</th>
                         </tr>
-                        <tr>";
-	?>
-	<?php
-	echo "
+                        <tr>
+
 	<form method='POST' action='Modificar_Mascotas.php'>
 	<input type='hidden' name='usu' value='".$Mas[0]."'>
 	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-	</form>";
-	?>
-	<?php
-	echo "
+	</form>
+
 	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
 	<input type='hidden' name='codma' value='".$Mas[0]."'>
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
@@ -106,10 +102,6 @@ while($Mas=mysqli_fetch_row($resultado)){
 		</script>";
 
 	}
-	echo "</table>";
-
-
-
 ?>
 
 </body>

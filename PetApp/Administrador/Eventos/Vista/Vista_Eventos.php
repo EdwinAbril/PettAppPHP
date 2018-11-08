@@ -70,11 +70,9 @@ while($Eve=mysqli_fetch_row($resultado)){
 				<form method='POST' action='Modificar_Eventos.php'>
 				<input type='hidden' name='usu' value='".$Eve[0]."'>
 				<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-				</form>";
-				?>
-				
-				<?php
-				echo "
+				</form>
+
+                
 				<form method='POST' action='../Controlador/Controlador_Eliminar.php'> 
 				<input type='hidden' name='codev' value='".$Eve[0]."'>
 				<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
