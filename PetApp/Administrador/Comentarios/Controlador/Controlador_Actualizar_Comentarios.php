@@ -1,3 +1,4 @@
+ <link rel="stylesheet" type="text/css" href="../Vista/Estilomod.css">
 <?php
 	  
 	if (isset($_POST['botonfunci']))

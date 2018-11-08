@@ -2,13 +2,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="Estilomod.css">
         <title>Mascotas</title>
     </head>
-    <body>
+    <body id="fondox">
 
         <form action="../Vista/Vista_Mascotas.php">
-        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
         </form>
+          <div id="padre">
+        <div id="modificar" class="form-group">
 
     	<?php
 
@@ -35,7 +40,7 @@
     <p>Raza</p><input type='text' name='raz'  value='".$Mas[6]."'><BR></BR>
     <input type='hidden' name='ced' value='".$Mas[7]."'>
     <p>Cedula</p>".$Mas[7]."<BR></BR>
-    <input type='submit' name='botonfunci' value='Modificar'>
+    <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
     </form>";
 	}
 	
@@ -47,6 +52,9 @@
 	}
 
 	?>
+</div>
+</div>
+
         
     </body>
 </html>
