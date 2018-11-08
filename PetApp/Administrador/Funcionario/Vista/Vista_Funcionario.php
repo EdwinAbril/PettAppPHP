@@ -4,18 +4,17 @@
 <head>
 	<title>Funcionario</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="Estilos.css">
+	<link rel="stylesheet" href="CSS/Estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  	<script src="JS/jquery-3.3.1.min.js"></script>
+    <script src="JS/main.js"></script>
   	
 </head>
 
 <body>
 <form action="Vista_Insertar.php">
-  <input type="submit" name="nuevo" value="Insertar Nuevo Funcionario" class="btn btn-outline-dark" id="nuevo">
+  <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
   	</form>
 
 <div name="tabla">
@@ -23,67 +22,79 @@
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
   	</form>
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
-<center><h1 class="display-3">Funcionarios</h1></center>
+<center><h1 class="display-4">Funcionarios</h1></center>
 <?php
 require_once("../Controlador/Controlador_Funcionario.php");
-echo "
-	<table class='table'>
-	<thead class='thead-dark'>
-	<tr>
-
-	<th scope='col'>Cedula</th>
-	<th scope='col'>Telefono</th>
-	<th scope='col'>Nombre</th>
-	<th scope='col'>Correo</th>
-	<th scope='col'>Rol</th>
-	<th scope='col'></th>
-	<th scope='col'></th>
-	<th scope='col'></th>
-	<th scope='col'></th>
-	</tr>
-	</thead>
-	";
-while($Fun=mysqli_fetch_row($resultado)){
-echo "
-
-	<tr>
-
-	<th scope='col'>".$Fun[0]."</th>
-	<th scope='col'>".$Fun[1]."</th>
-	<th scope='col'>".$Fun[2]."</th>
-	<th scope='col'>".$Fun[3]."</th>
-	<th scope='col'>".$Fun[4]."</th>
-	
-	";
+	while($Fun=mysqli_fetch_row($resultado)){
 	?>
-	<?php
-	echo "
-	<form method='POST' action='Modificar_Funcionario.php'>
-	<input type='hidden' name='cod' value='".$Fun[0]."'>
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' ><th>
-	</form>";
-	?>
-	<?php
-	echo "
-	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
-	<input type='hidden' name='codfu' value='".$Fun[0]."'>
-	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'><th>
-	</form>
-	</tr>
-	";
-	}
-	if(isset($_POST['eliminar'])){
-		echo"<script type='text/javascript'>;
-		alert('".$resulta."');
-		</script>";
+		<div id="centro">
+        <div class="caja1">
+				<?php
+					echo '
+					
+                    <table class="table">
+                    <tr>
+                    <thead class="thead-dark">
+                    <th>'.$Fun[2].'</th>
+                    </thead>
+                    </tr>
+                    </table>
+                    
+                	';
+				?>
+				</div>
+				<div class='caja2'>
+                    <table class='table'>
+                <?php
+					echo "
+					    <tr>
+                        <th>Cedula</th>
+                        <th>".$Fun[0]."</th>
+                        </tr>
+                        <tr>
+                        <th>Telefono</th>
+                        <th>".$Fun[1]."</th>
+                        </tr>
+                        <tr>
+                        <th>Nombre</th>
+                        <th>".$Fun[2]."</th>
+                        </tr>
+                        <tr>
+                        <th>Correo</th>
+                        <th>".$Fun[3]."</th>
+                        </tr>
+                        <tr>";
+				?>
+				<?php
+				echo "
+				<form method='POST' action='Modificar_Funcionario.php'>
+				<input type='hidden' name='cod' value='".$Fun[0]."'>
+				<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info' ></th>
+				</form>";
+				?>
+				<?php
+				echo "
+				<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
+				<input type='hidden' name='codfu' value='".$Fun[0]."'>
+				<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
+				</form>
+				</tr>
+				";
+				?>
+				</table>
+			    </div>
+			    </div>
+				<?php
+				}
+				if(isset($_POST['eliminar'])){
+					echo"<script type='text/javascript'>;
+					alert('".$resulta."');
+					</script>";
 
-	}
-	echo "</table>";
-
+				}
+				echo "</table>";
 
 ?>
 
-</form>
-</div>
 </body>
 </html>
