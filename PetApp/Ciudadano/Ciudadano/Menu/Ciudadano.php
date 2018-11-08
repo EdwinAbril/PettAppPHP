@@ -15,21 +15,16 @@
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
     </form>
 		<h1>Ciudadano</h1>
-		<img src="Logos/Avatar.png" id="Avatar" >
+		<img src="Logos/Mujer.png" height="300" width="300" id="Avatar" >
 	</header>
 
   <center>  
 	<div id="pricing" class="container-fluid">
-  <div class="text-center">
-
-    <br><h2>GESTIONAR</h2><br><br>
-    <br>
-  </div>
 
      <form action="../Vista/Vista_Ciudadano.php">
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading">
+        <div class="panel-heading" id="Datos">
           <h1>Mis Datos</h1>
         </div>
         <div class="panel-body"><center>
@@ -42,7 +37,7 @@
   <form action="../../Animales/Vista/Vista_Animal.php">
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divadoptar">
-        <div class="panel-heading">
+        <div class="panel-heading" id="Adoptar">
           <h1>Adoptar</h1>
         </div>
         <div class="panel-body"><center>
