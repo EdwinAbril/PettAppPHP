@@ -1,9 +1,12 @@
+
+    <link rel="stylesheet" type="text/css" href="../Vista/Estilomod.css">
 <?php
 	  
 	if (isset($_POST['botonfunci']))
 	{
 		$result=modificar();
 		require_once("../Vista/Modificar_Administrador.php");
+	
 	}
 
 function modificar(){
