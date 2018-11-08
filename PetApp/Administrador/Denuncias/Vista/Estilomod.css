@@ -1,0 +1,63 @@
+
+#fondox{
+	background-image: url("Imagenes/Administrador.jpg")
+}
+
+
+#vol{
+float: left;	
+}
+#sal{
+float: right;
+}
+#nuevo{
+	float: left;
+	margin-top: 50px;	
+	margin-left: 5px;
+}
+#bot{
+	margin-top: 10px;
+}
+#padre{
+	background-color: transparent;
+  	padding: 0 1rem;
+  	margin: 1rem;
+}
+#modificar{
+	margin-top: 8%;
+	width: 300px;
+	margin-left: auto;
+  	margin-right: auto;
+	text-align: center;
+    padding: 20px;
+    background: transparent;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid green;
+    
+}
+#quitar{
+	color:transparent;
+	width: 150px;
+	height: 30px;
+}
+
+
+@media screen and (max-width:1200px){
+	table{
+		width: 80%;
+	}
+	   #insertar{
+  
+ 
+    background: white;
+    margin-top: 80px;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid green;
+    max-width: 80%;
+} 
+}
+#vol{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}

@@ -24,7 +24,7 @@ class MetodoVeterinaria{
 	$correo_p=$correo;
 	$clave_p=$clave;
 	$consulta->execute();
-	$mensa="Veterinaria Modificada";
+	$mensa="Usuario Modificado";
 	return $mens;
 	}
 		public function Mostrar_1_Veterinaria($n){

@@ -73,7 +73,7 @@ class MetodoEventos{
 	$conexion= $conectar->conexion();
 	$sql="call FunEliminar_Eventos('$d')";
 	$consulta=mysqli_query($conexion,$sql);
-	$mensaje="Evento Eliminado";
+	$mensaje="Eventos Eliminada";
 	return $mensaje; 
 }
 

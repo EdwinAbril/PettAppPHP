@@ -1,4 +1,6 @@
-
+#pricing{
+	background-color: #e5e8e8;
+}
 body{
 	font-family:Rockwell;
 }
@@ -13,7 +15,7 @@ body{
 }
 
 header{
-    background-image: url("Imagenes/Fondo2.jpg");  
+    background-image: url("Imagenes/Banner.jpg");  
     font-weight: bold; 
     padding: 50px;
     text-align: center;
