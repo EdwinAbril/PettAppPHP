@@ -15,7 +15,6 @@
   <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
   	</form>
 
-<div name="tabla">
 	<form action="../../Menu/Vista/Administrador.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
   	</form>
@@ -24,28 +23,23 @@
 <?php
 require_once("../Controlador/Controlador_Eventos.php");
 while($Eve=mysqli_fetch_row($resultado)){
-?>
-		<div id="centro">
-        <div class="caja1">
-				<?php
-					echo '
+echo "
+		<div id='centro'>
+        <div class='caja1'>
 					
-                    <table class="table">
+					
+                    <table class='table'>
                     <tr>
-                    <thead class="thead-dark">
-                    <th>'.$Eve[2].'</th>
+                    <thead class='thead-dark'>
+                    <th>".$Eve[2]."</th>
                     </thead>
                     </tr>
                     </table>
                     
-                	';
-				?>
 				</div>
 				<div class='caja2'>
                     <table class='table'>
-                <?php
-					echo "
-					    <tr>
+                    <tr>
                         <th>Codigo</th>
                         <th>".$Eve[0]."</th>
                         </tr>
@@ -78,12 +72,10 @@ while($Eve=mysqli_fetch_row($resultado)){
 				<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
 				</form>
 				</tr>
-				";
-				?>
 				</table>
-			    </div>
-			    </div>
-				<?php
+                </div>
+                </div>
+                ";
 				}
 				if(isset($_POST['eliminar'])){
 					echo"<script type='text/javascript'>;
@@ -93,7 +85,6 @@ while($Eve=mysqli_fetch_row($resultado)){
 				}
 
 		?>
-</form>
-</div>
+
 </body>
 </html>

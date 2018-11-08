@@ -6,7 +6,6 @@
 	if (isset($_POST['eliminar']))
 	{
 		$resulta=eliminar();
-		require_once("../Vista/Vista_Eventos.php");
 		header('Location:../Vista/Vista_Eventos.php');
 	}
 

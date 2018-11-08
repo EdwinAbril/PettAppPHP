@@ -30,17 +30,17 @@ require_once("../Controlador/Controlador_Funcionario.php");
 		<div id="centro">
         <div class="caja1">
 				<?php
-					echo '
+					echo "
 					
-                    <table class="table">
+                    <table class='table'>
                     <tr>
-                    <thead class="thead-dark">
-                    <th>'.$Fun[2].'</th>
+                    <thead class='thead-dark'>
+                    <th>".$Fun[2]."</th>
                     </thead>
                     </tr>
                     </table>
                     
-                	';
+                	";
 				?>
 				</div>
 				<div class='caja2'>
@@ -75,15 +75,11 @@ require_once("../Controlador/Controlador_Funcionario.php");
 				<input type='hidden' name='codfu' value='".$Fun[0]."'>
 				<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
 				</form>
-				</tr> 
-				";
-
-				?>
+				</tr>
 				</table>
 			    </div>
-			    </div>
-				
-				<?php
+			    </div>";
+
 				}
 				if(isset($_POST['eliminar'])){
 					echo"<script type='text/javascript'>;
