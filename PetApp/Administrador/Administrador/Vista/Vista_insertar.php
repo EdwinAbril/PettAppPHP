@@ -23,6 +23,7 @@ require_once("../Controlador/Controlador_insertar.php");
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <body>
     <form action="../Vista/Vista_Administrador.php">
+	<form action="../Vista/Vista_Administrador.php">
     <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
     </form>
 <div id="padre">
@@ -39,7 +40,6 @@ require_once("../Controlador/Controlador_insertar.php");
 </div>
 </center>
 <?php
-
 if(isset($_POST['consulta']))
 {
 echo "<script type='text/javascript'>;
