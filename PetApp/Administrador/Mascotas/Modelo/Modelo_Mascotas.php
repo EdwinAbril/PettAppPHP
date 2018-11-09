@@ -53,15 +53,10 @@ public function Mostrar_1_Mascotas_1($to){
 	$sql="select * from mascota where raza_animal='to'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
-	}
+}
 	public function InsertarMascotas($nm,$des,$em,$tm,$edm,$rm,$ced,$fot){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_Mascotas_1($nm);
-		if ($result->num_rows>0) {
-			$mensa="La Mascota ya existe";
-		}
-		else{
 		$sql="call usuario_mascota_inser(?,?,?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
 			$consulta->bind_param('ssssssss',$nm_p,$des_p,$em_p,$tm_p,$edm_p,$rm_p,$ced_p,$fot_p);
@@ -75,10 +70,9 @@ public function Mostrar_1_Mascotas_1($to){
 			$fot_p=$fot;
 			$consulta->execute();
 			$mensa="Mascota Ingresada";
-		}
+		
 		return $mensa;
-	}
 
 }
-
+}
 ?>

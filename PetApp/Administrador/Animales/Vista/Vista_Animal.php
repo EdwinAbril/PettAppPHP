@@ -12,10 +12,8 @@
 </head>
 <body>
 
-
-<div name="tabla">
-	<form action="../../Menu/Vista/Administrador.php">
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="voler">
+    <form action="../../Menu/Vista/Administrador.php">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="voler">
     </form>
 
     <form action="Vista_insertar.php">
@@ -23,17 +21,15 @@
     </form>
 
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
-    <center><h1 class="display-4">Animal</h1></center>
+    <h1 class="display-4">Animal</h1>
 
     <?php
     
 	require_once("../Controlador/Controlador_Consultar.php");
 	while($Ani=mysqli_fetch_row($resultado)){
-		?>
-		<div id="centro">
-        <div class="caja1">
-		<?php
 		echo "
+        <div id='centro'>
+        <div class='caja1'>
 		<table class='table'>
             <tr>
             <thead class='thead-dark'>
@@ -41,13 +37,10 @@
             </thead>
             </tr>
             </table>
-		<tr>";
-		?>
+		<tr>
 		</div>
 		<div class='caja2'>
             <table class='table'>
-        <?php
-        echo "
             <tr>
             <th>Codigo</th>
             <th>".$Ani[0]."</th>
@@ -81,29 +74,22 @@
             <th>".$Ani[8]."</th>
             </tr>
             <tr>
-				
-		";
-		?>
-	<?php
-	echo "
+		
+
 	<form method='POST' action='Modificar_Animal.php'>
 	<input type='hidden' name='usu' value='".$Ani[0]."'>
 	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-	</form>";
-	?>
-	
-	<?php
-	echo "
+	</form>
+
 	<form method='POST' action='../Controlador/Eliminar_Animal.php'>
 	<input type='hidden' name='cdani' value='".$Ani[0]."'>
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
 	</form>
-	</tr>";
-	?>
-	</table>
+	</tr>
+    </table>
     </div>
     </div>
-	<?php
+    ";
 	}
 	
 	if(isset($_POST['eliminar'])){
@@ -112,10 +98,8 @@
 		</script>";
 
 	}
-	echo "</table>";
-
+	
 ?>
 
-</div>
 </body>
 </html>
