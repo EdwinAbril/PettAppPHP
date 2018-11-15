@@ -12,12 +12,12 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body id="fondox">
-        <form action="../Vista/Vista_Postulacion.php">
+        <form action="../../Ciudadano/Menu/Ciudadano.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
 <center>
 <div id="insertar" >
-	<h1>Postulacion</h1>
+	<h1>Postularme</h1>
  <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
  	<p><label>Telefono</label></p><input type="number" name="telefono">
     	<p><label>Direccion</label></p><input type="text" name="direccion">
@@ -27,7 +27,7 @@
         <p><label>Codigo del animal</label></p><input type="number" name="codigo">
            </br>
     </br>
-    	<input type="submit" name="consulta" value="Realizar Postulacion" class="btn btn-primary">
+    	<input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
     </form>
 </div>
 </center>
