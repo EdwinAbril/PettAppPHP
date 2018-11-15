@@ -6,7 +6,7 @@
 	if (isset($_POST['eliminar']))
 	{
 		$resulta=eliminar();
-		require_once("../Vista/Vista_Animal.php");
+		header('Location: ../Vista/Vista_Animal.php');
 	}
 
 function eliminar(){
