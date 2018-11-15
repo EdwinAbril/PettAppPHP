@@ -5,6 +5,7 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="Estilomod.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <title>Denuncias</title>
     </head>
     <body id="fondox">
@@ -41,7 +42,7 @@
 	
 	if(isset($_POST['botonfunci'])){
 		echo"<script type='text/javascript'>;
-		alert('".$result."');
+		swal('".$result."');
 		</script>";
 
 	}

@@ -53,15 +53,14 @@ public function EliminarAdopciones($d){
 		
 		}
 		else{
-			$sql="call insertar_usuario_Admin(?,?,?,?)";
+			$sql="call VetInsertar_Adopcion(?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssi',$ced_p,$nom_p,$cla_p,$rol_p);
-			$ced_p=$ced;
-			$nom_p=$nom;
-			$cla_p=$cla;
-			$rol_p=4;
+			$consulta->bind_param('iis',$coda_p,$cods_p,$men_p);
+			$coda_p=$coda;
+			$cods_p=$cods;
+			$men_p=$men;
 			$consulta->execute();
-			$mensa="Usuario del Ciudadano insertado correctamente";
+			$mensa="Proceso Finalizado correctamente";
 		}
 		return $mensa;
 
