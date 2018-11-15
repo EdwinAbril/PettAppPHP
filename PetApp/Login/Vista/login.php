@@ -56,12 +56,12 @@
     <div class="panel panel-default text-center">
         <div class="panel-heading" id="panel">
         	<img src="Imagenes/info.png" height="30" width="30" id="info" > 
-          <h1>Adopcion</h1>
-            <h5>Como Adopto?</h5>
+          <h1>Adopción</h1>
+            <h5>Cómo Adopto?</h5>
             </div>
             <div id="caja2">
             	<br>
-            	<p>En este modulo usted podrá dar hogar a un animal que lo necesita, La alcaldia municipal de Mosquera Cundinamarca, le ofrece la posibilidad de escoger el animal que usted quiera adoptar, y asi contribuir de manera responsable a la salud ambiental y el desarrollo del municipio </p><br><br>
+            	<p>En este módulo usted podrá dar hogar a un animal que lo necesita, La alcaldía municipal de Mosquera Cundinamarca, le ofrece la posibilidad de escoger el animal que usted quiera adoptar, y así contribuir de manera responsable a la salud ambiental y el desarrollo del municipio </p><br><br>
             	<a>saber más</a>
 
             </div>
@@ -81,7 +81,7 @@
         </div>
         <div id="caja4">
         	<br>
-            	<p>En este modulo usted podrá ubicar las diferentes veterinarias del municipio que contribuyen al cuidado animal y a las cuales usted podra acudir en caso de que su mascota requiera atencion</p><br><br>
+            	<p>En este módulo usted podrá ubicar las diferentes veterinarias del municipio que contribuyen al cuidado animal y a las cuales usted podrá acudir en caso de que su mascota requiera atención</p><br><br>
             	<a>saber más</a>
         </div>
         <div class="panel-body" id="imagen2">
@@ -95,11 +95,11 @@
           <div class="panel-heading" id="panel">
           	<img src="Imagenes/info.png" height="30" width="30" id="info3" >
           <h1>Eventos</h1>
-           <h5>Informate</h5>
+           <h5>Infórmate</h5>
         </div>
         <div id="caja6">
            <br>
-            	<p>En este modulo usted podrá informarse acerca de las jornadas de ciudado animal que realiza el municipio, aqui podra observar una descripcion detallada ademas de la fecha, la hora y el lugar en el que se realizaran  </p><br><br>
+            	<p>En este módulo usted podrá informarse acerca de las jornadas de cuidado animal que realiza el municipio, aquí podrá observar una descripción detallada además de la fecha, la hora y el lugar en el que se realizara</p><br><br>
             	<a>saber más</a>
         </div>
         <div class="panel-body" id="imagen3">
