@@ -4,6 +4,14 @@ require_once ("../../../Conexion.php");
 
 class MetodoVeterinarias{
 		
+	public function MostrarUsuario(){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from login_usuarios where rol_login=2";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+		
 	public function MostrarVeterinarias(){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();

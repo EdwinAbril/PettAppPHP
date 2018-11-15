@@ -49,7 +49,7 @@ if(isset($_POST['consulta']))
 	$us=$_POST['usuario'];
 	$mensaje=$mostrar->InsertarCiudadano($ced,$nom,$tel,$dir,$cor,$us);
 	echo "<script type='text/javascript'>;
-	swal('".$mensaje."', '', 'success');
+	swal('".$mensaje."');
 	</script>";
 }
 

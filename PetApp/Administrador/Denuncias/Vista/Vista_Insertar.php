@@ -21,7 +21,11 @@
 	<h1>Insertar Denuncia</h1>
     <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
  	    <label>Fecha De la Denuncia</label><input type="date" name="fecha" required="" class="form-control">
-    	<label>Tipo de Denuncia</label><input type="text" name="tipo" required="" class="form-control">
+    	<label>Tipo </label><select  name="tipo" required="" class="form-control">
+            <option>Tipo de Denuncia</option>
+            <option>Maltrato</option>
+            <option>Abandono</option>
+        </select>
     	<label>Cedula del Denunciante</label><input type="number" name="cedula" required="" class="form-control">
     	<label>Denuncia</label><input type="text" name="denuncia" required="" class="form-control">
     	<div id="foto">
@@ -38,7 +42,7 @@
 if(isset($_POST['consulta']))
 {
 	echo "<script type='text/javascript'>;
-	swal('".$resulta."', '', 'success');
+	swal('".$resulta."');
 	</script>";
 }
 

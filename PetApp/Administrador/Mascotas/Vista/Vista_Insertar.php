@@ -20,9 +20,17 @@
 	<h1>Insertar Mascota</h1>
  <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
  	<p><label>Nombre de la Mascota</label></p><input type="text" name="nombre" class="form-control" required="">
-    	<p><label>Descendencia</label></p><input type="text" name="des" class="form-control" required="">
+    	<p><label>Esterilizacion</label></p><select  name="des" class="form-control" required="">
+            <option>Mascota Operada</option>
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+        </select>
     	<p><label>Estado de la Mascota</label></p><input type="text" name="estado" class="form-control" required="">
-    	<p><label>Tipo de la Mascota</label></p><input type="text" name="tipo" class="form-control" required="">
+    	<p><label>Tipo </label></p><select  name="tipo" class="form-control" required="">
+            <option>Tipo de Mascota</option>
+            <option>Perro</option>
+            <option>Gato</option>
+        </select>
         <p><label>Edad de la Mascota</label></p><input type="number" name="edad" class="form-control" required="">
         <p><label>Raza de la Mascota</label></p><input type="text" name="raza" class="form-control" required="">
         <p><label>Cedula del Dueño</label></p><input type="number" name="cedula" class="form-control" required="">
@@ -37,7 +45,7 @@
 if(isset($_POST['consulta']))
 {
 	echo "<script type='text/javascript'>;
-	swal('".$resulta."', '', 'success');
+	swal('".$resulta."');
 	</script>";
 }
 
