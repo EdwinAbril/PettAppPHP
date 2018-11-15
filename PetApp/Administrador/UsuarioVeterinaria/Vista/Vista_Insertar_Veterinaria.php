@@ -34,7 +34,7 @@ require_once("../Controlador/Controlador_Insertar.php");
 if(isset($_POST['consulta']))
 {
 echo "<script type='text/javascript'>;
-  swal('".$result."', '', 'success');
+  swal('".$result."');
   </script>";
   
 }

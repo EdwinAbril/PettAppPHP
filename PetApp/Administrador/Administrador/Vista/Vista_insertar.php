@@ -16,7 +16,7 @@ require_once("../Controlador/Controlador_insertar.php");
     <link rel="stylesheet" type="text/css" href="Estilo.css">
 
 <body id="fondox">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="Estilo.css">
