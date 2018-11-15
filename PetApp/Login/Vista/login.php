@@ -62,7 +62,7 @@
             <div id="caja2">
             	<br>
             	<p>En este módulo usted podrá dar hogar a un animal que lo necesita, La alcaldía municipal de Mosquera Cundinamarca, le ofrece la posibilidad de escoger el animal que usted quiera adoptar, y así contribuir de manera responsable a la salud ambiental y el desarrollo del municipio </p><br><br>
-            	<a>saber más</a>
+            	<a href="Informacion/Adoptar.php">saber más</a>
 
             </div>
           <div class="panel-body" id="imagen">
