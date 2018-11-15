@@ -10,8 +10,8 @@
     <script src="JS/main.js"></script>
     
 </head>
-
 <body>
+
 	<form action="Vista_insertar.php">
   		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
 	</form>
@@ -23,6 +23,7 @@
   	<input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 
 	<h3 class="display-4">Administrador</h3>
+	
 		<?php
 		require_once("../Controlador/Controlador_Administrador.php");
 		while($Adm=mysqli_fetch_row($resultado)){

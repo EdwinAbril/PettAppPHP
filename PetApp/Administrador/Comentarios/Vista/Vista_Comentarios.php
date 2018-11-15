@@ -12,15 +12,16 @@
 </head>
 <body>
 
-	<form action="../../Menu/Vista/Administrador.php">
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="voler">
+	<form action="Vista_insertar.php">
+  		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
 	</form>
 
-	<form action="Vista_insertar.php">
-  		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="inser">
+	<form action="../../Menu/Vista/Administrador.php">
+  		<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 	</form>
-	
-  <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
+  	
+  	<input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
+  	
 	<h1 class="display-4">Comentarios</h1>
 	
 <?php

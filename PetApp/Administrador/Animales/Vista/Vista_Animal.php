@@ -12,18 +12,17 @@
 </head>
 <body>
 
-
-<div name="tabla">
-	<form action="../../Menu/Vista/Administrador.php">
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="voler">
+    <form action="Vista_insertar.php">
+        <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
     </form>
 
-    <form action="Vista_insertar.php">
-        <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="inser">
+	<form action="../../Menu/Vista/Administrador.php">
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
     </form>
 
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
-    <center><h1 class="display-4">Animal</h1></center>
+    
+    <center><h1 class="display-4" >Animal</h1></center>
 
     <?php
     
@@ -82,29 +81,29 @@
             </tr>
             <tr>
 				
-		";
-		?>
-	<?php
-	echo "
-	<form method='POST' action='Modificar_Animal.php'>
-	<input type='hidden' name='usu' value='".$Ani[0]."'>
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-	</form>";
-	?>
-	
-	<?php
-	echo "
-	<form method='POST' action='../Controlador/Eliminar_Animal.php'>
-	<input type='hidden' name='cdani' value='".$Ani[0]."'>
-	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
-	</form>
-	</tr>";
-	?>
-	</table>
-    </div>
-    </div>
-	<?php
-	}
+    		";
+    		?>
+    	<?php
+    	echo "
+    	<form method='POST' action='Modificar_Animal.php'>
+    	<input type='hidden' name='usu' value='".$Ani[0]."'>
+    	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
+    	</form>";
+    	?>
+    	
+    	<?php
+    	echo "
+    	<form method='POST' action='../Controlador/Eliminar_Animal.php'>
+    	<input type='hidden' name='cdani' value='".$Ani[0]."'>
+    	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
+    	</form>
+    	</tr>";
+    	?>
+    	</table>
+        </div>
+        </div>
+    	<?php
+    	}
 	
 	if(isset($_POST['eliminar'])){
 		echo"<script type='text/javascript'>;
