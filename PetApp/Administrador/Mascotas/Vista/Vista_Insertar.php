@@ -11,9 +11,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
-<body>
+<body id="fondox">
         <form action="../Vista/Vista_Mascotas.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+  <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
 <center>
 <div id="insertar" >

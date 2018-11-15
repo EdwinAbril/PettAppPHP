@@ -16,9 +16,9 @@ require_once("../Controlador/Controlador_Insertar.php");
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
     <form action="../Vista/Vista_Seguimiento.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+  <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
-<body>
+<body id="fondox">
     <center>
 	<div id="insertar">
 	<h1>Insertar Seguimiento</h1>
