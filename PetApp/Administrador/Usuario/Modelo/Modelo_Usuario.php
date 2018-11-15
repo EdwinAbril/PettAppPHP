@@ -7,7 +7,7 @@ class MetodoUsuario{
 	public function MostrarUsuario(){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from registro_usuario";
+	$sql="select * from login_usuarios where rol_login=4";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
