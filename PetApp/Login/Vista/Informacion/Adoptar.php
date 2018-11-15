@@ -16,10 +16,10 @@
 	<title>Adoptar</title>
 </head>
 
-<header><img src="Adopcion.jpeg" width="1460" height="600" id="Perra"></header> 
+<header><img src="Imagen.jpg" id="imagen"></header> 
 <body>
 
-<h1 id="Adoptar">Cómo Adoptar?</h1>
+<h1 id="Texto">Cómo Adoptar?</h1>
 </body>
 
 </html>
