@@ -44,7 +44,7 @@
     </div> 
   </form>
 
-  <form action="../UsuarioFuncionario/Vista/Vista_Insertar_Funcionario.php">
+  <form action="../UsuarioFuncionario/Vista/Vista_Usuario.php">
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divciudadano">
         <div class="panel-heading" id="diciu">
@@ -57,7 +57,7 @@
     </div> 
   </form>
     
-    <form action="../UsuarioVeterinaria/Vista/Vista_Insertar_Veterinaria.php">
+    <form action="../UsuarioVeterinaria/Vista/Vista_Usuario.php">
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divanimal">
         <div class="panel-heading" id="diciu">

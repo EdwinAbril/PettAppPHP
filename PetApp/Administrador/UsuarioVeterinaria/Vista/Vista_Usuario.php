@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Usuario Ciudadano</title>
+	<title>Usuario Veterinaria</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="CSS/Estilos.css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
-    <script src="JS/main.js"></script>
-    
+    <script src="JS/main.js"></script>  
 </head>
-
 <body>
-	<form action="Vista_Insertar.php">
+
+	<form action="Vista_Insertar_Veterinaria.php">
   		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
 	</form>
 
@@ -22,9 +21,10 @@
   	
   	<input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 
-	<h3 class="display-4">Usuario Ciudadano</h3>
+	<h3 class="display-4">Usuario Veterinaria</h3>
+	
 		<?php
-		require_once("../Controlador/Controlador_vista.php");
+		require_once("../Controlador/Controlador_Veterinaria.php");
 		while($Usu=mysqli_fetch_row($resultado)){
 		?>
 		<div id="centro">
@@ -69,7 +69,7 @@
 					</form>
 					</tr>";
 					?>
-			</table>
+					</table>
             </div>
             </div>
 				<?php

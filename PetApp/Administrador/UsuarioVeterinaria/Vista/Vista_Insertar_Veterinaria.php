@@ -15,7 +15,7 @@ require_once("../Controlador/Controlador_Insertar.php");
    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  
 <body>
-    <form action="../../Menu/Vista/Administrador.php">
+    <form action="Vista_Usuario.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 </form>
 <center>

@@ -14,6 +14,9 @@ require_once("../Controlador/Controlador_Usuario.php");
   <link rel="stylesheet" type="text/css" href="Estilo.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <body>
+  <form action="Vista_Usuario.php">
+  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+</form>
 	<div class="insertar">
 	<h1>Insertar Usuario</h1>
  <form action="../Controlador/Controlador_Usuario.php" method="Post">
