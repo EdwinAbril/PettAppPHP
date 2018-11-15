@@ -1,16 +1,16 @@
+
 #fondox{
 	background-image: url("Imagenes/Administrador.jpg")
 }
 
-#volver{
-	position: absolute;
-	top: 5px;
-	left: 5px;
+
+#vol{
+float: left;	
 }
 #sal{
 float: right;
 }
-#inser{
+#nuevo{
 	float: left;
 	margin-top: 50px;	
 	margin-left: 5px;
@@ -23,7 +23,7 @@ float: right;
   	padding: 0 1rem;
   	margin: 1rem;
 }
-#insertar{
+#modificar{
 	margin-top: 8%;
 	width: 300px;
 	margin-left: auto;
@@ -56,7 +56,7 @@ float: right;
     max-width: 80%;
 } 
 }
-#volver{
+#vol{
 	position: absolute;
 	top: 5px;
 	left: 5px;

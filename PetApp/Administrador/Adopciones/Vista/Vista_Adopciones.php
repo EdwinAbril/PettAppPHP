@@ -9,18 +9,19 @@
   	<script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/main.js"></script>
 
-  	</head>
+</head>
 <body>
 
-	<form action="../../Menu/Vista/Administrador.php">
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="voler">
+	<form action="Vista_insertar.php">
+  	<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
 	</form>
 
-	<form action="Vista_insertar.php">
-  		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="inser">
+	<form action="../../Menu/Vista/Administrador.php">
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 	</form>
 
   	<input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
+  	
 	<center><h1 class="display-4">Adopciones</h1></center>
 
 <?php
