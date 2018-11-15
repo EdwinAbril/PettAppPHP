@@ -9,9 +9,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body id="fondox">
-        <form action="Vista_Adopciones.php">
+        <form action="../Vista/Vista_Adopciones.php">
         <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
         </form>
 <div id="padre">
@@ -22,7 +23,7 @@
     	<label>Codigo del Seguimiento</label><input type="code" name="seguimiento" class="form-control">
     	<label>Respuesta</label><input type="text" name="respuesta" class="form-control">
         <div class="form-group" id="bot">
-    	<input type="submit" name="consulta" value="Enviar Adopcion">
+    	<input type="submit" name="consulta" value="Finalizar Adopcion"  class="btn btn-primary">
         </div>
     </form>
 
@@ -30,7 +31,7 @@
 if(isset($_POST['consulta']))
 {
 	echo "<script type='text/javascript'>;
-	alert('".$result."');
+	swal('".$result."');
 	</script>";
 }
 
