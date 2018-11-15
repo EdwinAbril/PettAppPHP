@@ -31,7 +31,7 @@
   </div>
    
 
-  <form action="../Usuario/Vista/Vista_Insertar.php">
+  <form action="../Usuario/Vista/Vista_Usuario.php">
 <div class="col-sm-4 col-xs-12" >
       <div class="panel panel-default text-center" id="divciudadano">
         <div class="panel-heading" id="diciu">
