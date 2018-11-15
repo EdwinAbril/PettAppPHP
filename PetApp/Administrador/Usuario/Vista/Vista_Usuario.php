@@ -58,7 +58,7 @@
                         <tr>
 					
 			
-					<form method='POST' action='Modificar_Administrador.php'>
+					<form method='POST' action='Modificar_Usuario.php'>
 					<input type='hidden' name='usu' value='".$Usu[0]."'>
 					<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
 					</form>

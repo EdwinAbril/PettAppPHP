@@ -297,7 +297,9 @@ p{
     max-height:100%;
 }
 
-
+#Perra{
+	height: 50%;
+	width: 50%;
 
 @keyframes cambio{
 	0%{margin-left:0;}
@@ -399,6 +401,14 @@ p{
     font-size: 14px;
     
 }
+
+#Perra{
+	height: 10%;
+	width: 10%;
+
+}
+
+
 
 }
 

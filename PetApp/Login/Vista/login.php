@@ -62,7 +62,7 @@
             <div id="caja2">
             	<br>
             	<p>En este módulo usted podrá dar hogar a un animal que lo necesita, La alcaldía municipal de Mosquera Cundinamarca, le ofrece la posibilidad de escoger el animal que usted quiera adoptar, y así contribuir de manera responsable a la salud ambiental y el desarrollo del municipio </p><br><br>
-            	<a>saber más</a>
+            	<a href="Informacion/Adoptar.php">saber más</a>
 
             </div>
           <div class="panel-body" id="imagen">
@@ -82,7 +82,7 @@
         <div id="caja4">
         	<br>
             	<p>En este módulo usted podrá ubicar las diferentes veterinarias del municipio que contribuyen al cuidado animal y a las cuales usted podrá acudir en caso de que su mascota requiera atención</p><br><br>
-            	<a>saber más</a>
+            	<a href="Informacion/Eventos.php">saber más</a>
         </div>
         <div class="panel-body" id="imagen2">
           <img src="Imagenes/veterinaria.jpeg" class="img-responsive slideanim">
@@ -100,7 +100,7 @@
         <div id="caja6">
            <br>
             	<p>En este módulo usted podrá informarse acerca de las jornadas de cuidado animal que realiza el municipio, aquí podrá observar una descripción detallada además de la fecha, la hora y el lugar en el que se realizara</p><br><br>
-            	<a>saber más</a>
+            	<a href="Informacion/Veterinaria.php">saber más</a>
         </div>
         <div class="panel-body" id="imagen3">
           <img src="Imagenes/Jornadas.jpeg" class="img-responsive slideanim">
