@@ -63,7 +63,7 @@ while($Vet=mysqli_fetch_row($resultado)){
             <tr>
 		
 
-	<form method='POST' action='Modificar_Administrador.php'>
+	<form method='POST' action='Modificar_Veterinaria.php'>
 	<input type='hidden' name='usu' value='".$Vet[0]."'>
 	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
 	</form>

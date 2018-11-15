@@ -12,20 +12,19 @@ class MetodoVeterinaria{
 	return $consulta;
 	}
 
-	public function ModificarVeterinaria($cedula,$telefono,$nombre,$correo,$clave){
+	public function ModificarVeterinaria($nit,$telefono,$nombre,$direccion){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call act_veter_Admin(?,?,?,?,?)";
+	$sql="call act_veter_Admin(?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ssssi',$cedula_p,$telefono_p,$nombre_p,$correo_p,$clave_p);
-	$cedula_p=$cedula;
+	$consulta->bind_param('ssss',$nit_p,$telefono_p,$nombre_p,$direccion_p);
+	$nit_p=$nit;
 	$telefono_p=$telefono;
 	$nombre_p=$nombre;
-	$correo_p=$correo;
-	$clave_p=$clave;
+	$direccion_p=$direccion;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
-	return $mens;
+	$mensa="Veterinaria Modificada";
+	return $mensa;
 	}
 		public function Mostrar_1_Veterinaria($n){
 	$conectar= new conectarproyecto();
@@ -68,8 +67,9 @@ class MetodoVeterinaria{
 	$mensaje="Veterinaria Eliminada";
 	return $mensaje; 
 
-}
+	}
 
+	
 }
 
 ?>
