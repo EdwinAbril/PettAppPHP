@@ -8,6 +8,18 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/main.js"></script>
+    <?php
+  	session_start();
+  	if (!$_SESSION) {
+    echo '<script type="text/javascript">
+          alert("Usuario no Autenticado");
+          self.location=../../../Login/Vista/login.php;
+          </script>';  
+  	}
+  	else{
+    $usuar=$_SESSION["Usuario"];
+    }
+  	?>
 </head>
 
 <body>

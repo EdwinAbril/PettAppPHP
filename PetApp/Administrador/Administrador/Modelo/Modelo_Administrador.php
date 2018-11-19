@@ -4,10 +4,10 @@ require_once ("../../../Conexion.php");
 
 class MetodoAdministrador{
 	
-	public function MostrarAdministrador(){
+	public function MostrarAdministrador($ini){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from login_usuarios where rol_login=1";
+	$sql="select * from login_usuarios where rol_login=1 and nombre_usuario <> '$ini';";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}

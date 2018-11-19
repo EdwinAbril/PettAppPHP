@@ -8,20 +8,36 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/main.js"></script>
-
+    <script type="text/javascript">history.forward();</script>
 </head>
 <body>
+	
+	<?php
+  	session_start();
+  	if (!$_SESSION) {
+    echo '<script type="text/javascript">
+          alert("Usuario no Autenticado");
+          location="../../../Login/Vista/login.php";
+          </script>';  
+  	}
+  	else{
+    $usuar=$_SESSION["Usuario"];
+    echo "<h1> Bienvenido: ".$usuar."</h1>";
+    }
+  	?>
 
 	<form action="Vista_insertar.php">
-  	<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
+  		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
 	</form>
 
 	<form action="../../Menu/Vista/Administrador.php">
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+    	<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 	</form>
 
-  	<input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
-  	
+  	<form action="../../../Cerrar.php">
+  		<input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
+  	</form>
+
 	<center><h1 class="display-4">Adopciones</h1></center>
 
 <?php
