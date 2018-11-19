@@ -44,7 +44,9 @@ public function EliminarAdopciones($d){
 	$mensaje="Adopcion Eliminada";
 	return $mensaje; 
 }
-	public function  InsertarAdopciones($coda,$cods,$men){
+
+
+	public function  InsertarAdopciones($coda,$men){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_adopcion($coda);
@@ -53,11 +55,10 @@ public function EliminarAdopciones($d){
 		
 		}
 		else{
-			$sql="call VetInsertar_Adopcion(?,?,?)";
+			$sql="call VetInsertar_Adopcion(?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('iis',$coda_p,$cods_p,$men_p);
+			$consulta->bind_param('is',$coda_p,$men_p);
 			$coda_p=$coda;
-			$cods_p=$cods;
 			$men_p=$men;
 			$consulta->execute();
 			$mensa="Proceso Finalizado correctamente";
@@ -65,6 +66,33 @@ public function EliminarAdopciones($d){
 		return $mensa;
 
 	}
+		public function EliminarSeguimiento($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call FunEliminar_Seguimiento('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Seguimiento Eliminado";
+	return $mensaje; 
+}
+
+	public function EliminarPostulacion($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion(); 
+	$sql="call usuario_postulacion_elim('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Postulacion Eliminada";
+	return $mensaje; 
+}
+
+	public function EliminarAnimal($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call bor_animal_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Animal Eliminado";
+	return $mensaje; 
+}
+
 
 }
 

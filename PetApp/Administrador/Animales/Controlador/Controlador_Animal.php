@@ -30,6 +30,7 @@ function insertar(){
 	require_once("../Modelo/Modelo_Animal.php");
 	$mostrar=new MetodoAnimal();
 	$resulta=$mostrar->InsertarAnimal($na,$ta,$ea,$ra,$nombre,$tam,$gen,$col);
+	$resulta=$mostrar->InsertarAdoptado($na,$ta,$ea,$ra,$nombre,$tam,$gen,$col);
 
 	return $resulta;
 }

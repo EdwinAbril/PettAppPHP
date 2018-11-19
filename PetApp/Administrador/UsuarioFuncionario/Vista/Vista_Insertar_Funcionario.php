@@ -15,7 +15,7 @@ require_once("../Controlador/Controlador_Insertar.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <body id="fondox">
-  <form action="Vista_Usuario.php">
+  <form action="../Vista/Vista_Usuario.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
 <center>
@@ -34,7 +34,7 @@ require_once("../Controlador/Controlador_Insertar.php");
 if(isset($_POST['consulta']))
 {
 echo "<script type='text/javascript'>;
-  swal('".$result."', '', 'success');
+  swal('".$result."');
   </script>";
   
 }

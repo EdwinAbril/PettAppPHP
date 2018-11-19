@@ -3,7 +3,7 @@ class conectarproyecto{
 private $servidor="localhost";
 private $usuario="root";
 
-private $pass="0000";
+private $pass="camilo57";
 
 private $bd="proyecto";
 

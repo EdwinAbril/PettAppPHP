@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Adopciones</title>
+	<title>Adopcionesx</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="CSS/Estilos.css">
+	<link rel="stylesheet" href="estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<form action="Vista_insertar.php">
+	<form action="../Vista/Vista_Insertar.php">
   	<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
 	</form>
 
@@ -57,12 +57,8 @@
         <th>".$Ado[1]."</th>
         </tr>
         <tr>
-        <th>Seguimiento</th>
-        <th>".$Ado[2]."</th>
-        </tr>
-        <tr>
         <th>Mensaje</th>
-        <th>".$Ado[3]."</th>
+        <th>".$Ado[2]."</th>
         </tr>
         <tr>
 

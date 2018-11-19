@@ -16,7 +16,7 @@ require_once("../Controlador/Controlador_Insertar.php");
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  
 <body id="fondox">
-    <form action="Vista_Usuario.php">
+    <form action="../Vista/Vista_Usuario.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
 <center>

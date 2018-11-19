@@ -17,10 +17,10 @@
         </form>
 <div id="padre">
     <div id="insertar" class="form-group">
-	<h1>Postulacion</h1>
+	<h1>Adopcion</h1>
  <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
  	    <label>Codigo  del Animal</label><input type="number" name="animal" class="form-control">
-    	<label>Codigo del Seguimiento</label><input type="code" name="seguimiento" class="form-control">
+    	
     	<label>Respuesta</label><input type="text" name="respuesta" class="form-control">
         <div class="form-group" id="bot">
     	<input type="submit" name="consulta" value="Finalizar Adopcion"  class="btn btn-primary">
