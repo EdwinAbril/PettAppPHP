@@ -15,7 +15,7 @@ require_once("../Controlador/Controlador_Usuario.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <body id="fondox">
-  <form action="Vista_Usuario.php">
+  <form action="../Vista/Vista_Usuario.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
 	<div id="insertar">
