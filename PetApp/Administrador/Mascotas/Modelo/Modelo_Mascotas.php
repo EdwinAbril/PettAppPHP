@@ -35,7 +35,7 @@ class MetodoMascotas{
 	$raza_p=$raza;
 	$cedula_p=$cedula;
 	$consulta->execute();
-	$mensa="Mascota Modificada";
+	$mensa="Mascota Actualizada";
 	return $mensa;
 	}
 

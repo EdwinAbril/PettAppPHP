@@ -7,11 +7,13 @@ if (isset($_POST['consulta'])){
 
 function insertar(){
 	$coda=$_POST['animal'];
-	$cods=$_POST['seguimiento'];
 	$men=$_POST['respuesta'];
 	require_once("../Modelo/Modelo_Adopciones.php");
 	$mostrar=new MetodoAdopciones();
-	$result=$mostrar->InsertarAdopciones($coda,$cods,$men);
+	$result=$mostrar->InsertarAdopciones($coda,$men);
+	$result=$mostrar->EliminarAnimal($coda);
+
+
 
 	return $result;
 }

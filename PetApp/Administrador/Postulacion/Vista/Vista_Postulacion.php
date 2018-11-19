@@ -69,6 +69,10 @@ while($Pos=mysqli_fetch_row($resultado)){
                 <th>Cedula</th>
                 <th>".$Pos[5]."</th>
                 </tr>
+                  <tr>
+                <th>Animal</th>
+                <th>".$Pos[6]."</th>
+                </tr>
                 <tr>
 
 	<form method='POST' action='Modificar_Postulacion.php'>

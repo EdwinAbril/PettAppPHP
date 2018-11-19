@@ -7,11 +7,24 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="Estilo.css">
 	<title>PetApp</title>
+  <script type="text/javascript">history.forward();</script>
 </head>
 <body>
-  
+  <?php
+  session_start();
+  if (!$_SESSION) {
+    echo '<script type="text/javascript">
+          alert("Usuario no Autenticado");
+          self.location=../../../Login/Vista/login.php;
+          </script>';  
+  }
+  else{
+    $usuar=$_SESSION["Usuario"];
+    echo "<h1> Bienvenido: ".$usuar."</h1>";
+    }
+  ?>
 	<header id="encabezado">
-    <form action="../../../Login/Vista/registro.php">
+    <form action="../../../Cerrar.php">
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
     </form>
 		<h1>Ciudadano</h1>
