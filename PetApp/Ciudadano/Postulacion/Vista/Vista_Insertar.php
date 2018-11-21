@@ -15,6 +15,7 @@
         <form action="../../Ciudadano/Menu/Ciudadano.php">
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
+
 <center>
 <div id="insertar" >
 	<h1>Postularme</h1>
@@ -24,7 +25,16 @@
     	<p><label>Telefono Fijo</label></p><input type="number" name="fijo">
     	<p><label>Certificado Laboral</label></p><CENTER><input type="file" name="certificado" accept="aplication/pdf" id="quitar"></CENTER>
     	<p><label>Cedula</label></p><input type="number" name="cedula"></label>
-        <p><label>Codigo del animal</label></p><input type="number" name="codigo">
+        <?php
+
+        $cod=$_POST["xp"];
+
+        ?>
+
+
+        <p>Codigo</p><?php echo $cod
+        ?>
+        <p><label>Codigo del animal</label></p><input type="number" name="codigo"  value=.$cod. >
            </br>
     </br>
     	<input type="submit" name="consulta" value="Postularme" class="btn btn-primary">

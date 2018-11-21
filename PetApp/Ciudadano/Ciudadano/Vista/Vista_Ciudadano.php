@@ -53,6 +53,7 @@
 				</div>
 				<div class='caja2'>
             <table class='table'>
+            	
 			<?php
 			echo "
 			<tr>
@@ -86,6 +87,7 @@
 			<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
 			</form>"; 
 			?>
+
 			</table>
 		    </div>
 		    </div>

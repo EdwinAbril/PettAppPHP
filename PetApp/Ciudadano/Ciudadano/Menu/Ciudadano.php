@@ -51,7 +51,7 @@
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divadoptar">
         <div class="panel-heading" id="Adoptar">
-          <h1>Animales</h1>
+          <h1>Adoptar</h1>
         </div>
         <div class="panel-body"><center>
           <input type="image" name="Eventos" src="logos/Adopcion.png" class="img-responsive slideanim" id="logoimagen"></center>
@@ -59,21 +59,7 @@
       </div>      
     </div> 
   </form>
-</div>
 
-  <form action="../../Postulacion/Vista/Vista_Insertar.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divadoptar">
-        <div class="panel-heading" id="Adoptar">
-          <h1>Adoptar</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Eventos" src="logos/Seguimiento.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div> 
-  </form>
-</div>
 
   <form action="../../Denuncias/Vista/Vista_Insertar.php">
 <div class="col-sm-4 col-xs-12">

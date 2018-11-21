@@ -17,7 +17,9 @@
     	?>
         <h1>Ciudadano</h1>
 
-        <p>Cedula</p><?php echo $cod?><BR>
+        <p>Cedula</p><?php echo $cod
+        ?>
+        <BR>
 
         <?php
 	require_once("../Controlador/Controlador_Modificar_Ciudadano.php");
