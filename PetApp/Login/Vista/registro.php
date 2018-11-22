@@ -14,6 +14,9 @@
 		<h1>PetApp</h1>
 		</center>
 	</header>
+	<form action="Login.php">
+  		<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+	</form>
 	<div id="Ingreso" src="Imagenes/user">
 		<form action="registro.php" method="Post"  id="LogIn">
 			<center>
