@@ -11,16 +11,33 @@
 
 </head>
 <body>
-    <form action="Vista_Insertar.php">
-  <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
-</form>
 
-<div name="tabla">
+    <?php
+    session_start();
+    if (!$_SESSION) {
+    echo '<script type="text/javascript">
+          alert("Usuario no Autenticado");
+          location="../../../Login/Vista/login.php";
+          </script>';  
+    }
+    else{
+    $usuar=$_SESSION["Usuario"];
+    }
+    ?>
+    
+    <form action="Vista_Insertar.php">
+        <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
+    </form>
+
 	<form action="../../Menu/Vista/Administrador.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
   	</form>
-  <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
-	<h1 class="display-4">Postulacion</h1>
+    
+    <form action="../../../Cerrar.php">
+        <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
+    </form>
+    
+<h1 class="display-4">Postulacion</h1>
 <?php
 require_once("../Controlador/Controlador_Postulacion.php");
 while($Pos=mysqli_fetch_row($resultado)){
