@@ -16,32 +16,33 @@
   <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
 
-<center>
 <div id="insertar" >
 	<h1>Postularme</h1>
- <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
- 	<p><label>Telefono</label></p><input type="number" name="telefono">
-    	<p><label>Direccion</label></p><input type="text" name="direccion">
-    	<p><label>Telefono Fijo</label></p><input type="number" name="fijo">
-    	<p><label>Certificado Laboral</label></p><CENTER><input type="file" name="certificado" accept="aplication/pdf" id="quitar"></CENTER>
-    	<p><label>Cedula</label></p><input type="number" name="cedula"></label>
-        <?php
 
-        $cod=$_POST["xp"];
+
+ <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
+ 	    <?php
+
+        $cod=$_POST["codi"];
 
         ?>
+        <p><label>Telefono</label></p><input type="number" name="telefono">
+    	<p><label>Direccion</label></p><input type="text" name="direccion">
+    	<p><label>Telefono Fijo</label></p><input type="number" name="fijo">
+    	<p><label>Certificado Laboral</label></p><input type="file" name="certificado" accept="aplication/pdf" id="quitar">
+    	<p><label>Cedula</label></p><input type="number" name="cedula"></label>
+        
 
-
-        <p>Codigo</p><?php 
+        <?php 
         echo'
-        <p><label>Codigo del animal</label></p><input type="number" name="codigo"  value="'.$cod.'" >
+        <p><label>Codigo del animal</label></p>'.$cod.'
+        <p><input type="hidden" name="codi"  value="'.$cod.'"></p>
         '?>   
-           </br>
-    </br>
-    	<input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
+           
+        <input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
     </form>
 </div>
-</center>
+
     <?php
 if(isset($_POST['consulta']))
 {
