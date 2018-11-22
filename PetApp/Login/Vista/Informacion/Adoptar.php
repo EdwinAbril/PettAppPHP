@@ -13,9 +13,9 @@
 	<title>Adoptar</title>
 </head>
 
-<div>
-    <form action="../login.php">
-        <input type="submit" name="inicio" value="inicio" class="btn btn-light">
+<form action="../login.php" method="post" id="volver">
+        <input type="submit" name="inicio" value="inicio" class="btn btn-light" id="">
+</form>
 
 <div id="contenedor">
 <header><img src="Imagen.jpg" id="imagen"></header> 
@@ -35,8 +35,8 @@
 
 </body>
 
-<footer id="myFooter"> 
-        <div class="container"> 
+<footer id="myFooter">
+        <div class="container">
         </div>
         <div class="footer-social">
             <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
@@ -49,6 +49,7 @@
 </script>
 
 </div>
+
 </html>
 
 

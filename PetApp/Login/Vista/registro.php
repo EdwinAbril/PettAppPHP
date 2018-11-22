@@ -8,10 +8,10 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
 </head>
 <body>
+	<form action="login.php">
+  		<input type="submit" name="inicio" value="inicio" class="btn btn-light" id="">
+  	</form> 
 	<div id=contenedor>
-		<form action="login.php">
-  		<input type="submit" name="Inicio" value="Inicio" class="btn btn-light" id="Inicio">
-  	</form>
 	<header class="titulo">
 		<center>
 		<h1>PetApp</h1>

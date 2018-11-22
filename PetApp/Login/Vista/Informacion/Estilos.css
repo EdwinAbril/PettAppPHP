@@ -1,35 +1,35 @@
+#volver{
+	position: absolute;
+}
+
 #imagen{
 	width: 100%;
 	height: 100%;
 }
 
 #Texto{
-	font-size: 50px;
-	margin-top: 10px;
+	font-size: 70px;
+	margin-top: 30px;
 	text-align: center;
 	font-family:'Rockwell';
 }
 
 #Informacion{
-	margin-top: 10px;
+	margin-top: 50px;
 	margin: 10px;
-}
-
-#imagen2{
-
-	width: 600px;
-	height: 300px;
-	height: 70%;
-	float: left;
-	margin: 10px;
-	margin-left: 10px;
-	margin-top: 45px;
-
 }
 
 #parrafo1{
 	margin-top: 50px;
-	font-size: 18px;
+	font-size: 20px;
+}
+
+#imagen2{
+	height: 350px;
+	width: 520px;
+	float: left;
+	margin: 10px;
+	margin-top: 45px;
 }
 
 @media screen and (max-width: 700px){
@@ -47,21 +47,21 @@
 }
 
 #Informacion{
-	margin: 15px;
+	margin-top: 50px;
+	margin: 10px;
 }
 
 #parrafo1{
+	margin-top: 50px;
 	font-size: 15px;
 }
 
 #imagen2{
-
-	width: 50%;
 	height: 50%;
-	float: left; 
+	width: 50%;
+	float: left;
 	margin: 10px;
 	margin-top: 45px;
-
 }
 
 #myFooter{
