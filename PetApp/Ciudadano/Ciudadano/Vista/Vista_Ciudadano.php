@@ -29,8 +29,7 @@
   		<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vo">
 	</form>
   	
-  	<input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
-
+  	
 	<h3 class="display-4">Ciudadano</h3>
 		<?php
 		require_once("../Controlador/Controlador_vista.php");
