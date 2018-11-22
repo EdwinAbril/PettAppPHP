@@ -25,14 +25,9 @@
     echo "<h1> Bienvenido: ".$usuar."</h1>";
     }
   	?>
-
-<<<<<<< HEAD
-	<form action="Vista_insertar.php">
-  		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
-=======
 	<form action="../Vista/Vista_Insertar.php">
   	<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
->>>>>>> 691bcba31874a922f20f977be40f6a67d9a11a3c
+
 	</form>
 
 	<form action="../../Menu/Vista/Administrador.php">

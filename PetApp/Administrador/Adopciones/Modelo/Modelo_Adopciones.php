@@ -89,7 +89,7 @@ public function EliminarAdopciones($d){
 	$conexion= $conectar->conexion();
 	$sql="call bor_animal_Admin('$d')";
 	$consulta=mysqli_query($conexion,$sql);
-	$mensaje="Animal Eliminado";
+	$mensaje="Proceso Finalizado";
 	return $mensaje; 
 }
 
