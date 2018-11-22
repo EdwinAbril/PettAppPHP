@@ -70,7 +70,7 @@ echo "
                         <th>".$Eve[2]."</th>
                         </tr>
                         <tr>
-                        <th>Duracion</th>
+                        <th>Hora</th>
                         <th>".$Eve[3]."</th>
                         </tr>
                         <tr>

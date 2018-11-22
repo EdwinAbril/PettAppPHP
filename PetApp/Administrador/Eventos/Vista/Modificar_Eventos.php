@@ -33,9 +33,9 @@
 	<tr>
 	<form action='../Controlador/Controlador_Actualizar_Eventos.php' method='Post'>
 	<input type='hidden' name='usu' value='".$Eve[0]."'>   
-    <p>Fecha</p><input type='text' name='fec'  value='".$Eve[1]."'><BR></BR>
+    <p>Fecha</p><input type='date' name='fec'  value='".$Eve[1]."'><BR></BR>
     <p>Lugar</p><input type='text' name='lug'  value='".$Eve[2]."'><BR></BR>
-    <p>Duracion</p><input type='text' name='dur'  value='".$Eve[3]."'><BR></BR>
+    <p>Hora</p><input type='time' name='dur'  value='".$Eve[3]."'><BR></BR>
     <p>Descripcion</p><input type='text' name='des'  value='".$Eve[4]."'><BR></BR>
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
     </form>";

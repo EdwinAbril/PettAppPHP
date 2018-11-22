@@ -21,7 +21,6 @@
   	}
   	else{
     $usuar=$_SESSION["Usuario"];
-    echo "<h1> Bienvenido: ".$usuar."</h1>";
     }
   	?>
 	<form action="Vista_insertar.php">

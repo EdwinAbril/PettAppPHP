@@ -26,7 +26,7 @@ require_once("../Controlador/Controlador_insertar.php");
  <form action="../Controlador/Controlador_insertar.php" method="Post">
  	<p><label>Fecha del evento </label></p><input type="date" name="fecha" required="">
     	<p><label>Lugar del evento</label></p><input type="text" name="lugar" required="">
-    	<p><label>Duracion del evento</label></p><input type="text" name="duracion" required="">
+    	<p><label>Hora del evento</label></p><input type="time" name="duracion" required="">
       <p><label>Descripcion</label></p><input type="text" name="desc" required="">
           </br>
     </br>
