@@ -3,7 +3,7 @@
 <head>
 	<title>Adopcionesx</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="CSS/Estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
@@ -22,13 +22,12 @@
   	}
   	else{
     $usuar=$_SESSION["Usuario"];
-    echo "<h1> Bienvenido: ".$usuar."</h1>";
     }
   	?>
-	<form action="../Vista/Vista_Insertar.php">
-  	<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
 
-	</form>
+	<form action="Vista_insertar.php">
+      <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
+  </form>
 
 	<form action="../../Menu/Vista/Administrador.php">
     	<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
