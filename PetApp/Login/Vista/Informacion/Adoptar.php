@@ -33,6 +33,10 @@
 		</p>
 	</article>
 
+<form action="../registro.php" method="post" id="adopta">
+        <input type="image" src="Adopta.png" height="70" width="70">
+</form>
+
 </body>
 
 <footer id="myFooter">
