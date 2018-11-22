@@ -11,14 +11,15 @@
 
 </head>
 <body>
+			
 	<form action="Vista_Insertar.php">
-  <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
-</form>
+ 		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
+	</form>
 
-<div name="tabla">
-	<form action="../../Menu/Vista/Administrador.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
-</form>
+	<form action="../../Ciudadano/Menu/Ciudadano.php">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+    </form>
+
   <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
 <center><h1 class="display-4">Denuncias</h1></center>
 <?php
