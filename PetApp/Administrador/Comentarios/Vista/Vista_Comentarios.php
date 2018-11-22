@@ -23,7 +23,6 @@
     }
     else{
     $usuar=$_SESSION["Usuario"];
-    echo "<h1> Bienvenido: ".$usuar."</h1>";
     }
     ?>
 
