@@ -32,9 +32,10 @@
         ?>
 
 
-        <p>Codigo</p><?php echo $cod
-        ?>
-        <p><label>Codigo del animal</label></p><input type="number" name="codigo"  value=.$cod. >
+        <p>Codigo</p><?php 
+        echo'
+        <p><label>Codigo del animal</label></p><input type="number" name="codigo"  value="'.$cod.'" >
+        '?>   
            </br>
     </br>
     	<input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
