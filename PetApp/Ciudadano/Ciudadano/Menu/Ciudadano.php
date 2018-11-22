@@ -29,6 +29,11 @@
     </form>
 		<h1>Ciudadano</h1>
 		<img src="Logos/Mujer.png" height="300" width="300" id="Avatar" >
+
+
+                <form action="../../Eventos/Vista/Vista_Eventos.php">
+                    <input type="image" name="eventis" src="logos/eventis.png" height="100" width="100" id="eventis">
+                </form>
 	</header>
 
   <center>  
