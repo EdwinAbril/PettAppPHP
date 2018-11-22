@@ -13,6 +13,10 @@
 	<title>Adoptar</title>
 </head>
 
+<div>
+    <form action="../login.php">
+        <input type="submit" name="inicio" value="inicio" class="btn btn-light">
+
 <div id="contenedor">
 <header><img src="Imagen.jpg" id="imagen"></header> 
 <body>
@@ -31,15 +35,8 @@
 
 </body>
 
-<footer id="myFooter">
-        <div class="container">
-            <ul>
-                <li><a href="#" >Alcaldia de Mosquera</a></li>
-                <li><a href="#">Contactenos</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Terms of service</a></li>
-            </ul>
-        <p class="footer-copyright">© 2018 Copyright</p>
+<footer id="myFooter"> 
+        <div class="container"> 
         </div>
         <div class="footer-social">
             <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
@@ -52,7 +49,6 @@
 </script>
 
 </div>
-
 </html>
 
 

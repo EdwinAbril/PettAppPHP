@@ -9,6 +9,9 @@
 </head>
 <body>
 	<div id=contenedor>
+		<form action="login.php">
+  		<input type="submit" name="Inicio" value="Inicio" class="btn btn-light" id="Inicio">
+  	</form>
 	<header class="titulo">
 		<center>
 		<h1>PetApp</h1>
