@@ -17,6 +17,7 @@
 		<h1>PetApp</h1>
 		</center>
 	</header>
+	
 	<div id="Ingreso" src="Imagenes/user">
 		<form action="registro.php" method="Post"  id="LogIn">
 			<center>
