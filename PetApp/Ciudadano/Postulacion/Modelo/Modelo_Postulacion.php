@@ -12,6 +12,14 @@ class MetodoPostulacion{
 	return $consulta;
 	}
 
+	public function MostrarCedula($usu){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select usuario_ciu from ciudadano where cedula='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
 	public function ModificarPostulacion($telefono,$direcion,$telfij,$certificado,$cedula,$codigo){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
