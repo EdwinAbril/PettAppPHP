@@ -8,7 +8,8 @@ body{
 }
 
 body { 
-	background-image: url('Imagenes/FondoCiudadano.jpeg');
+	background: url('Imagenes/FondoCiudadano.jpeg');
+	background-attachment: fixed;
 }
 
 #Avatar{
@@ -17,8 +18,6 @@ body {
 
 }
 
-#Fondo{
-}
 
 header{
 	text-align: center;
@@ -26,6 +25,9 @@ header{
 
  } 
 
+#content{
+
+}
 
 .container{
 	max-width: 100%;
