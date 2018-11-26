@@ -10,6 +10,9 @@
   <script type="text/javascript">history.forward();</script>
 </head>
 <body>
+
+  <div class="content">
+    
   <?php
   session_start();
   if (!$_SESSION) {
@@ -29,32 +32,62 @@
     </form>
 		<h1>Ciudadano</h1>
 		<img src="Logos/Mujer.png" height="300" width="300" id="Avatar" >
+      </header>
 
+        <div id="cajas">
 
-                <form action="../../Eventos/Vista/Vista_Eventos.php">
-                    <input type="image" name="eventis" src="logos/eventis.png" height="100" width="100" id="eventos">
-                </form>
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <form action="../../Eventos/Vista/Vista_Eventos.php">
+                <center>  
+                <input type="image" name="eventoss" src="logos/eventis.png" height="250" width="250" id="eventos">
+              </center>
+              </form>
+            </div>
+          </div>
 
-                <form action="../../Animales/Vista/Vista_Animal.php">
-                    <input type="image" name="eventis" src="logos/Adoptar.png" height="100" width="100" id="animales">
-                </form>
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center"> 
+              <form action="../../Animales/Vista/Vista_Animal.php">
+              <center>
+              <input type="image" name="animal" src="logos/Adoptar.png" height="250" width="250" id="animales">
+              </center>
+              </form>
+          </div>
+        </div>
 
-                <form action="../../Denuncias/Vista/Vista_Denuncias.php">
-                    <input type="image" name="eventis" src="logos/Denuncia.png" height="100" width="100" id="denuncia">
-                </form>
+        <div class="col-sm-4 col-xs-12" id="caja1">
+          <div class="panel panel-default text-center">
+              <form action="../../Denuncias/Vista/Vista_Denuncias.php">
+                <center>
+                <input type="image" name="denuncia" src="logos/Denuncia.png" height="250" width="250" id="denuncia">
+              </center>
+              </form>
+          </div>
+        </div>
 
-                <form action="../../Mascotas/Vista/Vista_Mascotas.php">
-                    <input type="image" name="eventis" src="logos/Mascota.png" height="100" width="100" id="mascota">
-                </form>
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+              <form action="../../Mascotas/Vista/Vista_Mascotas.php">
+                <center>
+                <input type="image" name="mascotas" src="logos/Mascota.png" height="250" width="250" id="mascota">
+                </center>
+               </form>
+          </div>
+        </div>
 
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
                 <form action="../Vista/Vista_Ciudadano.php">
-                    <input type="image" name="eventis" src="logos/MisDatos.png" height="100" width="100" id="datos">
+                  <center>
+                  <input type="image" name="datos" src="logos/MisDatos.png" height="250" width="250" id="datos">
+                </center>
                 </form>
+              </div>
+            </div>
 
-
-	</header>
-
-  
+      </div>
+    </div>
 
 </body>
 </html>
