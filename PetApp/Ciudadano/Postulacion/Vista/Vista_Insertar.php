@@ -12,15 +12,27 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body id="fondox">
-        <form action="../../Ciudadano/Menu/Ciudadano.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
-</form>
+    <?php
+    session_start();
+    if (!$_SESSION) {
+    echo '<script type="text/javascript">
+          alert("Usuario no Autenticado");
+          self.location=../../../Login/Vista/login.php;
+          </script>';  
+    }
+    else{
+    $usuar=$_SESSION["Usuario"];
+    }
+    ?>
+    <form action="../../Ciudadano/Menu/Ciudadano.php">
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
+    </form>
 
-<div id="insertar" >
+    <div id="insertar" >
 	<h1>Postularme</h1>
 
 
- <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
+    <form action="../Controlador/Controlador_Insertar.php" method="Post"  enctype="multipart/form-data">
  	    <?php
 
         $cod=$_POST["codi"];
@@ -30,9 +42,8 @@
     	<p><label>Direccion</label></p><input type="text" name="direccion">
     	<p><label>Telefono Fijo</label></p><input type="number" name="fijo">
     	<p><label>Certificado Laboral</label></p><input type="file" name="certificado" accept="aplication/pdf" id="quitar">
-    	<p><label>Cedula</label></p><input type="number" name="cedula"></label>
+        <p><label>Cedula</label></p><input type="text" name="cedula"></label>
         
-
         <?php 
         echo'
         <p><label>Codigo del animal</label></p>'.$cod.'
