@@ -64,55 +64,29 @@
 
 
                 <form action="../../Eventos/Vista/Vista_Eventos.php">
-                    <input type="image" name="eventis" src="logos/eventis.png" height="100" width="100" id="eventis">
+                    <input type="image" name="eventis" src="logos/eventis.png" height="100" width="100" id="eventos">
                 </form>
+
+                <form action="../../Animales/Vista/Vista_Animal.php">
+                    <input type="image" name="eventis" src="logos/Adoptar.png" height="100" width="100" id="animales">
+                </form>
+
+                <form action="../../Denuncias/Vista/Vista_Denuncias.php">
+                    <input type="image" name="eventis" src="logos/Denuncia.png" height="100" width="100" id="denuncia">
+                </form>
+
+                <form action="../../Mascotas/Vista/Vista_Mascotas.php">
+                    <input type="image" name="eventis" src="logos/Mascota.png" height="100" width="100" id="mascota">
+                </form>
+
+                <form action="../Vista/Vista_Ciudadano.php">
+                    <input type="image" name="eventis" src="logos/MisDatos.png" height="100" width="100" id="datos">
+                </form>
+
+
 	</header>
 
-  <center>  
-	<div id="pricing" class="container-fluid">
-
-     <form action="../Vista/Vista_Ciudadano.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="Datos">
-          <h1>Mis Datos</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Eventos" src="logos/Postulacion.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div> 
-  </form>
-
-  <form action="../../Animales/Vista/Vista_Animal.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divadoptar">
-        <div class="panel-heading" id="Adoptar">
-          <h1>Adoptar</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Eventos" src="logos/Adopcion.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div> 
-  </form>
-
-
-  <form action="../../Denuncias/Vista/Vista_Insertar.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divadoptar">
-        <div class="panel-heading" id="Adoptar">
-          <h1>Denunciar</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Eventos" src="logos/Denuncias.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div> 
-  </form>
-</div>
-
-</center>
+  
 
 </body>
 </html>
