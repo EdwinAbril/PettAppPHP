@@ -1,3 +1,15 @@
+#imgcir{
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000;
+}
+#top{
+    margin-top: 130px;
+}
+#ubi{
+    margin-top: -50px;
+}
 #fondox{
 	background-image: url("Imagenes/Administrador.jpg")
 }
@@ -31,7 +43,12 @@ float: right;
     background: transparent;
     border-radius: 20px 20px 20px 20px;
     border: 1px solid green;
-    
+}
+#foto input{
+	width: 100px;
+	margin-left: auto;
+  	margin-right: auto;
+	text-align: center;
 }
 #quitar{
 	color:transparent;
@@ -53,9 +70,9 @@ float: right;
     border: 1px solid green;
     max-width: 80%;
 } 
-}
 #vol{
 	position: absolute;
 	top: 5px;
 	left: 5px;
+}
 }

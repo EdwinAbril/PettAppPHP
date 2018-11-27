@@ -3,7 +3,7 @@
 <?php
 if (isset($_POST['consulta'])){
 	$result=insertar();
-	require_once("../Vista/Vista_insertar.php");	
+	header('Location: ../Vista/Registrarse.php');	
 }
 
 function insertar(){

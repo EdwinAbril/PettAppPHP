@@ -1,0 +1,30 @@
+#padre{
+	  background-color: transparent;
+  	padding: 0 1rem;
+  	margin: 1rem;
+}
+#insertar{
+	  width: 300px;
+	  margin-left: auto;
+  	margin-right: auto;
+	  text-align: center;
+    padding: 20px;
+    background: transparent;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid green;
+    
+}
+#bot{
+  margin-top: 10px;
+}
+
+
+@media screen and (max-width:1200px){
+  #insertar{
+    margin-top: 10px;
+    background: white;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid green;
+    max-width: 100%;
+} 
+}

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="Estilos.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
 </head>
-<body>
+<body id='fondo'>
 	<form action="login.php">
   		<input type="submit" name="inicio" value="inicio" class="btn btn-light" id="">
   	</form> 
