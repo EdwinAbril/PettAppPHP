@@ -32,7 +32,7 @@
         ?>
 
 
-        <p>Codigo</p><?php 
+        <?php 
         echo'
         <p><label>Codigo del animal</label></p><input type="number" name="codigo"  value="'.$cod.'" >
         '?>   
