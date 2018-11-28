@@ -56,6 +56,7 @@
                 	';
 				?>
 				</div>
+
 				<div class='caja2'>
                     <table class='table'>
                 <?php
@@ -75,7 +76,15 @@
 					<input type='hidden' name='usu' value='".$Adm[0]."'>
 					<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
 					</form>
-					
+					</tr>
+					</table>
+					</div>";
+					?>
+
+					<div class="opciones">
+						<table class="table">
+					<?php
+					echo "
 					<form method='POST' action='../Controlador/Controlador_Eliminar_Administrador.php'>
 					<input type='hidden' name='usu' value='".$Adm[0]."'>
 					<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
@@ -85,6 +94,9 @@
 					</table>
             </div>
             </div>
+
+
+
 				<?php
 			}
 			
