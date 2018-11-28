@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	    <meta charset="utf-8">
+      <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
@@ -9,7 +9,7 @@
       </script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <link rel="stylesheet" type="text/css" href="Estilo.css">
-    	<title>PetApp</title>
+      <title>PetApp</title>
       <script type="text/javascript">history.forward();
       </script>
 </head>
@@ -37,8 +37,8 @@
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
     </form>
 
-		<h1>Ciudadano</h1>
-		<img src="Logos/Mujer.png" height="300" width="300" id="Avatar" >
+    <h1>Ciudadano</h1>
+    <img src="Logos/Mujer.png" height="300" width="300" id="Avatar" >
 
     </header>
 
