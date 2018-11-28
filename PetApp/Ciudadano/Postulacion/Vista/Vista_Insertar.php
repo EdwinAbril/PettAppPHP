@@ -75,12 +75,7 @@
     	<label>Telefono Fijo</label><input type="number" name="fijo" class="form-control">
         <label>Certificado Laboral</label><input type="file" name="certificado" accept="aplication/pdf" id="cer" class="form-control-file"><?php
         echo"
-        <p><label>Cedula</label></p>
-        <p>".$Ced[0]."</p>
         <input type='hidden' name='cedula' value='".$Ced[0]."'>
-        
-        <p><label>Codigo del animal</label></p>
-        <p>".$cod."</p>
         <input type='hidden' name='codi'  value='".$cod."'>";
         }
         ?>   

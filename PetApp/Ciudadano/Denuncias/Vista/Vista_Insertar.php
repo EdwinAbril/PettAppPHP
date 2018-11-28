@@ -62,14 +62,27 @@
     <div id="insertar" class="form-group">
 	<h1>Denunciar</h1>
     <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
- 	    <label>Fecha De la Denuncia</label><input type="date" name="fecha" required="" class="form-control">
-    	<label>Tipo </label><select  name="tipo" required="" class="form-control">
+ 	    <?php
+      while($Fec=mysqli_fetch_row($resultadof)){
+      echo'
+        <p><label>Fecha de la Denuncia</label></p>
+        <p>'.$Fec[0].'</p>
+        <input type="hidden" name="fecha" value="'.$Fec[0].'">
+        
+        ';
+      ?>
+      <label>Tipo </label><select  name="tipo" required="" class="form-control">
             <option>Tipo de Denuncia</option>
             <option>Maltrato</option>
             <option>Abandono</option>
         </select>
-    	<label>Cedula del Denunciante</label><input type="number" name="cedula" required="" class="form-control">
-    	<label>Denuncia</label><input type="text" name="denuncia" required="" class="form-control">
+        <?php
+        echo'
+        <input type="hidden" name="cedula" value="'.$Ced[0].'">
+        ';
+        ?>
+    	
+    	<label>Denuncia</label><input type="text" name="denuncia"  class="form-control">
     	<div id="foto">
         <label>Foto</label><input type="file" name="imagen" id="quitar" accept="image/png,image/jpeg,image/jpg" class="form-control-file">
         </div>
@@ -80,7 +93,7 @@
 </div>
 </div>
     <?php
-    }
+  }}
     if(isset($_POST['consulta'])){
 	  echo "<script type='text/javascript'>;
 	  swal('".$resulta."');
