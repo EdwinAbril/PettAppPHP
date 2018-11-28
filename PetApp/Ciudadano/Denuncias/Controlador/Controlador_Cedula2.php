@@ -1,6 +1,6 @@
 <?php
 require_once("../Modelo/Modelo_Denuncias.php");
 $mostrar= new MetodoDenuncias();
-$resultado=$mostrar->MostrarDenuncias($Ced[0]);
+$resultadod=$mostrar->MostrarCedula($usuar);
 require_once("../Vista/Vista_Denuncias.php");
 ?>
