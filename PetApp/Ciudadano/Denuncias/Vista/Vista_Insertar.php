@@ -49,7 +49,10 @@
           </div>
         </div>
       </div>
-
+    <?php
+    require_once("../Controlador/Controlador_Cedula.php");
+    while($Ced=mysqli_fetch_row($resultado)){
+    ?>
     <div id="top">
         <form action="Vista_Denuncias.php">
             <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
@@ -77,14 +80,13 @@
 </div>
 </div>
     <?php
-if(isset($_POST['consulta']))
-{
-	echo "<script type='text/javascript'>;
-	swal('".$resulta."');
-	</script>";
-}
-
-    ?>
+    }
+    if(isset($_POST['consulta'])){
+	  echo "<script type='text/javascript'>;
+	  swal('".$resulta."');
+	  </script>";
+    }
+  ?>
 </div>
 </div>
 </body>

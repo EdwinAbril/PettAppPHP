@@ -16,18 +16,17 @@
 
 </head>
 <body>
-
         <?php
-    session_start();
-    if (!$_SESSION) {
-        echo '<script type="text/javascript">
-              alert("Usuario no Autenticado");
-              self.location=../../../Login/Vista/login.php;
-              </script>';  
-    }
-    else{
-        $usuar=$_SESSION["Usuario"];
-    }
+        session_start();
+        if (!$_SESSION) {
+            echo '<script type="text/javascript">
+                  alert("Usuario no Autenticado");
+                  self.location=../../../Login/Vista/login.php;
+                  </script>';  
+        }
+        else{
+            $usuar=$_SESSION["Usuario"];
+        }
         ?>
         <div class="container-fluid">
             <div class="row">
