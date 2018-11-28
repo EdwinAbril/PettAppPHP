@@ -119,7 +119,13 @@ echo"
 <input type='hidden' name='an' value='".$Pos[6]."'>
 <th><input type='submit' name='aceptar' class='btn btn-primary' value='Aceptar'></th>
 </form> 
-"
+";
+if(isset($_POST['aceptar']))
+{
+    echo "<script type='text/javascript'>;
+    swal('".$result."');
+    </script>";
+}
 ?>
 
 <?php
@@ -135,6 +141,7 @@ echo"
     </div>
 	<?php
 	}
+
 	if(isset($_POST['eliminar'])){
 		echo"<script type='text/javascript'>;
 		alert('".$resulta."');

@@ -28,7 +28,7 @@ function insertar(){
 }
 
 function insertars(){
-	$pos=$_POST['postulacion']
+	$pos=$_POST['postulacion'];
 	$tel=$_POST['telefono'];
 	$dir=$_POST['direccion'];
 	$fij=$_POST['fijo'];

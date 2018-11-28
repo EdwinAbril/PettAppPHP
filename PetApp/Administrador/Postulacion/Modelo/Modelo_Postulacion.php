@@ -77,14 +77,10 @@ class MetodoPostulacion{
 	public function Insertarseguimiento($cp,$tel,$dir,$fij,$ce,$ca){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_Seguimiento_1($ce);
-		if($result->num_rows>0){
-			$mensa="";
-		}
-		else{
+		
 			$sql="call FunInsertar_Seguimiento(?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('isssssi',$cp_p,$tel_p,$dir_p,$fij_p,$ce_p,$ca_p);
+			$consulta->bind_param('issssi',$cp_p,$tel_p,$dir_p,$fij_p,$ce_p,$ca_p);
 
 			$cp_p=$cp;
 			$tel_p=$tel;
@@ -94,7 +90,7 @@ class MetodoPostulacion{
 			$ca_p=$ca;
 			$consulta->execute();
 			$mensa="Postulacion Aceptada";
-		}
+		
 		return $mensa;
 	}
 
