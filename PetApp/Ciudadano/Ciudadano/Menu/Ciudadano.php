@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="Estilo.css">
-	<title>PetApp</title>
-  <script type="text/javascript">history.forward();</script>
+	    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"> 
+      </script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="Estilo.css">
+    	<title>PetApp</title>
+      <script type="text/javascript">history.forward();
+      </script>
 </head>
+
 <body>
 
-    
   <?php
   session_start();
   if (!$_SESSION) {
@@ -28,44 +29,7 @@
     }
   ?>
 
-
-      <div class="col-md-12">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-top">
-           
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-
-          <span class="navbar-toggler-icon"></span>
-
-          </button> 
-
-          <a class="navbar-brand" href="../../../Login/Vista/login.php">PetApp</a>
-
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <form class="form-inline">
-
-          <input class="form-control mr-sm-2" type="text" /> 
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">
-
-                Buscar
-
-          </button>
-          </form>
-
-          <ul class="navbar-nav ml-md-auto">
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="Imagenes/perros.jpg" height="40" width="40"></a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="../Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
-          <div class="dropdown-divider">
-
-          </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
-          </div>
-          </li>
-          </ul>
-          </div>
-        </nav>
-      </div>
-
+    <div id="contenedor">
 
     <header id="encabezado">
 
@@ -78,14 +42,14 @@
 
     </header>
 
-      <div id="pricing" class="container-fluid">
-      <div class="text-center"> 
+    <center>
 
-        
-        <div id="pricing" class="container-fluid">
-        <div class="text-center">
+    <div id="pricing" class="container-fluid">
+    <div class="text-center">
 
-        <div id="cajas">
+    <br><h2>GESTIONAR</h2><br><br>
+    <br>
+     
 
           <div class="col-sm-4 col-xs-12">
             <div class="panel panel-default text-center">
@@ -135,13 +99,11 @@
                 </center>
                 </form>
               </div>
-            </div>
+            </div> 
 
-        </div>
-      </div>
-    </div>
+</center>
   </div>
-  </div>
+</div>
 
 </body>
 </html>
