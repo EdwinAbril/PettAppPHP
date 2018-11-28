@@ -1,3 +1,15 @@
+#imgcir{
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000;
+}
+#top{
+    margin-top: 80px;
+}
+#ubi{
+    margin-top: -50px;
+}
 #centro{
     background-color: transparent;
     padding: 0 1rem;
@@ -62,6 +74,13 @@ p{
     color:white;
 }
 @media screen and (max-width: 1200px){
+#top{
+    margin-top: 60px;
+}
+#ubi{
+    margin-top: -70px;
+}
+
 #centro{
     background-color: transparent;
     padding: 0px;
@@ -88,9 +107,7 @@ p{
     color:black;
 }
     #vol{
-    float: left;
-    margin-left: -72px;
-    margin-top: 5px;
+    margin-bottom: 20px;
     }
 }
 

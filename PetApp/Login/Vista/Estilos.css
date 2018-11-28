@@ -1,15 +1,13 @@
-body{
-
+#fondo{
+	background-image: url("Imagenes/Fondo.jpg");
 	font-family:Rockwell;
     text-align: center;
-
 }
 @media screen and (max-width:980px) {
 		.container {
 			width:98%
 		}
 }
-
 
 #Ingreso{
 	margin-top: 50px; 
@@ -63,22 +61,13 @@ body{
 	-moz-border-radius: 30px 30px 30px 30px;
 	-webkit-border-radius: 30px 30px 30px 30px;
 	border-color: transparent;
- 	height: 400px;
+ 	height: 650px;
+ 	width: 400px;
  	margin-top: 50px;
  	float:center;
 
 }
-#Registrar:hover{
 
-    border-radius: 30px 30px 30px 30px;
-	-moz-border-radius: 30px 30px 30px 30px;
-	-webkit-border-radius: 30px 30px 30px 30px;
-	border: 4px color: green;
-	height: 400px;
-	margin-top: 50px;
-	float:center;
-
-}		
 #header{
 	background-color: #d0d0ff;
     font-size:12pt;  

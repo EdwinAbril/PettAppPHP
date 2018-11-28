@@ -1,84 +1,77 @@
-
+#titulos{
+	color: white;
+}
+#imgcir{
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000;
+}
+h1{
+	margin-top: 60px;
+}
 body{
 	font-family:Rockwell;
+	color: white;
+}
+
+body { 
+	background: url('Imagenes/FondoCiudadano.jpeg');
+	background-attachment: fixed;
 }
 
 #Avatar{
 	margin-top:25px;
 	align-self:center;
+
 }
 
-header{ 
-background: rgba(131,227,86,1);
-background: -moz-linear-gradient(left, rgba(131,227,86,1) 0%, rgba(136,212,96,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(131,227,86,1)), color-stop(100%, rgba(136,212,96,1)));
-background: -webkit-linear-gradient(left, rgba(131,227,86,1) 0%, rgba(136,212,96,1) 100%);
-background: -o-linear-gradient(left, rgba(131,227,86,1) 0%, rgba(136,212,96,1) 100%);
-background: -ms-linear-gradient(left, rgba(131,227,86,1) 0%, rgba(136,212,96,1) 100%);
-background: linear-gradient(to right, rgba(131,227,86,1) 0%, rgba(136,212,96,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83e356', endColorstr='#88d460', GradientType=1 );
-text-align: center;
-padding: 40px;
+
+header{
+	text-align: center;
+	padding: 37px;
 
  } 
-    
-#pricing{
-background: rgba(255,255,255,1);
-background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(235,235,235,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(235,235,235,1)));
-background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(235,235,235,1) 100%);
-background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(235,235,235,1) 100%);
-background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(235,235,235,1) 100%);
-background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(235,235,235,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ebebeb', GradientType=1 );
+
+#content{
+
 }
-
-#Datos{
-background-color:#5fc732;
-}
-
-#Adoptar{
-background-color:#5fc732;
-}
-
-#divinsert{
-	max-width: 300px;
-}
-
-
-#divconsulta{
-	max-width: 300px;
-}
-
-
-#divactuali{
-	max-width: 300px;
-}
-
-
-#diveli{
-	max-width: 300px;
-}
-
-
-#divciudadano{
-	margin-top: 80px;
-	max-width: 350px;
-	border:4px solid #5fc732;
-}
-
-#divadoptar{
-	margin-top: 80px;
-	max-width: 350px;
-	border:4px solid #5fc732;
-}
-
 
 .container{
 	max-width: 100%;
 	min-width: 40%;
 }
 
+#cajas{
+	margin-top: 100px;
+}
+
+#eventos{
+	height: 250px;
+	width: 250px;
+}
+
+#animales{
+	height: 250px;
+	width: 250px;
+}
+
+#denuncia{
+	height: 250px;
+	width: 250px;
+}
+
+#mascota{
+	height: 280px;
+	width: 280px;
+}
+
+#datos{
+	height: 250px;
+	width: 250px;
+}
+
+		
 footer{
 	margin:0px;
 	text-align:center;
@@ -88,8 +81,37 @@ footer{
 	margin-top: 100%;
 }
 
-@media screen and (max-width:640px) {
-    /* reglas CSS */
+@media screen and (max-width:740px) {
+
+#cajas{
+	margin-top: 100px;
+}
+
+#eventos{
+	height: 100px;
+	width: 100px;
+}
+
+#animales{
+	height: 100px;
+	width: 100px;
+}
+
+#denuncia{
+	height: 100px;
+	width: 100px;
+}
+
+#mascota{
+	height: 100px;
+	width: 100px;
+}
+
+#datos{
+	height: 100px;
+	width:  100px;
+}
+
 }
 @media screen and (max-width:1024px) and (min-width:640px) {
     /* reglas CSS */

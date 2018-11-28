@@ -13,7 +13,7 @@ function insertar(){
     $tipo=$_FILES['certificado']['type'];
     $tamaño=$_FILES['certificado']['size'];
     $ce=$_POST['cedula'];
-    $ca=$_POST['codigo'];
+    $ca=$_POST['codi'];
 	if ($nombre!=null && $tamaño<=1000000) {
         $hoy=date("d_m_y");
         $nombre=$hoy.$nombre;

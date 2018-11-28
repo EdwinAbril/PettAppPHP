@@ -23,6 +23,7 @@
     echo "<h1> Bienvenido: ".$usuar."</h1>";
     }
   ?>
+  
   <header id="encabezado">
     <form action="../../../Cerrar.php">
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">

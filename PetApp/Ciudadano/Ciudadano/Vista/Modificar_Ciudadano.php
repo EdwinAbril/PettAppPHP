@@ -2,24 +2,30 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="Estilomod.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <title>Ciudadano</title>
     </head>
-    <body>
+    <body id="fondox">
+
 
         <form action="../Vista/Vista_Ciudadano.php">
-        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
         </form>
 
-    	<?php
+<div id="padre">
+        <div id="modificar" class="form-group">
 
-    	$cod=$_POST["usu"];
+        <?php
 
-    	?>
+        $cod=$_POST["usu"];
+
+        ?>
         <h1>Ciudadano</h1>
 
-        <p>Cedula</p><?php echo $cod
-        ?>
-        <BR>
+        <p>Cedula</p><?php echo $cod?>
 
         <?php
 	require_once("../Controlador/Controlador_Modificar_Ciudadano.php");
@@ -33,7 +39,7 @@
     <p>Telefono</p><input type='text' name='tel'  value='".$Ciu[2]."'><BR></BR>
     <p>Direccion</p><input type='text' name='dir'  value='".$Ciu[3]."'><BR></BR>
     <p>Correo</p><input type='text' name='cor'  value='".$Ciu[4]."'><BR></BR>
-    <input type='submit' name='botonfunci' value='Modificar'>
+    <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
     </form>";
 	}
 	
@@ -45,6 +51,7 @@
 	}
 
 	?>
-        
+        </div>
+    </div>
     </body>
 </html>
