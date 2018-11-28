@@ -12,7 +12,7 @@ class MetodoCiudadano{
 	return $consulta;
 	}
 
-		public function Mostrar_1_Ciudadano($ced){
+	public function Mostrar_1_Ciudadano($ced){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
 	$sql="select * from ciudadano where cedula='$ced'";
@@ -44,6 +44,37 @@ class MetodoCiudadano{
 		return $mensa;
 
 	}
+
+	public function Mostrar_1_Usuario($usu){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from login_usuarios where nombre_usuario='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
+	public function  InsertarUsuario($nom,$cla){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_usuario($nom);
+		if ($result->num_rows>0) {
+			$mensa="El Usuario del Ciudadano ya ha sido registrado";
+		
+		}
+		else{
+			$sql="call inser_usu_ciud(?,?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('ssi',$nom_p,$cla_p,$rol_p);
+			$nom_p=$nom;
+			$cla_p=$cla;
+			$rol_p=4;
+			$consulta->execute();
+			$mensa="Usuario del Ciudadano insertado correctamente";
+		}
+		return $mensa;
+
+	}
+	
 	public function ModificarCiudadano($cedula,$nombre,$telefono,$direccion,$correo){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();

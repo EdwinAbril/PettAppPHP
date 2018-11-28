@@ -21,9 +21,9 @@ function insertar(){
         $hoy=date("d_m_y");
         $nombre=$hoy.$nombre;
 
-        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Animales_fotos/';
+        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Animales_fotos/';
 
-        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Animales_fotos/';
+        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Animales_fotos/';
 
         move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre);
     }

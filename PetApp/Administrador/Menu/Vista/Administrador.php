@@ -25,7 +25,6 @@
   ?>
   
   <header id="encabezado">
-    <img src='Imagenes/Fondo.png' id="Fondo">
     <form action="../../../Cerrar.php">
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
     </form>

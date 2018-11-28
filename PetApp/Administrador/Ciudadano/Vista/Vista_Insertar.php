@@ -18,40 +18,34 @@ require_once("../Controlador/Controlador_Ciudadano.php");
 	
 <body id="fondox">
 	    <form action="../Vista/Vista_Ciudadano.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
-</form>
-<div id="padre">
+            <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
+        </form>
+    <div id="padre">
     <div id="insertar" class="form-group">
 
 	<h1>Insertar Ciudadano</h1>
     <form action="" method="Post">
- 	    <label>Cedula</label><input type="number" name="cedula" class="form-control">
+ 	    <label>Nombre de Usuario</label><input type="text" name="usuario" class="form-control">
+        <label>Clave</label><input type="text" name="clave" class="form-control">
+        <label>Cedula</label><input type="number" name="cedula" class="form-control">
     	<label>Nombre</label><input type="text" name="nombre" class="form-control">
     	<label>Telefono</label><input type="number" name="telefono" class="form-control">
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
     	<label>Correo Electronico</label><input type="text" name="correo" class="form-control">
-    	<label>Nombre de Usuario</label><input type="text" name="usuario" class="form-control">
-        <div class="form-group" id="bot">
+    	<div class="form-group" id="bot">
     	<input type="submit" name="consulta" value="Insertar Nuevo Ciudadano"  class="btn btn-primary">
         </div>
     </form>
-</div>
-</div>
-</center>
+    </div>
+    </div>
     <?php
-if(isset($_POST['consulta']))
-{
-	$ced=$_POST['cedula'];
-	$nom=$_POST['nombre'];
-	$tel=$_POST['telefono'];
-	$dir=$_POST['direccion'];
-	$cor=$_POST['correo'];
-	$us=$_POST['usuario'];
-	$mensaje=$mostrar->InsertarCiudadano($ced,$nom,$tel,$dir,$cor,$us);
-	echo "<script type='text/javascript'>;
-	swal('".$mensaje."');
-	</script>";
-}
+    
+    if(isset($_POST['consulta'])){
+    echo "<script type='text/javascript'>;
+    swal('".$result."');
+    </script>";
+    
+    }
 
     ?>
 
