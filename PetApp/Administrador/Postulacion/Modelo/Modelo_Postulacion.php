@@ -43,6 +43,11 @@ class MetodoPostulacion{
 	$sql="select * from postulacion where cedu='to'";
 	}
 
+	public function Mostrar_1_Seguimiento_1($ta){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$sql="select * from seguimiento where codigo_seguimiento='ta'";
+	}
 	
 		public function  Insertarpostulacion($tel,$dir,$fij,$cl,$ce,$ca){
 		$conectar=new conectarproyecto();
@@ -68,6 +73,25 @@ class MetodoPostulacion{
 		}
 		return $mensa;
 
+	}
+	public function Insertarseguimiento($cp,$tel,$dir,$fij,$ce,$ca){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		
+			$sql="call FunInsertar_Seguimiento(?,?,?,?,?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('issssi',$cp_p,$tel_p,$dir_p,$fij_p,$ce_p,$ca_p);
+
+			$cp_p=$cp;
+			$tel_p=$tel;
+			$dir_p=$dir;
+			$fij_p=$fij;
+			$ce_p=$ce;
+			$ca_p=$ca;
+			$consulta->execute();
+			$mensa="Postulacion Aceptada";
+		
+		return $mensa;
 	}
 
 	public function EliminarPostulacion($d){

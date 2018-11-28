@@ -69,7 +69,16 @@
 
         $cod=$_POST["codi"];
 
-        ?>
+
+        
+        echo'
+        <p><label>Codigo del animal</label></p><input type="number" name="codigo"  value="'.$cod.'" >
+        '?>   
+           </br>
+    </br>
+    	
+
+        
         <label>Telefono</label><input type="number" name="telefono" class="form-control">
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
     	<label>Telefono Fijo</label><input type="number" name="fijo" class="form-control">
@@ -81,6 +90,7 @@
         ?>   
            
         <input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
+
     </form>
 </div>
 
