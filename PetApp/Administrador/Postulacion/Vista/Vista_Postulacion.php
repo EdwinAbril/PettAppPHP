@@ -128,6 +128,7 @@ if(isset($_POST['aceptar']))
 }
 ?>
 
+
 <?php
 echo"
 <form method='POST' action=''>
