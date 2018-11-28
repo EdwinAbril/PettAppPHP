@@ -1,4 +1,3 @@
-
 #fondo{
 	background-image: url("Imagenes/Fondo.jpg");
 	font-family:Rockwell;
@@ -8,17 +7,6 @@
 		.container {
 			width:98%
 		}
-}
-
-#fondo{
-	background: rgba(222,247,232,1);
-background: -moz-linear-gradient(left, rgba(222,247,232,1) 0%, rgba(177,230,195,1) 25%, rgba(131,184,148,1) 85%, rgba(131,184,148,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(222,247,232,1)), color-stop(25%, rgba(177,230,195,1)), color-stop(85%, rgba(131,184,148,1)), color-stop(100%, rgba(131,184,148,1)));
-background: -webkit-linear-gradient(left, rgba(222,247,232,1) 0%, rgba(177,230,195,1) 25%, rgba(131,184,148,1) 85%, rgba(131,184,148,1) 100%);
-background: -o-linear-gradient(left, rgba(222,247,232,1) 0%, rgba(177,230,195,1) 25%, rgba(131,184,148,1) 85%, rgba(131,184,148,1) 100%);
-background: -ms-linear-gradient(left, rgba(222,247,232,1) 0%, rgba(177,230,195,1) 25%, rgba(131,184,148,1) 85%, rgba(131,184,148,1) 100%);
-background: linear-gradient(to right, rgba(222,247,232,1) 0%, rgba(177,230,195,1) 25%, rgba(131,184,148,1) 85%, rgba(131,184,148,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#def7e8', endColorstr='#83b894', GradientType=1 );
 }
 
 #Ingreso{

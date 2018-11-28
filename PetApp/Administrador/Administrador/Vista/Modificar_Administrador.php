@@ -23,7 +23,7 @@
     	?>
         <h1>Administrador</h1>
 
-        <p>Usuario</p><?php echo $cod?><BR>
+        <p>Usuario</p><?php echo $cod?>
 
         <?php
 	require_once("../Controlador/Controlador_Modificar_Administrador.php");
