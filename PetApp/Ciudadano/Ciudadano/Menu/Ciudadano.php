@@ -4,6 +4,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://code.jquery.com/jqu
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"> 
       </script>
@@ -90,7 +92,7 @@
      
 
           <div class="col-sm-4 col-xs-12">
-            <div class="panel panel-default text-center">
+            <div class="panel panel-default text-center" id="caja">
               <form action="../../Eventos/Vista/Vista_Eventos.php">
                 <center>  
                 <input type="image" name="eventoss" src="logos/eventis.png" height="250" width="250" id="eventos">
@@ -100,7 +102,7 @@
           </div>
 
           <div class="col-sm-4 col-xs-12">
-            <div class="panel panel-default text-center">
+            <div class="panel panel-default text-center" id="caja">
               <form action="../../Animales/Vista/Vista_Animal.php">
               <center>
               <input type="image" name="animal" src="logos/Adoptar.png" height="250" width="250" id="animales">
@@ -110,7 +112,7 @@
           </div>
 
         <div class="col-sm-4 col-xs-12" id="caja1">
-          <div class="panel panel-default text-center">
+          <div class="panel panel-default text-center" id="caja">
               <form action="../../Denuncias/Vista/Vista_Denuncias.php">
                 <center>
                 <input type="image" name="denuncia" src="logos/Denuncia.png" height="250" width="250" id="denuncia">
@@ -120,7 +122,7 @@
         </div>
 
         <div class="col-sm-4 col-xs-12">
-          <div class="panel panel-default text-center">
+          <div class="panel panel-default text-center" id="caja">
               <form action="../../Mascotas/Vista/Vista_Mascotas.php">
                 <center>
                 <input type="image" name="mascotas" src="logos/Mascota.png" height="250" width="250" id="mascota">
@@ -130,7 +132,7 @@
         </div>
 
           <div class="col-sm-4 col-xs-12">
-            <div class="panel panel-default text-center">
+            <div class="panel panel-default text-center" id="caja">
                 <form action="../Vista/Vista_Ciudadano.php">
                   <center>
                   <input type="image" name="datos" src="logos/MisDatos.png" height="250" width="250" id="datos">
