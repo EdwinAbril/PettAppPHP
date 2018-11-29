@@ -1,0 +1,77 @@
+#volver{
+	position: absolute;
+}
+
+#imagen{
+	width: 100%;
+	height: 100%;
+}
+
+#Texto{
+	font-size: 70px;
+	margin-top: 30px;
+	text-align: center;
+	font-family:'Rockwell';
+}
+
+#Informacion{
+	margin-top: 50px;
+	margin: 10px;
+}
+
+#parrafo1{
+	margin-top: 50px;
+	font-size: 20px;
+}
+
+#imagen2{
+	height: 350px;
+	width: 520px;
+	float: left;
+	margin: 10px;
+	margin-top: 45px;
+}
+
+#adopta{
+	cursor: pointer;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 700px){
+
+#imagen{
+	width: 100%;
+	height: 100%;
+}
+
+#Texto{
+	font-size: 35px;
+	margin-top: 30px;
+	text-align: center;
+	font-family:'Rockwell';
+}
+
+#Informacion{
+	margin-top: 50px;
+	margin: 10px;
+}
+
+#parrafo1{
+	margin-top: 50px;
+	font-size: 15px;
+}
+
+#imagen2{
+	height: 50%;
+	width: 50%;
+	float: left;
+	margin: 10px;
+	margin-top: 45px;
+}
+
+#myFooter{
+	font-size: 15px;
+}
+
+}

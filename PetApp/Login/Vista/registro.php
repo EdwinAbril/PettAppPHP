@@ -55,7 +55,7 @@ if (isset($_POST['Entrar'])) {
 			}
 			else if ($sql_d['rol_login']==4) {
 				$_SESSION["Usuario"]=$sql_d['nombre_usuario'];
-				header("Location:../../Ciudadano/Ciudadano/Menu/Ciudadano.php");
+				header("Location:../../Ciudadano/Login/Vista/Login.php");
 			}
 		}
 	}

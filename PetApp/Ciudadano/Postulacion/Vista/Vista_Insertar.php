@@ -31,10 +31,10 @@
                
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="navbar-toggler-icon"></span>
-                    </button> <a class="navbar-brand" href="../../../Login/Vista/login.php">PetApp</a>
+                    </button> <a class="navbar-brand" href="../../Login/Vista/login.php">PetApp</a>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="navbar-nav ml-md-auto">
-                            <a class="navbar-brand" href="../../../Login/Vista/login.php">Usuario: <?php echo "".$usuar.""?></a>
+                            <a class="navbar-brand" href="">Usuario: <?php echo "".$usuar.""?></a>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -68,15 +68,14 @@
  	    <?php
 
         $cod=$_POST["codi"];
-        ?>   
+        ?>
            </br>
-    </br>
-    	
+        </br>
 
-        
-        <label>Telefono</label><input type="number" name="telefono" class="form-control">
+        <label>Celular</label><input type="tel" name="telefono" pattern="[0-9]{10}"
+        class="form-control">
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
-    	<label>Telefono Fijo</label><input type="number" name="fijo" class="form-control">
+    	<label>Telefono Fijo</label><input type="tel" name="fijo" pattern="[0-9]{7}" class="form-control">
         <label>Certificado Laboral</label><input type="file" name="certificado" accept="aplication/pdf" id="cer" class="form-control-file"><?php
         echo"
         <input type='hidden' name='cedula' value='".$Ced[0]."'>
