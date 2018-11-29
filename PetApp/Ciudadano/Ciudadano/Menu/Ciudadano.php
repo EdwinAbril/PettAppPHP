@@ -68,10 +68,10 @@
 
     <h2>GESTIONAR</h2>
      
-        <div class="row">
+        <div class="row" id="icono">
           <div class="col-sm">
               <form action="../../Eventos/Vista/Vista_Eventos.php">
-                <input type="image" name="eventoss" src="logos/eventis.png" height="250" width="250" id="eventos">
+                <input type="image" name="eventoss" src="logos/evento.png" height="250" width="250" id="eventos"> 
               </form>
           </div>
 
@@ -88,7 +88,7 @@
           </div>
         </div>
         
-        <div class="row">
+        <div class="row" id="icono2">
           <div class="col-sm">
                 <form action="../../Mascotas/Vista/Vista_Mascotas.php">
                   <input type="image" name="mascotas" src="logos/Mascota.png" height="250" width="250" id="mascota">

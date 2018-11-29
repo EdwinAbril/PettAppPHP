@@ -68,15 +68,14 @@
  	    <?php
 
         $cod=$_POST["codi"];
-        ?>   
+        ?>
            </br>
-    </br>
-    	
+        </br>
 
-        
-        <label>Telefono</label><input type="number" name="telefono" class="form-control">
+        <label>Celular</label><input type="tel" name="telefono" pattern="[0-9]{10}"
+        class="form-control">
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
-    	<label>Telefono Fijo</label><input type="number" name="fijo" class="form-control">
+    	<label>Telefono Fijo</label><input type="tel" name="fijo" pattern="[0-9]{7}" class="form-control">
         <label>Certificado Laboral</label><input type="file" name="certificado" accept="aplication/pdf" id="cer" class="form-control-file"><?php
         echo"
         <input type='hidden' name='cedula' value='".$Ced[0]."'>
