@@ -47,36 +47,64 @@ header{
 	min-width: 40%;
 }
 
-#cajas{
+#icono{
+	margin-top: 100px;
+}
+
+#icono2{
 	margin-top: 100px;
 }
 
 #eventos{
 	height: 250px;
 	width: 250px;
+	margin-top: 50px;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 2px solid #ffffff;
 }
 
 #animales{
 	height: 250px;
 	width: 250px;
+	margin-top: 50px;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 2px solid #ffffff;
 }
 
 #denuncia{
 	height: 250px;
 	width: 250px;
+	margin-top: 50px;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 2px solid #ffffff;
 }
 
 #mascota{
-	height: 280px;
-	width: 280px;
+	height: 250px;
+	width: 250px;
+	margin-top: 50px;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 2px solid #ffffff;
 }
 
 #datos{
 	height: 250px;
 	width: 250px;
+	margin-top: 50px;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 2px solid #ffffff;
 }
 
-		
 footer{
 	margin:0px;
 	text-align:center;
@@ -88,8 +116,12 @@ footer{
 
 @media screen and (max-width:740px) {
 
-#cajas{
+#icono{
 	margin-top: 100px;
+}
+
+#icono2{
+	margin-top: 0px;
 }
 
 #eventos{

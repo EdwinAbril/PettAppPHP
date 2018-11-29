@@ -104,6 +104,7 @@ while($Pos=mysqli_fetch_row($resultado)){
 
                 <form method='POST' action=''>
                 <th><input type='submit' name='rechazar' class='btn btn-danger'value='Rechazar'></th>
+                <input type='hidden' name='ced' value='".$Pos[5]."'>
                 </form>
 	            ";
 	
