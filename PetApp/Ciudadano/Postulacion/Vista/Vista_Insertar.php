@@ -68,12 +68,7 @@
  	    <?php
 
         $cod=$_POST["codi"];
-
-
-        
-        echo'
-        <p><label>Codigo del animal</label></p><input type="number" name="codigo"  value="'.$cod.'" >
-        '?>   
+        ?>   
            </br>
     </br>
     	

@@ -65,6 +65,12 @@
 
   <h1 class="display-4">Denuncias</h1>
 <?php
+require_once("../Controlador/Controlador_Cedula2.php");
+while($Ced=mysqli_fetch_row($resultadod)){
+  echo'
+  <input type="hidden" name="cedula" value="'.$Ced[0].'">                  
+  ';
+
 require_once("../Controlador/Controlador_Denuncias.php");
 while($Com=mysqli_fetch_row($resultado)){
 	?>
@@ -76,7 +82,7 @@ while($Com=mysqli_fetch_row($resultado)){
                     <table class="table">
                     <tr>
                     <thead class="thead-dark">
-                    <th>'.$Com[1].'-Cedula: '.$Com[3].'</th>
+                    <th>Fecha:'.$Com[1].'-Cedula: '.$Com[3].'</th>
                     </thead>
                     </tr>
                     </table>
@@ -121,6 +127,7 @@ while($Com=mysqli_fetch_row($resultado)){
             </div>
 				<?php
 	}
+}
 	if(isset($_POST['eliminar'])){
 		echo"<script type='text/javascript'>;
 		alert('".$resulta."');

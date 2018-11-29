@@ -1,406 +1,106 @@
-*{
-	margin:0;
-	padding:0;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
+#fondo{
+	background-image: url("Imagenes/Fondo.jpg");
+	font-family:Rockwell;
+    text-align: center;
+}
+@media screen and (max-width:980px) {
+		.container {
+			width:98%
+		}
 }
 
-header{
-	width:100%;
-	height: 190px;
-	overflow:hidden;
-	background:green;
+#Ingreso{
+	margin-top: 50px; 
+	padding:0px;
+	margin: 50px auto;
+    height:250px;
+    width:900px;
 
+	border-radius: 30px 30px 30px 30px;
+	-moz-border-radius: 30px 30px 30px 30px;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	border: 3px solid #3c9e0b;
+	float:none;
+	background-image: url("Imagenes/loginuser.png");
 }
-.logotipo{
-	width:90%;
-	max-width:1200px;
-	margin: auto;
-}
-.logotipo h1{
-	font-family:'Rockwell';
-	font-weight: 400;
-	color:white;
-	padding:15px 0;
-	font-size:60px;
-}
+#Logo{
+	margin-top: 40px;
 
-.navegacion{
-	width: 100%;
-	background:green;
-	text-decoration: none;
-
-
-}
-.navegacion nav{
-	width: 90%;
-	max-width: 1200px;
-	margin: auto;
-	text-decoration: none;
-        
-}
-.menu{
-	list-style: none;
-	width: 100%;
-
-}
-.menu li{
-	display: inline-block;
-
-
-}
-.menu li a{
-display: block;
-padding: 15px;
-color: white;
-text-decoration: none;
-font-family:'Rockwell';
-}
-
-header .login{
-	color:white;
-	font-size:70px;
-	line-height: 200px;
-	float:left; 
-	margin-left: 0px;
-
-}
-header nav{
-	float: right; 
-}
-header nav a{
-	display:inline-block;
-	color: white;
-	text-decoration: none;
-	padding: 10px 20px;
-	line-height: normal;
-	font-size: 20px;
-	-webkit-transition:all 500ms ease;
-	-o-transition:all 500ms ease;
-	transition:all  500ms ease;
-}
-header nav li{
-	display: inline-block;
-	padding: 10px 20px;
-	right: 2%;
-}
-
-
-header nav s{
-	display:inline-block;
-	color: white;
-	text-decoration: none;
-	padding: 10px 20px;
-	line-height: normal;
-	font-size:30px;
-	-webkit-transition:all 500ms ease;
-	-o-transition:all 500ms ease;
-	transition:all  500ms ease;
-
-
-}
-header nav a:hover{
-	background: #FFC300;
-	border-radius: 50px;
-}
-
-header nav s:hover{
-	background:#F3AA45;
-	border-radius:50px;
-}
-
-.slider{
-width: 100%;
-height: 550px;
-margin: auto;
-overflow: hidden;
-}
-.slider ul{
-	list-style: none;
-	display:flex;
-	padding:0;
-	width:400%;
-	animation: cambio 20s infinite alternate;
-
-}
-.slider s{
-    	width: 100%;
-	list-style: none;
-        height: 50%;
 	
-
 }
-.slider img{
-
-	width:100%;
-	height: 550px;
-}
-.boton-menu{
-	display: none;
-
-}
-
-.boton-menu  span{
-color:white;
-font-size: 25px;
-cursor: pointer; 
-text-decoration: none;
-
-}
-header label{
-	display: none;
-	width: 30px;
+#BtnRegistro{
+	
+	border-radius: 30px 30px 30px 30px;
+	-moz-border-radius: 30px 30px 30px 30px;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	border: 3px solid #3c9e0b;
+	width: 140px;
 	height: 30px;
-	padding: 10px;
-	border-right: 1px solid #fff;
-}
-header label:hover{
-	cursor: pointer;
-	background: rgba(0,0,0,0.3);
-}
-
-a{
-	text-decoration: none;
-}
-
-h1{
-    font-family:'Rockwell';
-}
-
-.col-sm-4 col-xs-12{
-    width: 100%;
-    position: relative;
-    height: 100%;
-}
-
-.col-sm-4 col-xs-12 img{
-    height:100%;
-    width: 100%;
-    
-}
-
-#imagen{
-	position: relative;
-}
-#imagen2{
-	position: relative;
-}
-#imagen3{
-	position: relative;
-}
-
-#caja2{
-    background-color: white; 
-    width: auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-}
-
-#caja4{
-    background-color: white; 
-    width: auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-}
-
-#caja6{
-    background-color: white; 
-    width: auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-}
-
-
-#info{
-	cursor: pointer;
-	margin-top:50px;
-	float: right;
-}
-
-#info2{
-	cursor: pointer;
-	margin-top:50px;
-	float: right;
-}
-
-#info3{
-	cursor: pointer;
-	margin-top:50px;
-	float: right;
-}
-
-a{	
-	cursor: pointer;
-	align-self: right;
-}
-
-p{
-        text-align:left;
-}
-
-#caja2{
-    background-color: white; 
-    width:auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-    font-size: 16px;
-    border: 5px;   
-}
-
-#caja4{
-    background-color: white; 
-    width:auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-    font-size: 16px;
-}
-
-#caja6{
-    background-color: white; 
-    width:auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-    font-size: 16px;
-} 
-
-#contenedor1{
-	position: absolute;
-}
-
-.panel-heading{
-    background-color:green;
-}
-
-#panel{
- background-color:green;
- color: white;
-}
-
-.panel-body{
-    
-    padding:0px;
-    background-color:#DFF4BA;
-}
-
-#modulos{
-	padding: 10px;
-}
-
-.img-responsive slideanim{
-    max-width:100%;
-    max-height:100%;
-}
-
-
-
-@keyframes cambio{
-	0%{margin-left:0;}
-	20%{margin-left:0;}
-
-	25%{margin-left:-100%;}
-	45%{margin-left:-100%;}
-
-	50%{margin-left:-200%;}
-	70%{margin-left:-200%;}
-
-	75%{margin-left:-300%;}
-	100%{margin-left:-300%;}
-}
-@media screen and (max-width: 700px){
-.boton-menu{
-	width: 90%;
-	margin:auto;
-	display: block;
-	padding: 8px 0;
-	text-decoration: none;
-
-}
-.navegacion nav{
-	position: absolute;
-	width:100%;
-	height: 100%;
-	background:green;
-	left: -100%;
-	text-decoration: none;
+	padding: 5px;
+	margin-top: 80px;
 	text-align: center;
+    background: transparent;
+	border: solid 3px white;
+	color: white;
+}
+#BtnRegistro:hover{
+
+	width: 140px;
+	height: 30px;
+	padding: 5px;
+	margin-top: 80px;
+    border:solid 3px green;
+    background: limegreen;
+    color: black;
+    text-decoration: none;
+
+}   
+#Registrar{
 	
-}
-.menu li{
-display: block;	
-text-decoration: none;
-}
-.slider s{
-	height:100%;
-}
-.logotipo h1{
-	font-family:'Rockwell';
-	font-weight: 400;
-	color:white;
-	padding:15px 0;
-	font-size:40px;
-	text-align: center;
-}
-.col-sm-4 col-xs-12{
-    width: 100%;
-    position: relative;
-    
-}
-
-.slider{
-width: 100%;
-height: 280px;
-margin: auto;
-overflow: hidden;
-}
-
-.slider img{
-
-	width:100%;
-	height: 280px;
-}
-
-
-p{
-        text-align:left;
-}
-
-
-#caja2{
-    background-color: white; 
-    width: auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#caja4{
-    background-color: white; 
-    width: auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-    
-}
-
-#caja6{
-    background-color: white; 
-    width: auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-    
-}
+	border-radius: 30px 30px 30px 30px;
+	-moz-border-radius: 30px 30px 30px 30px;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	border-color: transparent;
+ 	height: 650px;
+ 	width: 400px;
+ 	margin-top: 50px;
+ 	float:center;
 
 }
 
+#header{
+	background-color: #d0d0ff;
+    font-size:12pt;  
+    font-weight: bold; 
+    padding: 3 3 3 10px; 
+}
+#contentedor{
+    margin: auto;
+    width: 700px; 
+}
+#regist{
+	height: 400px;
+	width: 250px;
+	background-color: #FFF;  
+    width: 120px; 
 
+}
+footer{
+	margin:10px;
+	text-align:center;
+	clear:both;
+	background-color: white;
+	position: relative;
+
+
+}
+.titulo{
+	color: white;
+	font-size:100px;
+}
+
+@media screen and (max-width: 900px){
+	#Ingreso {
+		width: 90%;
+	}
+}

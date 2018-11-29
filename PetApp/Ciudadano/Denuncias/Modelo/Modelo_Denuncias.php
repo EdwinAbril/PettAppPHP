@@ -20,10 +20,10 @@ class MetodoDenuncias{
 	return $consulta;
 	}
 
-	public function MostrarDenuncias(){
+	public function MostrarDenuncias($ced){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from denuncia";
+	$sql="select * from denuncia where cedul_ciudadano='$ced'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}

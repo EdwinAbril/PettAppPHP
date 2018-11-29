@@ -8,4 +8,7 @@ require_once("../Modelo/Modelo_Denuncias.php");
 $mostrar= new MetodoDenuncias();
 $resultado=$mostrar->MostrarCedula($usuar);
 require_once("../Vista/Vista_Insertar.php");
+
+
+
 ?>

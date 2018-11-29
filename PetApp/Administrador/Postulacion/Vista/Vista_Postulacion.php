@@ -92,48 +92,63 @@ while($Pos=mysqli_fetch_row($resultado)){
                 </tr>
                 <tr>
 
+                <form method='POST' action='../Controlador/Controlador_Seguimiento.php'>
+                <input type='hidden' name='cp' value='".$Pos[0]."'>
+                <input type='hidden' name='tel' value='".$Pos[1]."'>
+                <input type='hidden' name='dir' value='".$Pos[2]."'>
+                <input type='hidden' name='tf' value='".$Pos[3]."'>
+                <input type='hidden' name='ced' value='".$Pos[5]."'>
+                <input type='hidden' name='an' value='".$Pos[6]."'>
+                <th><input type='submit' name='aceptar' class='btn btn-primary' value='Aceptar'></th>
+                </form> 
 
-	<form method='POST' action='Modificar_Postulacion.php'>
-	<input type='hidden' name='usu' value='".$Pos[0]."'>
-	<th><input type='image' src='Imagenes/editar.png' name='modificar' class='btn btn-link' height='60' width='60'></th>
-	</form>";
-	?>
-	<?php
-	echo "
-	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
-	<input type='hidden' name='codp' value='".$Pos[0]."'>
-	<th><input type='image' src='Imagenes/borrar.png' name='eliminar' class='btn btn-link' height='60' width='60' ></th>
-	</form>
-	</tr>
-	";
-	?>
-<?php
+                <form method='POST' action=''>
+                <th><input type='submit' name='rechazar' class='btn btn-danger'value='Rechazar'></th>
+                </form>
+	            ";
+	
 
-echo"
-<form method='POST' action='../Controlador/Controlador_Seguimiento.php'>
-<input type='hidden' name='cp' value='".$Pos[0]."'>
-<input type='hidden' name='tel' value='".$Pos[1]."'>
-<input type='hidden' name='dir' value='".$Pos[2]."'>
-<input type='hidden' name='tf' value='".$Pos[3]."'>
-<input type='hidden' name='ced' value='".$Pos[5]."'>
-<input type='hidden' name='an' value='".$Pos[6]."'>
-<th><input type='submit' name='aceptar' class='btn btn-primary' value='Aceptar'></th>
-</form> 
-";
-if(isset($_POST['aceptar']))
-{
-    echo "<script type='text/javascript'>;
-    swal('".$result."');
-    </script>";
-}
 ?>
 
 
+</table>
+</div>
+
+<div class="opciones">
+<table class="table">
+
+    <?php
+            echo '
+            
+            <table class="table">
+            <tr>
+            <th>Opciones Avanzadas</th>
+            </tr>
+            </table>
+
+            ';
+        ?>
+</table>
+</div>
+
+<div class="iconos">
+    <table class="table">
+
+
 <?php
+
 echo"
-<form method='POST' action=''>
-<th><input type='submit' name='rechazar' class='btn btn-danger'value='Rechazar'></th>
-</form>
+
+<form method='POST' action='Modificar_Postulacion.php'>
+    <input type='hidden' name='usu' value='".$Pos[0]."'>
+    <th><input type='image' src='Imagenes/editar.png' name='modificar' class='btn btn-link' height='60' width='60'></th>
+    </form>
+    
+    <form method='POST' action='../Controlador/Controlador_Eliminar.php'>
+    <input type='hidden' name='codp' value='".$Pos[0]."'>
+    <th><input type='image' src='Imagenes/borrar.png' name='eliminar' class='btn btn-link' height='60' width='60' ></th>
+    </form>
+    </tr>
 "
 ?>
 
@@ -141,6 +156,12 @@ echo"
     </div>
     </div>
 	<?php
+    if(isset($_POST['aceptar']))
+{
+    echo "<script type='text/javascript'>;
+    swal('".$result."');
+    </script>";
+}
 	}
 
 	if(isset($_POST['eliminar'])){
