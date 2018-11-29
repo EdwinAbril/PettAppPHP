@@ -12,10 +12,10 @@ class MetodoMascotas{
 	return $consulta;
 	}
 		
-	public function MostrarMascotas(){
+	public function MostrarMascotas($ced){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from mascota";
+	$sql="select * from mascota where ced='$ced'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}

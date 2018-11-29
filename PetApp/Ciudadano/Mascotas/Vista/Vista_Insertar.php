@@ -31,14 +31,14 @@
                
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="navbar-toggler-icon"></span>
-              </button> <a class="navbar-brand" href="../../../Login/Vista/login.php">PetApp</a>
+              </button> <a class="navbar-brand" href="../../Login/Vista/login.php">PetApp</a>
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="navbar-nav ml-md-auto">
-                  <a class="navbar-brand" href="../../../Login/Vista/login.php">Usuario: <?php echo "".$usuar.""?></a>
+                  <a class="navbar-brand" href="#">Usuario: <?php echo "".$usuar.""?></a>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                       <a class="dropdown-item" href="../Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
+                       <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
                       <div class="dropdown-divider">
                       </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
                     </div>
@@ -79,7 +79,6 @@
         <p><label>Raza de la Mascota</label></p><input type="text" name="raza" class="form-control" required="">
         <?php
         echo'
-        '.$Ced[0].'
         <input type="hidden" name="cedula" value="'.$Ced[0].'">
         ';
         ?>
