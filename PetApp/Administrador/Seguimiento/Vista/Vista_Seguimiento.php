@@ -64,29 +64,68 @@ while($Seg=mysqli_fetch_row($resultado)){
         <?php
 			echo "
 			    <tr>
-                <th>Codigo</th>
+                <th>Codigo de Seguimiento</th>
                 <th>".$Seg[0]."</th>
                 </tr>
                 <tr>
-                <th>Postulacion</th>
+                <th>Codigo de Postulacion</th>
                 <th>".$Seg[1]."</th>
+                </tr>
+                  <tr>
+                <th>Telefono</th>
+                <th>".$Seg[2]."</th>
+                </tr>
+                  <tr>
+                <th>Direccion</th>
+                <th>".$Seg[3]."</th>
+                </tr>
+                  <tr>
+                <th>Telefono</th>
+                <th>".$Seg[4]."</th>
+                </tr>
+                  <tr>
+                <th>Cedula del Postulante</th>
+                <th>".$Seg[5]."</th>
+                </tr>
+                  <tr>
+                <th>Codigo del Animal</th>
+                <th>".$Seg[6]."</th>
                 </tr>
                 <tr>
 
 	<form method='POST' action='Modificar_Seguimiento.php'>
 	<input type='hidden' name='usu' value='".$Seg[0]."'>
-	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-	</form>";
+	<th><input type='image' src='Imagenes/editar.png' name='modificar'  class='btn btn-link' height='60' width='60'></th>
+	</form>
+
+  ";
 	?>
+
+
 	<?php
 	echo "
 	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
 	<input type='hidden' name='cdseg' value='".$Seg[0]."'>
-	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
+	<th><input type='image' src='Imagenes/eliminar.png' name='eliminar'  class='btn btn-link' height'60' width='60'></th>
 	</form>
 	</tr>
 	";
 	?>
+
+  <?php
+echo"
+<form method='POST' action='../../Respuestas/Vista/Vista_RespuestaPositiva.php'>
+<input type='hidden' name='cedula' value='".$Seg[5]."'>
+<th><input type='submit' name='aceptar' class='btn btn-primary' value='Aceptar'></th>
+</form> 
+";
+?>
+<?php
+echo "<form method='POST' action=''>
+<th><input type='submit' name='rechazar' class='btn btn-danger' value='Rechazar'></th>
+</form>
+";
+?>
 	</table>
     </div>
     </div>
@@ -103,6 +142,7 @@ while($Seg=mysqli_fetch_row($resultado)){
 
 
 ?>
+  
 
 </body>
 </html>

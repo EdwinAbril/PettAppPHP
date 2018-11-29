@@ -110,6 +110,7 @@ while($Pos=mysqli_fetch_row($resultado)){
 
 ?>
 
+
 </table>
 </div>
 
@@ -132,6 +133,7 @@ while($Pos=mysqli_fetch_row($resultado)){
 
 <div class="iconos">
     <table class="table">
+
 
 <?php
 

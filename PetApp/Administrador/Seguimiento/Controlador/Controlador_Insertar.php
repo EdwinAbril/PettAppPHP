@@ -1,6 +1,6 @@
  <link rel="stylesheet" href="../Vista/Estilos.css">
 <?php
-if (isset($_POST['consulta'])){
+if (isset($_POST['consultas'])){
 	$result=insertar();
 	require_once("../Vista/Vista_Insertar.php");	
 }

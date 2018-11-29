@@ -1,4 +1,4 @@
- <link rel="stylesheet" href="../Vista/Estilos.css">
+ <link rel="stylesheet" type="text/css" href="../Vista/Estilos.css">
 <?php
 if (isset($_POST['aceptar'])){
     $result=insertars();
