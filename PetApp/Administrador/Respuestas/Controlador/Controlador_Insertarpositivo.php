@@ -1,6 +1,6 @@
  <link rel="stylesheet" href="../Vista/Estilos.css">
 <?php
-if (isset($_POST['aceptar'])){
+if (isset($_POST['aceptar2'])){
 	$result=InsertarPositivo();
 	require_once("../Vista/Vista_RespuestaPositiva.php");	
 }

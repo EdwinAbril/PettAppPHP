@@ -39,7 +39,7 @@
 	<div id="pricing" class="container-fluid">
   <div class="text-center">
 
-    <h2>GESTIONAR</h2>>
+    <h2>GESTIONAR</h2>
   </div>
    
 
