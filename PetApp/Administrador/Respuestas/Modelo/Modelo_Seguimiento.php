@@ -8,7 +8,7 @@ class MetodoSeguimiento{
 	public function Mostrar_1_positivo($pos){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$sql="select * from respuestausuario where cedula_respuesta='$pos'";
+		$sql="select * from respuestausuario where codigo_positivo='$pos'";
 		$consulta=mysqli_query($conexion,$sql);
 		return $consulta;
 	}

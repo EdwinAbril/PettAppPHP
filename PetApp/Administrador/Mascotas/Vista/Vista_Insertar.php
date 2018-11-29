@@ -19,22 +19,29 @@
 <div id="insertar" >
 	<h1>Insertar Mascota</h1>
  <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
- 	<p><label>Nombre de la Mascota</label></p><input type="text" name="nombre" class="form-control" required="">
-    	<p><label>Esterilizacion</label></p><select  name="des" class="form-control" required="">
-            <option>Mascota Operada</option>
-            <option value="Si">Si</option>
-            <option value="No">No</option>
-        </select>
-    	<p><label>Estado de la Mascota</label></p><input type="text" name="estado" class="form-control" required="">
-    	<p><label>Tipo </label></p><select  name="tipo" class="form-control" required="">
+ 	<label>Nombre de la Mascota</label><input type="text" name="nombre" class="form-control" required="">
+    	<label>Tipo</label><select  name="tipo" class="form-control" required="">
             <option>Tipo de Mascota</option>
-            <option>Perro</option>
-            <option>Gato</option>
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
         </select>
-        <p><label>Edad de la Mascota</label></p><input type="number" name="edad" class="form-control" required="">
-        <p><label>Raza de la Mascota</label></p><input type="text" name="raza" class="form-control" required="">
-        <p><label>Cedula del Dueño</label></p><input type="number" name="cedula" class="form-control" required="">
-    	<p><label>Foto de la Mascota</label></p><center><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></center></label>
+    	<label>Edad de la Mascota</label><input type="text" name="edad" class="form-control" required="">
+    	<label>Raza de la Mascota</label><input type="text" name="raza" class="form-control" required="">
+        <label>Foto de la Mascota</label><center><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></center></label>
+        <label>Tamaño </label><select name="tamaño" class="form-control" required="">
+            <option>Tamaño de la Mascota</option>
+            <option value="Grande">Grande</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Pequeño">Pequeño</option>
+        </select>
+         <label>Genero</label><select  name="genero" class="form-control" required="">
+            <option>Genero de la Mascota</option>
+            <option value="Macho">Macho</option>
+            <option value="Hembra">Hembra</option>
+        </select>
+        <label>Color de la Mascota</label><input type="text" name="color" class="form-control" required="">
+    	
+          <label>Cedula del Dueño</label><input type="number" name="cedula" class="form-control" required="">
     </br>
     </br>
     	<input type="submit" name="consulta" value="Insertar Nueva Mascota" class="btn btn-primary">

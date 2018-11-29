@@ -72,28 +72,36 @@ while($Mas=mysqli_fetch_row($resultado)){
                         <th>".$Mas[1]."</th>
                         </tr>
                         <tr>
-                        <th>Descendencia</th>
+                        <th>Tipo</th>
                         <th>".$Mas[2]."</th>
                         </tr>
                         <tr>
-                        <th>Estado</th>
+                        <th>Edad</th>
                         <th>".$Mas[3]."</th>
                         </tr>
                         <tr>
-                        <th>Tipo</th>
+                        <th>Raza</th>
                         <th>".$Mas[4]."</th>
                         </tr>
                         <tr>
-                        <th>Edad</th>
-                        <th>".$Mas[5]."</th>
+                         <th>Foto</th>
+                        <th><img src='../../../Uploads/Mascotas_fotos/".$Mas[5]."' width='30' heigth='30'></th>
                         </tr>
                         <tr>
-                        <th>Raza</th>
+                        <th>Tamaño</th>
                         <th>".$Mas[6]."</th>
                         </tr>
                         <tr>
-                        <th>Cedula</th>
+                        <th>Genero</th>
                         <th>".$Mas[7]."</th>
+                        </tr>
+                         <tr>
+                        <th>Color</th>
+                        <th>".$Mas[8]."</th>
+                        </tr>
+                         <tr>
+                        <th>Cedula</th>
+                        <th>".$Mas[9]."</th>
                         </tr>
                         <tr>
 

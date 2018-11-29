@@ -19,7 +19,7 @@
 
 <header >	
 		<div class="logotipo">
-		<h1>Pet App ok</h1>
+		<h1>Pet App </h1>
 		</div>
 		<div class="navegacion">
 			<div class="boton-menu">
