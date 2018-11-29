@@ -41,6 +41,8 @@ class MetodoSeguimiento{
 	return $consulta;
 	}
 
+	
+
 		public function  InsertarSeguimiento($cod){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
