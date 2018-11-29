@@ -122,7 +122,7 @@ echo"
 ?>
 <?php
 echo "<form method='POST' action=''>
-<th><input type='submit' name='rechazar' class='btn btn-danger' value='Rechazar'></th>
+<th><input type='submit' name='rechazar2' class='btn btn-danger' value='Rechazar'></th>
 </form>
 ";
 ?>

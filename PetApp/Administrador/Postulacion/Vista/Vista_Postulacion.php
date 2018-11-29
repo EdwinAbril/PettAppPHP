@@ -102,9 +102,10 @@ while($Pos=mysqli_fetch_row($resultado)){
                 <th><input type='submit' name='aceptar' class='btn btn-primary' value='Aceptar'></th>
                 </form> 
 
-                <form method='POST' action=''>
-                <th><input type='submit' name='rechazar' class='btn btn-danger'value='Rechazar'></th>
+                <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
+                <th><input type='submit' name='rechazar1' class='btn btn-danger'value='Rechazar'></th>
                 <input type='hidden' name='ced' value='".$Pos[5]."'>
+                <input type='hidden' name='mensarech' value='El proceso de Adopcion no fue Aceptado en el menu principal encontrara informacion de contacto'>
                 </form>
 	            ";
 	
