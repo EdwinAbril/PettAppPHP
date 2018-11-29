@@ -4,6 +4,14 @@ require_once ("../../../Conexion.php");
 
 class MetodoMascotas{
 	
+	public function MostrarCedula($usu){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select cedula from ciudadano where usuario_ciu='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+		
 	public function MostrarMascotas(){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
