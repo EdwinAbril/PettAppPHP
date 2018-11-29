@@ -49,11 +49,15 @@
           </div>
         </div>
       </div>
-
+      <?php
+      require_once("../Controlador/Controlador_Cedula.php");
+      while($Ced=mysqli_fetch_row($resultado)){
+      ?>
+    
       <div id="top">
         <form action="../Vista/Vista_Mascotas.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
-</form>
+          <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
+      </form>
     <div id="ubi">
 <div id="padre">
     <div id="insertar" class="form-group">
@@ -73,15 +77,19 @@
         </select>
         <p><label>Edad de la Mascota</label></p><input type="number" name="edad" class="form-control" required="">
         <p><label>Raza de la Mascota</label></p><input type="text" name="raza" class="form-control" required="">
-        <p><label>Cedula del Dueño</label></p><input type="number" name="cedula" class="form-control" required="">
-    	<p><label>Foto de la Mascota</label></p><center><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></center></label>
-    </br>
-    </br>
+        <?php
+        echo'
+        '.$Ced[0].'
+        <input type="hidden" name="cedula" value="'.$Ced[0].'">
+        ';
+        ?>
+        <p><label>Foto de la Mascota</label></p><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></label>
     	<input type="submit" name="consulta" value="Insertar Nueva Mascota" class="btn btn-primary">
     </form>
 </div>
 </div>
     <?php
+  }
 if(isset($_POST['consulta']))
 {
 	echo "<script type='text/javascript'>;
