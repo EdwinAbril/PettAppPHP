@@ -15,7 +15,7 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="main.js"></script>
   <script src="js/jquery-3.3.1.min.js" ></script>
-  <script src="js/main.js" ></script>
+  <script src="js/main.js"></script>
 
 </head>
 <body>
