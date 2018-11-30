@@ -72,7 +72,7 @@
            </br>
         </br>
 
-        <label>Celular</label><input type="tel" name="telefono" pattern="[0-9]{10}"
+        <label>Celular</label><input type="tel" name="telefono" pattern="[0-9]{10}" required="telefono" 
         class="form-control">
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
     	<label>Telefono Fijo</label><input type="tel" name="fijo" pattern="[0-9]{7}" class="form-control">
