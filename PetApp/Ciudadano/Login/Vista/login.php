@@ -13,9 +13,11 @@
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/Footer-white.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="main.js"></script>
   <script src="js/jquery-3.3.1.min.js" ></script>
   <script src="js/main.js" ></script>
+	<script src="main.js"></script>
+  
+  
 
 </head>
 <body>

@@ -15,6 +15,8 @@
 
 </head>
 <body>
+
+
 	<?php
     session_start();
     if (!$_SESSION) {
@@ -27,43 +29,50 @@
     $usuar=$_SESSION["Usuario"];
     }
       ?>
+
+
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
             <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-top">
-               
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="navbar-toggler-icon"></span>
-              </button> <a class="navbar-brand" href="../../Login/Vista/login.php">PetApp</a>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="navbar-nav ml-md-auto">
-                  <a class="navbar-brand" href="#">Usuario: <?php echo "".$usuar.""?></a>
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                       <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
-                      <div class="dropdown-divider">
-                      </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="navbar-toggler-icon"></span>
+            </button> <a class="navbar-brand" href="../../Login/Vista/login.php">PetApp</a>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-nav ml-md-auto">
+            <a class="navbar-brand" href="#">Usuario: <?php echo "".$usuar.""?></a>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
+            <div class="dropdown-divider">
+            </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
+            </div>
+            </li>
+            </ul>
+            </div>
             </nav>
           </div>
         </div>
       </div>
 	
 	<div id="top">
-	<form action="Vista_Insertar.php">
- 		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
-	</form>
+	
 
 	<div id="ubi">
     <form action="../../Ciudadano/Menu/Ciudadano.php">
-        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
     </form>
 
-  <h1 class="display-4">Denuncias</h1>
+  	<h1 class="display-4">Denuncias</h1>
+
+  	<center>
+  	<form action="Vista_Insertar.php">
+ 	<input type="submit" name="insertar" value="Realizar denuncia" class="btn btn-info" id="inserta">
+	</form>
+	</center>
+
+
 <?php
 require_once("../Controlador/Controlador_Cedula2.php");
 while($Ced=mysqli_fetch_row($resultadod)){
@@ -74,8 +83,12 @@ while($Ced=mysqli_fetch_row($resultadod)){
 require_once("../Controlador/Controlador_Denuncias.php");
 while($Com=mysqli_fetch_row($resultado)){
 	?>
+
+
 		<div id="centro">
         <div class="caja1">
+
+
 				<?php
 					echo '
 					
@@ -88,9 +101,13 @@ while($Com=mysqli_fetch_row($resultado)){
                     </table>
                 	';
 				?>
+
+
 				</div>
 				<div class='caja2'>
                     <table class='table'>
+
+
                 <?php
 					echo "
 					    <tr>
@@ -111,9 +128,13 @@ while($Com=mysqli_fetch_row($resultado)){
                         </tr>
                         ";
 					?>
+
+
 					</table>
             </div>
             </div>
+
+
 				<?php
 	}
 }
@@ -125,9 +146,9 @@ while($Com=mysqli_fetch_row($resultado)){
 	}
 	echo "</table>";
 
-
-
 ?>
+
+
 </div>
 </div>
 </body>

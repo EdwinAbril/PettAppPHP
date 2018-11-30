@@ -35,12 +35,13 @@
 	<tr>
 	<form action='../Controlador/Controlador_Actualizar_Ciudadano.php' method='Post'>
 	<input type='hidden' name='usu' value='".$Ciu[0]."'>   
-    <p>Nombre</p><input type='text' name='nom'  value='".$Ciu[1]."'><BR></BR>
-    <p>Telefono</p><input type='text' name='tel'  value='".$Ciu[2]."'><BR></BR>
+    <p>Nombre</p><input type='text' name='nom' pattern='[a-z]{1,15}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Ciu[1]."'><BR></BR>
+    <p>Celular</p><input type='text' name='tel' pattern='[0-9]{10}' value='".$Ciu[2]."'><BR></BR>
     <p>Direccion</p><input type='text' name='dir'  value='".$Ciu[3]."'><BR></BR>
-    <p>Correo</p><input type='text' name='cor'  value='".$Ciu[4]."'><BR></BR>
+    <p>Correo</p><input type='email' name='cor'  value='".$Ciu[4]."'><BR></BR>
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
     </form>";
+
 	}
 	
 	if(isset($_POST['botonfunci'])){

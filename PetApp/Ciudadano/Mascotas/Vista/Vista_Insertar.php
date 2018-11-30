@@ -63,20 +63,20 @@
     <div id="insertar" class="form-group">
     <h1>Insertar Mascota</h1>
  <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
- 	<p><label>Nombre de la Mascota</label></p><input type="text" name="nombre" class="form-control" required="">
+ 	<p><label>Nombre de la Mascota</label></p><input type="text" name="nombre" pattern="[a-zA-Z]{1,15}" title="Ajustese al formato solicitado: Unicamente letras (maximo 15)" class="form-control" required >
     	<p><label>Esterilizacion</label></p><select  name="des" class="form-control" required="">
-            <option>Mascota Operada</option>
+            <option>Mascota Operada</option> 
             <option value="Si">Si</option>
             <option value="No">No</option>
         </select>
-    	<p><label>Estado de la Mascota</label></p><input type="text" name="estado" class="form-control" required="">
+    	<p><label>Estado de la Mascota</label></p><input type="text" name="estado" pattern="[a-zA-Z]{1,25}" title="Ajustese al formato solicitado: Unicamente letras (maximo 25)" class="form-control" required="">
     	<p><label>Tipo </label></p><select  name="tipo" class="form-control" required="">
-            <option>Tipo de Mascota</option>
+            <option>Tipo de Mascota</option> 
             <option>Perro</option>
             <option>Gato</option>
         </select>
-        <p><label>Edad de la Mascota</label></p><input type="number" name="edad" class="form-control" required="">
-        <p><label>Raza de la Mascota</label></p><input type="text" name="raza" class="form-control" required="">
+        <p><label>Edad de la Mascota</label></p><input type="number" name="edad" min="1" max="30" class="form-control" required="">
+        <p><label>Raza de la Mascota</label></p><input type="text" name="raza" pattern="[a-zA-Z]{1,15}" title="Ajustese al formato solicitado: Unicamente letras (maximo 15)" class="form-control" required="">
         <?php
         echo'
         <input type="hidden" name="cedula" value="'.$Ced[0].'">

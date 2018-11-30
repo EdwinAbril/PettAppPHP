@@ -33,12 +33,12 @@
 	<tr>
 	<form action='../Controlador/Controlador_Actualizar_Mascotas.php' method='Post'>
 	<input type='hidden' name='usu' value='".$Mas[0]."'>   
-    <p>Nombre</p><input type='text' name='nom'  value='".$Mas[1]."'><BR></BR>
-    <p>Descendencia</p><input type='text' name='des'  value='".$Mas[2]."'><BR></BR>
-    <p>Estado</p><input type='text' name='est'  value='".$Mas[3]."'><BR></BR>
-    <p>Tipo</p><input type='text' name='tip'  value='".$Mas[4]."'><BR></BR>
-    <p>Edad</p><input type='text' name='eda'  value='".$Mas[5]."'><BR></BR>
-    <p>Raza</p><input type='text' name='raz'  value='".$Mas[6]."'><BR></BR>
+    <p>Nombre</p><input type='text' name='nom' pattern='[a-z]{1,15}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[1]."'><BR></BR>
+    <p>Descendencia</p><input type='text' name='des' pattern='[a-z]{1,15}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[2]."'><BR></BR>
+    <p>Estado</p><input type='text' name='est' pattern='[a-z]{1,25}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[3]."'><BR></BR>
+    <p>Tipo</p><input type='text' name='tip' pattern='[a-z]{1,10}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[4]."'><BR></BR>
+    <p>Edad</p><input type='number' name='eda' min='1' max='30' value='".$Mas[5]."'><BR></BR>
+    <p>Raza</p><input type='text' name='raz' pattern='[a-z]{1,15}'' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[6]."'><BR></BR>
     <input type='hidden' name='ced' value='".$Mas[7]."'>
     <p>Cedula</p>".$Mas[7]."<BR></BR>
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>

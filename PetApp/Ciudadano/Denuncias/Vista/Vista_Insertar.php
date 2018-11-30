@@ -82,12 +82,12 @@
         ';
         ?>
     	
-    	<label>Denuncia</label><input type="text" name="denuncia"  class="form-control">
+    	<label>Denuncia</label><input type="text" name="denuncia" pattern="[a-zA-Z]{1,250}" title="maximo 250 letras" class="form-control" id="denuncia">
     	<div id="foto">
         <label>Foto</label><input type="file" name="imagen" id="quitar" accept="image/png,image/jpeg,image/jpg" class="form-control-file">
         </div>
         <div class="form-group" id="bot">
-    	<input type="submit" name="consulta" value="Realizar Denuncia" class="btn btn-primary">
+    	  <input type="submit" name="consulta" value="Realizar Denuncia" class="btn btn-primary">
         </div>
     </form>
 </div>
