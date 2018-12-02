@@ -16,9 +16,6 @@
           <div id="padre">
         <div id="modificar" class="form-group">
 
-
-
-
     	<?php
 
     	$cod=$_POST["usu"];
@@ -30,14 +27,13 @@
 
         <?php
 
-
 	require_once("../Controlador/Controlador_Modificar_Mascotas.php");
 	while($Mas=mysqli_fetch_row($resultado)){
 	echo '
     
     <form action="../Controlador/Controlador_Actualizar_Mascotas.php" method="Post" enctype="multipart/form-data">
     <div id="centro">
-    <p>Foto</p><label class="botonModi"><img src="../../../Uploads/Mascotas_fotos/'.$Mas[5].'" width="180" heigth="180" id="fotomod"><input type="file" class="file" name="fos" accept="image/jpeg,image/png"><img src="Imagenes/Icono.png" width="40" heigth="40"></label>
+    <p>Foto</p><label class="botonModi"><img src="../../../Uploads/Mascotas_fotos/'.$Mas[5].'" width="180" heigth="180" id="fotomod"><input type="file" class="file" name="fos" accept="image/jpeg,image/png"><img src="../Vista/Imagenes/Icono.png" width="40" heigth="40"></label>
     </div>
 	<input type="hidden" name="usu" value="'.$Mas[0].'">   
     <input type="hidden" name="fotosi" value="'.$Mas[5].'">
@@ -82,7 +78,5 @@
 	?>
 </div>
 </div>
-
-        
-    </body>
+</body>
 </html>

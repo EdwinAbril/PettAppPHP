@@ -19,7 +19,7 @@ function insertar(){
     $col=$_POST['color'];
 	if ($nombre!=null && $tamaño<=1000000) {
         $hoy=date("d_m_y");
-        $nombre=$hoy.$nombre;
+        $nombre=$na.$ra.$ea;
         $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Animales_fotos/';
         $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Animales_fotos/';
         move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre);
