@@ -18,16 +18,27 @@
 
 	<div id="insertar">
 	<h1>Respuesta</h1>
-    <form action="../Controlador/Controlador_Insertarpositivo.php" method="Post">
+ <form method='POST' action='../Controlador/Controlador_Insertarpositivo.php'>
     <?php
-    $cedula=$_POST["cedula"];
+    $cedula=$_POST["celuda"];
+    $animal=$_POST["aimal"];
+   
     ?>
     <?php
+
     echo"
- 	<p><label>Cedula del Postulante </label></p><input type='number' name='cedula' value='".$cedula."'>"?>
-    <p><lable>Respuesta</lable></p><input type="text" name="mensaje">
-	<input type="submit" name="aceptar2" value="Enviar Respuesta" class="btn btn-primary">
-    </form>
+ 	<p><label>Cedula del Postulante </label></p><input type='text' name='cedula' value='".$cedula."'>"?>
+  
+    <?php 
+    echo "
+   
+    <p><lable>Respuesta</lable></p><input type='text' name='mensanxh'>
+    <input type='hidden' name='cedula' value='".$cedula."'>
+    <input type='hidden' name='animal' value='".$animal."'>
+    <input type='submit' name='aceptar2' value='Enviar Respuesta' class='btn btn-primar'>
+  
+    ";?>
+  </form>
     </div>
 
     <?php
