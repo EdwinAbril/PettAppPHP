@@ -77,21 +77,63 @@ while($Com=mysqli_fetch_row($resultado)){
                         <th>".$Com[3]."</th>
                         </tr>
                         <tr>					
-			
-					<form method='POST' action='Modificar_Denuncias.php'>
-					<input type='hidden' name='usu' value='".$Com[0]."'>
-					<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-					</form>
-					
-					<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
-					<input type='hidden' name='codde' value='".$Com[0]."'>
-					<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
-					</form>
-					</tr>";
+			     <form method='POST' action='Vista_Respuesta.php'>
+          <input type='hidden' name='ceduladenun' value='".$Com[3]."'>
+                <th><input type='submit' name='aceptarden' class='btn btn-primary' value='Aceptar'></th>
+                </form> 
+
+                <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
+                <input type='hidden' name='cedurech' value='".$Com[3]."'>
+                <input type='hidden' name='mensajerech' value='Su denuncia no fue aceptada podra comunicarse por medio de la informacion de contacto en el menu principal'>
+                <th><input type='submit' name='rechazarden' class='btn btn-danger'value='Rechazar'></th>
+ 
+                <input type='hidden' name='mensarech' value='El proceso de Adopcion no fue Aceptado en el menu principal encontrara informacion de contacto'>
+                </form>
+";
 					?>
 					</table>
             </div>
+
+
+            <div class="opciones">
+<table class="table">
+
+    <?php
+            echo '
+            
+            <table class="table">
+            <tr>
+            <th>Opciones Avanzadas</th>
+            </tr>
+            </table>
+
+            ';
+        ?>
+</table>
+</div>
+
+<div class="iconos">
+    <table class="table">
+
+      <?php
+      echo "
+          <form method='POST' action='Modificar_Denuncias.php'>
+          <input type='hidden' name='usu' value='".$Com[0]."'>
+          <th><input type='image' src='Imagenes/editar.png' name='modificar' value='Modificar' class='btn btn-link' height='60' width='60'></th>
+          </form>
+          
+          <form method='POST' action='../Controlador/Controlador_Eliminar.php'>
+          <input type='hidden' name='codde' value='".$Com[0]."'>
+          <th><input type='image' src='Imagenes/borrar.png' name='eliminar' value='Eliminar' class='btn btn-link' height='60' width='60'></th>
+          </form>
+          </tr>";
+
+
+      ?>
+    </table>
             </div>
+          </div>
+
 				<?php
 	}
 	if(isset($_POST['eliminar'])){
@@ -100,6 +142,7 @@ while($Com=mysqli_fetch_row($resultado)){
 		</script>";
 
 	}
+
 	echo "</table>";
 
 

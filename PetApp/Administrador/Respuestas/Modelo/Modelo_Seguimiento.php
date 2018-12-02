@@ -30,6 +30,14 @@ class MetodoSeguimiento{
 		}
 		return $mensa;
 	}
+	public function EliminarAnimal($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call bor_animal_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Animal Eliminado";
+	return $mensaje; 
+}
 
 
 		public function Mostrar_1_positivo_1($pos){

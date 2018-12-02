@@ -54,7 +54,7 @@
     while($Ced=mysqli_fetch_row($resultado)){
     ?>
     <div id="top">
-        <form action="Vista_Denuncias.php">
+        <form action="../Vista/Vista_Denuncias.php">
             <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
         </form>
     <div id="ubi">
@@ -82,7 +82,7 @@
         ';
         ?>
     	
-    	<label>Denuncia</label><input type="text" name="denuncia" pattern="[a-zA-Z]{1,250}" title="maximo 250 letras" class="form-control" id="denuncia">
+    	<label>Denuncia</label><input type="text" name="denuncia"  class="form-control" id="denuncia">
     	<div id="foto">
         <label>Foto</label><input type="file" name="imagen" id="quitar" accept="image/png,image/jpeg,image/jpg" class="form-control-file">
         </div>
