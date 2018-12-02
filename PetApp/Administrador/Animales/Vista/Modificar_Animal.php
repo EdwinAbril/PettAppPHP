@@ -30,14 +30,13 @@
 	while($Ani=mysqli_fetch_row($resultado)){
 	echo '
 
-	<tr>
-	<form action="../Controlador/Controlador_Actualizar_Animal.php" method="Post">
+	<form action="../Controlador/Controlador_Actualizar_Animal.php" method="Post" enctype="multipart/form-data">
     <div id="centro">   
-    <p>Foto</p><label class="botonModi"><img src="../../../Uploads/Mascotas_fotos/'.$Ani[5].'" width="180" heigth="180" id="fotomod"><input type="file" class="file" name="fos" accept="image/jpeg,image/png"><img src="../Vista/Imagenes/Icono.png" width="40" heigth="40"></label>
+    <p>Foto</p><label class="botonModi"><img src="../../../Uploads/Animales_fotos/'.$Ani[5].'" width="180" heigth="180" id="fotomod"><input type="file" class="file" name="fo" accept="image/jpeg,image/png"><img src="../Vista/Imagenes/Icono.png" width="40" heigth="40"></label>
     </div>
     <input type="hidden" name="usu" value="'.$Ani[0].'">
     <input type="hidden" name="fotosi" value="'.$Ani[5].'">
-    <label>Nombre del Animal</label><input type="text" name="nombre" class="form-control" required="" value="'.$Mas[1].'">
+    <label>Nombre del Animal</label><input type="text" name="nombre" class="form-control" required="" value="'.$Ani[1].'">
     <label for="t1">Tipo de Animal<abbr title="Este campo es obligatorio"></abbr></label>
     <input type="text" id="t1" class="form-control" name="tipo" value="'.$Ani[2].'" list="l1" required
            pattern="[Gg]ato|[Pp]erro">
@@ -47,6 +46,7 @@
     </datalist>
     <label>Edad del Animal</label><input type="text" name="edad" class="form-control" required="" value="'.$Ani[3].'">
     <label>Raza del Animal</label><input type="text" name="raza" class="form-control" required="" value="'.$Ani[4].'">
+    <label for="t2">Tamaño<abbr title="Este campo es obligatorio"></abbr></label>
     <input type="text" id="t2" class="form-control" name="tamaño" value="'.$Ani[6].'" list="l2" required
            pattern="[Gg]rande|[Mm]ediano|[Pp]equeño">
     <datalist id="l2">

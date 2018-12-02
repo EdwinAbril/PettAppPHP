@@ -56,6 +56,8 @@ class MetodoAnimal{
 	$genero_p=$genero;
 	$color_p=$color;
 	$consulta->execute();
+	$mensa="Animal Actualizado";
+	return $mensa;
 	}
 
 	public function Mostrar_1_Animal1($to){

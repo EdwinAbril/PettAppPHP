@@ -3,7 +3,7 @@
 <head>
 	<title>Insertar Animal</title>
         <meta charset="utf-8">
-    <link rel="stylesheet" href="CSS/Estilos.css">
+    <link rel="stylesheet" href="Estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
@@ -40,7 +40,7 @@
             <option value="Hembra">Hembra</option>
         </select>
         <label>Color del Animal</label><input type="text" name="color" class="form-control" required="">
-    	<label>Foto del Animal</label><center><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></center></label>
+    	<label>Foto del Animal</label><center><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar"></center></label>
         <div class="form-group" id="bot">
     	<input type="submit" name="consulta" value="Insertar Nuevo Animal" class="btn btn-primary">
         </div>

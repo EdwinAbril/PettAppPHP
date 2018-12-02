@@ -1,6 +1,5 @@
 <link rel="stylesheet" type="text/css" href="../Vista/Estilomod.css">
 <?php
-	  
 	if (isset($_POST['botonfunci']))
 	{
 		$result=modificar();
@@ -28,9 +27,7 @@ function modificar(){
 	if($nombre!=null & $tamaño<=1000000){ 
 
     $hoy=date("d_m_y");  
-    $nombre=$nm.$ced
-
-    ;
+    $nombre=$nm.$ced;
     $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Mascotas_fotos/';
     move_uploaded_file($_FILES['fos']['tmp_name'],$carpeta_destino.$nombre);
     
