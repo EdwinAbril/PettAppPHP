@@ -20,16 +20,17 @@ class MetodoAnimal{
 	return $consulta;
 	}
 
-	public function ModificarAnimal($codigo,$nombre,$tipo,$edad,$raza,$tamaño,$genero,$color){
+	public function ModificarAnimal($codigo,$nombre,$tipo,$edad,$raza,$foto,$tamaño,$genero,$color){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call act_animal_Admin(?,?,?,?,?,?,?,?)";
+	$sql="call act_animal_Admin(?,?,?,?,?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('isssssss',$codigo_p,$nombre_p,$tipo_p,$edad_p,$raza_p,$tamaño_p,$genero_p,$color_p);
+	$consulta->bind_param('issssssss',$codigo_p,$nombre_p,$tipo_p,$edad_p,$raza_p,$foto_p,$tamaño_p,$genero_p,$color_p);
 	$codigo_p=$codigo;
 	$nombre_p=$nombre;
 	$tipo_p=$tipo;
 	$edad_p=$edad;
+	$foto_p=$foto;
 	$raza_p=$raza;
 	$tamaño_p=$tamaño;
 	$genero_p=$genero;
@@ -37,6 +38,24 @@ class MetodoAnimal{
 	$consulta->execute();
 	$mensa="Animal Actualizado";
 	return $mensa;
+	}
+
+	public function ModificarAdoptado($codigo,$nombre,$tipo,$edad,$raza,$foto,$tamaño,$genero,$color){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call act_adoptado_Admin(?,?,?,?,?,?,?,?,?)";
+	$consulta=$conexion->prepare($sql);
+	$consulta->bind_param('issssssss',$codigo_p,$nombre_p,$tipo_p,$edad_p,$raza_p,$foto_p,$tamaño_p,$genero_p,$color_p);
+	$codigo_p=$codigo;
+	$nombre_p=$nombre;
+	$tipo_p=$tipo;
+	$edad_p=$edad;
+	$foto_p=$foto;
+	$raza_p=$raza;
+	$tamaño_p=$tamaño;
+	$genero_p=$genero;
+	$color_p=$color;
+	$consulta->execute();
 	}
 
 	public function Mostrar_1_Animal1($to){
