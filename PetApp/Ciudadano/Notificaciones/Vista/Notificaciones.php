@@ -42,7 +42,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="../../Notificaciones/Vista/Vista_Notificaciones.php">Notificaciones</a>
+                        <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> 
                             <div class="dropdown-divider">
                         </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
                     </div>
@@ -60,9 +60,9 @@
 	</form>
   	
   	<div id="ubi">
-	<h3 class="display-4">Ciudadano</h3>
+	<h3 class="display-4">Notificaciones</h3>
 		<?php
-		require_once("../Controlador/Controlador_vista.php");
+		require_once("../Controlador/Controlador_Notificacion.php");
 		while($Ciu=mysqli_fetch_row($resultado)){
 		?>
 			<div id="centro">
@@ -86,53 +86,28 @@
 			<?php
 			echo "
 			<tr>
-		        <th>Cedula</th>
+		        <th>Respuesta</th>
 		        <th>".$Ciu[0]."</th>
 		        </tr>
 		        <tr>
-		        <th>Nombre</th>
+		        <th>Cedula</th>
 		        <th>".$Ciu[1]."</th>
 		        </tr>
 		        <tr>
-		        <th>Telefono</th>            
-		        <th>".$Ciu[2]."</th>
-		        </tr>
-		        <tr>
-		        <th>Direccion</th>
+		        <th>Respuesta</th>            
 		        <th>".$Ciu[3]."</th>
 		        </tr>
-		        <tr>
-		        <th>Correo</th>
-		        <th>".$Ciu[4]."</th>
-		        </tr>
+
 		        <tr>";
 
 			?>
 
-			<?php
-			echo "
-			<form method='POST' action='Modificar_Ciudadano.php'>
-			<input type='hidden' name='usu' value='".$Ciu[0]."'>
-			<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-			<th></th>
-			</form>"; 
-			?>
+		
 
 			</table>
 		    </div>
 		    </div>
-				<?php
-			}
 			
-			if(isset($_POST['eliminar'])){
-				echo"<script type='text/javascript'>;
-				alert('".$resulta."');
-				</script>";
-
-			}
-			
-
-		?>
 	
 	</div>
     </div>

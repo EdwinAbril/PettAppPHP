@@ -14,6 +14,7 @@ function Insertar(){
 	$mostrar=new MetodoSeguimiento();
 	$result=$mostrar->InsertarPositivo($ced,$men);
 	$result=$mostrar->InsertarAdopciones($ani,$ced,$men);
+	$result=$mostrar->EliminarAnimal($ani);
 
 	return $result;
 }

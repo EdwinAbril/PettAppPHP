@@ -152,7 +152,7 @@ echo"
     <th><input type='image' src='Imagenes/borrar.png' name='eliminar' class='btn btn-link' height='60' width='60' ></th>
     </form>
     </tr>
-"
+";
 ?>
 
 	</table>
