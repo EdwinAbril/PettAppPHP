@@ -38,7 +38,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="../Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
+                        <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
                             <div class="dropdown-divider">
                         </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
                     </div>
@@ -72,7 +72,7 @@
            </br>
         </br>
 
-        <label>Celular</label><input type="tel" name="telefono" pattern="[0-9]{10}"
+        <label>Celular</label><input type="tel" name="telefono" pattern="[0-9]{10}" required="telefono" 
         class="form-control">
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
     	<label>Telefono Fijo</label><input type="tel" name="fijo" pattern="[0-9]{7}" class="form-control">

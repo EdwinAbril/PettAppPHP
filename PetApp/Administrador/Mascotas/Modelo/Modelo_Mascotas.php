@@ -20,19 +20,21 @@ class MetodoMascotas{
 	return $consulta;
 	}
 
-	public function ModificarMascotas($codigo,$nombre,$descendencia,$estado,$tipo,$edad,$raza,$cedula){
+	public function ModificarMascotas($codigo,$nombre,$tipo,$edad,$raza,$foto,$tamaño,$genero,$color,$cedula){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call usuario_mascota_actu(?,?,?,?,?,?,?,?)";
+	$sql="call usuario_mascota_actu(?,?,?,?,?,?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('isssssss',$codigo_p,$nombre_p,$descendencia_p,$estado_p,$tipo_p,$edad_p,$raza_p,$cedula_p);
+	$consulta->bind_param('isssssssss',$codigo_p,$nombre_p,$tipo_p,$edad_p,$raza_p,$foto_p,$tamaño_p,$genero_p,$color_p,$cedula_p);
 	$codigo_p=$codigo;
 	$nombre_p=$nombre;
-	$descendencia_p=$descendencia;
-	$estado_p=$estado;
 	$tipo_p=$tipo;
 	$edad_p=$edad;
 	$raza_p=$raza;
+	$foto_p=$foto;
+	$tamaño_p=$tamaño;
+	$genero_p=$genero;
+	$color_p=$color;
 	$cedula_p=$cedula;
 	$consulta->execute();
 	$mensa="Mascota Actualizada";

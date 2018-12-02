@@ -114,6 +114,7 @@
 			<form method='POST' action='Modificar_Ciudadano.php'>
 			<input type='hidden' name='usu' value='".$Ciu[0]."'>
 			<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
+			<th></th>
 			</form>"; 
 			?>
 
