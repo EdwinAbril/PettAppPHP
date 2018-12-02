@@ -46,7 +46,7 @@ public function EliminarAdopciones($d){
 }
 
 
-	public function  InsertarAdopciones($coda,$men){
+	public function  InsertarAdopciones($coda,$ced,$men){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_adopcion($coda);
@@ -55,10 +55,11 @@ public function EliminarAdopciones($d){
 		
 		}
 		else{
-			$sql="call VetInsertar_Adopcion(?,?)";
+			$sql="call VetInsertar_Adopcion(?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('is',$coda_p,$men_p);
+			$consulta->bind_param('iss',$coda_p,$ced_p,$men_p);
 			$coda_p=$coda;
+			$ced_p=$ced;
 			$men_p=$men;
 			$consulta->execute();
 			$mensa="Proceso Finalizado correctamente";

@@ -115,17 +115,23 @@ while($Seg=mysqli_fetch_row($resultado)){
   <?php
 echo"
 <form method='POST' action='../../Respuestas/Vista/Vista_RespuestaPositiva.php'>
-<input type='hidden' name='cedula' value='".$Seg[5]."'>
+<input type='hidden' name='celuda' value='".$Seg[5]."'>
+<input type='hidden' name='aimal' value='".$Seg[6]."'>
+
 <th><input type='submit' name='aceptar' class='btn btn-primary' value='Aceptar'></th>
 </form> 
 ";
 ?>
 <?php
-echo "<form method='POST' action=''>
+echo "<form method='POST' action='../Controlador/Controlador_Rechazar.php'>
 <th><input type='submit' name='rechazar2' class='btn btn-danger' value='Rechazar'></th>
+<input type='hidden' name='ced' value='".$Seg[5]."'>
+<input type='hidden' name='pos' value='".$Seg[1]."'>
+<input type='hidden' name='mensarecha' value='El proceso de Adopcion no fue aceptado en el Menu principal encontrara informacion de contacto'>
 </form>
 ";
 ?>
+
 	</table>
     </div>
     </div>

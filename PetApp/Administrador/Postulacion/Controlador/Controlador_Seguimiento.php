@@ -2,7 +2,8 @@
 <?php
 if (isset($_POST['aceptar'])){
     $result=insertars();
-    require_once("../Vista/Vista_Postulacion.php");    
+   
+    header('Location:../Vista/Vista_Postulacion.php');
 }
 
 function insertars(){
