@@ -69,17 +69,25 @@ while($Com=mysqli_fetch_row($resultado)){
                         <th>".$Com[1]."</th>
                         </tr>
                         <tr>
-                        <th>Descripcion</th>
+                        <th>Tipo</th>
                         <th>".$Com[2]."</th>
                         </tr>
                         <tr>
                         <th>Cedula</th>
                         <th>".$Com[3]."</th>
                         </tr>
+                        <tr>
+                        <th>Denuncia</th>
+                        <th>".$Com[4]."</th>
+                        </tr>
+                         <th>Evidencia</th>
+                         <th colspan='2'><img src='../../../Administrador/Evidencias_Denuncias/".$Com[5]."' width='300px' heigth='300px'>
+                         </th>
+                          </tr>
                         <tr>					
 			     <form method='POST' action='Vista_Respuesta.php'>
           <input type='hidden' name='ceduladenun' value='".$Com[3]."'>
-                <th><input type='submit' name='aceptarden' class='btn btn-primary' value='Aceptar'></th>
+                <th><input type='submit' name='aceptarden' class='btn btn-primary' value='Responder'></th>
                 </form> 
 
                 <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
