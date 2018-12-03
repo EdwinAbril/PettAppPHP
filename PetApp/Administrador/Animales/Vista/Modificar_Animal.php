@@ -32,7 +32,7 @@
 
 	<form action="../Controlador/Controlador_Actualizar_Animal.php" method="Post" enctype="multipart/form-data">
     <div id="centro">   
-    <p>Foto</p><label class="botonModi"><img src="../../../Uploads/Animales_fotos/'.$Ani[5].'" width="180" heigth="180" id="fotomod"><input type="file" class="file" name="fo" accept="image/jpeg,image/png"><img src="../Vista/Imagenes/Icono.png" width="40" heigth="40"></label>
+    <p>Foto</p><label class="botonModi"><img src="../../../Uploads/Animales_fotos/'.$Ani[5].'" style="width:180px;height:180px;border-radius: 180px;" id="fotomod"><input type="file" class="file" name="fo" accept="image/jpeg,image/png"><img src="../Vista/Imagenes/Icono.png" width="40" heigth="40"></label>
     </div>
     <input type="hidden" name="usu" value="'.$Ani[0].'">
     <input type="hidden" name="fotosi" value="'.$Ani[5].'">

@@ -60,7 +60,9 @@
     <h1>Ciudadano</h1>
     <img src="Logos/Mujer.png" height="300" width="300" id="Avatar" >
 
+    <h2><?php echo "".$usuar.""?></h2>
     </header>
+
 
 
     <div id="pricing" class="container-fluid">

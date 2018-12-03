@@ -28,9 +28,14 @@
     <form action="../../../Cerrar.php">
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
     </form>
-
+    <?php
+    require_once("../Controlador/Controlador_Administrador.php");
+    while($Adm=mysqli_fetch_row($resultado)){
+    ?>
 		<h1>Administrador</h1>
-		<img src="Imagenes/Admin2.png" id="Avatar" >
+    <?php
+          echo "
+		      <img src='../../../Uploads/Usuarios_Fotos/".$Adm[3]."' class='fotomod' style='width:250px; height:250px; border-radius: 200px 200px;'>";}?>
 	</header>
 
   

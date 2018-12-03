@@ -7,7 +7,7 @@ class MetodoAdministrador{
 	public function MostrarAdministrador($ini){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from login_usuarios where rol_login=1 and nombre_usuario <> '$ini';";
+	$sql="select * from login_usuarios where rol_login=1 and nombre_usuario='$ini';";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
@@ -20,15 +20,14 @@ class MetodoAdministrador{
 	return $consulta;
 	}
 
-	public function ModificarAdministrador($usuario,$clave,$foto){
+	public function ModificarAdministrador($usuario,$clave){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call act_admin_Admin(?,?,?)";
+	$sql="call act_admin_Admin(?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('sss',$usuario_p,$clave_p,$foto_p);
+	$consulta->bind_param('ss',$usuario_p,$clave_p);
 	$usuario_p=$usuario;
 	$clave_p=$clave;
-	$foto_p=$foto;
 	$consulta->execute();
 	$mensa="Usuario Modificado";
 	return $mensa;
