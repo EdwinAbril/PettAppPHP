@@ -24,14 +24,15 @@ require_once("../Controlador/Controlador_Ciudadano.php");
     <div id="insertar" class="form-group">
 
 	<h1>Insertar Ciudadano</h1>
-    <form action="" method="Post">
+    <form action="../Controlador/Controlador_Ciudadano.php" method="Post" enctype="multipart/form-data">
  	    <label>Nombre de Usuario</label><input type="text" name="usuario" class="form-control">
-        <label>Clave</label><input type="text" name="clave" class="form-control">
+        <label>Clave</label><input type="password" name="clave" class="form-control">
         <label>Cedula</label><input type="number" name="cedula" class="form-control">
     	<label>Nombre</label><input type="text" name="nombre" class="form-control">
     	<label>Telefono</label><input type="number" name="telefono" class="form-control">
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
     	<label>Correo Electronico</label><input type="text" name="correo" class="form-control">
+        <label>Foto del Animal</label><div id="padre"><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar"></div>
     	<div class="form-group" id="bot">
     	<input type="submit" name="consulta" value="Insertar Nuevo Ciudadano"  class="btn btn-primary">
         </div>

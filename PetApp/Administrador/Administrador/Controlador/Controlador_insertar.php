@@ -21,7 +21,7 @@ function insertar(){
         $resulta=$mostrar->InsertarUsuario($us,$cla,$nombre);
     }
 	else{
-	$nombre="Usuario_Defecto.jpg";
+	$nombre="Usuario_Defecto.png";
 	$resulta=$mostrar->InsertarUsuario($us,$cla,$nombre);
 	}
 	return $resulta;

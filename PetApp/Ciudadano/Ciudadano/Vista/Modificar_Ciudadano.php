@@ -38,9 +38,16 @@
                         <ul class="navbar-nav ml-md-auto">
                             <a class="navbar-brand" href="../../../Login/Vista/login.php">Usuario: <?php echo "".$usuar.""?></a>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
+                                    <?php
+                                      require_once("../../Menu/Controlador/Controlador_Usuario.php");
+                                      while($Usu=mysqli_fetch_row($resultado)){
+                                      ?>
+                                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                      <?php echo "
+                                      <img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' class='fotomod' 
+                                      style='width:50px;height:50px;border-radius:200px 200px;'>";}?></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
+                        <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a><a class="dropdown-item" href="../../Menu/Vista/Ciudadano.php">Menu</a>
                             <div class="dropdown-divider">
                         </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
                     </div>
@@ -61,27 +68,36 @@
     <div id="padre">
     <div id="modificar" class="form-group">
     <?php
-    $cod=$_POST["usu"];
+    $usu=$_POST["usu"];
+    $nom=$_POST["nom"];
     ?>
 
     <h1>Ciudadano</h1>
-    <p>Cedula</p><?php echo $cod?>
+    <p>Cedula</p><?php echo $nom?>
     <?php
 	require_once("../Controlador/Controlador_Modificar_Ciudadano.php");
-	while($Ciu=mysqli_fetch_row($resultado)){
+	while($Usu=mysqli_fetch_row($resultado)){
+    while($Ciu=mysqli_fetch_row($resultado2)){
 	echo "
 
 	<tr>
-	<form action='../Controlador/Controlador_Actualizar_Ciudadano.php' method='Post'>
-	<input type='hidden' name='usu' value='".$Ciu[0]."'>   
-    <p>Nombre</p><input type='text' name='nom' pattern='[a-z]{1,15}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Ciu[1]."'><BR></BR>
-    <p>Celular</p><input type='text' name='tel' pattern='[0-9]{10}' value='".$Ciu[2]."'><BR></BR>
-    <p>Direccion</p><input type='text' name='dir'  value='".$Ciu[3]."'><BR></BR>
-    <p>Correo</p><input type='email' name='cor'  value='".$Ciu[4]."'><BR></BR>
+	<form action='../Controlador/Controlador_Actualizar_Ciudadano.php' method='Post' enctype='multipart/form-data'>
+    <div id='centro'>
+    <p>Foto</p><label class='botonModi'><img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."'' style='width:180px;height:180px;border-radius: 150px;' id='fotomod'><input type='file' class='file' name='fos' accept='image/jpeg,image/png'><img src='../Vista/Imagenes/Icono.png' width='40' heigth='40'></label>
+    </div>
+    <input type='hidden' name='fotosi' value='".$Usu[3]."'>
+	<input type='hidden' name='usu' value='".$Usu[0]."'>
+    <input type='hidden' name='nom' value='".$Ciu[0]."'> 
+    <input type='hidden' name='nombre' value='".$Ciu[1]."'>   
+    <p>Nombre</p><p>".$Ciu[1]."</p>
+    <p>Celular</p><input type='text' name='tel' pattern='[0-9]{10}' value='".$Ciu[2]."'>
+    <p>Direccion</p><input type='text' name='dir'  value='".$Ciu[3]."'>
+    <p>Correo</p><input type='email' name='cor'  value='".$Ciu[4]."'>
+    <p>Clave</p><input type='password' name='cla'  value='".$Usu[1]."'>
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
     </form>";
 
-	}
+	}}
 	
 	if(isset($_POST['botonfunci'])){
 		echo"<script type='text/javascript'>;

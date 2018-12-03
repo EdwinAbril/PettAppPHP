@@ -30,10 +30,7 @@
 }
 
 #vol{
-float: left;
-margin-left: -72px;
 margin-top: 5px;
-margin-bottom:50px;
 }
 
 #sal{
@@ -88,8 +85,6 @@ p{
     color:black;
 }
     #vol{
-    float: left;
-    margin-left: -72px;
     margin-top: 5px;
     }
 }

@@ -45,7 +45,7 @@ class MetodoCiudadano{
 	return $consulta;
 	}
 
-	public function  InsertarUsuario($nom,$cla){
+	public function  InsertarUsuario($nom,$cla,$foto){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_usuario($nom);
@@ -54,12 +54,13 @@ class MetodoCiudadano{
 		
 		}
 		else{
-			$sql="call inser_usu_ciud(?,?,?)";
+			$sql="call inser_admin_Admin(?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('ssi',$nom_p,$cla_p,$rol_p);
+			$consulta->bind_param('ssis',$nom_p,$cla_p,$rol_p,$foto_p);
 			$nom_p=$nom;
 			$cla_p=$cla;
 			$rol_p=4;
+			$foto_p=$foto;
 			$consulta->execute();
 			$mensa="Usuario del Ciudadano insertado correctamente";
 		}

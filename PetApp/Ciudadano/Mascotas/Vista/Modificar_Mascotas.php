@@ -31,16 +31,40 @@
 	echo "
 
 	<tr>
-	<form action='../Controlador/Controlador_Actualizar_Mascotas.php' method='Post'>
-	<input type='hidden' name='usu' value='".$Mas[0]."'>   
-    <p>Nombre</p><input type='text' name='nom' pattern='[a-z]{1,15}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[1]."'><BR></BR>
-    <p>Descendencia</p><input type='text' name='des' pattern='[a-z]{1,15}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[2]."'><BR></BR>
-    <p>Estado</p><input type='text' name='est' pattern='[a-z]{1,25}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[3]."'><BR></BR>
-    <p>Tipo</p><input type='text' name='tip' pattern='[a-z]{1,10}' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[4]."'><BR></BR>
-    <p>Edad</p><input type='number' name='eda' min='1' max='30' value='".$Mas[5]."'><BR></BR>
-    <p>Raza</p><input type='text' name='raz' pattern='[a-z]{1,15}'' title='Ajustese al formato solicitado: Unicamente letras (maximo 15)' value='".$Mas[6]."'><BR></BR>
-    <input type='hidden' name='ced' value='".$Mas[7]."'>
-    <p>Cedula</p>".$Mas[7]."<BR></BR>
+	<form action='../Controlador/Controlador_Actualizar_Mascotas.php' method='Post' enctype='multipart/form-data'>
+    <div id='centro'>
+    <p>Foto</p><label class='botonModi'><img src='../../../Uploads/Mascotas_fotos/".$Mas[5]."'' style='width:180px;height:180px;border-radius: 150px;' id='fotomod'><input type='file' class='file' name='fos' accept='image/jpeg,image/png'><img src='../Vista/Imagenes/Icono.png' width='40' heigth='40'></label>
+    </div>
+	<input type='hidden' name='usu' value='".$Mas[0]."'>
+    <input type='hidden' name='fotosi' value='".$Mas[5]."'>
+    <input type='hidden' name='nombre' value='".$Mas[1]."'>   
+    <p>Nombre de la Mascota</p><p>".$Mas[1]."</p>
+    <label for='t'>Tipo de Mascota<abbr title='Este campo es obligatorio'></abbr></label>
+    <input type='text' id='t1' class='form-control' name='tipo' value='".$Mas[2]."' list='l1' required
+           pattern='[Gg]ato|[Pp]erro'>
+    <datalist id='l1'>
+        <option>Gato</option>
+        <option>Perro</option>
+    </datalist>
+    <p>Edad de la Mascota</p><input type='text' name='edad' pattern='[0-9]{1,2}' title='Ajustese al formato solicitado' value='".$Mas[3]."' class='form-control'>
+    <p>Raza de la Mascota</p><input type='text' name='raza' value='".$Mas[4]."' class='form-control'>
+    <label for='t2'>Tamaño<abbr title='Este campo es obligatorio'></abbr></label>
+    <input type='text' id='t2' class='form-control' name='tamaño' value='".$Mas[6]."' list='l2' required
+           pattern='[Gg]rande|[Mm]ediano|[Pp]equeño'>
+    <datalist id='l2'>
+        <option>Grande</option>
+        <option>Mediano</option>
+        <option>Pequeño</option>
+    </datalist>
+    <label for='t3'>Genero<abbr title='Este campo es obligatorio'></abbr></label>
+    <input type='text' id='t3' class='form-control' name='genero' value='".$Mas[7]."' list='l3' required
+           pattern='|[Mm]acho|[Hh]embra'>
+    <datalist id='l3'>
+        <option>Macho</option>
+        <option>Hembra</option>
+    </datalist>
+    <label>Color de la Mascota</label><input type='text' name='color' class='form-control' required='' value='".$Mas[8]."'>
+    <input type='hidden' name='cedula' value='".$Mas[9]."'>
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
     </form>";
 	}
