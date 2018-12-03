@@ -88,7 +88,7 @@
         class="form-control">
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
     	<label>Telefono Fijo</label><input type="tel" name="fijo" pattern="[0-9]{7}" class="form-control">
-        <label>Certificado Laboral</label><input type="file" name="certificado" accept="aplication/pdf" id="cer" class="form-control-file"><?php
+        <label>Certificado Laboral</label><input type="file" name="certificado" accept="application/pdf" id="cer" class="form-control-file"><?php
         echo"
         <input type='hidden' name='cedula' value='".$Ced[0]."'>
         <input type='hidden' name='codi'  value='".$cod."'>";
