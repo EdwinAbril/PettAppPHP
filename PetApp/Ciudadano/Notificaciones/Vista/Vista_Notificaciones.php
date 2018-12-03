@@ -82,7 +82,7 @@ while($Ced=mysqli_fetch_row($resultadod)){
                 <table class="table">
                 <tr>
                 <thead class="thead-dark">
-                <th>'.$Ciu[1].'</th>
+                <th>'.$Ciu[2].'</th>
                 </thead>
                 </tr>
                 </table>
