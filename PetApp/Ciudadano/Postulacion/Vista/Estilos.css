@@ -14,7 +14,7 @@
 	background-image: url("Imagenes/Administrador.jpg")
 }
 
-#vol{
+#volver{
 float: left;	
 }
 #sal{
@@ -34,7 +34,7 @@ float: right;
   	margin: 1rem;
 }
 #insertar{
-	margin-top: 8%;
+	margin-top: 15%;
 	width: 300px;
 	margin-left: auto;
   	margin-right: auto;
@@ -53,21 +53,22 @@ float: right;
 
 
 @media screen and (max-width:1200px){
+
 	table{
 		width: 80%;
-	}
-	   #insertar{
-  
- 
+	}	
+
+	#insertar{
     background: white;
-    margin-top: 80px;
+    margin-top: 200px;
     border-radius: 20px 20px 20px 20px;
     border: 1px solid green;
     max-width: 80%;
 
 }
-#vol{
-	position: absolute;
+
+#volver{
+	float: left;
 	top: 5px;
 	left: 5px;
 }
