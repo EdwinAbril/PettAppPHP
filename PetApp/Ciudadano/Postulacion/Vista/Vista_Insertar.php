@@ -56,7 +56,7 @@
     ?>
     <div id="top">
     <form action="../../Ciudadano/Menu/Ciudadano.php">
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="volver">
     </form>
 
     <div id="ubi">
