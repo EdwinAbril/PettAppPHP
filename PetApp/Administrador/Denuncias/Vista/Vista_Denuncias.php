@@ -3,7 +3,7 @@
 <head>
 	<title>Denuncias</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="CSS/Estilos.css">
+	<link rel="stylesheet" href="../Vista/CSS/Estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
@@ -84,6 +84,7 @@ while($Com=mysqli_fetch_row($resultado)){
 
                 <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
                 <input type='hidden' name='cedurech' value='".$Com[3]."'>
+                <input type='hidden' name='codi' value='".$Com[0]."'>
                 <input type='hidden' name='mensajerech' value='Su denuncia no fue aceptada podra comunicarse por medio de la informacion de contacto en el menu principal'>
                 <th><input type='submit' name='rechazarden' class='btn btn-danger'value='Rechazar'></th>
  

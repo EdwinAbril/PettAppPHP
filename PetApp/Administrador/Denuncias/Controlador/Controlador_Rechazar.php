@@ -6,6 +6,7 @@ if (isset($_POST['rechazarden'])){
 }
 
 function Insertar(){
+	$cod=$_POST['codi'];
 	$ced=$_POST['cedurech'];
 	$men=$_POST['mensajerech'];
 
@@ -13,7 +14,7 @@ function Insertar(){
 	require_once("../Modelo/Modelo_Denuncias.php");
 	$mostrar=new MetodoDenuncias();
 	$result=$mostrar->InsertarPositivo($ced,$men);
-	$result=$mostrar->EliminarDenuncias($ced);
+	$result=$mostrar->EliminarDenuncias($cod);
 
 
 	return $result;
