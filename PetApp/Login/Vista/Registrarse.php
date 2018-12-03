@@ -18,7 +18,7 @@
 	        	<label>Clave</label><input type="password" name="clave" class="form-control" minlength="8" maxlength="20" title="Minimo 8 Caracteres">
 	        	<label>Cedula</label><input type="text" name="cedula" pattern="[0-9]{8,10}"  class="form-control">
 	    		<label>Nombre</label><input type="text" name="nombre" pattern="[a-zA-Z]{1,15}" class="form-control" >
-	    		<label>Celular</label><input type="number" name="telefono" pattern="[0-9]{10}" class="form-control">
+	    		<label>Celular</label><input type="text" name="telefono" pattern="[0-9]{10}" class="form-control">
 	    		<label>Direccion</label><input type="text" name="direccion" class="form-control">
 	    		<label>Correo Electronico</label><input type="email" name="correo" class="form-control">
    		        <label>Foto de Perfil</label><div id="padre">
