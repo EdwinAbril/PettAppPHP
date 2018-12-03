@@ -21,7 +21,7 @@
 	    		<label>Telefono</label><input type="number" name="telefono" class="form-control">
 	    		<label>Direccion</label><input type="text" name="direccion" class="form-control">
 	    		<label>Correo Electronico</label><input type="text" name="correo" class="form-control">
-   		        <label>Foto del Animal</label><div id="padre">
+   		        <label>Foto de Perfil</label><div id="padre">
    		        <input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar"></div>
 
 		    		<div class="form-group" id="bot">
