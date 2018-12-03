@@ -7,12 +7,23 @@ if (isset($_POST['consulta'])){
 }
 
 function insertar(){
-	$us=$_POST['nombre'];
-	$cla=$_POST['clave'];
 	require_once("../Modelo/Modelo_Administrador.php");
 	$mostrar=new MetodoAdministrador();
-	$result=$mostrar->InsertarUsuario($us,$cla);
-
-	return $result;
+	$us=$_POST['nombre'];
+	$cla=$_POST['clave'];
+	$nombre=$_FILES['fo']['name'];
+    $tipo=$_FILES['fo']['type'];
+    $tamaño=$_FILES['fo']['size'];
+	if ($nombre!=null && $tamaño<=1000000) {
+        $nombre=$us;
+        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Usuarios_Fotos/';
+        move_uploaded_file($_FILES['fo']['tmp_name'],$carpeta_destino.$nombre);
+        $resulta=$mostrar->InsertarUsuario($us,$cla,$nombre);
+    }
+	else{
+	$nombre="Usuario_Defecto.png";
+	$resulta=$mostrar->InsertarUsuario($us,$cla,$nombre);
+	}
+	return $resulta;
 }
 ?>

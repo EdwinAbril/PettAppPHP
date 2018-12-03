@@ -36,9 +36,16 @@
                 <ul class="navbar-nav ml-md-auto">
                   <a class="navbar-brand" href="#">Usuario: <?php echo "".$usuar.""?></a>
                   <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
+                     <?php
+                      require_once("../../Menu/Controlador/Controlador_Usuario.php");
+                      while($Usu=mysqli_fetch_row($resultado)){
+                      ?>
+                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                      <?php echo "
+                      <img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' class='fotomod' 
+                      style='width:50px;height:50px;border-radius:200px 200px;'>";}?></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                       <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
+                       <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a><a class="dropdown-item" href="../../Menu/Vista/Ciudadano.php">Menu</a>
                       <div class="dropdown-divider">
                       </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
                     </div>
@@ -63,27 +70,34 @@
     <div id="insertar" class="form-group">
     <h1>Insertar Mascota</h1>
  <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
- 	<p><label>Nombre de la Mascota</label></p><input type="text" name="nombre" pattern="[a-zA-Z]{1,15}" title="Ajustese al formato solicitado: Unicamente letras (maximo 15)" class="form-control" required >
-    	<p><label>Esterilizacion</label></p><select  name="des" class="form-control" required="">
-            <option>Mascota Operada</option> 
-            <option value="Si">Si</option>
-            <option value="No">No</option>
+ 	<label>Nombre de la Mascota</label><input type="text" name="nombre" class="form-control" required="">
+      <label>Tipo</label><select  name="tipo" class="form-control" required="">
+            <option>Tipo de Mascota</option>
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
         </select>
-    	<p><label>Estado de la Mascota</label></p><input type="text" name="estado" pattern="[a-zA-Z]{1,25}" title="Ajustese al formato solicitado: Unicamente letras (maximo 25)" class="form-control" required="">
-    	<p><label>Tipo </label></p><select  name="tipo" class="form-control" required="">
-            <option>Tipo de Mascota</option> 
-            <option>Perro</option>
-            <option>Gato</option>
+      <label>Edad de la Mascota</label><input type="text" name="edad" class="form-control" required="">
+      <label>Raza de la Mascota</label><input type="text" name="raza" class="form-control" required="">
+        <label>Foto de la Mascota</label><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></label>
+        <label>Tamaño </label><select name="tamaño" class="form-control" required="">
+            <option>Tamaño de la Mascota</option>
+            <option value="Grande">Grande</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Pequeño">Pequeño</option>
         </select>
-        <p><label>Edad de la Mascota</label></p><input type="number" name="edad" min="1" max="30" class="form-control" required="">
-        <p><label>Raza de la Mascota</label></p><input type="text" name="raza" pattern="[a-zA-Z]{1,15}" title="Ajustese al formato solicitado: Unicamente letras (maximo 15)" class="form-control" required="">
+         <label>Genero</label><select  name="genero" class="form-control" required="">
+            <option>Genero de la Mascota</option>
+            <option value="Macho">Macho</option>
+            <option value="Hembra">Hembra</option>
+        </select>
+        <label>Color de la Mascota</label><input type="text" name="color" class="form-control" required="">
+    
         <?php
         echo'
         <input type="hidden" name="cedula" value="'.$Ced[0].'">
         ';
         ?>
-        <p><label>Foto de la Mascota</label></p><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></label>
-    	<input type="submit" name="consulta" value="Insertar Nueva Mascota" class="btn btn-primary">
+        <input type="submit" name="consulta" value="Insertar Nueva Mascota" class="btn btn-primary">
     </form>
 </div>
 </div>

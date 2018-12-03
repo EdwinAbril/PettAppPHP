@@ -3,6 +3,28 @@
 require_once ("../../../Conexion.php");
 
 class MetodoCiudadano{
+
+	public function ModificarUsuario($usuario,$clave,$foto){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call act_admin_Admin(?,?,?)";
+	$consulta=$conexion->prepare($sql);
+	$consulta->bind_param('sss',$usuario_p,$clave_p,$foto_p);
+	$usuario_p=$usuario;
+	$clave_p=$clave;
+	$foto_p=$foto;
+	$consulta->execute();
+	$mensa="Usuario Modificado";
+	return $mensa;
+	}
+
+	public function Mostrar_1_Usuario($usu){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from login_usuarios where nombre_usuario='$usu'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
 	
 	public function MostrarCiudadano($usu){
 	$conectar= new conectarproyecto();

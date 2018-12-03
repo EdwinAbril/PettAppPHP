@@ -69,6 +69,10 @@
                         <th>".$Adm[1]."</th>
                         </tr>
                         <tr>
+                        <th>Foto</th>
+            			<th><img src='../../../Uploads/Usuarios_Fotos/".$Adm[3]."' width='200' heigth='200'></th>
+            			</tr>
+                        <tr>
 					
 			
 					<form method='POST' action='Modificar_Administrador.php'>

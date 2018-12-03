@@ -105,6 +105,7 @@ while($Pos=mysqli_fetch_row($resultado)){
                 <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
                 <th><input type='submit' name='rechazar1' class='btn btn-danger'value='Rechazar'></th>
                 <input type='hidden' name='ced' value='".$Pos[5]."'>
+                <input type='hidden' name='postu' value='".$Pos[0]."'>
                 <input type='hidden' name='mensarech' value='El proceso de Adopcion no fue Aceptado en el menu principal encontrara informacion de contacto'>
                 </form>
 	            ";
@@ -151,7 +152,7 @@ echo"
     <th><input type='image' src='Imagenes/borrar.png' name='eliminar' class='btn btn-link' height='60' width='60' ></th>
     </form>
     </tr>
-"
+";
 ?>
 
 	</table>

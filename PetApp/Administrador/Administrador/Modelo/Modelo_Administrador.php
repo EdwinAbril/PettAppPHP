@@ -20,14 +20,15 @@ class MetodoAdministrador{
 	return $consulta;
 	}
 
-	public function ModificarAdministrador($usuario,$clave){
+	public function ModificarAdministrador($usuario,$clave,$foto){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call act_admin_Admin(?,?)";
+	$sql="call act_admin_Admin(?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ss',$usuario_p,$clave_p);
+	$consulta->bind_param('sss',$usuario_p,$clave_p,$foto_p);
 	$usuario_p=$usuario;
 	$clave_p=$clave;
+	$foto_p=$foto;
 	$consulta->execute();
 	$mensa="Usuario Modificado";
 	return $mensa;
@@ -50,7 +51,7 @@ class MetodoAdministrador{
 	return $consulta;
 	}
 
-		public function  InsertarUsuario($nom,$cla){
+		public function  InsertarUsuario($nom,$cla,$foto){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_Administrador_1($nom);
@@ -59,12 +60,13 @@ class MetodoAdministrador{
 		
 		}
 		else{
-			$sql="call inser_admin_Admin(?,?,?)";
+			$sql="call inser_admin_Admin(?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('ssi',$nom_p,$cla_p,$rol_p);
+			$consulta->bind_param('ssis',$nom_p,$cla_p,$rol_p,$foto_p);
 			$nom_p=$nom;
 			$cla_p=$cla;
 			$rol_p=1;
+			$foto_p=$foto;
 			$consulta->execute();
 			$mensa="Usuario de Administrador insertado correctamente";
 		}

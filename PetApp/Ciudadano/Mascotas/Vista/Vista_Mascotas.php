@@ -40,9 +40,16 @@
                         <ul class="navbar-nav ml-md-auto">
                             <a class="navbar-brand" href="#">Usuario: <?php echo "".$usuar.""?></a>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
+                                    <?php
+                                      require_once("../../Menu/Controlador/Controlador_Usuario.php");
+                                      while($Usu=mysqli_fetch_row($resultado)){
+                                      ?>
+                                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                      <?php echo "
+                                      <img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' class='fotomod' 
+                                      style='width:50px;height:50px;border-radius:200px 200px;'>";}?></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
+                        <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a><a class="dropdown-item" href="../../Menu/Vista/Ciudadano.php">Menu</a>
                             <div class="dropdown-divider">
                         </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
                     </div>
@@ -59,8 +66,8 @@
         <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
   	</form>
 
-	<form action="../../Ciudadano/Menu/Ciudadano.php">
-        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+	<form action="../../Menu/Vista/Ciudadano.php">
+        <input type="submit" name="volver" value="Menu" class="btn btn-outline-dark" id="vol">
     </form>
     
     <div id="ubi">
@@ -95,6 +102,7 @@ while($Mas=mysqli_fetch_row($resultado)){
                     <table class='table'>
                 <?php
 					echo "
+                        <p><img src='../../../Uploads/Mascotas_fotos/".$Mas[5]."' width='300px' heigth='300px'></p>
 					    <tr>
                         <th>Codigo</th>
                         <th>".$Mas[0]."</th>
@@ -104,28 +112,32 @@ while($Mas=mysqli_fetch_row($resultado)){
                         <th>".$Mas[1]."</th>
                         </tr>
                         <tr>
-                        <th>Descendencia</th>
+                        <th>Tipo</th>
                         <th>".$Mas[2]."</th>
                         </tr>
                         <tr>
-                        <th>Estado</th>
+                        <th>Edad</th>
                         <th>".$Mas[3]."</th>
                         </tr>
                         <tr>
-                        <th>Tipo</th>
+                        <th>Raza</th>
                         <th>".$Mas[4]."</th>
                         </tr>
                         <tr>
-                        <th>Edad</th>
-                        <th>".$Mas[5]."</th>
-                        </tr>
-                        <tr>
-                        <th>Raza</th>
+                        <th>Tamaño</th>
                         <th>".$Mas[6]."</th>
                         </tr>
                         <tr>
-                        <th>Cedula</th>
+                        <th>Genero</th>
                         <th>".$Mas[7]."</th>
+                        </tr>
+                         <tr>
+                        <th>Color</th>
+                        <th>".$Mas[8]."</th>
+                        </tr>
+                         <tr>
+                        <th>Cedula</th>
+                        <th>".$Mas[9]."</th>
                         </tr>
                         <tr>
 

@@ -72,8 +72,12 @@
         <th>".$Ado[1]."</th>
         </tr>
         <tr>
-        <th>Mensaje</th>
+        <th>Cedula</th>
         <th>".$Ado[2]."</th>
+        </tr>
+         <tr>
+        <th>Respuesta</th>
+        <th>".$Ado[3]."</th>
         </tr>
         <tr>
 

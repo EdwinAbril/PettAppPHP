@@ -28,19 +28,21 @@ class MetodoMascotas{
 	return $consulta;
 	}
 
-	public function ModificarMascotas($codigo,$nombre,$descendencia,$estado,$tipo,$edad,$raza,$cedula){
+	public function ModificarMascotas($codigo,$nombre,$tipo,$edad,$raza,$foto,$tamaño,$genero,$color,$cedula){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call usuario_mascota_actu(?,?,?,?,?,?,?,?)";
+	$sql="call usuario_mascota_actu(?,?,?,?,?,?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('isssssss',$codigo_p,$nombre_p,$descendencia_p,$estado_p,$tipo_p,$edad_p,$raza_p,$cedula_p);
+	$consulta->bind_param('isssssssss',$codigo_p,$nombre_p,$tipo_p,$edad_p,$raza_p,$foto_p,$tamaño_p,$genero_p,$color_p,$cedula_p);
 	$codigo_p=$codigo;
 	$nombre_p=$nombre;
-	$descendencia_p=$descendencia;
-	$estado_p=$estado;
 	$tipo_p=$tipo;
 	$edad_p=$edad;
 	$raza_p=$raza;
+	$foto_p=$foto;
+	$tamaño_p=$tamaño;
+	$genero_p=$genero;
+	$color_p=$color;
 	$cedula_p=$cedula;
 	$consulta->execute();
 	$mensa="Mascota Actualizada";
@@ -62,20 +64,21 @@ public function Mostrar_1_Mascotas_1($to){
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 }
-	public function InsertarMascotas($nm,$des,$em,$tm,$edm,$rm,$ced,$fot){
+	public function InsertarMascotas($nm,$tip,$ed,$raz,$fot,$tam,$gen,$col,$ced){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$sql="call usuario_mascota_inser(?,?,?,?,?,?,?,?)";
+		$sql="call usuario_mascota_inser(?,?,?,?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('ssssssss',$nm_p,$des_p,$em_p,$tm_p,$edm_p,$rm_p,$ced_p,$fot_p);
+			$consulta->bind_param('sssssssss',$nm_p,$tip_p,$ed_p,$raz_p,$fot_p,$tam_p,$gen_p,$col_p,$ced);
 			$nm_p=$nm;
-			$des_p=$des;
-			$em_p=$em;
-			$tm_p=$tm;
-			$edm_p=$edm;
-			$rm_p=$rm;
-			$ced_p=$ced;
+			$tip_p=$tip;
+			$ed_p=$ed;
+			$raz_p=$raz;
 			$fot_p=$fot;
+			$tam_p=$tam;
+			$gen_p=$gen;
+			$col_p=$col;
+			$ced_p=$ced;
 			$consulta->execute();
 			$mensa="Mascota Ingresada";
 		

@@ -27,7 +27,7 @@
         </select>
     	<label>Edad de la Mascota</label><input type="text" name="edad" class="form-control" required="">
     	<label>Raza de la Mascota</label><input type="text" name="raza" class="form-control" required="">
-        <label>Foto de la Mascota</label><center><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></center></label>
+        <label>Foto de la Mascota</label><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></label>
         <label>Tamaño </label><select name="tamaño" class="form-control" required="">
             <option>Tamaño de la Mascota</option>
             <option value="Grande">Grande</option>

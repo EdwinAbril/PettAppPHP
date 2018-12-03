@@ -39,9 +39,16 @@
                         <ul class="navbar-nav ml-md-auto">
                             <a class="navbar-brand" href="#">Usuario: <?php echo "".$usuar.""?></a>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
+                                    <?php
+                                      require_once("../../Menu/Controlador/Controlador_Usuario.php");
+                                      while($Usu=mysqli_fetch_row($resultado)){
+                                      ?>
+                                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                      <?php echo "
+                                      <img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' class='fotomod' 
+                                      style='width:50px;height:50px;border-radius:200px 200px;'>";}?></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a>
+                        <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a><a class="dropdown-item" href="../../Menu/Vista/Ciudadano.php">Menu</a>
                             <div class="dropdown-divider">
                         </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
                     </div>
@@ -55,8 +62,8 @@
 
 
   <div id="top">
-    <form action="../../Ciudadano/Menu/Ciudadano.php">
-        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+    <form action="../../Menu/Vista/Ciudadano.php">
+        <input type="submit" name="volver" value="Menu" class="btn btn-outline-dark" id="vol">
   	</form>
     <div id="ubi">
     <h1 class="display-4">Eventos</h1>

@@ -31,9 +31,16 @@
 	echo "
 
 	<tr>
-	<form action='../Controlador/Controlador_Actualizar_Administrador.php' method='Post'>
-	<input type='hidden' name='usu' value='".$Adm[0]."'>   
-    <p>Clave</p><input type='text' name='clave'  value='".$Adm[1]."'><BR></BR>
+	<form action='../Controlador/Controlador_Actualizar_Administrador.php' method='Post' enctype='multipart/form-data'>
+    <div id='centro'>   
+    <p>Foto</p><label class='botonModi'>
+    <img src='../../../Uploads/Usuarios_Fotos/".$Adm[3]."' style='width:150px;height:150px;border-radius: 150px;' id='fotomod'>
+    <input type='file' class='file' name='fo' accept='image/jpeg,image/png'>
+    <img src='../Vista/Imagenes/Icono.png' width='40' heigth='40'></label>
+    </div>
+	<input type='hidden' name='usu' value='".$Adm[0]."'>
+    <input type='hidden' name='fotosi' value='".$Adm[3]."'>   
+    <p>Clave</p><input type='password' name='clave'  value='".$Adm[1]."'><BR></BR>
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
     </form>";
 	}

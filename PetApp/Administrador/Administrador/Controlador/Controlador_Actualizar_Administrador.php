@@ -10,12 +10,29 @@
 	}
 
 function modificar(){
-		$cod=$_POST["usu"];
-		$tel=$_POST['clave'];
 	require_once("../Modelo/Modelo_Administrador.php");
 	$mostrar= new MetodoAdministrador();
-	$resultado=$mostrar->ModificarAdministrador($cod,$tel);
+		$cod=$_POST["usu"];
+		$tel=$_POST['clave'];
+		$nombre=$_FILES['fo']['name'];
+	    $tipo=$_FILES['fo']['type'];
+	    $tamaño=$_FILES['fo']['size'];
+	    $imagensi=$_POST['fotosi'];
+	$resultado=$mostrar->ModificarAdministrador($cod,$tel,$nombre);
 
+	if ($nombre!=null && $tamaño<=1000000) {
+        $nombre=$cod;
+        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Usuarios_Fotos/';
+        move_uploaded_file($_FILES['fo']['tmp_name'],$carpeta_destino.$nombre);
+	    $resultado=$mostrar->ModificarAdministrador($cod,$tel,$nombre);
+	}
+
+	else {
+	    $mensaje1=" No adjunto imagen o el tamaño no corresponde";
+	    $nombre=$imagensi;
+	    $resultado=$mostrar->ModificarAdministrador($cod,$tel,$nombre);
+	    $resultado=$resultado.$mensaje1;
+  	}
 	return $resultado;
 }
 ?>
