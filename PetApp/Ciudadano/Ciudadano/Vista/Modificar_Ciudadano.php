@@ -89,7 +89,7 @@
 	<input type='hidden' name='usu' value='".$Usu[0]."'>
     <input type='hidden' name='nom' value='".$Ciu[0]."'> 
     <input type='hidden' name='nombre' value='".$Ciu[1]."'>   
-    <p>Nombre</p><p>".$Ciu[1]."</p>
+    <p>Nombre</p><p>".$Ciu[1]."</p>  
     <p>Celular</p><input type='text' name='tel' pattern='[0-9]{10}' value='".$Ciu[2]."'>
     <p>Direccion</p><input type='text' name='dir'  value='".$Ciu[3]."'>
     <p>Correo</p><input type='email' name='cor'  value='".$Ciu[4]."'>
