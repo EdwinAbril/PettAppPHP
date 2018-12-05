@@ -3,21 +3,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,  user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">
-	<title>Pet App</title>
 	<link rel="stylesheet" href="Estilo.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/Footer-white.css">
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="main.js"></script>
-  <script src="js/jquery-3.3.1.min.js" ></script>
-  <script src="js/main.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-white.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="main.js"></script>
+  	<script src="js/jquery-3.3.1.min.js" ></script>
+  	<script src="js/main.js"></script>
+
+
+	<title>Pet App</title>
 </head>
+
 <body>
 <?php
         session_start();
@@ -102,7 +104,7 @@
     <div class="panel panel-default text-center">
         <div class="panel-heading" id="panel">
         	<img src="Imagenes/info.png" height="30" width="30" id="info" > 
-          <h1>Adopción</h1>
+          <h1 id="Adopcion">Adopción</h1>
             <h5>Cómo Adopto?</h5>
             </div>
             <div id="caja2">
@@ -113,7 +115,7 @@
             </div>
           <div class="panel-body" id="imagen">
           <!--  AQUI VA LA IMAGEN DEL EVENTO -->
-        <img src="Imagenes/adopcion.jpeg" class="img-responsive slideanim" height="280" width="400">
+        <img src="Imagenes/adopcion.jpeg" class="img-responsive slideanim" id="imagenadopcion">
      </div>
     </div>      
   </div>  
@@ -122,7 +124,7 @@
       <div class="panel panel-default text-center">
           <div class="panel-heading" id="panel">
           	<img src="Imagenes/info.png" height="30" width="30" id="info2" >
-          <h1>Veterinarias</h1>
+          <h1 id="Veterinaria">Veterinarias</h1>
            <h5>Veterinarias Vinculadas</h5>
         </div>
         <div id="caja4">
@@ -131,7 +133,7 @@
             	<a href="Informacion/Eventos.php">saber más</a>
         </div>
         <div class="panel-body" id="imagen2">
-          <img src="Imagenes/veterinaria.jpeg" class="img-responsive slideanim" height="280" width="400">
+          <img src="Imagenes/veterinaria.jpeg" class="img-responsive slideanim" id="imagenveterinaria">
         </div>
       </div>      
     </div>     
@@ -140,7 +142,7 @@
       <div class="panel panel-default text-center">
           <div class="panel-heading" id="panel">
           	<img src="Imagenes/info.png" height="30" width="30" id="info3" >
-          <h1>Eventos</h1>
+          <h1 id="Eventos">Eventos</h1>
            <h5>Infórmate</h5>
         </div>
         <div id="caja6">
@@ -149,7 +151,7 @@
             	<a href="Informacion/Veterinaria.php">saber más</a>
         </div>
         <div class="panel-body" id="imagen3">
-          <img src="Imagenes/Jornadas.jpeg" class="img-responsive slideanim" height="280" width="400">
+          <img src="Imagenes/Jornadas.jpeg" class="img-responsive slideanim" id="imageneventos">
         </div>
       </div>      
     </div>    
