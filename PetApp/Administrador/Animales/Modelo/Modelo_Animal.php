@@ -160,7 +160,7 @@ class MetodoAnimal{
 		$resultad=$this->Mostrar_1_Adop3($ea);
 		$resultado=$this->Mostrar_1_Adop4($ra);
 		if ($result->num_rows>0) {
-			$mensa="El animal ya Existe";
+			$mensa="Animal Ingresado";
 		}
 		else{
 		$sql="call inser_adoptado_Admin(?,?,?,?,?,?,?,?)";

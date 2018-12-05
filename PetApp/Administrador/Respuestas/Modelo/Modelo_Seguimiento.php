@@ -4,6 +4,13 @@ require_once ("../../../Conexion.php");
 
 class MetodoSeguimiento{
 	
+	public function Mostrar_1_animal($an){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$sql="select * from animal where codigo_animal='$an'";
+		$consulta=mysqli_query($conexion,$sql);
+		return $consulta;
+	}
 	
 	public function Mostrar_1_positivo($pos){
 		$conectar=new conectarproyecto();
@@ -95,7 +102,33 @@ class MetodoSeguimiento{
 		return $mensa;
 
 	}
+		public function Mostrar_1_Mascotas_1($to){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from mascota where raza_animal='to'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+}
+	public function InsertarMascotas($nm,$tip,$ed,$raz,$tam,$gen,$col,$ced){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$sql="call usuario_mascota_adop(?,?,?,?,?,?,?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('ssssssss',$nm_p,$tip_p,$ed_p,$raz_p,$tam_p,$gen_p,$col_p,$ced);
+			$nm_p=$nm;
+			$tip_p=$tip;
+			$ed_p=$ed;
+			$raz_p=$raz;
+			$tam_p=$tam;
+			$gen_p=$gen;
+			$col_p=$col;
+			$ced_p=$ced;
+			$consulta->execute();
+			$mensa="Mascota Ingresada";
 		
+		return $mensa;
+
+}
 
 
 }

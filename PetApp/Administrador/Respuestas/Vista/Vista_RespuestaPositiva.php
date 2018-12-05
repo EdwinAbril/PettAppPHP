@@ -25,16 +25,28 @@
    
     ?>
     <?php
-
-    echo"
- 	<p><label>Cedula del Postulante </label></p><input type='text' name='cedula' value='".$cedula."'>"?>
+        require_once("../Controlador/Controlador_Consulanimal.php");
+        while($Anim=mysqli_fetch_row($resultado)){
+            echo"
+         <input type='hidden' name='nombrefinal' value='".$Anim[1]."'>
+         <input type='hidden' name='tipofinal' value='".$Anim[2]."'>
+         <input type='hidden' name='edadfinal' value='".$Anim[3]."'>
+         <input type='hidden' name='razafinal' value='".$Anim[4]."'>
+         <input type='hidden' name='tamañofinal' value='".$Anim[5]."'>
+         <input type='hidden' name='generofinal' value='".$Anim[7]."'>
+         <input type='hidden' name='colorfinal' value='".$Anim[8]."'>
+         ";   
+        }
+        ?>
+  
   
     <?php 
     echo "
    
-    <p><lable>Respuesta</lable></p><input type='text' name='mensanxh'>
-    <input type='hidden' name='cedula' value='".$cedula."'>
-    <input type='hidden' name='animal' value='".$animal."'>
+  
+    <input type='hidden' name='cedulaadop' value='".$cedula."'>
+    <input type='hidden' name='animaladop' value='".$animal."'>
+      <p><lable>Respuesta</lable></p><input type='text' name='mensadop'>
     <input type='submit' name='aceptar2' value='Enviar Respuesta' class='btn btn-primar'>
   
     ";?>

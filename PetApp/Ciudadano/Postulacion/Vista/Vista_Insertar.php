@@ -63,8 +63,6 @@
     ?>
     <div id="top">
 
-    <form action="../../Ciudadano/Menu/Ciudadano.php">
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="volver">
 
     <form action="../../Animales/Vista/Vista_Animal.php">
     <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
