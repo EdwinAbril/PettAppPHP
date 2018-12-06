@@ -7,6 +7,7 @@
 .img-responsive{
 	margin:10px;
 }
+
 *{
 	margin:0;
 	padding:0;
@@ -107,9 +108,8 @@ header nav s{
 	-webkit-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
 	transition:all  500ms ease;
-
-
 }
+
 header nav a:hover{
 	background: #FFC300;
 	border-radius: 50px;
@@ -126,29 +126,29 @@ height: 550px;
 margin: auto;
 overflow: hidden;
 }
+
 .slider ul{
 	list-style: none;
 	display:flex;
 	padding:0;
 	width:400%;
 	animation: cambio 20s infinite alternate;
-
 }
+
 .slider s{
-    	width: 100%;
+    width: 100%;
 	list-style: none;
-        height: 50%;
-	
-
+    height: 50%;
 }
+
 .slider img{
 
 	width:100%;
 	height: 550px;
 }
+
 .boton-menu{
 	display: none;
-
 }
 
 .boton-menu  span{
@@ -156,8 +156,8 @@ color:white;
 font-size: 25px;
 cursor: pointer; 
 text-decoration: none;
-
 }
+
 header label{
 	display: none;
 	width: 30px;
@@ -165,6 +165,7 @@ header label{
 	padding: 10px;
 	border-right: 1px solid #fff;
 }
+
 header label:hover{
 	cursor: pointer;
 	background: rgba(0,0,0,0.3);
@@ -187,7 +188,6 @@ h1{
 .col-sm-4 col-xs-12 img{
     height:100%;
     width: 100%;
-    
 }
 
 #imagen{
@@ -200,12 +200,28 @@ h1{
 	position: relative;
 }
 
+#panel{
+    border: solid 10px green ;
+}
+
+#Adopcion{
+	margin-left: 45px;
+}
+
 #caja2{
     background-color: white; 
     width: auto;
     height:300px;
     padding: 15px;
     position: relative;
+}
+
+#imagenadopcion{
+	width: 420px;
+}
+
+#Veterinaria{
+	margin-left: 40px;
 }
 
 #caja4{
@@ -216,6 +232,14 @@ h1{
     position: relative;
 }
 
+#imagenveterinaria{
+	width: 420px;
+}
+
+#Eventos{
+	margin-left: 40px;
+}
+
 #caja6{
     background-color: white; 
     width: auto;
@@ -224,6 +248,9 @@ h1{
     position: relative;
 }
 
+#imageneventos{
+	width: 420px;
+}
 
 #info{
 	cursor: pointer;
@@ -326,7 +353,9 @@ p{
 	75%{margin-left:-300%;}
 	100%{margin-left:-300%;}
 }
-@media screen and (max-width: 700px){
+
+@media screen and (max-width: 600px){
+
 .boton-menu{
 	width: 90%;
 	margin:auto;
@@ -335,6 +364,7 @@ p{
 	text-decoration: none;
 
 }
+
 .navegacion nav{
 	position: absolute;
 	width:100%;
@@ -343,15 +373,17 @@ p{
 	left: -100%;
 	text-decoration: none;
 	text-align: center;
-	
 }
+
 .menu li{
 display: block;	
 text-decoration: none;
 }
+
 .slider s{
 	height:100%;
 }
+
 .logotipo h1{
 	font-family:'Rockwell';
 	font-weight: 400;
@@ -360,6 +392,7 @@ text-decoration: none;
 	font-size:40px;
 	text-align: center;
 }
+
 .col-sm-4 col-xs-12{
     width: 100%;
     position: relative;
@@ -368,7 +401,7 @@ text-decoration: none;
 
 .slider{
 width: 100%;
-height: 280px;
+height: 220px;
 margin: auto;
 overflow: hidden;
 }
@@ -376,44 +409,246 @@ overflow: hidden;
 .slider img{
 
 	width:100%;
-	height: 280px;
+	height: 220px;
 }
-
 
 p{
-        text-align:left;
+  text-align:left;
+}
 }
 
+@media screen and (max-width: 768px){
+
+.slider{
+width: 100%;
+height: 250px;
+margin: auto;
+overflow: hidden;
+}
+
+.slider img{
+
+	width:100%;
+	height: 250px;
+}
+
+@media screen and (max-width: 700px){
+
+.slider{
+width: 100%;
+height: 200px;
+margin: auto;
+overflow: hidden;
+}
+
+.slider img{
+
+	width:100%;
+	height: 200px;
+}
 
 #caja2{
     background-color: white; 
     width: auto;
-    height:300px;
+    height:270px;
     padding: 15px;
     position: relative;
     font-size: 14px;
+}
+
+#imagenadopcion{
+	width: 320px;
+}
+
+#caja3{
+	margin-top: 50px;
 }
 
 #caja4{
     background-color: white; 
     width: auto;
-    height:300px;
+    height:270px;
     padding: 15px;
     position: relative;
     font-size: 14px;
     
+}
+
+#imagenveterinaria{
+	width: 320px;
+}
+
+#caja5{
+	margin-top: 50px;
 }
 
 #caja6{
     background-color: white; 
     width: auto;
-    height:300px;
+    height:320px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+#imageneventos{
+	width: 320px;
+}
+
+}
+
+@media screen and (max-width: 320px){
+
+#caja2{
+    background-color: white; 
+    width: auto;
+    height:270px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+#imagenadopcion{
+	width: 280px;
+}
+
+#caja3{
+	margin-top: 50px;
+}
+
+#caja4{
+    background-color: white; 
+    width: auto;
+    height:270px;
     padding: 15px;
     position: relative;
     font-size: 14px;
     
 }
 
+#imagenveterinaria{
+	width: 280px;
 }
 
+#caja5{
+	margin-top: 50px;
+}
 
+#caja6{
+    background-color: white; 
+    width: auto;
+    height:320px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+#imageneventos{
+	width: 280px;
+}
+
+}
+
+@media screen and (max-width: 360px){
+
+#caja2{
+    background-color: white; 
+    width: auto;
+    height:270px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+#imagenadopcion{
+	width: 250px;
+}
+
+#caja3{
+	margin-top: 50px;
+}
+
+#caja4{
+    background-color: white; 
+    width: auto;
+    height:270px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+    
+}
+
+#imagenveterinaria{
+	width: 280px;
+}
+
+#caja5{
+	margin-top: 50px;
+}
+
+#caja6{
+    background-color: white; 
+    width: auto;
+    height:320px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+#imageneventos{
+	width: 280px;
+}
+
+}
+
+@media screen and (max-width: 414px){
+
+#caja2{
+    background-color: white; 
+    width: auto;
+    height:270px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+#imagenadopcion{
+	width: 370px;
+}
+
+#caja3{
+	margin-top: 50px;
+}
+
+#caja4{
+    background-color: white; 
+    width: auto;
+    height:270px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+    
+}
+
+#imagenveterinaria{
+	width: 370px;
+}
+
+#caja5{
+	margin-top: 50px;
+}
+
+#caja6{
+    background-color: white; 
+    width: auto;
+    height:320px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+#imageneventos{
+	width: 370px;
+}
+
+}

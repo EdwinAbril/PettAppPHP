@@ -104,10 +104,7 @@ while($Mas=mysqli_fetch_row($resultado)){
 					echo "
                         <p><img src='../../../Uploads/Mascotas_fotos/".$Mas[5]."' width='300px' heigth='300px'></p>
 					    <tr>
-                        <th>Codigo</th>
-                        <th>".$Mas[0]."</th>
-                        </tr>
-                        <tr>
+                   
                         <th>Nombre</th>
                         <th>".$Mas[1]."</th>
                         </tr>
@@ -135,10 +132,7 @@ while($Mas=mysqli_fetch_row($resultado)){
                         <th>Color</th>
                         <th>".$Mas[8]."</th>
                         </tr>
-                         <tr>
-                        <th>Cedula</th>
-                        <th>".$Mas[9]."</th>
-                        </tr>
+                       
                         <tr>
 
 	<form method='POST' action='Modificar_Mascotas.php'>

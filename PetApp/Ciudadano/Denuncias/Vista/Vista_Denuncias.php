@@ -133,6 +133,16 @@ while($Com=mysqli_fetch_row($resultado)){
                         <th>Cedula</th>
                         <th>".$Com[3]."</th>
                         </tr>
+                         <tr>
+                        <th>Denuncia</th>
+                        <th>".$Com[4]."</th>
+                        </tr>
+                        <tr>
+                        <th>Evidencia</th>
+                         <th colspan='2'><img src='../../../Administrador/Evidencias_Denuncias/".$Com[5]."' width='300px' heigth='300px'>
+                         </th>
+                          </tr>
+
                         ";
 					?>
 
