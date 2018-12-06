@@ -12,6 +12,14 @@ class MetodoAnimal{
 	return $consulta;
 	}
 
+	public function BuscarAnimal($bus){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from animal where color='$bus'";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
 	public function Mostrar_1_Animal($cod){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();

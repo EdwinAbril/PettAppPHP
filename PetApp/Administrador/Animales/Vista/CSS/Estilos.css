@@ -4,6 +4,28 @@
     margin: 1rem;
 }
 
+.cen{
+    background-color: transparent;
+    padding: 0 4rem;
+    margin: 1rem;
+}
+.do{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    position: relative;
+}
+#filtro{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    position: relative;
+}
+
+
+
 .caja1{
     margin-top: -12px;
     text-align: center;

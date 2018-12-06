@@ -7,6 +7,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="JS/main.js"></script>
     <script type="text/javascript">history.forward();</script>
 
@@ -42,14 +43,17 @@
 
     <h1 class="display-4">Animal</h1>
 
+    
     <?php
     
 	require_once("../Controlador/Controlador_Consultar.php");
-	while($Ani=mysqli_fetch_row($resultado)){
+        
+        
+    while($Ani=mysqli_fetch_row($resultado)){
 		echo "
-        <div id='centro'>
+		<div id='centro'>
         <div class='caja1'>
-		<table class='table'>
+        <table class='table'>
             <tr>
             <thead class='thead-dark'>
             <th>".$Ani[1]."</th>
