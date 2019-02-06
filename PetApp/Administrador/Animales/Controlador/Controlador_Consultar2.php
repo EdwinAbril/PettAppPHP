@@ -1,9 +1,9 @@
 <?php
 require_once ("../../../Conexion.php");
 require_once("../Modelo/Modelo_Animal.php");
-
+$mostrar= new MetodoAnimal();
 if(isset($_POST['dato']!=null)){
-$resultado=$mostrar->BuscarAnimal('dato');
+$resultado=$mostrar->BuscarAnimal();
 }
 function BuscarAnimal(){
 
@@ -20,8 +20,8 @@ if ($query->num_rows>0) {
 	while ($consulta=$query->fetch_assoc()) {
 		$tabla.= "
 		<div id='centro'>
-        <div class='caja1'>
-        <table class='table'>
+            <div class='caja1'>
+            <table class='table'>
             <tr>
             <thead class='thead-dark'>
             <th>".$consulta['nombre_animal']."</th>
@@ -29,7 +29,7 @@ if ($query->num_rows>0) {
             </tr>
             </table>
 		<tr>
-		</div>
+		
 		<div class='caja2'>
             <table class='table'>
             <tr>
@@ -56,7 +56,7 @@ if ($query->num_rows>0) {
             <th><img src='../../../Uploads/Animales_fotos/".$consulta['foto']."' width='200' heigth='200'></th>
             </tr>
             <th>Tamaño</th>
-            <th>".$consulta['tamaño']."</th>
+            <th>".$consulta['tamano']."</th>
             </tr>
             <th>Genero</th>
             <th>".$consulta['genero']."</th>
@@ -64,13 +64,26 @@ if ($query->num_rows>0) {
             <th>Color</th>
             <th>".$consulta['color']."</th>
             </tr>
+            <tr><form method='POST' action='Modificar_Animal.php'>
+            <input type='hidden' name='usu' value='".$fila['codigo_animal']."'>
+            <th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
+            </form>
 
-    ";
+            <form method='POST' action='../Controlador/Eliminar_Animal.php'>
+            <input type='hidden' name='cdani' value='".$fila['codigo_animal']."'>
+            <th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
+            </form>
+            </tr>
+            </div>
+            </div>
+            </div>
+            ";
 	}
 	$tabla.="</table>";
 	}
+      echo "</div>";
 	else{
-		$tabla.="No se encontraron los datos";
+		$tabla="No se encontraron los datos";
 	}
 	echo $tabla;
 	

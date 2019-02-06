@@ -65,9 +65,6 @@ if (isset($_POST['Entrar'])) {
 }
 ?>
 	</div>
-	<div>
-		
-	</div>
 		<div><br>
 			<center>
 			<a href="Registrarse.php" target="cargar" name="" class="btn btn-outline-success">Registrarse </a>

@@ -15,7 +15,7 @@ class MetodoAnimal{
 	public function BuscarAnimal($bus){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from animal where color='$bus'";
+	$sql="select * from animal where nombre_animal like '%$bus%'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}

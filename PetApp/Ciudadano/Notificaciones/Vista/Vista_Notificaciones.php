@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Notificaciones</title>
+	<title>Respuestas</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="CSS/Estilos.css">
@@ -64,7 +64,7 @@
 	</form>
   	
   	<div id="ubi">
-	<h3 class="display-4">Notificaciones</h3>
+	<h3 class="display-4">Respuestas</h3>
 		<?php
 		require_once("../Controlador/Controlador_Cedula2.php");
 while($Ced=mysqli_fetch_row($resultadod)){

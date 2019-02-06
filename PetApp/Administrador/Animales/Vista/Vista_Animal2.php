@@ -46,7 +46,7 @@
     
     <div class="form-1-2">
         <label for="caja_busqueda">Buscar:</label>
-        <input type='text' name='caja_busqueda' id='caja_busqueda' placeholder="Busqueda por Color">
+        <input type='text' name='caja_busqueda' class='caja_busqueda' placeholder="Busqueda por Color">
     </div>
     
     <?php
@@ -65,6 +65,7 @@ if ($resultado->num_rows > 0) {
     while ($fila = $resultado -> fetch_assoc()) {   
     $salida.="
     <div id='centro'>
+    	<div class='tabla'>
         <div class='caja1'>
         <table class='table'>
             <tr>
@@ -74,7 +75,7 @@ if ($resultado->num_rows > 0) {
             </tr>
             </table>
         <tr>
-        </div>
+        
         <div class='caja2'>
             <table class='table'>
             <tr>
@@ -120,6 +121,7 @@ if ($resultado->num_rows > 0) {
             </form>
             </tr>
             </table>
+            </div>
             </div>
             </div>
             ";

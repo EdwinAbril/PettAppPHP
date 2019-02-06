@@ -48,7 +48,7 @@
                     echo "<img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' class='fotomod' 
                          style='width:50px;height:50px;border-radius:200px 200px;'>";}?></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Notificaciones</a><a class="dropdown-item" href="../../Menu/Vista/Ciudadano.php">Menu</a>
+                    <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Respuestas</a><a class="dropdown-item" href="../../Menu/Vista/Ciudadano.php">Menu</a>
                     <div class="dropdown-divider">
                     </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
                 </div>
@@ -66,12 +66,6 @@
     ?>
 
     <div id="top">
-
-
-    <form action="../../Animales/Vista/Vista_Animal.php">
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
-
-    
     <div id="ubi">
 
 
@@ -99,8 +93,7 @@
         <label>Certificado Laboral</label><input type="file" name="certificado" accept="application/pdf" id="cer" class="form-control-file"><?php
         echo"
         <input type='hidden' name='cedula' value='".$Ced[0]."'>
-        <input type='hidden' name='codi'  value='".$cod."'>";
-        }
+        <input type='hidden' name='codi'  value='".$cod."'>";        }
         ?>   
            
         <input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
