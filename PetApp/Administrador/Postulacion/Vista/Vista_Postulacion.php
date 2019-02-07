@@ -80,7 +80,7 @@ while($Pos=mysqli_fetch_row($resultado)){
                 </tr>
                 <tr>
                 <th>Certificado Laboral</th>
-                <th>".$Pos[4]."</th>
+                <th>".$Pos[4]."<p><a href='javascript:window.print();'>Imprimir</a></p></th>
                 </tr>
                 <tr>
                 <th>Cedula</th>
