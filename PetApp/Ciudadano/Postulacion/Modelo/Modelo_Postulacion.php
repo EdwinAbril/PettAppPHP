@@ -52,7 +52,7 @@ class MetodoPostulacion{
 	}
 
 	
-		public function  Insertarpostulacion($tel,$dir,$fij,$cl,$ce,$ca){
+		public function  Insertarpostulacion($tel,$dir,$fij,$cl,$cpdf,$es,$re,$ub,$tv,$res,$ce,$ca){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_postulacion($ce);
@@ -62,13 +62,19 @@ class MetodoPostulacion{
 		
 		}
 		else{
-			$sql="call usuario_postulacion_inser(?,?,?,?,?,?)";
+			$sql="call usuario_postulacion_inser(?,?,?,?,?,?,?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssssi',$tel_p,$dir_p,$fij_p,$cl_p,$ce_p,$ca_p);
+			$consulta->bind_param('sssssiissisi',$tel_p,$dir_p,$fij_p,$cl_p,$cpdf_p,$es_p,$re_p,$ub_p,$tv_p,$res_p,$ce_p,$ca_p);
 			$tel_p=$tel;
 			$dir_p=$dir;
 			$fij_p=$fij;
 			$cl_p=$cl;
+			$cpdf_p=$cpdf;
+			$es_p=$es;
+			$re_p=$re;
+			$ub_p=$ub;
+			$tv_p=$tv;
+			$res_p=$res;
 			$ce_p=$ce;
 			$ca_p=$ca;
 			$consulta->execute();
