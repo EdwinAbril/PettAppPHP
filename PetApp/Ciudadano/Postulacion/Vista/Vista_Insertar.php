@@ -106,6 +106,7 @@
              <option value="Finca">Finca</option>
          </select>
          <label>Puntaje</label><input type="number" name="puntos" class="form-control" required="">
+         <label>Recibo Publico</label><input type="file" name="recibo" accept="application/pdf" id="reci" class="">
         <input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
 <?php
         echo"
