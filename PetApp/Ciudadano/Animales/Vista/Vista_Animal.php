@@ -128,7 +128,7 @@
 		?>
         <?php
         echo "
-                 <form method='POST' action='../../Postulacion/Vista/Vista_Insertar.php'>
+                 <form method='POST' action='../../Postulacion_Preguntas/Vista/Pagina1.php'>
                             <input type='hidden' name='codi' value='".$Ani[0]."'>
                   <input type='image' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png' class='img-responsive slideanim' id='logoadopta'  >
                   <h1>Adoptame</h1>
