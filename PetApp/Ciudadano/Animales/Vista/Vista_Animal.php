@@ -128,36 +128,16 @@
 		?>
         <?php
         echo "
-                 <form method='POST' action='Vista_Animal.php'>
-                            <input type='hidden' name='codi' value='".$Ani[0]."'>
-                            <input type='hidden' name='usu' value='".$usuar."'>
-                  <input type='image' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png' class='img-responsive slideanim' id='logoadopta'  >
+                 <form method='POST' action='../Controlador/Controlador_Enlace.php'>
+                            <input type='text' name='codi' value='".$Ani[0]."'>
+                            <input type='text' name='usu' value='".$usuar."'>
+                  <input type='submit' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png' class='img-responsive slideanim' id='logoadopta'  >
                   <h1>Adoptame</h1>
                 
                 
 
                 <p><img src='../../../Uploads/Animales_fotos/".$Ani[5]."' width='300px' heigth='300px'></p>";
-if (isset($_POST['readop'])) {
-require_once("../Controlador/Controlador_Preguntas.php");
-while($Pre=mysqli_fetch_row($resultado)){
-  $ce=$Pre[0];
-  require_once("../Modelo/Modelo_Preguntas.php");
-  $obj= new MetodoPreguntas();
-  $con=$obj->Preguntas($ce);
-  $num=$con->num_rows;
-}
-  if ($num>0){
-    while($sql_d=$con->fetch_assoc()){
-        $_SESSION["res"]=$sql_d['respuesta_fin'];
-        $_SESSION["ced"]=$sql_d['cedula'];
-        header("Location:../../Postulacion/Vista/Vista_Insertar.php");
-      
-    }
-  }
-  else{
-    header("Location:../../Postulacion_Preguntas/Vista/Pagina1.php");
-  } 
-}
+
         ?>
 	
 	</form>
