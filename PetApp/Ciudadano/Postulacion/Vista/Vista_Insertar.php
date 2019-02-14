@@ -22,6 +22,9 @@
         }
         else{
             $usuar=$_SESSION["Usuario"];
+            $cod=$_SESSION["codi"];
+            $res=$_SESSION["res"];
+            $ced=$_SESSION["ced"];
         }
         ?>
     <div class="container-fluid">
@@ -79,10 +82,6 @@
 
     <form action="../Controlador/Controlador_Insertar.php" method="Post"  enctype="multipart/form-data">
 
- 	    <?php
-
-        $cod=$_POST["codi"];
-        ?>
            </br>
         </br>
 

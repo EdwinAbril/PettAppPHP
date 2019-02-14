@@ -128,17 +128,19 @@
 		?>
         <?php
         echo "
-                 <form method='POST' action='../../Postulacion/Vista/Vista_Insertar.php'>
-                            <input type='hidden' name='codi' value='".$Ani[0]."'>
-                  <input type='image' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png' class='img-responsive slideanim' id='logoadopta'  >
+                 <form method='POST' action='../Controlador/Controlador_Enlace.php'>
+                            <input type='text' name='codi' value='".$Ani[0]."'>
+                            <input type='text' name='usu' value='".$usuar."'>
+                  <input type='submit' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png' class='img-responsive slideanim' id='logoadopta'  >
                   <h1>Adoptame</h1>
                 
-                </form>
-                <p><img src='../../../Uploads/Animales_fotos/".$Ani[5]."' width='300px' heigth='300px'></p>"
+                
+
+                <p><img src='../../../Uploads/Animales_fotos/".$Ani[5]."' width='300px' heigth='300px'></p>";
 
         ?>
 	
-	
+	</form>
 	</table>
     </div>
     </div>

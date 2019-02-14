@@ -354,6 +354,87 @@ p{
 	100%{margin-left:-300%;}
 }
 
+
+
+@media screen and (max-width: 768px){
+
+.slider{
+width: 100%;
+height: 250px;
+margin: auto;
+overflow: hidden;
+}
+
+.slider img{
+
+	width:100%;
+	height: 250px;
+}
+
+@media screen and (max-width: 720px){
+
+.slider{
+width: 100%;
+height: 200px;
+margin: auto;
+overflow: hidden;
+}
+
+.slider img{
+	width:100%;
+	height: 200px;
+}
+
+#caja2{
+    background-color: white; 
+    width: auto;
+    height:270px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+#imagenadopcion{
+	width: 320px;
+}
+
+#caja3{
+	margin-top: 50px;
+}
+
+#caja4{
+    background-color: white; 
+    width: auto;
+    height:270px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+    
+}
+
+#imagenveterinaria{
+	width: 320px;
+}
+
+#caja5{
+	margin-top: 50px;
+}
+
+#caja6{
+    background-color: white; 
+    width: auto;
+    height:320px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+#imageneventos{
+	width: 320px;
+}
+
+}
+
 @media screen and (max-width: 600px){
 
 .boton-menu{
@@ -417,238 +498,5 @@ p{
 }
 }
 
-@media screen and (max-width: 768px){
 
-.slider{
-width: 100%;
-height: 250px;
-margin: auto;
-overflow: hidden;
-}
 
-.slider img{
-
-	width:100%;
-	height: 250px;
-}
-
-@media screen and (max-width: 700px){
-
-.slider{
-width: 100%;
-height: 200px;
-margin: auto;
-overflow: hidden;
-}
-
-.slider img{
-
-	width:100%;
-	height: 200px;
-}
-
-#caja2{
-    background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imagenadopcion{
-	width: 320px;
-}
-
-#caja3{
-	margin-top: 50px;
-}
-
-#caja4{
-    background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-    
-}
-
-#imagenveterinaria{
-	width: 320px;
-}
-
-#caja5{
-	margin-top: 50px;
-}
-
-#caja6{
-    background-color: white; 
-    width: auto;
-    height:320px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imageneventos{
-	width: 320px;
-}
-
-}
-
-@media screen and (max-width: 320px){
-
-#caja2{
-    background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imagenadopcion{
-	width: 280px;
-}
-
-#caja3{
-	margin-top: 50px;
-}
-
-#caja4{
-    background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-    
-}
-
-#imagenveterinaria{
-	width: 280px;
-}
-
-#caja5{
-	margin-top: 50px;
-}
-
-#caja6{
-    background-color: white; 
-    width: auto;
-    height:320px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imageneventos{
-	width: 280px;
-}
-
-}
-
-@media screen and (max-width: 360px){
-
-#caja2{
-    background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imagenadopcion{
-	width: 250px;
-}
-
-#caja3{
-	margin-top: 50px;
-}
-
-#caja4{
-    background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-    
-}
-
-#imagenveterinaria{
-	width: 280px;
-}
-
-#caja5{
-	margin-top: 50px;
-}
-
-#caja6{
-    background-color: white; 
-    width: auto;
-    height:320px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imageneventos{
-	width: 280px;
-}
-
-}
-
-@media screen and (max-width: 414px){
-
-#caja2{
-    background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imagenadopcion{
-	width: 370px;
-}
-
-#caja3{
-	margin-top: 50px;
-}
-
-#caja4{
-    background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-    
-}
-
-#imagenveterinaria{
-	width: 370px;
-}
-
-#caja5{
-	margin-top: 50px;
-}
-
-#caja6{
-    background-color: white; 
-    width: auto;
-    height:320px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imageneventos{
-	width: 370px;
-}
-
-}
