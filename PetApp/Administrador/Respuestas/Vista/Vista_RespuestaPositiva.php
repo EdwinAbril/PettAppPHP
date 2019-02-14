@@ -46,7 +46,8 @@
   
     <input type='hidden' name='cedulaadop' value='".$cedula."'>
     <input type='hidden' name='animaladop' value='".$animal."'>
-      <p><lable>Respuesta</lable></p><input type='text' name='mensadop'>
+      <p><lable>Respuesta</label></p><input type='text' name='mensadop'>
+      <p><label>Encargado</label></p><input type='number' name='encar'>
     <input type='submit' name='aceptar2' value='Enviar Respuesta' class='btn btn-primar'>
   
     ";?>

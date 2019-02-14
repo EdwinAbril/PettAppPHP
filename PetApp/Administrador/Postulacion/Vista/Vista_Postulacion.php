@@ -83,12 +83,40 @@ while($Pos=mysqli_fetch_row($resultado)){
                 <th>".$Pos[4]."<p><a href='javascript:window.print();'>Imprimir</a></p></th>
                 </tr>
                 <tr>
+                <tr>
+                <th>Fotocopia Cedula</th>
+                <th>".$Pos[5]."<p><a href='javascript:window.print();'>Imprimir</a></p></th>
+                </tr>
+                <tr>
+                <th>Estrato</th>
+                <th>".$Pos[6]."</th>
+                </tr>
+                <tr>
+                <th>Cantidad de Residentes en el Hogar</th>
+                <th>".$Pos[7]."</th>
+                </tr>
+                <tr>
+                <th>Ubicacion del Hogar</th>
+                <th>".$Pos[8]."</th>
+                </tr>
+                <tr>
+                <th>Tipo de Vivienda</th>
+                <th>".$Pos[9]."</th>
+                </tr>
+                <tr>
+                <th>Puntaje de Encuesta</th>
+                <th>".$Pos[10]."</th>
+                </tr>
+                <tr>
+                <th>Recibo Publico</th>
+                <th>".$Pos[11]."<p><a href='javascript:window.print();'>Imprimir</a></p></th>
+                </tr>
                 <th>Cedula</th>
-                <th>".$Pos[5]."</th>
+                <th>".$Pos[12]."</th>
                 </tr>
                   <tr>
                 <th>Animal</th>
-                <th>".$Pos[6]."</th>
+                <th>".$Pos[13]."</th>
                 </tr>
                 <tr>
 
@@ -97,14 +125,22 @@ while($Pos=mysqli_fetch_row($resultado)){
                 <input type='hidden' name='tel' value='".$Pos[1]."'>
                 <input type='hidden' name='dir' value='".$Pos[2]."'>
                 <input type='hidden' name='tf' value='".$Pos[3]."'>
-                <input type='hidden' name='ced' value='".$Pos[5]."'>
-                <input type='hidden' name='an' value='".$Pos[6]."'>
+                <input type='hidden' name='cer' value='".$Pos[4]."'>
+                <input type='hidden' name='fot' value='".$Pos[5]."'>
+                <input type='hidden' name='est' value='".$Pos[6]."'>
+                <input type='hidden' name='cre' value='".$Pos[7]."'>
+                <input type='hidden' name='ubi' value='".$Pos[8]."'>
+                <input type='hidden' name='tvi' value='".$Pos[9]."'>
+                <input type='hidden' name='pun' value='".$Pos[10]."'>
+                <input type='hidden' name='rpu' value='".$Pos[11]."'>
+                <input type='hidden' name='cedu' value='".$Pos[12]."'>
+                <input type='hidden' name='an' value='".$Pos[13]."'>
                 <th><input type='submit' name='aceptar' class='btn btn-primary' value='Aceptar'></th>
                 </form> 
 
                 <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
                 <th><input type='submit' name='rechazar1' class='btn btn-danger'value='Rechazar'></th>
-                <input type='hidden' name='ced' value='".$Pos[5]."'>
+                <input type='hidden' name='ced' value='".$Pos[12]."'>
                 <input type='hidden' name='postu' value='".$Pos[0]."'>
                 <input type='hidden' name='mensarech' value='El proceso de Adopcion no fue Aceptado en el menu principal encontrara informacion de contacto'>
                 </form>

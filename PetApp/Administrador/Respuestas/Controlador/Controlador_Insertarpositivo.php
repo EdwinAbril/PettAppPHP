@@ -6,8 +6,10 @@ if (isset($_POST['aceptar2'])){
 }
 
 function Insertar(){
+	$icon="adopcion.png";
 	$ced=$_POST['cedulaadop'];
 	$men=$_POST['mensadop'];
+	$enc=$_POST['encar'];
 	$ani=$_POST['animaladop'];
 	$nom=$_POST['nombrefinal'];
 	$tip=$_POST['tipofinal'];
@@ -19,7 +21,7 @@ function Insertar(){
 
 	require_once("../Modelo/Modelo_Seguimiento.php");
 	$mostrar=new MetodoSeguimiento();
-	$result=$mostrar->InsertarPositivo($ced,$men);
+	$result=$mostrar->InsertarPositivo($icon,$ced,$men,$enc);
 	$result=$mostrar->InsertarAdopciones($ani,$ced,$men);
 	$result=$mostrar->EliminarAnimal($ani);
 	$result=$mostrar->InsertarMascotas($nom,$tip,$eda,$raz,$tam,$gen,$col,$ced);

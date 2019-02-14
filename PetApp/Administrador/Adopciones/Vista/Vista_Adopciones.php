@@ -76,8 +76,12 @@
         <th>".$Ado[2]."</th>
         </tr>
          <tr>
-        <th>Respuesta</th>
+        <th>Funcionario Encargado</th>
         <th>".$Ado[3]."</th>
+        </tr>
+        <tr>
+        <th>Respuesta</th>
+        <th>".$Ado[4]."</th>
         </tr>
         <tr>
 

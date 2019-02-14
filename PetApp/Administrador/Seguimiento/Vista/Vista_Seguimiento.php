@@ -80,16 +80,48 @@ while($Seg=mysqli_fetch_row($resultado)){
                 <th>".$Seg[3]."</th>
                 </tr>
                   <tr>
-                <th>Telefono</th>
+                <th>Telefono Fijo</th>
                 <th>".$Seg[4]."</th>
                 </tr>
                   <tr>
-                <th>Cedula del Postulante</th>
+                <th>Certificado Laboral</th>
                 <th>".$Seg[5]."</th>
                 </tr>
                   <tr>
-                <th>Codigo del Animal</th>
+                <th>Fotocopia de Cedula</th>
                 <th>".$Seg[6]."</th>
+                </tr>
+                <tr>
+                <th>Estrato</th>
+                <th>".$Seg[7]."</th>
+                </tr>
+                <tr>
+                <th>Canditad de Residentes</th>
+                <th>".$Seg[8]."</th>
+                </tr>
+                <tr>
+                <th>Ubicacion del Hogar</th>
+                <th>".$Seg[9]."</th>
+                </tr>
+                <tr>
+                <th>Tipo de Vivienda</th>
+                <th>".$Seg[10]."</th>
+                </tr>
+                <tr>
+                <th>Puntaje de Encuesta</th>
+                <th>".$Seg[11]."</th>
+                </tr>
+                <tr>
+                <th>Recibo Publico</th>
+                <th>".$Seg[12]."</th>
+                </tr>
+                <tr>
+                <th>Cedula del Postulante</th>
+                <th>".$Seg[13]."</th>
+                </tr>
+                <tr>
+                <th>Codigo del Animal</th>
+                <th>".$Seg[14]."</th>
                 </tr>
                 <tr>
 
@@ -115,8 +147,8 @@ while($Seg=mysqli_fetch_row($resultado)){
   <?php
 echo"
 <form method='POST' action='../../Respuestas/Vista/Vista_RespuestaPositiva.php'>
-<input type='hidden' name='celuda' value='".$Seg[5]."'>
-<input type='hidden' name='aimal' value='".$Seg[6]."'>
+<input type='hidden' name='celuda' value='".$Seg[13]."'>
+<input type='hidden' name='aimal' value='".$Seg[14]."'>
 
 <th><input type='submit' name='aceptar' class='btn btn-primary' value='Aceptar'></th>
 </form> 
@@ -125,7 +157,7 @@ echo"
 <?php
 echo "<form method='POST' action='../Controlador/Controlador_Rechazar.php'>
 <th><input type='submit' name='rechazar2' class='btn btn-danger' value='Rechazar'></th>
-<input type='hidden' name='ced' value='".$Seg[5]."'>
+<input type='hidden' name='ced' value='".$Seg[13]."'>
 <input type='hidden' name='pos' value='".$Seg[1]."'>
 <input type='hidden' name='mensarecha' value='El proceso de Adopcion no fue aceptado en el Menu principal encontrara informacion de contacto'>
 </form>
