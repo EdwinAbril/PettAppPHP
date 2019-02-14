@@ -23,6 +23,8 @@
         else{
             $usuar=$_SESSION["Usuario"];
             $cod=$_SESSION["codi"];
+            $res=$_SESSION["res"];
+            $ced=$_SESSION["ced"];
         }
         ?>
     <div class="container-fluid">

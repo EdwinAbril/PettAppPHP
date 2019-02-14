@@ -15,9 +15,6 @@
 <body>
 
 	<?php
-        $cod=$_POST["codi"];
-        ?>
-	<?php
     session_start();
     if (!$_SESSION) {
     echo '<script type="text/javascript">
@@ -27,6 +24,8 @@
     }
     else{
     $usuar=$_SESSION["Usuario"];
+    $cod=$_POST["codi"];
+    $_SESSION["codi"]=$cod;
     }
 
     require_once("../Controlador/Contolador_Cedula.php");
