@@ -87,14 +87,30 @@
         class="form-control">
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
     	<label>Telefono Fijo</label><input type="tel" name="fijo" pattern="[0-9]{7}" class="form-control">
-        <label>Certificado Laboral</label><input type="file" name="certificado" accept="application/pdf" id="cer" class="form-control-file"><?php
+        <label>Certificado Laboral</label><input type="file" name="certificado" accept="application/pdf" id="cer" class="form-control-file"> 
+         <label>Fotocopia de Cedula</label><input type="file" name="cedpdf" accept="application/pdf" id="cedp" class="form-control-file">
+         <label>Estrato</label><input type="number" name="estrato" required="estrato" class="form-control">
+         <label>Cantidad de personas con las que vive</label><input type="number" name="residentes" required="residentes" id="resi" class="form-control">
+         <label>Ubicacion de su vivienda</label><select name="ubicacion" class="form-control" required="">
+             <option>Ubicacion</option>
+             <option value="Urbano">Urbano</option>
+             <option value="Rural">Rural</option>
+         </select>
+         <label>Tipo de Vivienda</label><select name="vivienda" class="form-control" required="">
+             <option>Tipo</option>
+             <option value="Casa">Casa</option>
+             <option value="Apartamento">Apartamento</option>
+             <option value="Finca">Finca</option>
+         </select>
+         <label>Puntaje</label><input type="number" name="puntos" class="form-control" required="">
+         <label>Recibo Publico</label><input type="file" name="recibo" accept="application/pdf" id="reci" class="">
+        <input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
+<?php
         echo"
         <input type='hidden' name='cedula' value='".$Ced[0]."'>
-        <input type='hidden' name='codi'  value='".$cod."'>";        }
-        ?>   
-           
-        <input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
-
+        <input type='hidden' name='codi'  value='".$cod."'>";
+    }
+        ?>  
     </form>
 </div>
 
