@@ -116,7 +116,7 @@
       ?>
     	
     	<label>Denuncia</label>
-      <input type="text" name="denuncia"  class="form-control" id="denuncia">
+      <input type="tetxarea" name="denuncia"  class="form-control" id="denuncia">
 
     	<div id="foto">
 
