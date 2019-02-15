@@ -49,9 +49,9 @@ if (isset($_POST['Entrar'])) {
 				$_SESSION["Usuario"]=$sql_d['nombre_usuario'];
 				header("Location:../../Funcionario/Menu/Vista/Funcionario.php");
 			}
-			else if ($sql_d['rol_login']==3) {
+			else if ($sql_d['rol_login']==3) { 
 				$_SESSION["Usuario"]=$sql_d['nombre_usuario'];
-				header("Location:../../Veterinaria/Menu/Vista/Veterinaria.php");
+				header("Location:../../Veterinaria/Login/Vista/login.php");
 			}
 			else if ($sql_d['rol_login']==4) {
 				$_SESSION["Usuario"]=$sql_d['nombre_usuario'];
