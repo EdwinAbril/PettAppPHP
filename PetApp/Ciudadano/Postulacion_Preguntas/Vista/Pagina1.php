@@ -24,8 +24,7 @@
     }
     else{
     $usuar=$_SESSION["Usuario"];
-    $cod=$_POST["codi"];
-    $_SESSION["codi"]=$cod;
+    $cod=$_SESSION["codi"];
     }
 
     require_once("../Controlador/Contolador_Cedula.php");

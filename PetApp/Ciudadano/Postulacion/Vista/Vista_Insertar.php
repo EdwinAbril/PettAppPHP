@@ -23,8 +23,6 @@
         else{
             $usuar=$_SESSION["Usuario"];
             $cod=$_SESSION["codi"];
-            $res=$_SESSION["res"];
-            $ced=$_SESSION["ced"];
         }
         ?>
     <div class="container-fluid">
@@ -63,10 +61,7 @@
         </div>
     </div>
 
-    <?php
-    require_once("../Controlador/Controlador_Cedula.php");
-    while($Ced=mysqli_fetch_row($resultado)){
-    ?>
+    
 
     <div id="top">
     <div id="ubi">
@@ -104,14 +99,21 @@
              <option value="Apartamento">Apartamento</option>
              <option value="Finca">Finca</option>
          </select>
-         <label>Puntaje</label><input type="number" name="puntos" class="form-control" required="">
+         
          <label>Recibo Publico</label><input type="file" name="recibo" accept="application/pdf" id="reci" class="">
-        <input type="submit" name="consulta" value="Postularme" class="btn btn-primary">
-<?php
+        <input type="submit" name="consulta" value="Postularme" class="btn btn-primary">  
+    <?php
+    require_once("../Controlador/Controlador_Cedula.php");
+    while($Ced=mysqli_fetch_row($resultado)){
         echo"
-        <input type='hidden' name='cedula' value='".$Ced[0]."'>
-        <input type='hidden' name='codi'  value='".$cod."'>";
-    }
+        <input type='text' name='cedula' value='".$Ced[0]."'>";
+    require_once("../Controlador/Controlador_Respuesta.php");
+    while($Res=mysqli_fetch_row($resultado)){
+        echo "
+        <input type='text' name='puntos' value='".$Res[1]."'>";}}
+        echo "
+        <input type='text' name='codi'  value='".$cod."'>";
+    
         ?>  
     </form>
 </div>
