@@ -12,11 +12,16 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <form action="../../Denuncias/Vista/Vista_Denuncias.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
+
+<div id="top">
+        <form action="Vista_Denuncias.php">
+            <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
+        </form>
+
 <body id="fondox">
     <div id="insertar">
-    <h1>Respuesta</h1>
+    <h1 id="titulo">Respuesta</h1>
  <form method='POST' action='../Controlador/Controlador_Respuesta.php'>
    <?php
    $cedul=$_POST["ceduladenun"]
@@ -27,9 +32,9 @@
    <input type='hidden' name='ceduladenunci' value='".$cedul."'>"?>
    <input type="text" name="encargado" >
 
-    <p><lable>Respuesta</lable></p><input type='text' name='mensajedenun'>
+    <p><lable>Respuesta</lable></p><textarea type='text' name='mensajedenun'></textarea> 
 
-    <input type='submit' name='aceptardenunci' value='Enviar Respuesta' class='btn btn-primar'>
+    <input type='submit' name='aceptardenunci' value='Enviar Respuesta' class='btn btn-primar' id="enviar">
   
  
   </form>

@@ -112,15 +112,15 @@
 
       <?php
           echo'
-          <input type="hidden" name="cedula" value="'.$Ced[0].'">';
+          <input type="hidden" name="cedula" id="fecha" value="'.$Ced[0].'">';
       ?>
     	
     	<label>Denuncia</label>
-      <input type="tetxarea" name="denuncia"  class="form-control" id="denuncia">
+      <textarea name="denuncia" class="form-control" id="denuncia" rows="3"></textarea>
 
     	<div id="foto">
 
-      <label>Foto</label>
+      <label>Evidencia</label>
       <input type="file" name="imagen" id="quitar" accept="image/png,image/jpeg,image/jpg" class="form-control-file">
 
       </div>

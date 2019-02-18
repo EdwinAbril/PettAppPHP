@@ -80,19 +80,19 @@
     <h2>GESTIONAR</h2>
      
         <div class="row" id="icono">
-          <div class="col-sm">
+          <div class="col">
               <form action="../../Eventos/Vista/Vista_Eventos.php">
                 <input type="image" name="eventoss" src="logos/evento.png" height="250" width="250" id="eventos"> 
               </form>
           </div>
 
-          <div class="col-sm">
+          <div class="col">
               <form action="../../Animales/Vista/Vista_Animal.php">
                 <input type="image" name="animal" src="logos/Adoptar.png" height="250" width="250" id="animales">
               </form>
           </div>
 
-          <div class="col-sm">
+          <div class="col">
                 <form action="../../Denuncias/Vista/Vista_Denuncias.php">
                   <input type="image" name="denuncia" src="logos/Denuncia.png" height="250" width="250" id="denuncia">
                 </form>
@@ -100,13 +100,13 @@
         </div>
         
         <div class="row" id="icono2">
-          <div class="col-sm">
+          <div class="col">
                 <form action="../../Mascotas/Vista/Vista_Mascotas.php">
                   <input type="image" name="mascotas" src="logos/Mascota.png" height="250" width="250" id="mascota">
                 </form>
           </div>
 
-          <div class="col-sm">
+          <div class="col">
                 <form action="../../Ciudadano/Vista/Vista_Ciudadano.php">
                   <input type="image" name="datos" src="logos/MisDatos.png" height="250" width="250" id="datos">
                 </form>

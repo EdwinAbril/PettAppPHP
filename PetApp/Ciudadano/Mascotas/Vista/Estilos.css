@@ -4,35 +4,73 @@
     -webkit-border-radius: 200px 200px 200px 200px;
     border: 0px solid #000000;
 }
+
 #top{
     margin-top: 140px;
 }
+
 #ubi{
     margin-top: -50px;
 }
+
 #fondox{
-	background-image: url("Imagenes/Administrador.jpg")
+	background: #a8a8a8;
+	background: -moz-linear-gradient(left, #a8a8a8 0%, #858585 40%, #6b6a6b 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, #a8a8a8), color-stop(40%, #858585), color-stop(100%, #6b6a6b));
+	background: -webkit-linear-gradient(left, #a8a8a8 0%, #858585 40%, #6b6a6b 100%);
+	background: -o-linear-gradient(left, #a8a8a8 0%, #858585 40%, #6b6a6b 100%);
+	background: -ms-linear-gradient(left, #a8a8a8 0%, #858585 40%, #6b6a6b 100%);
+	background: linear-gradient(to right, #a8a8a8 0%, #858585 40%, #6b6a6b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a8a8', endColorstr='#6b6a6b', GradientType=1 );
 }
 
 #vol{
 float: left;	
 }
+
 #sal{
 float: right;
 }
+
 #nuevo{
 	float: left;
 	margin-top: 50px;	
 	margin-left: 5px;
 }
+
 #bot{
 	margin-top: 10px;
 }
+
 #padre{
 	background-color: transparent;
   	padding: 0 1rem;
   	margin: 1rem;
 }
+
+h1{
+	margin-top: 20px;
+	color: white;
+}
+
+label{
+	margin-top: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+p{
+	margin-top: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+input{
+	margin-top: 20px;
+	text-align: center;
+}
+
+
 #insertar{
 	margin-top: 8%;
 	width: 300px;
@@ -44,12 +82,14 @@ float: right;
     border-radius: 20px 20px 20px 20px;
     border: 1px solid green;
 }
+
 #foto input{
 	width: 100px;
 	margin-left: auto;
   	margin-right: auto;
 	text-align: center;
 }
+
 #quitar{
 	color:transparent;
 	width: 150px;
@@ -58,21 +98,17 @@ float: right;
 
 
 @media screen and (max-width:1200px){
+	
 	table{
 		width: 80%;
 	}
-	   #insertar{
-  
- 
+
+	#insertar{
     background: white;
     margin-top: 80px;
     border-radius: 20px 20px 20px 20px;
     border: 1px solid green;
     max-width: 80%;
 } 
-#vol{
-	position: absolute;
-	top: 5px;
-	left: 5px;
-}
+
 }
