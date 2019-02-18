@@ -1,26 +1,62 @@
 #fondox{
-	background-image: url("Imagenes/Administrador.jpg")
+	background-color: #a8a8a8;
+	background: @include filter-gradient
+	(#a8a8a8, #6b6a6b, horizontal);
+	background: @include background-image
+	(linear-gradient(left, #a8a8a8 0%, #858585 40%, #6b6a6b 100%));
 }
 
 #vol{
 float: left;	
 }
+
 #sal{
 float: right;
 }
+
 #nuevo{
 	float: left;
 	margin-top: 50px;	
 	margin-left: 5px;
 }
+
 #bot{
 	margin-top: 10px;
 }
+
 #padre{
 	background-color: transparent;
   	padding: 0 1rem;
   	margin: 1rem;
 }
+
+#titulo{
+	margin-top: 20px;
+	color: white;
+}
+
+label{
+	margin-top: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+p{
+	margin-top: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+input{
+	margin-top: 20px;
+	text-align: center;
+}
+
+#enviar{
+	margin-top: 20px;
+	text-align: center;
+}
+
 #insertar{
 	margin-top: 8%;
 	width: 300px;
@@ -32,12 +68,14 @@ float: right;
     border-radius: 20px 20px 20px 20px;
     border: 1px solid green;
 }
+
 #foto input{
 	width: 100px;
 	margin-left: auto;
   	margin-right: auto;
 	text-align: center;
 }
+
 #quitar{
 	color:transparent;
 	width: 150px;
@@ -46,21 +84,50 @@ float: right;
 
 
 @media screen and (max-width:1200px){
+
+
 	table{
 		width: 80%;
 	}
-	   #insertar{
-  
- 
+
+	h1{
+	margin-top: 20px;
+	color: black;
+	}
+
+	label{
+		margin-top: 20px;
+		color: black;
+	}
+
+	p{
+		margin-top: 20px;
+		color: black;
+	}
+
+	input{
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	#enviar{
+	margin-top: 20px;
+	text-align: center;
+	}
+
+	#insertar{
     background: white;
     margin-top: 80px;
     border-radius: 20px 20px 20px 20px;
     border: 1px solid green;
     max-width: 80%;
 } 
+
 }
+
 #vol{
 	position: absolute;
 	top: 5px;
 	left: 5px;
 }
+

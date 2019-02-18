@@ -1,0 +1,158 @@
+#encabezado{
+    margin-top: 50px;
+}
+
+#titulos{
+	color: white;
+}
+
+#imgcir{
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000;
+}
+h1{
+	margin-top: 40px;
+}
+body{
+	font-family:Rockwell;
+	color: white;
+}
+
+body { 
+	background: url('Imagenes/MenuVet.jpeg');
+	background-attachment: fixed;
+}
+
+#Avatar{
+	margin-top:25px;
+	align-self:center;
+
+}
+
+
+header{
+	text-align: center;
+	padding: 37px;
+
+ } 
+
+h2{
+    margin-top: 50px;
+}
+
+#caja{
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#content{
+
+}
+
+.container{
+	max-width: 100%;
+	min-width: 40%;
+}
+
+#icono{
+	margin-top: 50px;
+}
+
+#icono2{
+	margin-top: 100px;
+}
+
+#eventos{
+	height: 250px;
+	width: 250px;
+	margin-top: 80px;
+    margin-bottom: 190px;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 2px solid #ffffff;
+}
+
+#denuncia{
+	height: 250px;
+	width: 250px;
+	margin-top: 80px;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 2px solid #ffffff;
+}
+
+#datos{
+	height: 250px;
+	width: 250px;
+	margin-top: 80px;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 2px solid #ffffff;
+}
+
+footer{
+	margin:0px;
+	text-align:center;
+	clear:both;
+	background-color: white;
+	position: relative;
+	margin-top: 100%;
+}
+
+@media screen and (max-width:740px) {
+
+#avatar{
+    height: 50px;
+    width: 50px;
+}
+    
+#icono{
+	margin-top: 20px;
+}
+
+#icono2{
+	margin-top: 0px;
+}
+
+#avatar{
+    height: 80px;
+    width: 80px;
+}
+
+#eventos{
+	height: 80px;
+	width: 80px;
+}
+
+#animales{
+	height: 80px;
+	width: 80px;
+}
+
+#denuncia{
+	height: 80px;
+	width: 80px;
+}
+
+#mascota{
+	height: 80px;
+	width: 80px;
+}
+
+#datos{
+	height: 80px;
+	width: 80px;
+}
+
+}
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+}
+@media screen and (min-width:1024px) {
+    /* reglas CSS */
+}

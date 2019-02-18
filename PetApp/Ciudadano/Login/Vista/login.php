@@ -33,10 +33,10 @@
             $usuar=$_SESSION["Usuario"];
         }
         ?>
-        <div class="container-fluid">
+        <div class="container-fluid" 
             <div class="row">
                 <div class="col-md-12">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-top">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-top" id="navegacion1">
                
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="navbar-toggler-icon"></span>
@@ -163,10 +163,9 @@
             <ul>
                 <li><a href="#">Alcaldia de Mosquera</a></li>
                 <li><a href="#">Contactenos</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Terminos de servicio</a></li>
             </ul>
-        <p class="footer-copyright">© 2018 Copyright</p>
+        <p class="footer-copyright">© 2019 Copyright</p>
         </div>
         <div class="footer-social">
             <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
