@@ -24,7 +24,8 @@
    ?>
    <?php
    echo "
-    <p><label>Cedula del Denunciante</label></p><input type='text' name='ceduladenunci' value='".$cedul."'>"?>
+   <input type='hidden' name='ceduladenunci' value='".$cedul."'>"?>
+   <input type="text" name="encargado" >
 
     <p><lable>Respuesta</lable></p><input type='text' name='mensajedenun'>
 
