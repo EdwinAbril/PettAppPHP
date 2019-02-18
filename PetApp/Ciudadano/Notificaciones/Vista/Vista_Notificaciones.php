@@ -77,16 +77,16 @@ while($Ced=mysqli_fetch_row($resultadod)){
 			<div id="centro">
         	<div class="caja1">
 			<?php
-				echo '
+				echo "
 				
-                <table class="table">
+                <table class='table'>
                 <tr>
-                <thead class="thead-dark">
-                <th>'.$Ciu[2].'</th>
+                <thead class='thead-dark'>
+                <th><img src='../../../Uploads/Respuestas/".$Ciu[0]."' width='50px' height='50px'></th> 
                 </thead>
                 </tr>
                 </table>
-            	';
+            	";
 				?>
 				</div>
 				<div class='caja2'>
@@ -96,16 +96,20 @@ while($Ced=mysqli_fetch_row($resultadod)){
 			echo "
 			<tr>
 		        <th>Codigo de Respuesta</th>
-		        <th>".$Ciu[0]."</th>
-		        </tr>
-		        <tr>
-		        <th>Cedula</th>
 		        <th>".$Ciu[1]."</th>
 		        </tr>
 		        <tr>
-		        <th>Respuesta</th>            
+		        <th>Cedula</th>
 		        <th>".$Ciu[2]."</th>
 		        </tr>
+		        <tr>
+		        <th>Respuesta</th>            
+		        <th>".$Ciu[3]."</th>
+		        </tr>
+             <tr>
+            <th>Funcionario Encargado</th>            
+            <th>".$Ciu[4]."</th>
+            </tr>
 		     
 		        <tr>";
 
