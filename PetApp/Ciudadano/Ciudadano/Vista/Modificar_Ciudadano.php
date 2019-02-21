@@ -2,12 +2,12 @@
 <html>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="EstilosModificar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="Estilomod.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Ciudadano</title>
     </head>
@@ -60,9 +60,6 @@
         </div>
 
         <div id="top">
-        <form action="../Vista/Vista_Ciudadano.php">
-            <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
-        </form>
 
     <div id="ubi">
     <div id="padre">
@@ -82,19 +79,24 @@
 
 	<tr>
 	<form action='../Controlador/Controlador_Actualizar_Ciudadano.php' method='Post' enctype='multipart/form-data'>
+
     <div id='centro'>
     <p>Foto</p><label class='botonModi'><img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."'' style='width:180px;height:180px;border-radius: 150px;' id='fotomod'><input type='file' class='file' name='fos' accept='image/jpeg,image/png'><img src='../Vista/Imagenes/Icono.png' width='40' heigth='40'></label>
     </div>
+
     <input type='hidden' name='fotosi' value='".$Usu[3]."'>
 	<input type='hidden' name='usu' value='".$Usu[0]."'>
     <input type='hidden' name='nom' value='".$Ciu[0]."'> 
-    <input type='hidden' name='nombre' value='".$Ciu[1]."'>   
+    <input type='hidden' name='nombre' value='".$Ciu[1]."'>  
+
     <p>Nombre</p><p>".$Ciu[1]."</p>  
     <p>Celular</p><input type='text' name='tel' pattern='[0-9]{10}' value='".$Ciu[2]."'>
     <p>Direccion</p><input type='text' name='dir'  value='".$Ciu[3]."'>
     <p>Correo</p><input type='email' name='cor'  value='".$Ciu[4]."'>
     <p>Clave</p><input type='password' name='cla'  value='".$Usu[1]."'>
+
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
+
     </form>";
 
 	}}

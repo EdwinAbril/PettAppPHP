@@ -51,7 +51,7 @@
             <table class="table">
             <tr>
             <thead class="thead-dark">
-            <th>'.$Ado[0].'</th>
+            <th>'.$Ado[1].'</th>
             </thead>
             </tr>
             </table>
@@ -64,24 +64,25 @@
         <?php
 	echo "
 		<tr>
-        <th>Adopcion</th>
-        <th>".$Ado[0]."</th>
-        </tr>
-        <tr>
-        <th>Animal</th>
+
+        <th>Codigo</th>
         <th>".$Ado[1]."</th>
         </tr>
         <tr>
-        <th>Cedula</th>
+        <th>Animal</th>
         <th>".$Ado[2]."</th>
         </tr>
          <tr>
-        <th>Funcionario Encargado</th>
+        <th>Cedula</th>
         <th>".$Ado[3]."</th>
         </tr>
         <tr>
-        <th>Respuesta</th>
+        <th>Funcionario Encargado</th>
         <th>".$Ado[4]."</th>
+        </tr>
+        <tr>
+        <th>Respuesta</th>
+        <th>".$Ado[5]."</th>
         </tr>
         <tr>
 

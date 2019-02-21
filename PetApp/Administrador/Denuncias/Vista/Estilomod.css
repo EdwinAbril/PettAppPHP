@@ -23,6 +23,12 @@ float: right;
   	padding: 0 1rem;
   	margin: 1rem;
 }
+
+#titulo{
+	margin-top: 20px;
+	color: white;
+}
+
 #modificar{
 	margin-top: 8%;
 	width: 300px;

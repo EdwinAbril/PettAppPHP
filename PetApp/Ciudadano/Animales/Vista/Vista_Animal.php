@@ -130,7 +130,7 @@
         echo "
                  <form method='POST' action='../Controlador/Controlador_Enlace.php'>
                             <input type='text' name='codi' value='".$Ani[0]."'>
-                            <input type='text' name='usu' value='".$usuar."'>
+                            <input type='hidden' name='usu' value='".$usuar."'>
                   <input type='submit' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png' class='img-responsive slideanim' id='logoadopta'  >
                   <h1>Adoptame</h1>
                 
