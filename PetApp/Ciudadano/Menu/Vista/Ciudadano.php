@@ -8,7 +8,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="Estilo.css">
+      <link rel="stylesheet" type="text/css" href="Estilos.css">
       <title>PetApp</title>
       <script type="text/javascript">history.forward();
       </script>
