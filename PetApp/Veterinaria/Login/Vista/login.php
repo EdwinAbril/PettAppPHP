@@ -100,10 +100,6 @@
   <div class="row" id="modulos">
 
       <!--  MODULO UNO -->
-
-      
-      <!--  MODULO DOS -->
-
       
     <div class="col-sm" id="caja3">
       <div class="panel panel-default text-center">
@@ -122,7 +118,7 @@
         </div>
       </div>
     </div>    
-  </div>    
+    
 
       <!--  MODULO DOS -->
       
