@@ -45,7 +45,7 @@
           <li class="nav-item dropdown">
 
             <?php
-              require_once("../../Menu/Controlador/Controlador_Usuario.php");
+              require_once("../../Menu/Controlador/Controlador_Veterinaria.php");
               while($Usu=mysqli_fetch_row($resultado)){
             ?>
 
@@ -59,7 +59,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php.php">Perfil</a>
             <a class="dropdown-item" href="#">Respuestas</a> 
-            <a class="dropdown-item" href="../../Menu/Vista/Ciudadano.php">Menu</a>
+            <a class="dropdown-item" href="../../Menu/Vista/Menu.php">Menu</a>
               <div class="dropdown-divider">
               </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
           </div>
