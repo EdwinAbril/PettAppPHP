@@ -14,6 +14,7 @@ function eliminar(){
 	require_once("../Modelo/Modelo_Animal.php");
 	$mostrar= new MetodoAnimal();
 	$resultado=$mostrar->EliminarAnimal($cod);
+	$resultado=$mostrar->EliminarAdoptado($cod);
 
 	return $resultado;
 }

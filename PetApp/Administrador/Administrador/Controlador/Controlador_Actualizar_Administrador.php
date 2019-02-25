@@ -28,10 +28,9 @@ function modificar(){
 	}
 
 	else {
-	    $mensaje1=" No adjunto imagen o el tamaño no corresponde";
 	    $nombre=$imagensi;
 	    $resultado=$mostrar->ModificarAdministrador($cod,$tel,$nombre);
-	    $resultado=$resultado.$mensaje1;
+	    $resultado=$resultado;
   	}
 	return $resultado;
 }

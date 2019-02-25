@@ -12,9 +12,9 @@ function insertar(){
 	$nombre=$_FILES['certificado']['name'];
     $tipo=$_FILES['certificado']['type'];
     $tamaño=$_FILES['certificado']['size'];
-    $nombre1=$_FILES['cedpdf']['name'];
-    $tipo1=$_FILES['cedpdf']['type'];
-    $tamaño1=$_FILES['cedpdf']['size'];
+    $nombre1=$_FILES['cedulapdf']['name'];
+    $tipo1=$_FILES['cedulapdf']['type'];
+    $tamaño1=$_FILES['cedulapdf']['size'];
     $est=$_POST['estrato'];
     $resi=$_POST['residentes'];
     $ubic=$_POST['ubicacion'];
@@ -34,8 +34,8 @@ function insertar(){
     if ($nombre1!=null && $tamaño1<=1000000){
     	$hoy=date("d_m_y");
     	$nombre1=$hoy.$nombre1;
-        $carpeta_destino1=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Administrador/Cedulas/';
-        move_uploaded_file($_FILES['cedpdf']['tmp_name'],$carpeta_destino1.$nombre1);
+        $carpeta_destino1=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Cedulapdf/';
+        move_uploaded_file($_FILES['cedulapdf']['tmp_name'],$carpeta_destino1.$nombre1);
     }
     if($nombre2!=null && $tamaño2<=1000000){
         $hoy=date("d_m_y");

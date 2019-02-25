@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Adopcionesx</title>
+	<title>Adopciones</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="CSS/Estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,10 +24,6 @@
     $usuar=$_SESSION["Usuario"];
     }
   	?>
-
-	<form action="Vista_insertar.php">
-      <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
-  </form>
 
 	<form action="../../Menu/Vista/Administrador.php">
     	<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
@@ -88,14 +84,14 @@
 
 
 	<form method='POST' action='Modificar_Adopciones.php'>
-	<input type='hidden' name='usu' value='".$Ado[0]."'>
+	<input type='hidden' name='usu' value='".$Ado[1]."'>
 	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
 	</form>";
 	?>
 	<?php
 	echo "
 	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
-	<input type='hidden' name='coda' value='".$Ado[0]."'>
+	<input type='hidden' name='coda' value='".$Ado[1]."'>
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
 	</form>
 	</tr>
@@ -103,9 +99,66 @@
 	?>
 	</table>
     </div>
+     <div class='caja3'>
+          <table class='table'>
+            <?php
+              echo '
+              <table class="table">
+              <tr>
+              <th>Encargado en el Proceso</th>
+              </tr>
+              </table>
+              ';
+            ?>
+          </table>
+        </div>
+        <div class='caja4'>
+          <table class='table'>
+<?php
+require_once("../Controlador/Controlador_Fun.php");
+
+echo "<input type='hidden' name='funci' value='".$Ado[4]."'>";
+
+
+while($Fun=mysqli_fetch_row($resultadof)){
+
+
+  echo "
+      <tr>
+            <th>Cedula</th>
+            <th>".$Fun[0]."</th>
+            </tr>
+            <tr>
+            <th>Telefono</th>
+            <th>".$Fun[1]."</th>
+            </tr>
+            <tr>
+            <th>Nombre</th>            
+            <th>".$Fun[2]."</th>
+            </tr>
+             <tr>
+            <th>Correo</th>            
+            <th>".$Fun[3]."</th>
+            </tr>
+            <tr>
+            <th>Cargo</th>
+            <th>".$Fun[4]."</th>
+            </tr>
+            <tr>
+            <th>Dependencia</th>
+            <th>".$Fun[5]."</th>
+            </tr>
+           ";
+    
+
+?>
+          </table>
+
+        </div>
     </div>
 	<?php
 	}
+}
 	if(isset($_POST['eliminar'])){
 		echo"<script type='text/javascript'>;
 		alert('".$resulta."');
