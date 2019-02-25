@@ -104,6 +104,27 @@ input{
 	}
 
 	#insertar{
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+	}
+
+	h1{
+	margin-top: 10px;
+	color: black;
+	}
+
+	label{
+		margin-top: 10px;
+		color: black;
+	}
+
+	input{
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	#insertar{
     background: white;
     margin-top: 80px;
     border-radius: 20px 20px 20px 20px;

@@ -23,7 +23,7 @@ class MetodoAdministrador{
 	public function ModificarAdministrador($usuario,$clave,$foto){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call act_admin_Admin(?,?,?)";
+	$sql="call login_usuariosact_admin_Admin(?,?,?)";
 	$consulta=$conexion->prepare($sql);
 	$consulta->bind_param('sss',$usuario_p,$clave_p,$foto_p);
 	$usuario_p=$usuario;

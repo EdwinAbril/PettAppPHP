@@ -6,15 +6,14 @@
 	if (isset($_POST['eliminar']))
 	{
 		$resulta=eliminar();
-		header('Location: ../Vista/Vista_Animal.php');
+		header('Location:../Vista/Vista_Veterinaria.php');
 	}
-
+	
 function eliminar(){
-		$cod=$_POST["cdani"];
-	require_once("../Modelo/Modelo_Animal.php");
-	$mostrar= new MetodoAnimal();
-	$resultado=$mostrar->EliminarAnimal($cod);
-	$resultado=$mostrar->EliminarAdoptado($cod);
+		$cod=$_POST["cdvet"];
+	require_once("../Modelo/Modelo_Veterinaria.php");
+	$mostrar= new MetodoVeterinaria(); 
+	$resultado=$mostrar->EliminarVeterinaria($cod);
 
 	return $resultado;
 }

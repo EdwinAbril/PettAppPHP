@@ -64,23 +64,23 @@
 			<?php
 			echo "
 			<tr>
-		        <th>Cedula</th>
+		        <th colspan='2'>Cedula</th>
 		        <th>".$Ciu[0]."</th>
 		        </tr>
 		        <tr>
-		        <th>Nombre</th>
+		        <th colspan='2'>Nombre</th>
 		        <th>".$Ciu[1]."</th>
 		        </tr>
 		        <tr>
-		        <th>Telefono</th>            
+		        <th colspan='2'>Telefono</th>            
 		        <th>".$Ciu[2]."</th>
 		        </tr>
 		        <tr>
-		        <th>Direccion</th>
+		        <th colspan='2'>Direccion</th>
 		        <th>".$Ciu[3]."</th>
 		        </tr>
 		        <tr>
-		        <th>Correo</th>
+		        <th colspan='2'>Correo</th>
 		        <th>".$Ciu[4]."</th>
 		        </tr>
 		        <tr>";
@@ -88,10 +88,18 @@
 			?>
 			<?php
 			echo "
+			<th>
 			<form method='POST' action='Modificar_Ciudadano.php'>
 			<input type='hidden' name='usu' value='".$Ciu[0]."'>
-			<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
-			</form>"; 
+			<input type='submit' name='modificar' value='Datos' class='btn btn-info'>
+			</form>
+			</th>
+			<th>
+			<form method='POST' action='../../Usuario/Vista/Modificar_Usuario.php'>
+			<input type='hidden' name='usu' value='".$Ciu[5]."'>
+			<input type='submit' name='modificar' value='Usuario' class='btn btn-info'>
+			</form>
+			</th>"; 
 			?>
 			<?php
 			echo "
