@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Adopcionesx</title>
+	<title>Adopciones</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="CSS/Estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,10 +24,6 @@
     $usuar=$_SESSION["Usuario"];
     }
   	?>
-
-	<form action="Vista_insertar.php">
-      <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
-  </form>
 
 	<form action="../../Menu/Vista/Administrador.php">
     	<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
@@ -88,14 +84,14 @@
 
 
 	<form method='POST' action='Modificar_Adopciones.php'>
-	<input type='hidden' name='usu' value='".$Ado[0]."'>
+	<input type='hidden' name='usu' value='".$Ado[1]."'>
 	<th><input type='submit' name='modificar' value='Modificar' class='btn btn-info'></th>
 	</form>";
 	?>
 	<?php
 	echo "
 	<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
-	<input type='hidden' name='coda' value='".$Ado[0]."'>
+	<input type='hidden' name='coda' value='".$Ado[1]."'>
 	<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
 	</form>
 	</tr>
