@@ -16,8 +16,8 @@
   <center>
 	<div id="pricing" class="container-fluid" >
   <div class="text-center">
-    <h1>Gestionar Eventos</h1>
-    <img src="logos/Eventos.png" id="Avatar"><BR><BR><BR><BR>
+    <h1>Gestionar Veterinaria</h1>
+    <img src="logos/Veterinaria.png" id="Avatar"><BR><BR><BR><BR>
   </div> 
   <div class="row ">
     <div class="col-sm-3 col-xs-12" >
@@ -31,7 +31,7 @@
         </div>
       </div>      
     </div>
-    <form action="../Vista/Vista_Eventos.php">     
+    <form action="../Vista/Vista_Veterinaria.php">     
     <div class="col-sm-3 col-xs-12">
       <div class="panel panel-default text-center"  id="divconsulta">
         <div class="panel-heading">
@@ -42,7 +42,7 @@
         </div>
       </div>      
     </div>
-  </form>       
+    </form>       
     <div class="col-sm-3 col-xs-12">
       <div class="panel panel-default text-center"  id="divactuali">
         <div class="panel-heading">

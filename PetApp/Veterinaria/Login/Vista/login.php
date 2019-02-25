@@ -101,28 +101,6 @@
 
       <!--  MODULO UNO -->
       
-  <div class="col-sm">
-    <div class="panel panel-default text-center"  id="Caja01" >
-        <div class="panel-heading" id="panel">
-        	<img src="Imagenes/info.png" height="30" width="30" id="info" > 
-          <h1 id="Adopcion">Adopción</h1>
-            <h5>Cómo Adopto?</h5>
-            </div>
-            <div id="caja2">
-            	<br>
-            	<p>En este módulo usted podrá dar hogar a un animal que lo necesita, La alcaldía municipal de Mosquera Cundinamarca, le ofrece la posibilidad de escoger el animal que usted quiera adoptar, y así contribuir de manera responsable a la salud ambiental y el desarrollo del municipio </p><br><br>
-            	<a href="Informacion/Adoptar.php">saber más</a>
-
-            </div>
-          <div class="panel-body" id="cajaimagen">
-          <!--  AQUI VA LA IMAGEN DEL EVENTO -->
-        <img src="Imagenes/adopcion.jpeg" class="img-responsive slideanim" id="imagenadopcion">
-     </div>
-    </div>      
-  </div>  
-      
-      <!--  MODULO DOS -->
-      
     <div class="col-sm" id="caja3">
       <div class="panel panel-default text-center">
           <div class="panel-heading" id="panel">
@@ -141,7 +119,7 @@
       </div>      
     </div>     
 
-      <!--  MODULO TRES -->
+      <!--  MODULO DOS -->
       
     <div class="col-sm" id="caja5">
       <div class="panel panel-default text-center">
@@ -153,7 +131,7 @@
         <div id="caja6">
            <br>
             	<p>En este módulo usted podrá informarse acerca de las jornadas de cuidado animal que realiza el municipio, aquí podrá observar una descripción detallada además de la fecha, la hora y el lugar en el que se realizara</p><br><br>
-            	<a href="Informacion/Veterinaria.php">saber más</a>
+            	<a href="../../Eventos/Vista/Vista_Eventos.php">saber más</a>
         </div>
         <div class="panel-body" id="cajaimagen3">
           <img src="Imagenes/Jornadas.jpeg" class="img-responsive slideanim" id="imageneventos">
