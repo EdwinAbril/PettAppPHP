@@ -85,7 +85,7 @@
     	<label>Direccion</label><input type="text" name="direccion" class="form-control">
     	<label>Telefono Fijo</label><input type="tel" name="fijo" pattern="[0-9]{7}" class="form-control">
         <label>Certificado Laboral</label><input type="file" name="certificado" accept="application/pdf" id="cer" class="form-control-file"> 
-         <label>Fotocopia de Cedula</label><input type="file" name="cedpdf" accept="application/pdf" id="cedp" class="form-control-file">
+         <label>Fotocopia de Cedula</label><input type="file" name="cedulapdf" accept="application/pdf" id="cedp" class="">
          <label>Estrato</label><input type="number" name="estrato" required="estrato" class="form-control">
          <label>Cantidad de personas con las que vive</label><input type="number" name="residentes" required="residentes" id="resi" class="form-control">
          <label>Ubicacion de su vivienda</label><select name="ubicacion" class="form-control" required="">
@@ -106,13 +106,13 @@
     require_once("../Controlador/Controlador_Cedula.php");
     while($Ced=mysqli_fetch_row($resultado)){
         echo"
-        <input type='text' name='cedula' value='".$Ced[0]."'>";
+        <input type='hidden' name='cedula' value='".$Ced[0]."'>";
     require_once("../Controlador/Controlador_Respuesta.php");
     while($Res=mysqli_fetch_row($resultado)){
         echo "
-        <input type='text' name='puntos' value='".$Res[1]."'>";}}
+        <input type='hidden' name='puntos' value='".$Res[1]."'>";}}
         echo "
-        <input type='text' name='codi'  value='".$cod."'>";
+        <input type='hidden' name='codi'  value='".$cod."'>";
     
         ?>  
     </form>

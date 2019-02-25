@@ -8,6 +8,7 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/main.js"></script>
+    <script src="JS/main1.js"></script>
 
 </head>
 <body>
@@ -80,12 +81,12 @@ while($Pos=mysqli_fetch_row($resultado)){
                 </tr>
                 <tr>
                 <th>Certificado Laboral</th>
-                <th>".$Pos[4]."<p><a href='javascript:window.print();'>Imprimir</a></p></th>
+                <th><a href='../../Certficados/".$Pos[4]."'>".$Pos[4]."</a></th>
                 </tr>
                 <tr>
                 <tr>
                 <th>Fotocopia Cedula</th>
-                <th>".$Pos[5]."<p><a href='javascript:window.print();'>Imprimir</a></p></th>
+                <th><a href='../../../Uploads/Cedulapdf/".$Pos[5]."'>".$Pos[5]."</a></th>
                 </tr>
                 <tr>
                 <th>Estrato</th>
@@ -105,11 +106,11 @@ while($Pos=mysqli_fetch_row($resultado)){
                 </tr>
                 <tr>
                 <th>Puntaje de Encuesta</th>
-                <th>".$Pos[10]."</th>
+                <th>".$Pos[10]."/20</th>
                 </tr>
                 <tr>
                 <th>Recibo Publico</th>
-                <th>".$Pos[11]."<p><a href='javascript:window.print();'>Imprimir</a></p></th>
+                <th><a href='../../Recibos/".$Pos[11]."'>".$Pos[11]."</a></th>
                 </tr>
                 <th>Cedula</th>
                 <th>".$Pos[12]."</th>

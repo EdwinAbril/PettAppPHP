@@ -103,9 +103,66 @@
 	?>
 	</table>
     </div>
+     <div class='caja3'>
+          <table class='table'>
+            <?php
+              echo '
+              <table class="table">
+              <tr>
+              <th>Encargado en el Proceso</th>
+              </tr>
+              </table>
+              ';
+            ?>
+          </table>
+        </div>
+        <div class='caja4'>
+          <table class='table'>
+<?php
+require_once("../Controlador/Controlador_Fun.php");
+
+echo "<input type='hidden' name='funci' value='".$Ado[4]."'>";
+
+
+while($Fun=mysqli_fetch_row($resultadof)){
+
+
+  echo "
+      <tr>
+            <th>Cedula</th>
+            <th>".$Fun[0]."</th>
+            </tr>
+            <tr>
+            <th>Telefono</th>
+            <th>".$Fun[1]."</th>
+            </tr>
+            <tr>
+            <th>Nombre</th>            
+            <th>".$Fun[2]."</th>
+            </tr>
+             <tr>
+            <th>Correo</th>            
+            <th>".$Fun[3]."</th>
+            </tr>
+            <tr>
+            <th>Cargo</th>
+            <th>".$Fun[4]."</th>
+            </tr>
+            <tr>
+            <th>Dependencia</th>
+            <th>".$Fun[5]."</th>
+            </tr>
+           ";
+    
+
+?>
+          </table>
+
+        </div>
     </div>
 	<?php
 	}
+}
 	if(isset($_POST['eliminar'])){
 		echo"<script type='text/javascript'>;
 		alert('".$resulta."');

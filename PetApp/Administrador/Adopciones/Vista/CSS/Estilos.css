@@ -23,6 +23,26 @@
     background: transparent;
     position: relative;
 }
+.caja3{
+    margin-top: -12px;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    position: relative;
+}
+
+.caja4{
+    margin-top: -12px;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    position: relative;
+}
+
 
 .display-4{
     text-align: center;

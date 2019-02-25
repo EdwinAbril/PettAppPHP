@@ -8,7 +8,8 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/main.js"></script>
-    <script type="text/javascript">history.forward();</script>
+    <script src="JS/main1.js"></script>
+
 
 </head>
 <body>
@@ -85,11 +86,11 @@ while($Seg=mysqli_fetch_row($resultado)){
                 </tr>
                   <tr>
                 <th>Certificado Laboral</th>
-                <th>".$Seg[5]."</th>
+                <th><a href='../../Certficados/".$Seg[5]."'>".$Seg[5]."</a></th>
                 </tr>
                   <tr>
                 <th>Fotocopia de Cedula</th>
-                <th>".$Seg[6]."</th>
+                <th><a href='../../../Uploads/Cedulapdf/".$Seg[6]."'>".$Seg[6]."</a></th>
                 </tr>
                 <tr>
                 <th>Estrato</th>
@@ -109,11 +110,11 @@ while($Seg=mysqli_fetch_row($resultado)){
                 </tr>
                 <tr>
                 <th>Puntaje de Encuesta</th>
-                <th>".$Seg[11]."</th>
+                <th>".$Seg[11]."/20</th>
                 </tr>
                 <tr>
                 <th>Recibo Publico</th>
-                <th>".$Seg[12]."</th>
+                <th><a href='../../Recibos/".$Seg[12]."'>".$Seg[12]."</a></th>
                 </tr>
                 <tr>
                 <th>Cedula del Postulante</th>
