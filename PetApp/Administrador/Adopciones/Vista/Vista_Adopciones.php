@@ -26,7 +26,7 @@
   	?>
 
 	<form action="../../Menu/Vista/Administrador.php">
-    	<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+    	<input type="submit" name="volver" value="Volver" id="vol" class="btn btn-outline-dark" id="vol">
 	</form>
 
   	<form action="../../../Cerrar.php">

@@ -23,11 +23,16 @@ require_once("../Controlador/Controlador_Insertar.php");
 <center>
     <div id="insertar">
     <h1>Insertar Funcionario</h1>
- <form action="../Controlador/Controlador_Insertar.php" method="Post">
+ <form action="../Controlador/Controlador_Insertar.php" method="Post" enctype="multipart/form-data">
+    <label>Foto </label><div id="padre"><input type="file" name="fo" accept="image/png,image/jpeg,image/jpg" id="quitar"></div>
+    <p><label>Nombre de Usuario</label></p><input type="text" name="user" required="">
+    <p><label>Contraseña</label></p><input type="text" name="con" required="">
     <p><label>Cedula </label></p><input type="number" name="cedula" required="">
         <p><label>Telefono</label></p><input type="number" name="telefono" required="">
         <p><label>Nombre</label></p><input type="text" name="nombre" required="">
             <p><label>Correo</label></p><input type="mail" name="correo" required="">
+            <p><label>Cargo</label></p><input type="text" name="cargo" required="">
+            <p><label>Dependencia</label></p><input type="text" name="depen" required="">
             </br>
     </br>
         <input type="submit" name="consulta" value="Insertar Nuevo Usuario" class="btn btn-primary">
