@@ -46,7 +46,7 @@
                             <a class="navbar-brand" href="">Usuario: <?php echo "".$usuar.""?></a>
                                 <li class="nav-item dropdown">
                                     <?php
-                                      require_once("../../Menu/Controlador/Controlador_Usuario.php");
+                                      require_once("../../Menu/Controlador/Controlador_Veterinaria.php");
                                       while($Usu=mysqli_fetch_row($resultado)){
                                       ?>
                                      <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">
