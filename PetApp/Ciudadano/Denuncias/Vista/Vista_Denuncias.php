@@ -102,7 +102,7 @@ while($Com=mysqli_fetch_row($resultado)){
                     <table class="table">
                     <tr>
                     <thead class="thead-dark">
-                    <th>Fecha:'.$Com[1].'-Cedula: '.$Com[3].'</th>
+                    <th>Fecha: '.$Com[1].'</th>
                     </thead>
                     </tr>
                     </table>
@@ -117,10 +117,7 @@ while($Com=mysqli_fetch_row($resultado)){
 
                 <?php
 					echo "
-					    <tr>
-                        <th>Codigo</th>
-                        <th>".$Com[0]."</th>
-                        </tr>
+					    
                         <tr>
                         <th>Fecha</th>
                         <th>".$Com[1]."</th>
