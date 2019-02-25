@@ -8,7 +8,7 @@ class MetodoRespuestas{
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		
-			$sql="call pregunta(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			$sql="insert into preguntas values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
 			$consulta->bind_param('iiiiiiiiiiiiiiiiiiiis',$re1_p,$re2_p,$re3_p,$re4_p,$re5_p,$re6_p,$re7_p,$re8_p,$re9_p,$re10_p,$re11_p,$re12_p,$re13_p,$re14_p,$re15_p,$re16_p,$re17_p,$re18_p,$re19_p,$re20_p,$ce);
 			$re1_p=$re1;
@@ -39,15 +39,15 @@ class MetodoRespuestas{
 
 	}
 
-	public function  InsertarRespuestasFin($rt,$ce){
+	public function  InsertarRespuestasFin($ce,$rt){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		
 			$sql="insert into respuesta_pre values(?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('is',$rt_p,$ce);
-			$rt_p=$rt;
+			$consulta->bind_param('si',$ce,$rt_p);
 			$ce_p=$ce;
+			$rt_p=$rt;
 			$consulta->execute();
 			$mensa="Exito";
 		

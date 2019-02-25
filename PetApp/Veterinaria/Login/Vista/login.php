@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,  user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="Estilo.css">
+	<link rel="stylesheet" href="Estilos.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Footer-white.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -100,24 +100,29 @@
   <div class="row" id="modulos">
 
       <!--  MODULO UNO -->
+
+      
+      <!--  MODULO DOS -->
+
       
     <div class="col-sm" id="caja3">
       <div class="panel panel-default text-center">
           <div class="panel-heading" id="panel">
-          	<img src="Imagenes/info.png" height="30" width="30" id="info2" >
-          <h1 id="Veterinaria">Veterinarias</h1>
-           <h5>Veterinarias Vinculadas</h5>
+            <img src="Imagenes/info.png" height="30" width="30" id="info2" >
+          <h1 id="Eventos">Denuncias</h1>
+           <h5>Realizar Denuncias</h5>
         </div>
         <div id="caja4">
-        	<br>
-            	<p>En este módulo usted podrá ubicar las diferentes veterinarias del municipio que contribuyen al cuidado animal y a las cuales usted podrá acudir en caso de que su mascota requiera atención</p><br><br>
-            	<a href="Informacion/Eventos.php">saber más</a>
+           <br>
+              <p>En este módulo usted podrá realizar denuncias de abandono de animales, encontrara un formulario que deberá diligenciar y si lo quiere podrá adjuntar una evidencia fotográfica, se le hará saber a usted si su denuncia fue atendida, una vez realizada la denuncia la alcaldía se encargara de los procesos correspondientes </p><br><br>
+              <a href="../../Denuncias/Vista/Vista_Denuncias.php">saber más</a>
         </div>
         <div class="panel-body" id="cajaimagen2">
-          <img src="Imagenes/veterinaria.jpeg" class="img-responsive slideanim" id="imagenveterinaria">
+          <img src="Imagenes/Denuncias.jpeg" class="img-responsive slideanim" id="imageneventos">
         </div>
-      </div>      
-    </div>     
+      </div>
+    </div>    
+  </div>    
 
       <!--  MODULO DOS -->
       

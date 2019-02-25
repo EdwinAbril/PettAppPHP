@@ -28,6 +28,7 @@
     }
     else{
     $usuar=$_SESSION["Usuario"];
+    $cod=$_SESSION["codi"];
     }
 	?>
   	<?php
@@ -44,7 +45,8 @@
 	$r11=$_POST["res11"];
 	$r12=$_POST["res12"];
 	$c=$_POST["ced"];
-	$cod=$_POST["codi"];
+
+	echo $c;
 	?>
 
     <div class="container-fluid">
