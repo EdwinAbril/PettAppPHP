@@ -47,7 +47,7 @@ class MetodoDenuncias{
 	$descripcion_p=$descripcion;
 	$cedula_p=$cedula;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
+	$mensa="Denuncia Modificada";
 	return $mensa;
 	}
 

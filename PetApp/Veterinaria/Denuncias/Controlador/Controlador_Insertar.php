@@ -1,4 +1,4 @@
- <link rel="stylesheet" href="../Vista/Estilos.css">
++ <link rel="stylesheet" href="../Vista/Estilos.css">
 <?php
 if (isset($_POST['consulta'])){
 	$resulta=insertar();
@@ -8,7 +8,7 @@ if (isset($_POST['consulta'])){
 function insertar(){
 	$fec=$_POST['fecha'];
 	$tip=$_POST['tipo'];
-	$ced=$_POST['cedula'];
+	$nit=$_POST['nitvet'];
 	$men=$_POST['denuncia'];
 	$nombre=$_FILES['imagen']['name'];
     $tipo=$_FILES['imagen']['type'];
@@ -21,7 +21,7 @@ function insertar(){
     }
 	require_once("../Modelo/Modelo_Denuncias.php");
 	$mostrar=new MetodoDenuncias();
-	$resulta=$mostrar->InsertarDenuncias($fec,$tip,$ced,$men,$nombre);
+	$resulta=$mostrar->InsertarDenuncias($fec,$tip,$nit,$men,$nombre);
 
 	return $resulta;
 }

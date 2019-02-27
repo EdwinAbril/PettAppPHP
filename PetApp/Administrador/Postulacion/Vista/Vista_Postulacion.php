@@ -25,10 +25,7 @@
     $usuar=$_SESSION["Usuario"];
     }
     ?>
-    
-    <form action="Vista_Insertar.php">
-        <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
-    </form>
+  
 
 	<form action="../../Menu/Vista/Administrador.php">
         <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">

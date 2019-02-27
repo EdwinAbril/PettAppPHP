@@ -5,16 +5,17 @@
 	  
 	if (isset($_POST['eliminar']))
 	{
-		$resulta=eliminar();
+		$result=eliminar();
 		header('Location:../Vista/Vista_Denuncias.php');
 	}
 
 function eliminar(){
-		$cod=$_POST["codde"];
+		$cod=$_POST['codi'];
+		
 	require_once("../Modelo/Modelo_Denuncias.php");
 	$mostrar= new MetodoDenuncias();
-	$resultado=$mostrar->EliminarDenuncias($cod);
+	$result=$mostrar->EliminarDenuncias($cod);
 
-	return $resultado;
+	return $resulta;
 }
 ?>

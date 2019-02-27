@@ -70,16 +70,17 @@
     <div id="insertar" class="form-group">
     <h1>Insertar Mascota</h1>
  <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
- 	<label>Nombre de la Mascota</label><input type="text" name="nombre" class="form-control" required="">
+ 	<label>Nombre de la Mascota</label><input type="text" name="nombre" pattern="[a-z A-Z]{1,30}" class="form-control" required="">
       <label>Tipo</label><select  name="tipo" class="form-control" required="">
             <option>Tipo de Mascota</option>
             <option value="Perro">Perro</option>
             <option value="Gato">Gato</option>
         </select>
-      <label>Edad de la Mascota</label><input type="text" name="edad" class="form-control" required="">
-      <label>Raza de la Mascota</label><input type="text" name="raza" class="form-control" required="">
-        <label>Foto de la Mascota</label><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></label>
-        <label>Tamaño </label><select name="tamaño" class="form-control" required="">
+      <label>Edad de la Mascota</label><input type="number" name="edad" min="1" max="30" step="1" id="n1" 
+           pattern="\d+" required="" class="form-control">
+      <label>Raza de la Mascota</label><input type="text" name="raza" pattern="[a-z A-Z]{1,30}" class="form-control" required="">
+        <label>Foto de la Mascota</label><input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar" required=""></label><br>
+        <label>Tamaño </label><select name="tamaño" class="form-control" required=""><br>
             <option>Tamaño de la Mascota</option>
             <option value="Grande">Grande</option>
             <option value="Mediano">Mediano</option>
@@ -96,7 +97,7 @@
         echo'
         <input type="hidden" name="cedula" value="'.$Ced[0].'">
         ';
-        ?>
+        ?><br>
         <input type="submit" name="consulta" value="Insertar Nueva Mascota" class="btn btn-primary">
     </form>
 </div>

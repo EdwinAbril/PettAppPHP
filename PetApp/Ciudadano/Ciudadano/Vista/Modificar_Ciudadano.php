@@ -94,7 +94,7 @@
     <p>Direccion</p><input type='text' name='dir'  value='".$Ciu[3]."'>
     <p>Correo</p><input type='email' name='cor'  value='".$Ciu[4]."'>
     <p>Clave</p><input type='password' name='cla'  value='".$Usu[1]."'>
-
+    <br>
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
 
     </form>";

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="CSS/Estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -43,7 +43,7 @@
             <a class="navbar-brand" href="#">Usuario: <?php echo "".$usuar.""?></a>
             <li class="nav-item dropdown">
             <?php
-            require_once("../../Menu/Controlador/Controlador_Usuario.php");
+            require_once("../../Menu/Controlador/Controlador_Veterinaria.php");
             while($Usu=mysqli_fetch_row($resultado)){
             ?>
            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">
@@ -51,7 +51,9 @@
             <img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' class='fotomod' 
             style='width:50px;height:50px;border-radius:200px 200px;'>";}?></a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="../../Ciudadano/Vista/Vista_Ciudadano.php">Perfil</a> <a class="dropdown-item" href="#">Respuestas</a><a class="dropdown-item" href="../../Menu/Vista/Ciudadano.php">Menu</a>
+            <a class="dropdown-item" href="">Perfil</a>
+            <a class="dropdown-item" href="../../Menu/Vista/Menu.php">Respuestas</a>
+            <a class="dropdown-item" href="">Menu</a>
             <div class="dropdown-divider">
             </div> <a class="dropdown-item" href="../../../Cerrar.php">Cerrar Sesion</a>
             </div>
@@ -84,7 +86,7 @@
 require_once("../Controlador/Controlador_Cedula2.php");
 while($Ced=mysqli_fetch_row($resultadod)){
   echo'
-  <input type="hidden" name="cedula" value="'.$Ced[0].'">                  
+  <input type="hidden" name="cedula" value="'.$nit[0].'">                  
   ';
 
 require_once("../Controlador/Controlador_Denuncias.php");

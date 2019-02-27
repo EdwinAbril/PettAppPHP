@@ -217,31 +217,32 @@ h1{
 
 	position: relative;
 }
+
 #cajaimagen2{
-    
-    background: #368716;
-    background: -moz-linear-gradient(left, #368716 0%, #6bb521 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #368716), color-stop(100%, #6bb521));
-    background: -webkit-linear-gradient(left, #368716 0%, #6bb521 100%);
-    background: -o-linear-gradient(left, #368716 0%, #6bb521 100%);
-    background: -ms-linear-gradient(left, #368716 0%, #6bb521 100%);
-    background: linear-gradient(to right, #368716 0%, #6bb521 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#368716', endColorstr='#6bb521', GradientType=1 );
-    
-	position: relative;
+
+    border: 1px solid #278230;
+    background: #278230;
+    background: -moz-linear-gradient(45deg, #278230 0%, #83e864 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #278230), color-stop(100%, #83e864));
+    background: -webkit-linear-gradient(45deg, #278230 0%, #83e864 100%);
+    background: -o-linear-gradient(45deg, #278230 0%, #83e864 100%);
+    background: -ms-linear-gradient(45deg, #278230 0%, #83e864 100%);
+    background: linear-gradient(45deg, #278230 0%, #83e864 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#278230', endColorstr='#83e864', GradientType=1 );
 }
+
 #cajaimagen3{
     
-    background: #368716;
-    background: -moz-linear-gradient(left, #368716 0%, #6bb521 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #368716), color-stop(100%, #6bb521));
-    background: -webkit-linear-gradient(left, #368716 0%, #6bb521 100%);
-    background: -o-linear-gradient(left, #368716 0%, #6bb521 100%);
-    background: -ms-linear-gradient(left, #368716 0%, #6bb521 100%);
-    background: linear-gradient(to right, #368716 0%, #6bb521 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#368716', endColorstr='#6bb521', GradientType=1 );
-    
-	position: relative;
+    border: 1px solid #278230;
+    background: #278230;
+    background: -moz-linear-gradient(45deg, #278230 0%, #83e864 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #278230), color-stop(100%, #83e864));
+    background: -webkit-linear-gradient(45deg, #278230 0%, #83e864 100%);
+    background: -o-linear-gradient(45deg, #278230 0%, #83e864 100%);
+    background: -ms-linear-gradient(45deg, #278230 0%, #83e864 100%);
+    background: linear-gradient(45deg, #278230 0%, #83e864 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#278230', endColorstr='#83e864', GradientType=1 );
+
 }
 
 #panel{

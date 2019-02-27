@@ -2,9 +2,9 @@
 
 require_once ("../../../Conexion.php");
 
-class MetodoUsuario{
+class MetodoVeterinaria{
 	
-	public function MostrarUsuario($ini){
+	public function MostrarVeterinaria($ini){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
 	$sql="select * from login_usuarios where nombre_usuario='$ini';";

@@ -31,7 +31,7 @@ require_once("../Controlador/Controlador_insertar.php");
 	<h1>Insertar Administrador</h1>
  <form action="../Controlador/Controlador_insertar.php" method="Post" enctype="multipart/form-data">
  	<label>Nombre de Usuario </label><input type="text" name="nombre" required="" class="form-control">
-  <label>Foto del Animal</label><div id="padre"><input type="file" name="fo" accept="image/png,image/jpeg,image/jpg" id="quitar"></div>
+  <label>Foto </label><div id="padre"><input type="file" name="fo" accept="image/png,image/jpeg,image/jpg" id="quitar"></div>
     <label>Clave</label><input type="password" name="clave" required="" class="form-control">
       <div class="form-group" id="bot">
       <input type="submit" name="consulta" value="Insertar Nuevo Usuario" class="btn btn-primary">

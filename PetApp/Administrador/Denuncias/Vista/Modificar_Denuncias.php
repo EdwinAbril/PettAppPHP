@@ -33,7 +33,7 @@
 	<tr>
 	<form action='../Controlador/Controlador_Actualizar_Denuncias.php' method='Post'>
 	<input type='hidden' name='usu' value='".$Com[0]."'>   
-    <p>Fecha</p><input type='text' name='fec'  value='".$Com[1]."'><BR></BR>
+    <p>Fecha</p><input type='hidden' name='fec'  value='".$Com[1]."'><BR></BR>
     <p>Descripcion</p><input type='text' name='des'  value='".$Com[2]."'><BR></BR>
     <p>Cedula</p><input type='text' name='ced'  value='".$Com[3]."'><BR></BR>
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>

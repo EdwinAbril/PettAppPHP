@@ -6,7 +6,7 @@ require_once("../Vista/Vista_Insertar.php");
 
 require_once("../Modelo/Modelo_Denuncias.php");
 $mostrar= new MetodoDenuncias();
-$resultado=$mostrar->MostrarCedula($usuar);
+$resultado=$mostrar->MostrarNit($usuar);
 require_once("../Vista/Vista_Insertar.php");
 
 

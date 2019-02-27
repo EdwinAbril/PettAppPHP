@@ -11,10 +11,12 @@
 
 function eliminar(){
 		$cod=$_POST["ced"];
+		$nom=$_POST["nom"];
 	require_once("../Modelo/Modelo_Ciudadano.php");
 	$mostrar= new MetodoCiudadano();
-	$resultado=$mostrar->EliminarCiudadano($cod);
+	$resulta=$mostrar->EliminarCiudadano($cod);
+	$resulta=$mostrar->EliminarDatos($nom);
 
-	return $resultado;
+	return $resulta;
 }
 ?>

@@ -105,7 +105,8 @@
 			echo "
 			<form method='POST' action='../Controlador/Controlador_Eliminar.php'>
 			<input type='hidden' name='ced' value='".$Ciu[0]."'>
-			<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
+			<input type='hidden' name='nom' value='".$Ciu[5]."'>
+ 			<th><input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'></th>
 			</form>
 			</tr>
 			";
