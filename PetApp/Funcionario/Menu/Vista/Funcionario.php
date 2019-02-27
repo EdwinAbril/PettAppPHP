@@ -15,7 +15,7 @@
     </form>
 
 		<h1>Funcionario</h1>
-		<img src="Imagenes/Funcion.png" id="Avatar2" >
+		<img src="Logos/Admin2.png" id="Avatar2" >
 	</header>
 
   

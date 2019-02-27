@@ -11,7 +11,7 @@
 <body>
 	<header id="encabezado">
 		<h1>Administrador</h1>
-		<img src="Imagenes/Funci.png" id="Avatar" >
+		<img src="Imagenes/Admin2.png" id="Avatar" >
 	</header>
   <center>
 	<div id="pricing" class="container-fluid" >
