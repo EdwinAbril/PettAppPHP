@@ -16,9 +16,9 @@ require_once("../Controlador/Controlador_insertar.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
-<body>
+<body id="fondox">
     <form action="../Vista/Vista_Eventos.php">
-  <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+  <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
 <center>
 	<div id="insertar" >
@@ -26,7 +26,7 @@ require_once("../Controlador/Controlador_insertar.php");
  <form action="../Controlador/Controlador_insertar.php" method="Post">
  	<p><label>Fecha del evento </label></p><input type="date" name="fecha" required="">
     	<p><label>Lugar del evento</label></p><input type="text" name="lugar" required="">
-    	<p><label>Duracion del evento</label></p><input type="text" name="duracion" required="">
+    	<p><label>Hora del evento</label></p><input type="time" name="duracion" required="">
       <p><label>Descripcion</label></p><input type="text" name="desc" required="">
           </br>
     </br>
@@ -38,7 +38,7 @@ require_once("../Controlador/Controlador_insertar.php");
 if(isset($_POST['consulta']))
 {
 echo "<script type='text/javascript'>;
-	swal('".$result."', '', 'success');
+	swal('".$result."');
 	</script>";
 	
 }

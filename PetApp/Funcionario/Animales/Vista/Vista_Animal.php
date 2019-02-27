@@ -69,7 +69,7 @@
             <th>".$Ani[4]."</th>
             </tr>
             <th>Foto</th>
-            <th><img src='../../../Animales_fotos/".$Ani[5]."' width='30' heigth='30'></th>
+            <th><img src='../../../Uploads/Animales_fotos/".$Ani[5]."' width='30' heigth='30'></th>
             </tr>
             <th>Tamaño</th>
             <th>".$Ani[6]."</th>
