@@ -167,7 +167,7 @@ class MetodoAnimal{
 		$resulta=$this->Mostrar_1_Adop2($ta);
 		$resultad=$this->Mostrar_1_Adop3($ea);
 		$resultado=$this->Mostrar_1_Adop4($ra);
-		if ($result->num_rows>0) {
+		if ($result->num_rows>0 && $resulta->num_rows>0 && $resultad->num_rows>0 && $resultado->num_rows>0) {
 			$mensa="Animal Ingresado";
 		}
 		else{
@@ -192,6 +192,15 @@ class MetodoAnimal{
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
 	$sql="call bor_animal_Admin('$d')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Animal Eliminado";
+	return $mensaje; 
+	}
+
+	public function EliminarAdoptado($d){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call bor_animal_Admin2('$d')";
 	$consulta=mysqli_query($conexion,$sql);
 	$mensaje="Animal Eliminado";
 	return $mensaje; 

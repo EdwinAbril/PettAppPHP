@@ -22,7 +22,7 @@ function Insertar(){
 	require_once("../Modelo/Modelo_Seguimiento.php");
 	$mostrar=new MetodoSeguimiento();
 	$result=$mostrar->InsertarPositivo($icon,$ced,$men,$enc);
-	$result=$mostrar->InsertarAdopciones($ani,$ced,$men);
+	$result=$mostrar->InsertarAdopciones($icon,$ani,$ced,$men,$enc);
 	$result=$mostrar->EliminarAnimal($ani);
 	$result=$mostrar->InsertarMascotas($nom,$tip,$eda,$raz,$tam,$gen,$col,$ced);
 

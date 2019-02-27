@@ -26,9 +26,7 @@
     }
     ?>
 
-	<form action="Vista_Insertar.php">
-  		<input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
-	</form>
+|
 
 	<form action="../../Menu/Vista/Administrador.php">
   		<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
@@ -129,8 +127,8 @@ while($Com=mysqli_fetch_row($resultado)){
           <th><input type='image' src='Imagenes/editar.png' name='modificar' value='Modificar' class='btn btn-link' height='60' width='60'></th>
           </form>
           
-          <form method='POST' action='../Controlador/Controlador_Eliminar.php'>
-          <input type='hidden' name='codde' value='".$Com[0]."'>
+          <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
+          <input type='hidden' name='codi' value='".$Com[0]."'>
           <th><input type='image' src='Imagenes/borrar.png' name='eliminar' value='Eliminar' class='btn btn-link' height='60' width='60'></th>
           </form>
           </tr>";
@@ -145,7 +143,7 @@ while($Com=mysqli_fetch_row($resultado)){
 	}
 	if(isset($_POST['eliminar'])){
 		echo"<script type='text/javascript'>;
-		alert('".$resulta."');
+		alert('".$result."');
 		</script>";
 
 	}

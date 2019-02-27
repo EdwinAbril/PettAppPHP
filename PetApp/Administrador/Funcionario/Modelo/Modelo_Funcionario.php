@@ -19,6 +19,26 @@ class MetodoFuncionario{
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
+		public function InsertarDatos($us,$con,$fot){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_funcionario($us);
+		if ($result->num_rows>0) {
+			$mensa="El funcionario ya ha sido registrado";
+		}
+		else{
+			$sql="call inser_usu_func(?,?,?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('ssis',$us_p,$con_p,$rol_p,$fot);
+			$us_p=$us;
+			$con_p=$con;
+			$rol_p=2;
+			$fot_p=$fot;
+			$consulta->execute();
+			$mensa="Funcionario Ingresado Correctamente";
+		}
+		return $mensa;
+	}
 
 	public function ModificarFuncionario($cedula,$telefono,$nombre,$correo){
 	$conectar= new conectarproyecto();
@@ -51,7 +71,8 @@ public function EliminarFuncionario($d){
 	return $consulta;
 	}
 
-		public function  InsertarFuncionario($ced,$tel,$nom,$cor){
+
+		public function  InsertarFuncionario($ced,$tel,$nom,$cor,$car,$dep){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_funcionario_1($ced);
@@ -60,20 +81,22 @@ public function EliminarFuncionario($d){
 		
 		}
 		else{
-			$sql="call Insertar_Funcionario(?,?,?,?,?)";
+			$sql="call Insertar_Funcionario(?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('ssssi',$ced_p,$tel_p,$nom_p,$cor_p,$rol_p);
+			$consulta->bind_param('ssssss',$ced_p,$tel_p,$nom_p,$cor_p,$car_p,$dep_p);
 			$ced_p=$ced;
 			$tel_p=$tel;
 			$nom_p=$nom;
 			$cor_p=$cor;
-			$rol_p=2;
+			$car_p=$car;
+			$dep_p=$dep;
 			$consulta->execute();
 			$mensa="Funcionario insertado correctamente";
 		}
 		return $mensa;
 
 	}
+
 
 	
 }

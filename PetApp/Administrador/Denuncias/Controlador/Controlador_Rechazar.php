@@ -13,7 +13,6 @@ function Insertar(){
 
 	require_once("../Modelo/Modelo_Denuncias.php");
 	$mostrar=new MetodoDenuncias();
-	$result=$mostrar->InsertarPositivo($ced,$men);
 	$result=$mostrar->EliminarDenuncias($cod);
 
 

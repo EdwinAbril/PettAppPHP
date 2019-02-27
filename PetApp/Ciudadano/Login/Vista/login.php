@@ -130,7 +130,7 @@
         <div id="caja4">
         	<br>
             	<p>En este módulo usted podrá ubicar las diferentes veterinarias del municipio que contribuyen al cuidado animal y a las cuales usted podrá acudir en caso de que su mascota requiera atención</p><br><br>
-            	<a href="Informacion/Eventos.php">saber más</a>
+            	<a href="../../Veterinaria/Vista/Vista_Veterinaria.php">saber más</a>
         </div>
         <div class="panel-body" id="imagen2">
           <img src="Imagenes/veterinaria.jpeg" class="img-responsive slideanim" id="imagenveterinaria">
@@ -148,7 +148,7 @@
         <div id="caja6">
            <br>
             	<p>En este módulo usted podrá informarse acerca de las jornadas de cuidado animal que realiza el municipio, aquí podrá observar una descripción detallada además de la fecha, la hora y el lugar en el que se realizara</p><br><br>
-            	<a href="Informacion/Veterinaria.php">saber más</a>
+            	<a href="../../Eventos/Vista/Vista_Eventos.php">saber más</a>
         </div>
         <div class="panel-body" id="imagen3">
           <img src="Imagenes/Jornadas.jpeg" class="img-responsive slideanim" id="imageneventos">

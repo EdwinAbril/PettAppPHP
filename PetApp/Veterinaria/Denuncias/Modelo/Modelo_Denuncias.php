@@ -4,10 +4,10 @@ require_once ("../../../Conexion.php");
 
 class MetodoDenuncias{
 	
-	public function MostrarCedula($usu){
+	public function MostrarNit($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select cedula from ciudadano where usuario_ciu='$usu'";
+	$sql="select nit_veterinaria from veterinaria where nombre_veterinaria='$usu'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
@@ -20,10 +20,10 @@ class MetodoDenuncias{
 	return $consulta;
 	}
 
-	public function MostrarDenuncias($ced){
+	public function MostrarDenuncias($nit){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from denuncia where cedul_ciudadano='$ced'";
+	$sql="select * from denuncia where nit_veterinaria='$nit'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
@@ -36,18 +36,18 @@ class MetodoDenuncias{
 	return $consulta;
 	}
 
-	public function ModificarDenuncias($codigo,$fecha,$descripcion,$cedula){
+	public function ModificarDenuncias($codigo,$fecha,$descripcion,$nit){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
 	$sql="call VetModificar_Denuncias(?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('isss',$codigo_p,$fecha_p,$descripcion_p,$cedula_p);
+	$consulta->bind_param('isss',$codigo_p,$fecha_p,$descripcion_p,$nit_vet);
 	$codigo_p=$codigo;
 	$fecha_p=$fecha;
 	$descripcion_p=$descripcion;
-	$cedula_p=$cedula;
+	$nit_vet=$nit;
 	$consulta->execute();
-	$mensa="Usuario Modificado";
+	$mensa="Denuincia Modificada";
 	return $mensa;
 	}
 
@@ -67,7 +67,7 @@ public function EliminarDenuncias($d){
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
-		public function InsertarDenuncias($fec,$des,$ced,$men,$fot){
+		public function InsertarDenuncias($fec,$des,$nit,$men,$fot){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_Denuncia_1($men);
@@ -77,10 +77,10 @@ public function EliminarDenuncias($d){
 		else{
 		$sql="call VetInsertar_Denuncias(?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssss',$fec_p,$des_p,$ced_p,$men_p,$fot_p);
+			$consulta->bind_param('sssss',$fec_p,$des_p,$nit_vet,$men_p,$fot_p);
 			$fec_p=$fec;
 			$des_p=$des;
-			$ced_p=$ced;
+			$nit_vet=$nit;
 			$men_p=$men;
 			$fot_p=$fot;
 			$consulta->execute();

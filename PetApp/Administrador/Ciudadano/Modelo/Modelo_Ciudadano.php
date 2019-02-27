@@ -100,6 +100,14 @@ public function EliminarCiudadano($d){
 	$mensaje="Ciudadano Eliminado";
 	return $mensaje; 
 }
+public function EliminarDatos($dc){
+	$conectar=new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="call bor_admin_Admin('$dc')";
+	$consulta=mysqli_query($conexion,$sql);
+	$mensaje="Ciudadano Eliminado";
+	return $mensaje;
+}
 
 }
 

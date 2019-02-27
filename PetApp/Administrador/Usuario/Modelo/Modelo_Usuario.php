@@ -20,14 +20,15 @@ class MetodoUsuario{
 	return $consulta;
 	}
 
-	public function ModificarUsuario($usuario,$clave){
+	public function ModificarUsuario($usuario,$clave,$foto){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call mod_usu(?,?)";
+	$sql="call login_usuariosact_admin_Admin(?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ss',$usuario_p,$clave_p);
+	$consulta->bind_param('sss',$usuario_p,$clave_p,$foto_p);
 	$usuario_p=$usuario;
 	$clave_p=$clave;
+	$foto_p=$foto;
 	$consulta->execute();
 	$mensa="Usuario Modificado";
 	return $mensa;
@@ -60,7 +61,7 @@ class MetodoUsuario{
 	public function EliminarUsuario($d){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call borrar_usuario_Admin('$d')";
+	$sql="call bor_admin_Admin('$d')";
 	$consulta=mysqli_query($conexion,$sql);
 	$mensaje="Usuario Eliminado";
 	return $mensaje; 

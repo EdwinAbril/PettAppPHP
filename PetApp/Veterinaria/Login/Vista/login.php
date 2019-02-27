@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,  user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="Estilo.css">
+	<link rel="stylesheet" href="Estilos.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Footer-white.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -46,7 +46,7 @@
                             <a class="navbar-brand" href="">Usuario: <?php echo "".$usuar.""?></a>
                                 <li class="nav-item dropdown">
                                     <?php
-                                      require_once("../../Menu/Controlador/Controlador_Usuario.php");
+                                      require_once("../../Menu/Controlador/Controlador_Veterinaria.php");
                                       while($Usu=mysqli_fetch_row($resultado)){
                                       ?>
                                      <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">
@@ -101,47 +101,26 @@
 
       <!--  MODULO UNO -->
       
-  <div class="col-sm">
-    <div class="panel panel-default text-center"  id="Caja01" >
-        <div class="panel-heading" id="panel">
-        	<img src="Imagenes/info.png" height="30" width="30" id="info" > 
-          <h1 id="Adopcion">Adopción</h1>
-            <h5>Cómo Adopto?</h5>
-            </div>
-            <div id="caja2">
-            	<br>
-            	<p>En este módulo usted podrá dar hogar a un animal que lo necesita, La alcaldía municipal de Mosquera Cundinamarca, le ofrece la posibilidad de escoger el animal que usted quiera adoptar, y así contribuir de manera responsable a la salud ambiental y el desarrollo del municipio </p><br><br>
-            	<a href="Informacion/Adoptar.php">saber más</a>
-
-            </div>
-          <div class="panel-body" id="cajaimagen">
-          <!--  AQUI VA LA IMAGEN DEL EVENTO -->
-        <img src="Imagenes/adopcion.jpeg" class="img-responsive slideanim" id="imagenadopcion">
-     </div>
-    </div>      
-  </div>  
-      
-      <!--  MODULO DOS -->
-      
     <div class="col-sm" id="caja3">
       <div class="panel panel-default text-center">
           <div class="panel-heading" id="panel">
-          	<img src="Imagenes/info.png" height="30" width="30" id="info2" >
-          <h1 id="Veterinaria">Veterinarias</h1>
-           <h5>Veterinarias Vinculadas</h5>
+            <img src="Imagenes/info.png" height="30" width="30" id="info2" >
+          <h1 id="Eventos">Denuncias</h1>
+           <h5>Realizar Denuncias</h5>
         </div>
         <div id="caja4">
-        	<br>
-            	<p>En este módulo usted podrá ubicar las diferentes veterinarias del municipio que contribuyen al cuidado animal y a las cuales usted podrá acudir en caso de que su mascota requiera atención</p><br><br>
-            	<a href="Informacion/Eventos.php">saber más</a>
+           <br>
+              <p>En este módulo usted podrá realizar denuncias de abandono de animales, encontrara un formulario que deberá diligenciar y si lo quiere podrá adjuntar una evidencia fotográfica, se le hará saber a usted si su denuncia fue atendida, una vez realizada la denuncia la alcaldía se encargara de los procesos correspondientes </p><br><br>
+              <a href="../../Denuncias/Vista/Vista_Denuncias.php">saber más</a>
         </div>
         <div class="panel-body" id="cajaimagen2">
-          <img src="Imagenes/veterinaria.jpeg" class="img-responsive slideanim" id="imagenveterinaria">
+          <img src="Imagenes/Denuncias.jpeg" class="img-responsive slideanim" id="imageneventos">
         </div>
-      </div>      
-    </div>     
+      </div>
+    </div>    
+    
 
-      <!--  MODULO TRES -->
+      <!--  MODULO DOS -->
       
     <div class="col-sm" id="caja5">
       <div class="panel panel-default text-center">
@@ -153,7 +132,7 @@
         <div id="caja6">
            <br>
             	<p>En este módulo usted podrá informarse acerca de las jornadas de cuidado animal que realiza el municipio, aquí podrá observar una descripción detallada además de la fecha, la hora y el lugar en el que se realizara</p><br><br>
-            	<a href="Informacion/Veterinaria.php">saber más</a>
+            	<a href="../../Eventos/Vista/Vista_Eventos.php">saber más</a>
         </div>
         <div class="panel-body" id="cajaimagen3">
           <img src="Imagenes/Jornadas.jpeg" class="img-responsive slideanim" id="imageneventos">

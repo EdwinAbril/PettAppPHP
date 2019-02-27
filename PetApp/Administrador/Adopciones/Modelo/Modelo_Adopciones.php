@@ -21,15 +21,13 @@ class MetodoAdopciones{
 	}
 
 
-	public function ModificarAdopcion($codigo,$animal,$seguimiento,$mensaje){
+	public function ModificarAdopcion($codigo,$mensaje){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call VetModificar_Adopcion(?,?,?,?)";
+	$sql="call VetModificar_Adopcion(?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('iiis',$codigo_p,$animal_p,$seguimiento_p,$mensaje);
+	$consulta->bind_param('is',$codigo_p,$mensaje);
 	$codigo_p=$codigo;
-	$animal_p=$animal;
-	$seguimiento_p=$seguimiento;
 	$mensaje_p=$mensaje;
 	$consulta->execute();
 	$mensa="Adopcion Modificada";
