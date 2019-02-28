@@ -140,18 +140,6 @@
     </div>
   </form>
 
-<form action="../../Mascotas/Vista/Vista_Mascotas.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Mascotas</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Mascotas" src="logos/Mascotas.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-  </form>
 
 <form action="../../USUARIOS/USUARIOS.php">
 <div class="col-sm-4 col-xs-12">
