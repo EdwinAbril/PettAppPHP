@@ -73,7 +73,8 @@
     
     require_once("../Controlador/Controlador_Consultar.php");
     ?>    
-
+    <div id="centro1">
+      <div id="caja0">
     <form action="" method="POST">
     <input type="text" name="xraza">
     <select name="xgenero">
@@ -89,6 +90,8 @@
     </select>
     <input type="submit" name="buscar">
     </form>
+      </div>
+    </div>
 
 
     <?php
