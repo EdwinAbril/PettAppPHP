@@ -18,7 +18,7 @@ function insertar(){
 	$tipo=$_FILES['fo']['type'];
 	$tamaño=$_FILES['fo']['size'];
 	if ($nombre!=null && $tamaño<=1000000) {
-        $nombre=$us;
+        $nombre=$use;
         $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Usuarios_Fotos/';
         move_uploaded_file($_FILES['fo']['tmp_name'],$carpeta_destino.$nombre);
         
