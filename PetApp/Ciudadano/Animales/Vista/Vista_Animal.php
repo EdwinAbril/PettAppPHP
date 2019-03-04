@@ -73,7 +73,33 @@
     
     require_once("../Controlador/Controlador_Consultar.php");
     ?>    
-    
+
+    <div id="centro1">
+      <div id="caja0">
+    <form action="" method="POST">
+    <input type="text" name="xraza">
+    <select name="xgenero">
+      <option value="">Genero</option>
+      <option value="Macho">Macho</option>
+      <option value="Hembra">Hembra</option>
+    </select>
+    <select name="xtamano">
+      <option value="">Tamaño</option>
+      <option value="Grande">Grande</option>
+      <option value="Mediano">Mediano</option>
+      <option value="Pequeño">Pequeño</option>
+    </select>
+    <select name="xtipo">
+      <option value="">Tipo</option>
+      <option value="Perro">Perro</option>
+      <option value="Gato">Gato</option>
+    </select>
+    <input type="submit" name="buscar">
+    </form>
+      </div>
+    </div>
+
+
 
     <?php
     
@@ -87,30 +113,63 @@
       $raza=$_POST['xraza'];
       $genero=$_POST['xgenero'];
       $tamano=$_POST['xtamano'];
-      if ((empty($_POST['xraza']))&&(empty($_POST['xtamano']))&&(empty($_POST['xgenero']))){
+      $tipo=$_POST['xtipo'];
+      if ((empty($_POST['xraza']))&&(empty($_POST['xtamano']))&&(empty($_POST['xgenero']))&&(empty($_POST['xtipo']))){
         $where="";
       }
-      else if ((empty($_POST['xraza']))&&(empty($_POST['xgenero']))){
+      else if ((empty($_POST['xraza']))&&(empty($_POST['xgenero']))&&(empty($_POST['xtipo']))){
         $where="where tamano='".$tamano."'"; 
       }
-      else if ((empty($_POST['xraza']))&&(empty($_POST['xtamano']))){
+      else if ((empty($_POST['xraza']))&&(empty($_POST['xtamano']))&&(empty($_POST['xtipo']))){
         $where="where genero='".$genero."'";
       }
-      else if ((empty($_POST['xgenero']))&&(empty($_POST['xtamano']))){
+      else if ((empty($_POST['xgenero']))&&(empty($_POST['xtamano']))&&(empty($_POST['xtipo']))){
         $where="where raza_animal='".$raza."'";
       }
-      else if (empty($_POST['xraza'])){
+      else if ((empty($_POST['xgenero']))&&(empty($_POST['xtamano']))&&(empty($_POST['xraza']))){
+        $where="where tipo_animal='".$tipo."'";
+      }
+      else if (empty($_POST['xraza'])&&(empty($_POST['xtipo']))){
         $where="where tamano='".$tamano."' and genero='".$genero."'";
       }
-      else if (empty($_POST['xtamano'])){
+      else if (empty($_POST['xtamano'])&&(empty($_POST['xtipo']))){
         $where="where raza_animal ='".$raza."' and genero='".$genero."'";
       }
-      else if (empty($_POST['xgenero'])){
+      else if (empty($_POST['xgenero'])&&(empty($_POST['xtipo']))){
         $where="where raza_animal ='".$raza."' and tamano='".$tamano."'";
       }
-      
+      else if (empty($_POST['xraza'])&&(empty($_POST['xtipo']))){
+        $where="where genero ='".$genero."' and tamano='".$tamano."'";
+      }
+      else if (empty($_POST['xgenero'])&&(empty($_POST['xraza']))){
+        $where="where tipo_animal ='".$tipo."' and tamano='".$tamano."'";
+      }
+      else if (empty($_POST['xgenero'])&&(empty($_POST['xtamano']))){
+        $where="where tipo_animal ='".$tipo."' and raza_animal='".$raza."'";
+      }
+      else if (empty($_POST['xgenero'])&&(empty($_POST['xraza']))){
+        $where="where tipo_animal ='".$tipo."' and tamano='".$tamano."'";
+      }
+      else if (empty($_POST['tamano'])&&(empty($_POST['xraza']))){
+        $where="where tipo_animal ='".$tipo."' and genero='".$genero."'";
+      }
+      else if (empty($_POST['xtipo'])){
+        $where="where tamano ='".$tamano."' and raza_animal='".$raza."' and genero ='".$genero."'";
+      }
+      else if (empty($_POST['xtamano'])){
+        $where="where tipo_animal ='".$tipo."' and raza_animal='".$raza."' and genero ='".$genero."'";
+      }
+      else if (empty($_POST['xtipo'])){
+        $where="where tamano ='".$tamano."' and raza_animal='".$raza."' and genero ='".$genero."'";
+      }
+      else if (empty($_POST['xraza'])){
+        $where="where tamano ='".$tamano."' and tipo_animal='".$tipo."' and genero ='".$genero."'";
+      }
+      else if (empty($_POST['xgenero'])){
+        $where="where tamano ='".$tamano."' and tipo_animal='".$tipo."' and raza_animal ='".$raza."'";
+      }
       else{
-        $where="where raza_animal ='".$raza."' and tamano='".$tamano."' and genero='".$genero."'";
+        $where="where raza_animal ='".$raza."' and tamano='".$tamano."' and genero='".$genero."' and tipo_animal='".$tipo."'";
       }
 
     }
