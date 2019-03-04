@@ -91,6 +91,7 @@ while($Com=mysqli_fetch_row($resultado)){
                 <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
                 <input type='hidden' name='cedurech' value='".$Com[3]."'>
                 <input type='hidden' name='codi' value='".$Com[0]."'>
+                <input type='hidden' name='cedf' value='".$usuar."'>
                 <input type='hidden' name='mensajerech' value='Su denuncia no fue aceptada podra comunicarse por medio de la informacion de contacto en el menu principal'>
                 <th><input type='submit' name='rechazarden' class='btn btn-danger'value='Rechazar'></th>
                 </form>

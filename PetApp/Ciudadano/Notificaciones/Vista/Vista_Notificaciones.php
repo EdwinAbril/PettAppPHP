@@ -167,7 +167,9 @@ while($Fun=mysqli_fetch_row($resultadof)){
             </tr>
            ";
     
-
+             
+      
+      
 ?>
           </table>
 
@@ -175,9 +177,9 @@ while($Fun=mysqli_fetch_row($resultadof)){
 		    </div>
 
 				<?php
-         }
-			}
-			}
+        }
+      }
+      } 
 			if(isset($_POST['eliminar'])){
 				echo"<script type='text/javascript'>;
 				alert('".$resulta."');

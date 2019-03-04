@@ -9,6 +9,20 @@
 	<title>PetApp</title>
 </head>
 <body>
+
+  <?php
+  session_start();
+  if (!$_SESSION) {
+    echo '<script type="text/javascript">
+          alert("Usuario no Autenticado");
+          location="../../../Login/Vista/login.php";
+          </script>';  
+  }
+  else{
+    $usuar=$_SESSION["Usuario"];
+    }
+  ?>
+
 	<header id="encabezado">
     <form action="../../../Login/Vista/registro.php">
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
