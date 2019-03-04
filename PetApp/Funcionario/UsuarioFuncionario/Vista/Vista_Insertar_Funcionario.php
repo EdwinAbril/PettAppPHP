@@ -10,6 +10,12 @@ require_once("../Controlador/Controlador_Insertar.php");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="../../Bst/3.3.7/CSS/bootstrap.css" rel="stylesheet">
+    <link href="../../Bst/3.3.7/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Bst/3.3.7/CSS/style.css" rel="stylesheet">
+ <script src="../../Bst/3.3.7/js/jquery.min.js"></script>
+    <script src="../../Bst/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../Bst/3.3.7/js/scripts.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="Estilo.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
