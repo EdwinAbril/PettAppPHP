@@ -148,6 +148,9 @@
       else if (empty($_POST['xgenero'])&&(empty($_POST['xraza']))){
         $where="where tipo_animal ='".$tipo."' and tamano='".$tamano."'";
       }
+      else if (empty($_POST['tamano'])&&(empty($_POST['xraza']))){
+        $where="where tipo_animal ='".$tipo."' and genero='".$genero."'";
+      }
       else if (empty($_POST['xtipo'])){
         $where="where tamano ='".$tamano."' and raza_animal='".$raza."' and genero ='".$genero."'";
       }
@@ -236,7 +239,7 @@
         <?php
         echo "
                  <form method='POST' action='../Controlador/Controlador_Enlace.php'>
-                            <input type='text' name='codi' value='".$Ani[0]."'>
+                            <input type='hidden' name='codi' value='".$Ani[0]."'>
                             <input type='hidden' name='usu' value='".$usuar."'>
                   <input type='submit' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png' class='img-responsive slideanim' id='logoadopta'  >
                   <h1>Adoptame</h1>
