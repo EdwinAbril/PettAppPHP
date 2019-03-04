@@ -12,7 +12,7 @@
       $raza=$_POST['xraza'];
       $genero=$_POST['xgenero'];
       $tamano=$_POST['xtamano'];
-
+      $tipo=$_POST['xtipo'];
       if ((empty($_POST['xraza']))&&(empty($_POST['xtamano']))&&(empty($_POST['xgenero']))){
         $where="";
         $resultado=$mostrar->MostrarAnimal($where);
@@ -62,19 +62,6 @@
         $where="where raza_animal ='".$raza."' and tamaño='".$tamano."'";
         $resultado=$mostrar->MostrarAnimal($where);
       }
-      
-      else{
-        $where="where raza_animal ='".$raza."' and tamaño='".$tamano."' and genero='".$genero."'";
-        $resultado=$mostrar->MostrarAnimal($where);
-      }
-
-    }
-    else{
-      $where="";
-      $resultado=$mostrar->MostrarAnimal($where);
-    }
-?>
-
       }
       else if (empty($_POST['xgenero'])&&(empty($_POST['xtipo']))){
         $where="where raza_animal ='".$raza."' and tamano='".$tamano."'";
@@ -113,11 +100,13 @@
         $where="where raza_animal ='".$raza."' and tamano='".$tamano."' and genero='".$genero."' and tipo_animal='".$tipo."'";
       }
     }
-      else{
-        $where="";
-      }
+    else{
+      $where="";
+      
+    }
+    $resultado=$mostrar->MostrarAnimal($where);
+?>
 
-
+      
     
-    ?>
 

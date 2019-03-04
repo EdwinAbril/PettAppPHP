@@ -74,33 +74,31 @@
     require_once("../Controlador/Controlador_Consultar.php");
     ?>    
 
-    <div id="centro1">
-      <div id="caja0">
+    <div id="centro">
+    <div class="caja0">
     <form action="" method="POST">
-    <input type="text" name="xraza">
-    <select name="xgenero">
+    <input type="text" name="xraza" class="form-control" placeholder="Busqueda Por Raza"></BR>
+    <select name="xgenero" class="form-control">
       <option value="">Genero</option>
       <option value="Macho">Macho</option>
       <option value="Hembra">Hembra</option>
-    </select>
-    <select name="xtamano">
+    </select></BR>
+    <select name="xtamano" class="form-control">
       <option value="">Tamaño</option>
       <option value="Grande">Grande</option>
       <option value="Mediano">Mediano</option>
-      <option value="Pequeño">Pequeño</option>
-    </select>
-    <select name="xtipo">
+      <option value="Pequeno">Pequeño</option>
+    </select></BR>
+    <select name="xtipo"class="form-control">
       <option value="">Tipo</option>
       <option value="Perro">Perro</option>
       <option value="Gato">Gato</option>
-    </select>
-    <input type="submit" name="buscar">
+    </select></BR>
+    <input type="submit" name="buscar" class="btn btn-info" value="Buscar">
     </form>
-      </div>
     </div>
-
-
-
+    </div></BR>
+    
     <?php
     
     require_once("../Modelo/Modelo_Animal.php");
@@ -181,25 +179,6 @@
 
     ?>
 
-    <div id="centro">
-    <div class="caja0">
-    <form action="" method="POST">
-    <input type="text" name="xraza" class="form-control" placeholder="Busqueda Por Raza"></BR>
-    <select name="xgenero" class="form-control">
-      <option value="">Genero</option>
-      <option value="Macho">Macho</option>
-      <option value="Hembra">Hembra</option>
-    </select></BR>
-    <select name="xtamano" class="form-control">
-      <option value="">Tamaño</option>
-      <option value="Grande">Grande</option>
-      <option value="Mediano">Mediano</option>
-      <option value="Pequeño">Pequeño</option>
-    </select></BR>
-    <input type="submit" name="buscar" class="btn btn-info" value="Buscar">
-    </form>
-    </div>
-    </div></BR>
     
     <?php
     while($Ani=mysqli_fetch_row($resultado)){
