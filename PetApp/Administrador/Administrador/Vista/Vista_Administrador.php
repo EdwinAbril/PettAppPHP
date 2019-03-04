@@ -6,8 +6,11 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="CSS/Estilos.css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  	<script src="JS/jquery-3.3.1.min.js"></script>
-    <script src="JS/main.js"></script>
+
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/scripts.js"></script>
     <script type="text/javascript">history.forward();</script>
 </head>
 <body>
