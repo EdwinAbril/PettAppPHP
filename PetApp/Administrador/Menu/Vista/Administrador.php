@@ -100,18 +100,6 @@
     </div> 
   </form>
 
-<form action="../../Comentarios/Vista/Vista_Comentarios.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Comentarios</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Comentarios" src="logos/Comentarios.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-  </form>
 
 <form action="../../Denuncias/Vista/Vista_Denuncias.php">
 <div class="col-sm-4 col-xs-12">
@@ -152,44 +140,6 @@
     </div>
   </form>
 
-<form action="../../Mascotas/Vista/Vista_Mascotas.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Mascotas</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Mascotas" src="logos/Mascotas.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-  </form>
-
-<form action="../../Postulacion/Vista/Vista_Postulacion.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Postulacion</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Eventos" src="logos/Postulacion.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-    </form>  
-
-<form action="../../Seguimiento/Vista/Vista_Seguimiento.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano"> 
-        <div class="panel-heading" id="verde">
-          <h1>Seguimiento</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Eventos" src="logos/Seguimiento.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div> 
-  </form>
 
 <form action="../../USUARIOS/USUARIOS.php">
 <div class="col-sm-4 col-xs-12">

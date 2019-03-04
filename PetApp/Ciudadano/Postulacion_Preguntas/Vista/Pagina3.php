@@ -65,7 +65,7 @@
 					          <input type="radio" required name="res13" id="r1" value="1" ><label for="r1">Si </label>
 					        </div>
 					        <div class="form-check" style="margin-left:20px;">
-					          <input type="radio" required name="res13" id="r2" value="0"><label for="r2">Naur</label>
+					          <input type="radio" required name="res13" id="r2" value="0"><label for="r2">No</label>
 					          </label>
 					        </div>
 					      </div>
@@ -77,7 +77,7 @@
 					          <input type="radio" required name="res14" id="r1" value="1" ><label for="r1">Si </label>
 					        </div>
 					        <div class="form-check" style="margin-left:20px;">
-					          <input type="radio" required name="res14" id="r2" value="0"><label for="r2">Naur</label>
+					          <input type="radio" required name="res14" id="r2" value="0"><label for="r2">No</label>
 					          </label>
 					        </div>
 					      </div>
@@ -89,7 +89,7 @@
 					          <input type="radio" required name="res15" id="r1" value="1" ><label for="r1">Si </label>
 					        </div>
 					        <div class="form-check" style="margin-left:20px;">
-					          <input type="radio" required name="res15" id="r2" value="0"><label for="r2">Naur</label>
+					          <input type="radio" required name="res15" id="r2" value="0"><label for="r2">No</label>
 					          </label>
 					        </div>
                                             </div>
@@ -107,7 +107,7 @@
 					          <input type="radio" required name="res16" id="r1" value="1" ><label for="r1">Si </label>
 					        </div>
 					        <div class="form-check" style="margin-left:20px;">
-					          <input type="radio" required name="res16" id="r2" value="0"><label for="r2">Naur</label>
+					          <input type="radio" required name="res16" id="r2" value="0"><label for="r2">No</label>
 					          </label>
 					        </div>
 					      </div>
@@ -119,7 +119,7 @@
 					          <input type="radio" required name="res17" id="r1" value="1" ><label for="r1">Si </label>
 					        </div>
 					        <div class="form-check" style="margin-left:20px;">
-					          <input type="radio" required name="res17" id="r2" value="0"><label for="r2">Naur</label>
+					          <input type="radio" required name="res17" id="r2" value="0"><label for="r2">No</label>
 					          </label>
 					        </div>
 					      </div>
@@ -131,7 +131,7 @@
 					          <input type="radio" required name="res18" id="r1" value="1" ><label for="r1">Si </label>
 					        </div>
 					        <div class="form-check" style="margin-left:20px;">
-					          <input type="radio" required name="res18" id="r2" value="0"><label for="r2">Naur</label>
+					          <input type="radio" required name="res18" id="r2" value="0"><label for="r2">No</label>
 					          </label>
 					        </div>
 					      </div>

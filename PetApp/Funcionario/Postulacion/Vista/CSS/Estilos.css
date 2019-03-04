@@ -3,6 +3,27 @@
     padding: 0 1rem;
     margin: 1rem;
 }
+.opciones{
+    margin-top: -12px;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.iconos{
+    margin-top: -12px;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    position: relative;
+}
+
 
 .caja1{
     margin-top: -12px;
@@ -31,7 +52,7 @@
 
 #vol{
 float: left;
-margin-left: -72px;
+margin-left:5px;
 margin-top: 5px;
 margin-bottom:50px;
 }

@@ -3,15 +3,15 @@
 <head>
 	<title>Animal</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="CSS/Estilos.css">
+	<link rel="stylesheet" href="../Vista/CSS/Estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="JS/jquery-3.3.1.min.js"></script>
-    <script src="JS/main.js"></script>
+    <script src="../Vista/JS/jquery-3.3.1.min.js"></script>
+    <script src="../Vista/JS/main.js"></script>
 
 </head>
 <body>
@@ -61,6 +61,7 @@
       </div>
 
 
+
     <div id="top">
 	  <form action="../../Menu/Vista/Ciudadano.php">
     <input type="submit" name="volver" value="Menu" class="btn btn-outline-dark" id="voler">
@@ -70,9 +71,80 @@
 
     <?php
     
-	require_once("../Controlador/Controlador_Consultar.php");
-	while($Ani=mysqli_fetch_row($resultado)){
-		?>
+    require_once("../Controlador/Controlador_Consultar.php");
+    ?>    
+    <div id="centro1">
+      <div id="caja0">
+    <form action="" method="POST">
+    <input type="text" name="xraza">
+    <select name="xgenero">
+      <option value="">Genero</option>
+      <option value="Macho">Macho</option>
+      <option value="Hembra">Hembra</option>
+    </select>
+    <select name="xtamano">
+      <option value="">Tamaño</option>
+      <option value="Grande">Grande</option>
+      <option value="Mediano">Mediano</option>
+      <option value="Pequeño">Pequeño</option>
+    </select>
+    <input type="submit" name="buscar">
+    </form>
+      </div>
+    </div>
+
+
+    <?php
+    
+    require_once("../Modelo/Modelo_Animal.php");
+    $mostrar= new MetodoAnimal();
+    
+
+    if (isset($_POST['buscar'])){
+
+      $where="";
+      $raza=$_POST['xraza'];
+      $genero=$_POST['xgenero'];
+      $tamano=$_POST['xtamano'];
+      if ((empty($_POST['xraza']))&&(empty($_POST['xtamano']))&&(empty($_POST['xgenero']))){
+        $where="";
+      }
+      else if ((empty($_POST['xraza']))&&(empty($_POST['xgenero']))){
+        $where="where tamano='".$tamano."'"; 
+      }
+      else if ((empty($_POST['xraza']))&&(empty($_POST['xtamano']))){
+        $where="where genero='".$genero."'";
+      }
+      else if ((empty($_POST['xgenero']))&&(empty($_POST['xtamano']))){
+        $where="where raza_animal='".$raza."'";
+      }
+      else if (empty($_POST['xraza'])){
+        $where="where tamano='".$tamano."' and genero='".$genero."'";
+      }
+      else if (empty($_POST['xtamano'])){
+        $where="where raza_animal ='".$raza."' and genero='".$genero."'";
+      }
+      else if (empty($_POST['xgenero'])){
+        $where="where raza_animal ='".$raza."' and tamano='".$tamano."'";
+      }
+      
+      else{
+        $where="where raza_animal ='".$raza."' and tamano='".$tamano."' and genero='".$genero."'";
+      }
+
+    }
+    else{
+      $where="";
+    }
+
+    $resultado=$mostrar->MostrarAnimal($where);
+
+    ?>
+
+    <?php
+    while($Ani=mysqli_fetch_row($resultado)){
+    ?>
+   
 		<div id="centro">
         <div class="caja1">
 		<?php

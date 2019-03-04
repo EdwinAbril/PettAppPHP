@@ -4,11 +4,11 @@ require_once ("../../../Conexion.php");
 
 class MetodoAnimal{
 	
-	public function MostrarAnimal(){
+	public function MostrarAnimal($ola){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from animal";
-	$consulta=mysqli_query($conexion,$sql);
+	$sql="select * from animal $ola";
+	$consulta=$conexion->query($sql);
 	return $consulta;
 	}
 
