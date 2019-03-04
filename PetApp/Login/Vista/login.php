@@ -7,20 +7,20 @@
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width,  user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">
 
-    <link href="../../../CSS/bootstrap.css" rel="stylesheet">
-    <link href="../../../CSS/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../CSS/style.css" rel="stylesheet">
+    <link href="../../Bst/3.3.7/CSS/bootstrap.css" rel="stylesheet">
+    <link href="../../Bst/3.3.7/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Bst/3.3.7/CSS/style.css" rel="stylesheet">
   	<link rel="stylesheet" href="Estilo.css">
     <link rel="stylesheet" href="Imagenes/" >
   	<link rel="stylesheet" href="Imagenes/fonts/style.css" >
 
-    <link rel="stylesheet" href="assets/css/Footer-white.css">
+    <link rel="stylesheet" href="assets/css/Footer-white.css"> 
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="../../../js/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="../../../js/bootstrap.min.js"></script>
-    <script src="../../../js/scripts.js"></script>
+    <script src="../../Bst/3.3.7/js/jquery-3.3.1.min.js"></script>
+    <script src="../../Bst/3.3.7/js/jquery.min.js"></script>
+    <script src="../../Bst/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../Bst/3.3.7/js/scripts.js"></script>
     <script src="../Vista/JS/main.js"></script>
 
 
@@ -126,10 +126,9 @@
             <ul>
                 <li><a href="#">Alcaldia de Mosquera</a></li>
                 <li><a href="#">Contactenos</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Terminos de servicio</a></li>
             </ul>
-        <p class="footer-copyright">© 2018 Copyright</p>
+        <p class="footer-copyright">© 2019 Copyright</p>
         </div>
         <div class="footer-social">
             <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
