@@ -8,6 +8,8 @@
   <link rel="stylesheet" type="text/css" href="Estilo.css">
 	<title>PetApp</title>
 </head>
+
+
 <body>
 	<header id="encabezado">
     <form action="../../../Login/Vista/registro.php">

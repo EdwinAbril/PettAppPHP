@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width,  user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">
-  	<link rel="stylesheet" href="Estilo.css">
-  	<link rel="stylesheet" href="Imagenes/fonts/style.css" >
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Footer-white.css">
-
-  	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  	<script src="main.js"></script>
-    <script src="js/jquery-3.3.1.min.js" ></script>
-    <script src="js/main.js" ></script>
 
     <title>Pet App</title>
+
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,  user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">
+
+    <link href="../../../CSS/bootstrap.css" rel="stylesheet">
+    <link href="../../../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../CSS/style.css" rel="stylesheet">
+  	<link rel="stylesheet" href="Estilo.css">
+    <link rel="stylesheet" href="Imagenes/" >
+  	<link rel="stylesheet" href="Imagenes/fonts/style.css" >
+
+    <link rel="stylesheet" href="assets/css/Footer-white.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/scripts.js"></script>
+    <script src="../Vista/JS/main.js"></script>
+
+
 </head>
 
 <body>

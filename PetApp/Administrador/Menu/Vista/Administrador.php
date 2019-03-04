@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <title>PetApp</title>
+
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="Estilo.css">
-	<title>PetApp</title>
-  <script type="text/javascript">history.forward();</script>
+
+    <link href="../../../CSS/bootstrap.css" rel="stylesheet">
+    <link href="../../../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Estilo.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/scripts.js"></script>
+    <script src="../Vista/JS/main.js"></script>
+    <script type="text/javascript">history.forward();</script>
+
 </head>
+
 <body>
 	<?php
   session_start();
