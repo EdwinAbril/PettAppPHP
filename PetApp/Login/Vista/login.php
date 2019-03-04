@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>Pet App</title>
+    <title>PettApp</title>
 
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width,  user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">

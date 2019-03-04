@@ -2,7 +2,7 @@
 <html>
 <head>
 
-  <title>PetApp1</title>
+  <title>PetApp</title>
 
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
