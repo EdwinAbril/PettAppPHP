@@ -11,15 +11,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
+<body id="fondox">
+
+  <?php
+    session_start();
+    if (!$_SESSION) {
+    echo '<script type="text/javascript">
+          alert("Usuario no Autenticado");
+          location="../../../Login/Vista/login.php";
+          </script>';  
+    }
+    else{
+    $usuar=$_SESSION["Usuario"];
+    }
+    ?>
+
 <form action="../../Denuncias/Vista/Vista_Denuncias.php">
 </form>
+
 
 <div id="top">
         <form action="Vista_Denuncias.php">
             <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
         </form>
 
-<body id="fondox">
+
     <div id="insertar">
     <h1 id="titulo">Respuesta</h1>
  <form method='POST' action='../Controlador/Controlador_Respuesta.php'>
@@ -29,8 +45,8 @@
    ?>
    <?php
    echo "
-   <input type='hidden' name='ceduladenunci' value='".$cedul."'>"?>
-   <input type="text" name="encargado" >
+   <input type='hidden' name='ceduladenunci' value='".$cedul."'>
+   <input type='hidden' name='encargado' value='".$usuar."'>";?>
 
     <p><lable>Respuesta</lable></p><textarea type='text' name='mensajedenun'></textarea> 
 

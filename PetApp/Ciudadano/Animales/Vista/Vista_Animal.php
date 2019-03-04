@@ -73,26 +73,7 @@
     
     require_once("../Controlador/Controlador_Consultar.php");
     ?>    
-    <div id="centro1">
-      <div id="caja0">
-    <form action="" method="POST">
-    <input type="text" name="xraza">
-    <select name="xgenero">
-      <option value="">Genero</option>
-      <option value="Macho">Macho</option>
-      <option value="Hembra">Hembra</option>
-    </select>
-    <select name="xtamano">
-      <option value="">Tamaño</option>
-      <option value="Grande">Grande</option>
-      <option value="Mediano">Mediano</option>
-      <option value="Pequeño">Pequeño</option>
-    </select>
-    <input type="submit" name="buscar">
-    </form>
-      </div>
-    </div>
-
+    
 
     <?php
     
@@ -141,15 +122,35 @@
 
     ?>
 
+    <div id="centro">
+    <div class="caja0">
+    <form action="" method="POST">
+    <input type="text" name="xraza" class="form-control" placeholder="Busqueda Por Raza"></BR>
+    <select name="xgenero" class="form-control">
+      <option value="">Genero</option>
+      <option value="Macho">Macho</option>
+      <option value="Hembra">Hembra</option>
+    </select></BR>
+    <select name="xtamano" class="form-control">
+      <option value="">Tamaño</option>
+      <option value="Grande">Grande</option>
+      <option value="Mediano">Mediano</option>
+      <option value="Pequeño">Pequeño</option>
+    </select></BR>
+    <input type="submit" name="buscar" class="btn btn-info" value="Buscar">
+    </form>
+    </div>
+    </div></BR>
+    
     <?php
     while($Ani=mysqli_fetch_row($resultado)){
     ?>
    
-		<div id="centro">
-        <div class="caja1">
-		<?php
-		echo "
-		<table class='table'>
+    <div id="centro">
+    <?php
+    echo "
+    <div class='caja1'>
+    <table class='table'>
             <tr>
             <thead class='thead-dark'>
             <th>".$Ani[1]."</th>
@@ -201,9 +202,9 @@
         <?php
         echo "
                  <form method='POST' action='../Controlador/Controlador_Enlace.php'>
-                            <input type='text' name='codi' value='".$Ani[0]."'>
+                            <input type='hidden' name='codi' value='".$Ani[0]."'>
                             <input type='hidden' name='usu' value='".$usuar."'>
-                  <input type='submit' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png' class='img-responsive slideanim' id='logoadopta'  >
+                  <input type='submit' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png'  id='logoadopta' value='Adoptar' class='btn btn-info' >
                   <h1>Adoptame</h1>
                 
                 

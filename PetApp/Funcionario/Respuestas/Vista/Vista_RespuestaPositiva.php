@@ -16,6 +16,19 @@
 </form>
 <body id="fondox">
 
+    <?php
+    session_start();
+    if (!$_SESSION) {
+    echo '<script type="text/javascript">
+          alert("Usuario no Autenticado");
+          location="../../../Login/Vista/login.php";
+          </script>';  
+    }
+    else{
+    $usuar=$_SESSION["Usuario"];
+    }
+    ?>
+
 	<div id="insertar">
 	<h1>Respuesta</h1>
  <form method='POST' action='../Controlador/Controlador_Insertarpositivo.php'>
@@ -46,9 +59,9 @@
   
     <input type='hidden' name='cedulaadop' value='".$cedula."'>
     <input type='hidden' name='animaladop' value='".$animal."'>
-      <p><lable>Respuesta</label></p><input type='text' name='mensadop'>
-      <p><label>Encargado</label></p><input type='number' name='encar'>
-    <input type='submit' name='aceptar2' value='Enviar Respuesta' class='btn btn-primar'>
+      <p><lable>Respuesta</label></p><textarea type='text' name='mensadop' class='form-control'></textarea>
+      <input type='hidden' name='encar' value='".$usuar."'></BR>
+    <input type='submit' name='aceptar2' value='Enviar Respuesta' class='btn btn-primary'>
   
     ";?>
   </form>
