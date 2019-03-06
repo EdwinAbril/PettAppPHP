@@ -6,12 +6,13 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="CSS/Estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  		<link href="../../Bst/4.1.3/CSS/bootstrap.css" rel="stylesheet">
-    <link href="../../Bst/4.1.3/CSS/bootstrap.min.css" rel="stylesheet">
-    <link href="../../Bst/4.1.3/CSS/style.css" rel="stylesheet">
- <script src="../../Bst/3.3.7/js/jquery.min.js"></script>
-    <script src="../../Bst/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../../Bst/3.3.7/js/scripts.js"></script>
+  	<link href="../../../Bst/4.3.1/CSS/bootstrap.css" rel="stylesheet">
+    <link href="../../../Bst/4.3.1/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../Bst/4.3.1/CSS/style.css" rel="stylesheet">
+    <script src="../../../Bst/4.3.1/js/jquery-3.3.1.min.js"></script>
+    <script src="../../../Bst/4.3.1/js/jquery.min.js"></script>
+    <script src="../../../Bst/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../../../Bst/4.3.1/js/scripts.js"></script>
   	<script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/main.js"></script>
   	

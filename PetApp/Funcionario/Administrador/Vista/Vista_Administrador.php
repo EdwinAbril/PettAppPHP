@@ -8,7 +8,7 @@
     <link href="../../Bst/4.1.3/CSS/bootstrap.min.css" rel="stylesheet">
     <link href="../../Bst/4.1.3/CSS/style.css" rel="stylesheet">
   	<link rel="stylesheet" href="CSS/Estilos.css">
- 
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   	<script src="JS/jquery-3.3.1.min.js"></script>
     <script src="../../Bst/3.3.7/js/jquery.min.js"></script>
     <script src="../../Bst/3.3.7/js/bootstrap.min.js"></script>
