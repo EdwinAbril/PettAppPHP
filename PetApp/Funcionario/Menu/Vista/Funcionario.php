@@ -9,13 +9,27 @@
 	<title>PetApp</title>
 </head>
 <body>
+
+  <?php
+  session_start();
+  if (!$_SESSION) {
+    echo '<script type="text/javascript">
+          alert("Usuario no Autenticado");
+          location="../../../Login/Vista/login.php";
+          </script>';  
+  }
+  else{
+    $usuar=$_SESSION["Usuario"];
+    }
+  ?>
+
 	<header id="encabezado">
     <form action="../../../Login/Vista/registro.php">
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
     </form>
 
 		<h1>Funcionario</h1>
-		<img src="Imagenes/Funcion.png" id="Avatar2" >
+		<img src="Logos/Admin2.png" id="Avatar2" >
 	</header>
 
   
@@ -70,19 +84,6 @@
     </div> 
   </form>
 
-<form action="../../Comentarios/Vista/Vista_Comentarios.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Comentarios</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Comentarios" src="logos/Comentarios.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-  </form>
-
 <form action="../../Denuncias/Vista/Vista_Denuncias.php">
 <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center" id="divciudadano">
@@ -117,19 +118,6 @@
         </div>
         <div class="panel-body"><center>
           <input type="image" name="Adopcion" src="logos/Funcionario.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-  </form>
-
-<form action="../../Mascotas/Vista/Vista_Mascotas.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Mascotas</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Mascotas" src="logos/Mascotas.png" class="img-responsive slideanim" id="logoimagen"></center>
         </div>
       </div>      
     </div>

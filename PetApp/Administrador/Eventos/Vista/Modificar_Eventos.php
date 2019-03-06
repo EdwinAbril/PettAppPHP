@@ -30,9 +30,15 @@
 	while($Eve=mysqli_fetch_row($resultado)){
 	echo "
 
-	<tr>
-	<form action='../Controlador/Controlador_Actualizar_Eventos.php' method='Post'>
-	<input type='hidden' name='usu' value='".$Eve[0]."'>   
+	<form action='../Controlador/Controlador_Actualizar_Eventos.php' method='Post' enctype='multipart/form-data'>
+    <div id='centro'>   
+    <p>Foto</p><label class='botonModi'>
+    <img src='../../../Uploads/Eventos_fotos/".$Eve[5]."' style='width:150px;height:150px;border-radius: 150px;' id='fotomod'>
+    <input type='file' class='file' name='fo' accept='image/jpeg,image/png'>
+    <img src='../Vista/Imagenes/Icono.png' width='40' heigth='40'></label>
+    </div>
+    <input type='hidden' name='usu' value='".$Eve[0]."'>   
+    <input type='hidden' name='fotosi' value='".$Eve[5]."'>   
     <p>Fecha</p><input type='date' name='fec'  value='".$Eve[1]."'><BR></BR>
     <p>Lugar</p><input type='text' name='lug'  value='".$Eve[2]."'><BR></BR>
     <p>Hora</p><input type='time' name='dur'  value='".$Eve[3]."'><BR></BR>

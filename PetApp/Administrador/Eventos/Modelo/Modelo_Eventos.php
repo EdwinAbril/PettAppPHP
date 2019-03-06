@@ -12,6 +12,14 @@ class MetodoEventos{
 	return $consulta;
 	}
 
+	public function MostrarEventosL(){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from jornada order by fecha desc limit 5";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
 	public function Mostrar_1_Evento($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
@@ -20,17 +28,18 @@ class MetodoEventos{
 	return $consulta;
 	}
 
-	public function ModificarEventos($codigo,$fecha,$lugar,$duracion,$descripcion){
+	public function ModificarEventos($codigo,$fecha,$lugar,$duracion,$descripcion,$foto){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call FunModificar_Eventos(?,?,?,?,?)";
+	$sql="call FunModificar_Eventos(?,?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('issss',$codigo_p,$fecha_p,$lugar_p,$duracion_p,$descripcion_p);
+	$consulta->bind_param('isssss',$codigo_p,$fecha_p,$lugar_p,$duracion_p,$descripcion_p,$foto_p);
 	$codigo_p=$codigo;
 	$fecha_p=$fecha;
 	$lugar_p=$lugar;
 	$duracion_p=$duracion;
 	$descripcion_p=$descripcion;
+	$foto_p=$foto;
 	$consulta->execute();
 	$mensa="Evento Modificado";
 	return $mensa;
@@ -44,25 +53,19 @@ class MetodoEventos{
 	return $consulta;
 	}
 
-		public function  InsertarEvento($fec,$lug,$dur,$des){
+		public function  InsertarEvento($fec,$lug,$dur,$des,$fot){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
-		$result=$this->Mostrar_1_evento_1($fec);
-		if ($result->num_rows>0) {
-			$mensa="El Evento ya ha sido registrado";
-		
-		}
-		else{
-			$sql="call FunInsertar_Eventos(?,?,?,?)";
+			$sql="call FunInsertar_Eventos(?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('ssss',$fec_p,$lug_p,$dur_p,$des_p);
+			$consulta->bind_param('sssss',$fec_p,$lug_p,$dur_p,$des_p,$fot_p);
 			$fec_p=$fec;
 			$lug_p=$lug;
 			$dur_p=$dur;
 			$des_p=$des;
+			$fot_p=$fot;
 			$consulta->execute();
 			$mensa="Evento insertado correctamente";
-		}
 		return $mensa;
 
 	}

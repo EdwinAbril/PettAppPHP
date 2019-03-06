@@ -3,6 +3,34 @@
 require_once ("../../../Conexion.php");
 
 class MetodoDenuncias{
+		
+	public function Mostrar_1_positivo($pos){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$sql="select * from respuestausuario where codigo_positivo='$pos'";
+		$consulta=mysqli_query($conexion,$sql);
+		return $consulta;
+	}
+	public function InsertarPositivo($icon,$cep,$men,$enc){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_positivo($cep);
+		if($result->num_rows>0){
+			$mensa="No es posible enviar la respuesta";
+		}
+		else{
+			$sql="call inser_respuesta_positiva(?,?,?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('ssss',$icon_p,$ce_p,$men_p,$enc_p);
+			$icon_p=$icon;
+			$ce_p=$cep;
+			$men_p=$men;
+			$enc_p=$enc;
+			$consulta->execute();
+			$mensa="Respuesta enviada";
+		}
+		return $mensa;
+	}
 	
 	public function MostrarDenuncias(){
 	$conectar= new conectarproyecto();

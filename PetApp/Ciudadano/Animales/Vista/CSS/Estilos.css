@@ -10,6 +10,24 @@
 #ubi{
     margin-top: -50px;
 }
+
+#centro1{
+    background-color: transparent;
+    padding: 0 1rem;
+    margin: 1rem;
+}
+
+.caja0{
+    margin-top: -12px;
+    margin-bottom: : 5px;
+    text-align: center;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    position: relative;
+}
+
 #centro{
     background-color: transparent;
     padding: 0 1rem;

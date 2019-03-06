@@ -5,7 +5,16 @@
 	<title>PetApp</title>
 	
     <link rel="stylesheet" href="css/EstiloRegistro.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+	<link href="../../Bst/4.3.1/CSS/bootstrap.css" rel="stylesheet">
+	<link href="../../Bst/4.3.1/CSS/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Bst/4.3.1/CSS/style.css" rel="stylesheet">
+	<script src="../../Bst/4.3.1/js/jquery.min.js"></script>
+	<script src="../../Bst/4.3.1/js/bootstrap.min.js"></script>
+	<script src="../../Bst/4.3.1/js/scripts.js"></script>
+	<script src="../Vista/JS/main.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+    
 </head>
 
 <body background="Imagenes/Registro2.jpg">

@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <title>PetApp</title>
+
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="Estilo.css">
-	<title>PetApp</title>
-  <script type="text/javascript">history.forward();</script>
+
+    <link href="../../../Bst/3.3.7/CSS/bootstrap.css" rel="stylesheet">
+    <link href="../../../Bst/3.3.7/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../Bst/3.3.7/CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Estilo.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="../../../Bst/3.3.7/js/jquery-3.3.1.min.js"></script>
+    <script src="../../../Bst/3.3.7/js/jquery.min.js"></script>
+    <script src="../../../Bst/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../../Bst/3.3.7/js/scripts.js"></script>
+    <script src="../Vista/JS/main.js"></script>
+    <script type="text/javascript">history.forward();</script>
+
 </head>
+
 <body>
 	<?php
   session_start();
@@ -100,18 +114,6 @@
     </div> 
   </form>
 
-<form action="../../Comentarios/Vista/Vista_Comentarios.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Comentarios</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Comentarios" src="logos/Comentarios.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-  </form>
 
 <form action="../../Denuncias/Vista/Vista_Denuncias.php">
 <div class="col-sm-4 col-xs-12">
@@ -152,44 +154,6 @@
     </div>
   </form>
 
-<form action="../../Mascotas/Vista/Vista_Mascotas.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Mascotas</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Mascotas" src="logos/Mascotas.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-  </form>
-
-<form action="../../Postulacion/Vista/Vista_Postulacion.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Postulacion</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Eventos" src="logos/Postulacion.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-    </form>  
-
-<form action="../../Seguimiento/Vista/Vista_Seguimiento.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano"> 
-        <div class="panel-heading" id="verde">
-          <h1>Seguimiento</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Eventos" src="logos/Seguimiento.png" class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div> 
-  </form>
 
 <form action="../../USUARIOS/USUARIOS.php">
 <div class="col-sm-4 col-xs-12">

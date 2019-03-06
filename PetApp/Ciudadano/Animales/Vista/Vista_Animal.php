@@ -3,15 +3,17 @@
 <head>
 	<title>Animal</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="CSS/Estilos.css">
+	<link rel="stylesheet" href="../Vista/CSS/Estilos.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="JS/jquery-3.3.1.min.js"></script>
-    <script src="JS/main.js"></script>
+  	<link href="../../../Bst/4.3.1/CSS/bootstrap.css" rel="stylesheet">
+    <link href="../../../Bst/4.3.1/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../Bst/4.3.1/CSS/style.css" rel="stylesheet">
+    <script src="../../../Bst/4.3.1/js/jquery-3.3.1.min.js"></script>
+    <script src="../../../Bst/4.3.1/js/jquery.min.js"></script>
+    <script src="../../../Bst/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../../../Bst/4.3.1/js/scripts.js"></script>
+    <script src="../Vista/JS/jquery-3.3.1.min.js"></script>
+    <script src="../Vista/JS/main.js"></script>
 
 </head>
 <body>
@@ -61,6 +63,7 @@
       </div>
 
 
+
     <div id="top">
 	  <form action="../../Menu/Vista/Ciudadano.php">
     <input type="submit" name="volver" value="Menu" class="btn btn-outline-dark" id="voler">
@@ -70,14 +73,124 @@
 
     <?php
     
-	require_once("../Controlador/Controlador_Consultar.php");
-	while($Ani=mysqli_fetch_row($resultado)){
-		?>
-		<div id="centro">
-        <div class="caja1">
-		<?php
-		echo "
-		<table class='table'>
+    require_once("../Controlador/Controlador_Consultar.php");
+    ?>    
+
+    <div id="centro">
+    <div class="caja0">
+    <form action="" method="POST">
+    <input type="text" name="xraza" class="form-control" placeholder="Busqueda Por Raza"></BR>
+    <select name="xgenero" class="form-control">
+      <option value="">Genero</option>
+      <option value="Macho">Macho</option>
+      <option value="Hembra">Hembra</option>
+    </select></BR>
+    <select name="xtamano" class="form-control">
+      <option value="">Tamaño</option>
+      <option value="Grande">Grande</option>
+      <option value="Mediano">Mediano</option>
+      <option value="Pequeno">Pequeño</option>
+    </select></BR>
+    <select name="xtipo"class="form-control">
+      <option value="">Tipo</option>
+      <option value="Perro">Perro</option>
+      <option value="Gato">Gato</option>
+    </select></BR>
+    <input type="submit" name="buscar" class="btn btn-info" value="Buscar">
+    </form>
+    </div>
+    </div></BR>
+    
+    <?php
+    
+    require_once("../Modelo/Modelo_Animal.php");
+    $mostrar= new MetodoAnimal();
+    
+
+    if (isset($_POST['buscar'])){
+
+      $where="";
+      $raza=$_POST['xraza'];
+      $genero=$_POST['xgenero'];
+      $tamano=$_POST['xtamano'];
+      $tipo=$_POST['xtipo'];
+      if ((empty($_POST['xraza']))&&(empty($_POST['xtamano']))&&(empty($_POST['xgenero']))&&(empty($_POST['xtipo']))){
+        $where="";
+      }
+      else if ((empty($_POST['xraza']))&&(empty($_POST['xgenero']))&&(empty($_POST['xtipo']))){
+        $where="where tamano='".$tamano."'"; 
+      }
+      else if ((empty($_POST['xraza']))&&(empty($_POST['xtamano']))&&(empty($_POST['xtipo']))){
+        $where="where genero='".$genero."'";
+      }
+      else if ((empty($_POST['xgenero']))&&(empty($_POST['xtamano']))&&(empty($_POST['xtipo']))){
+        $where="where raza_animal='".$raza."'";
+      }
+      else if ((empty($_POST['xgenero']))&&(empty($_POST['xtamano']))&&(empty($_POST['xraza']))){
+        $where="where tipo_animal='".$tipo."'";
+      }
+      else if (empty($_POST['xraza'])&&(empty($_POST['xtipo']))){
+        $where="where tamano='".$tamano."' and genero='".$genero."'";
+      }
+      else if (empty($_POST['xtamano'])&&(empty($_POST['xtipo']))){
+        $where="where raza_animal ='".$raza."' and genero='".$genero."'";
+      }
+      else if (empty($_POST['xgenero'])&&(empty($_POST['xtipo']))){
+        $where="where raza_animal ='".$raza."' and tamano='".$tamano."'";
+      }
+      else if (empty($_POST['xraza'])&&(empty($_POST['xtipo']))){
+        $where="where genero ='".$genero."' and tamano='".$tamano."'";
+      }
+      else if (empty($_POST['xgenero'])&&(empty($_POST['xraza']))){
+        $where="where tipo_animal ='".$tipo."' and tamano='".$tamano."'";
+      }
+      else if (empty($_POST['xgenero'])&&(empty($_POST['xtamano']))){
+        $where="where tipo_animal ='".$tipo."' and raza_animal='".$raza."'";
+      }
+      else if (empty($_POST['xgenero'])&&(empty($_POST['xraza']))){
+        $where="where tipo_animal ='".$tipo."' and tamano='".$tamano."'";
+      }
+      else if (empty($_POST['tamano'])&&(empty($_POST['xraza']))){
+        $where="where tipo_animal ='".$tipo."' and genero='".$genero."'";
+      }
+      else if (empty($_POST['xtipo'])){
+        $where="where tamano ='".$tamano."' and raza_animal='".$raza."' and genero ='".$genero."'";
+      }
+      else if (empty($_POST['xtamano'])){
+        $where="where tipo_animal ='".$tipo."' and raza_animal='".$raza."' and genero ='".$genero."'";
+      }
+      else if (empty($_POST['xtipo'])){
+        $where="where tamano ='".$tamano."' and raza_animal='".$raza."' and genero ='".$genero."'";
+      }
+      else if (empty($_POST['xraza'])){
+        $where="where tamano ='".$tamano."' and tipo_animal='".$tipo."' and genero ='".$genero."'";
+      }
+      else if (empty($_POST['xgenero'])){
+        $where="where tamano ='".$tamano."' and tipo_animal='".$tipo."' and raza_animal ='".$raza."'";
+      }
+      else{
+        $where="where raza_animal ='".$raza."' and tamano='".$tamano."' and genero='".$genero."' and tipo_animal='".$tipo."'";
+      }
+
+    }
+    else{
+      $where="";
+    }
+
+    $resultado=$mostrar->MostrarAnimal($where);
+
+    ?>
+
+    
+    <?php
+    while($Ani=mysqli_fetch_row($resultado)){
+    ?>
+   
+    <div id="centro">
+    <?php
+    echo "
+    <div class='caja1'>
+    <table class='table'>
             <tr>
             <thead class='thead-dark'>
             <th>".$Ani[1]."</th>
@@ -129,9 +242,9 @@
         <?php
         echo "
                  <form method='POST' action='../Controlador/Controlador_Enlace.php'>
-                            <input type='text' name='codi' value='".$Ani[0]."'>
+                            <input type='hidden' name='codi' value='".$Ani[0]."'>
                             <input type='hidden' name='usu' value='".$usuar."'>
-                  <input type='submit' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png' class='img-responsive slideanim' id='logoadopta'  >
+                  <input type='submit' name='readop' heigth='100px' width='100px' src='Imagenes/adoptame.png'  id='logoadopta' value='Adoptar' class='btn btn-info' >
                   <h1>Adoptame</h1>
                 
                 

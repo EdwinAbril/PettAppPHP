@@ -5,7 +5,12 @@
         <meta charset="utf-8">
     <link rel="stylesheet" href="Estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link href="../../Bst/4.1.3/CSS/bootstrap.css" rel="stylesheet">
+    <link href="../../Bst/4.1.3/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Bst/4.1.3/CSS/style.css" rel="stylesheet">
+ <script src="../../Bst/3.3.7/js/jquery.min.js"></script>
+    <script src="../../Bst/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../Bst/3.3.7/js/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -21,7 +26,11 @@
 	<h1>Insertar Denuncia</h1>
     <form action="../Controlador/Controlador_Insertar.php"" method="Post"  enctype="multipart/form-data">
  	    <label>Fecha De la Denuncia</label><input type="date" name="fecha" required="" class="form-control">
-    	<label>Tipo de Denuncia</label><input type="text" name="tipo" required="" class="form-control">
+    	<label>Tipo </label><select  name="tipo" required="" class="form-control">
+            <option>Tipo de Denuncia</option>
+            <option>Maltrato</option>
+            <option>Abandono</option>
+        </select>
     	<label>Cedula del Denunciante</label><input type="number" name="cedula" required="" class="form-control">
     	<label>Denuncia</label><input type="text" name="denuncia" required="" class="form-control">
     	<div id="foto">
@@ -38,7 +47,7 @@
 if(isset($_POST['consulta']))
 {
 	echo "<script type='text/javascript'>;
-	swal('".$resulta."', '', 'success');
+	swal('".$resulta."');
 	</script>";
 }
 

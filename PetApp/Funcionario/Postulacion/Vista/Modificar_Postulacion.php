@@ -2,13 +2,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link href="../../../Bst/4.3.1/CSS/bootstrap.css" rel="stylesheet">
+    <link href="../../../Bst/4.3.1/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../Bst/4.3.1/CSS/style.css" rel="stylesheet">
+    <script src="../../../Bst/4.3.1/js/jquery-3.3.1.min.js"></script>
+    <script src="../../../Bst/4.3.1/js/jquery.min.js"></script>
+    <script src="../../../Bst/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../../../Bst/4.3.1/js/scripts.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="Estilomod.css">
         <title>Postulacion</title>
     </head>
-    <body>
+    <body id="fondox">
 
         <form action="../Vista/Vista_Postulacion.php">
-        <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
+        <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
         </form>
+          <div id="padre">
+        <div id="modificar" class="form-group">
 
     	<?php
 
@@ -32,7 +43,7 @@
     <p>Telefono Fijo</p><input type='text' name='fij'  value='".$Pos[3]."'><BR></BR>
     <p>Certificado Laboral</p><input type='file' name='cer'  value='".$Pos[4]."'><BR></BR>
     <p>Cedula</p><input type='text' name='ced'  value='".$Pos[5]."'><BR></BR>
-    <input type='submit' name='botonfunci' value='Modificar'>
+    <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
     </form>";
 	}
 	
@@ -44,6 +55,7 @@
 	}
 
 	?>
-        
+    </div>
+        </div>
     </body>
 </html>
