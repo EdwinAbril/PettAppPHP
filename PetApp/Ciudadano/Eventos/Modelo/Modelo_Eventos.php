@@ -12,6 +12,14 @@ class MetodoEventos{
 	return $consulta;
 	}
 
+	public function MostrarEventosL(){
+	$conectar= new conectarproyecto();
+	$conexion= $conectar->conexion();
+	$sql="select * from jornada order by fecha desc limit 3";
+	$consulta=mysqli_query($conexion,$sql);
+	return $consulta;
+	}
+
 	public function Mostrar_1_Evento($usu){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();

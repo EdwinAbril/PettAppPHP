@@ -5,16 +5,15 @@
 	<title>PetApp</title>
 	
     <link rel="stylesheet" href="css/EstiloRegistro.css">
-	<link href="../../Bst/3.3.7/CSS/bootstrap.css" rel="stylesheet">
-    <link href="../../Bst/3.3.7/CSS/bootstrap.min.css" rel="stylesheet">
-    <link href="../../Bst/3.3.7/CSS/style.css" rel="stylesheet">
-
+	<link href="../../Bst/4.3.1/CSS/bootstrap.css" rel="stylesheet">
+	<link href="../../Bst/4.3.1/CSS/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Bst/4.3.1/CSS/style.css" rel="stylesheet">
+	<script src="../../Bst/4.3.1/js/jquery.min.js"></script>
+	<script src="../../Bst/4.3.1/js/bootstrap.min.js"></script>
+	<script src="../../Bst/4.3.1/js/scripts.js"></script>
+	<script src="../Vista/JS/main.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="../../Bst/3.3.7/js/jquery-3.3.1.min.js"></script>
-    <script src="../../Bst/3.3.7/js/jquery.min.js"></script>
-    <script src="../../Bst/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../../Bst/3.3.7/js/scripts.js"></script>
-    <script src="../Vista/JS/main.js"></script>
     
 </head>
 
