@@ -1,4 +1,17 @@
-
+#myFooter{
+    background: #1e7000;
+    background: -moz-linear-gradient(left, #1e7000 0%, #6ab029 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #1e7000), color-stop(100%, #6ab029));
+    background: -webkit-linear-gradient(left, #1e7000 0%, #6ab029 100%);
+    background: -o-linear-gradient(left, #1e7000 0%, #6ab029 100%);
+    background: -ms-linear-gradient(left, #1e7000 0%, #6ab029 100%);
+    background: linear-gradient(to right, #1e7000 0%, #6ab029 100%);
+    
+}
+#alt{
+    height: 400px;
+    background: white;
+}
 #imgcir{
     border-radius: 200px 200px 200px 200px;
     -moz-border-radius: 200px 200px 200px 200px;
@@ -208,7 +221,7 @@ h1{
     width: 100%;
 }
 
-#imagen{
+.imagen{
     
 	position: relative;
     
@@ -268,7 +281,7 @@ h1{
 	margin-left: 45px;
 }
 
-#caja2{
+.caja2{
     background-color: white; 
     width: auto;
     height:300px;
@@ -277,7 +290,7 @@ h1{
 }
 
 #imagenadopcion{
-	width: 420px;
+	width: 350px;
 }
 
 #Veterinaria{
