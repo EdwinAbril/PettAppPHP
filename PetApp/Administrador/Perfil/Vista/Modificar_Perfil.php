@@ -14,7 +14,7 @@
     
 <body id="fondox">
 
-<form action="../Vista/Vista_Administrador.php">
+<form action="../Vista/Vista_Perfil.php">
 <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
 </form>
 
@@ -27,10 +27,10 @@
     <p>Usuario</p><?php echo $cod?>
 
     <?php
-    require_once("../Controlador/Controlador_Modificar_Administrador.php");
+    require_once("../Controlador/Controlador_Modificar_Perfil.php");
     while($Adm=mysqli_fetch_row($resultado)){
     echo "
-        <form action='../Controlador/Controlador_Actualizar_Administrador.php' method='Post' enctype='multipart/form-data'>
+        <form action='../Controlador/Controlador_Actualizar_Perfil.php' method='Post' enctype='multipart/form-data'>
             <div id='centro'>   
                 <p>Foto</p>
                 <label class='botonModi'>
