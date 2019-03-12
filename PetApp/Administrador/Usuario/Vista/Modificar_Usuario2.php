@@ -12,7 +12,7 @@
     <title>Usuario Ciudadano</title>
 </head>
 <body id="fondox">
-    <form action="../../Ciudadano/Vista/Vista_Ciudadano.php">
+    <form action="../../Funcionario/Vista/Vista_Funcionario.php">
         <input type="submit" name="volver" value="Volver" class="btn btn-outline-light" id="vol">
     </form>
     <div id="padre">
@@ -23,10 +23,10 @@
             <h1>Usuario Ciudadano</h1>
             <p>Usuario</p><p><?php echo $cod?></p>
             <?php
-            require_once("../Controlador/Controlador_Modificar_Usuario.php");
+            require_once("../Controlador/Controlador_Modificar_Usuario2.php");
             while($Usu=mysqli_fetch_row($resultado)){
                 echo "
-                    <form action='../Controlador/Controlador_Actualizar_Usuario.php' method='Post' enctype='multipart/form-data'>
+                    <form action='../Controlador/Controlador_Actualizar_Usuario2.php' method='Post' enctype='multipart/form-data'>
                         <div id='centro'>   
                             <p>Foto</p><label class='botonModi'>
                             <img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' style='width:150px;height:150px;border-radius: 150px;' id='fotomod'>
