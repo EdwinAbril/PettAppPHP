@@ -83,7 +83,7 @@ class MetodoSeguimiento{
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}
-	public function  InsertarAdopciones($coda,$ced,$men){
+	public function  InsertarAdopciones($ico,$coda,$ced,$men,$enc){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_adopcion($coda);
@@ -92,12 +92,14 @@ class MetodoSeguimiento{
 		
 		}
 		else{
-			$sql="call VetInsertar_Adopcion(?,?,?)";
+			$sql="call VetInsertar_Adopcion(?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('iss',$coda_p,$ced_p,$men_p);
+			$consulta->bind_param('sisss',$ico_p,$coda_p,$ced_p,$men_p,$enc_p);
+			$ico_p=$ico;
 			$coda_p=$coda;
 			$ced_p=$ced;
 			$men_p=$men;
+			$enc_p=$enc;
 			$consulta->execute();
 			$mensa="Proceso Finalizado correctamente";
 		}

@@ -78,18 +78,6 @@
                 <img src='../../../Administrador/Evidencias_Denuncias/".$Com[5]."' width='300px' heigth='300px'>
               </th>
             </tr>
-            <tr>					
-              <form method='POST' action='Vista_Respuesta.php'>
-                <input type='hidden' name='ceduladenun' value='".$Com[3]."'>
-                <th><input type='submit' name='aceptarden' class='btn btn-primary' value='Responder'></th>
-              </form> 
-              <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
-                <input type='hidden' name='cedurech' value='".$Com[3]."'>
-                <input type='hidden' name='codi' value='".$Com[0]."'>
-                <input type='hidden' name='mensajerech' value='Su denuncia no fue aceptada podra comunicarse por medio de la informacion de contacto en el menu principal'>
-                <th><input type='submit' name='rechazarden' class='btn btn-danger'value='Rechazar'></th>
-              </form>
-            </tr>
           </table>
         </div>
         <div class='opciones'>
