@@ -82,15 +82,9 @@
               <th>".$Ado[5]."</th>
             </tr>
             <tr>
-              <form method='POST' action='Modificar_Adopciones.php'>
-                <input type='hidden' name='usu' value='".$Ado[1]."'>
-                <th>
-                  <input type='submit' name='modificar' value='Modificar' class='btn btn-info'>
-                </th>
-              </form>
               <form method='POST' action='../Controlador/Controlador_Eliminar.php'>
                 <input type='hidden' name='coda' value='".$Ado[1]."'>
-                <th>
+                <th colspan='2'>
                   <input type='submit' name='eliminar' value='Eliminar' class='btn btn-danger'>
                 </th>
               </form>

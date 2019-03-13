@@ -91,13 +91,9 @@
         <div class='iconos'>
           <table class='table'>
             <tr>
-              <form method='POST' action='Modificar_Denuncias.php'>
-                <input type='hidden' name='usu' value='".$Com[0]."'>
-                <th><input type='image' src='Imagenes/editar.png' name='modificar' value='Modificar' class='btn btn-link' height='60' width='60'></th>
-              </form>
               <form method='POST' action='../Controlador/Controlador_Rechazar.php'>
                 <input type='hidden' name='codi' value='".$Com[0]."'>
-                <th><input type='image' src='Imagenes/borrar.png' name='eliminar' value='Eliminar' class='btn btn-link' height='60' width='60'></th>
+                <th colspan='2'><input type='image' src='Imagenes/borrar.png' name='eliminar' value='Eliminar' class='btn btn-link' height='60' width='60'></th>
               </form>
             </tr>
           </table>

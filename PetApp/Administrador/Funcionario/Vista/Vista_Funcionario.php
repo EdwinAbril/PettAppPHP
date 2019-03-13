@@ -73,6 +73,10 @@ while($Fun=mysqli_fetch_row($resultado)){
                     <th>".$Fun[3]."</th>
                 </tr>
                 <tr>
+                    <th colspan='2'>Dependencia</th>
+                    <th>".$Fun[5]."</th>
+                </tr>
+                <tr>
                     <th>
                         <form method='POST' action='Modificar_Funcionario.php'>
                             <input type='hidden' name='cod' value='".$Fun[0]."'>
