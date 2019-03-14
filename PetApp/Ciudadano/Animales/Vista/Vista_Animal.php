@@ -69,6 +69,7 @@
     <input type="submit" name="volver" value="Menu" class="btn btn-outline-dark" id="voler">
     </form>
     <div id="ubi">
+      <br>
     <h1 class="display-4">Animal</h1>
 
     <?php
@@ -79,7 +80,6 @@
     <div id="centro">
     <div class="caja0">
     <form action="" method="POST">
-    <input type="text" name="xraza" class="form-control" placeholder="Busqueda Por Raza"></BR>
     <select name="xgenero" class="form-control">
       <option value="">Genero</option>
       <option value="Macho">Macho</option>
