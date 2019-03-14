@@ -30,6 +30,7 @@
                         <p><label>Telefono</label><input type='text' name='telefono' value='".$Fun[1]."' class='form-control'></p>
                         <p><label>Nombre</label><input type='text' name='nombre'  value='".$Fun[2]."' class='form-control'></p>
                         <p><label>Correo</label><input type='text' name='correo'  value='".$Fun[3]."' class='form-control'></p>
+                        <p><label>Dependencia</label><input type='text' name='dependencia' value='".$Fun[5]."' class='form-control'></p>
                         <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
                     </form>
                 ";

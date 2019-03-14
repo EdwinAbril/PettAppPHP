@@ -20,12 +20,15 @@ require_once("../Controlador/Controlador_Veterinaria.php");
     </form>
     <div id="insertar">
         <h1>Insertar Veterinaria</h1>
-        <form action="../Controlador/Controlador_Veterinaria.php" method="Post">
+        <form action="../Controlador/Controlador_Veterinaria.php" method="Post" enctype="multipart/form-data">
             <p><label>Nit </label><input type="text" name="nit" required="" class="form-control"></p>
             <p><label>Telefono</label><input type="number" name="telefono" required="" class="form-control"></p>
             <p><label>Nombre</label><input type="text" name="nombre" required="" class="form-control"></p>
             <p><label>Direccion</label><input type="text" name="direccion" required="" class="form-control"></p>
-            <p><label>Clave</label><input type="password" name="clave" required="" class="form-control"></p>
+            <div id="padre">
+                <p><label>Foto</label></p>
+                <input type="file" name="fot" accept="image/png,image/jpeg,image/jpg" id="quitar">
+            </div>
             <input type="submit" name="consulta" value="Insertar Nueva Veterinaria" class="btn btn-primary">
         </form>
     </div>

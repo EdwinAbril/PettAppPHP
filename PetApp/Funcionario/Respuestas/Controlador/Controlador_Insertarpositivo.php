@@ -2,7 +2,7 @@
 <?php
 if (isset($_POST['aceptar2'])){
 	$result=Insertar();
-	header('Location:../../Adopciones/Vista/Vista_Adopciones.php');	
+	header('Location:../../Menu/Vista/Funcionario.php');	
 }
 
 function Insertar(){

@@ -10,7 +10,6 @@ float: right;
 }
 #nuevo{
 	float: left;
-	margin-top: 50px;	
 	margin-left: 5px;
 }
 #bot{
@@ -22,7 +21,6 @@ float: right;
   	margin: 1rem;
 }
 #insertar{
-	margin-top: 8%;
 	width: 300px;
 	margin-left: auto;
   	margin-right: auto;
@@ -53,7 +51,7 @@ float: right;
     border: 1px solid green;
     max-width: 80%;
 } 
-}
+
 #vol{
 	position: absolute;
 	top: 5px;

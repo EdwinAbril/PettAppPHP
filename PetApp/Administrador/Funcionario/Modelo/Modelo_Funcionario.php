@@ -27,7 +27,7 @@ class MetodoFuncionario{
 			$mensa="El funcionario ya ha sido registrado";
 		}
 		else{
-			$sql="call inser_usu_func(?,?,?,?)";
+			$sql="call inser_admin_Admin(?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
 			$consulta->bind_param('ssis',$us_p,$con_p,$rol_p,$fot);
 			$us_p=$us;
@@ -40,16 +40,17 @@ class MetodoFuncionario{
 		return $mensa;
 	}
 
-	public function ModificarFuncionario($cedula,$telefono,$nombre,$correo){
+	public function ModificarFuncionario($cedula,$telefono,$nombre,$correo,$dependencia){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="call Modificar_Funcionario(?,?,?,?)";
+	$sql="call Modificar_Funcionario(?,?,?,?,?)";
 	$consulta=$conexion->prepare($sql);
-	$consulta->bind_param('ssss',$cedula_p,$telefono_p,$nombre_p,$correo_p);
+	$consulta->bind_param('sssss',$cedula_p,$telefono_p,$nombre_p,$correo_p,$dependencia_p);
 	$cedula_p=$cedula;
 	$telefono_p=$telefono;
 	$nombre_p=$nombre;
 	$correo_p=$correo;
+	$dependencia_p=$dependencia;
 	$consulta->execute();
 	$mensa="Funcionario Modificado";
 	return $mensa;

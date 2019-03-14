@@ -21,11 +21,11 @@
 
 <div name="tabla">
 	<form action="../../Menu/Vista/Funcionario.php">
-    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="voler">
+    <input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
     </form>
 
     <form action="Vista_insertar.php">
-        <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="inser">
+        <input type="submit" name="nuevo" value="Insertar" class="btn btn-outline-dark" id="nuevo">
     </form>
 
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">

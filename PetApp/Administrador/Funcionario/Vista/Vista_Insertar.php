@@ -26,12 +26,10 @@ require_once("../Controlador/Controlador_Insertar.php");
                 <p><label>Foto</label></p>
                 <input type="file" name="fo" accept="image/png,image/jpeg,image/jpg" id="quitar">
             </div>
-            <p><label>Contraseña</label><input type="text" name="con" required="" class="form-control"></p>
             <p><label>Cedula </label><input type="number" name="cedula" required="" class="form-control"></p>
             <p><label>Telefono</label><input type="number" name="telefono" required="" class="form-control"></p>
             <p><label>Nombre</label><input type="text" name="nombre" required="" class="form-control"></p>
             <p><label>Correo</label><input type="mail" name="correo" required="" class="form-control"></p>
-            <p><label>Cargo</label><input type="text" name="cargo" required="" class="form-control"></p>
             <p><label>Dependencia</label><input type="text" name="depen" required="" class="form-control"></p>
             <input type="submit" name="consulta" value="Insertar Nuevo Usuario" class="btn btn-primary">
         </form>
