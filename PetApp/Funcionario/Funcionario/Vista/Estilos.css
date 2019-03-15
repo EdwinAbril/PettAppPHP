@@ -22,7 +22,6 @@ float: right;
   	margin: 1rem;
 }
 #insertar{
-	margin-top: 8%;
 	width: 300px;
 	margin-left: auto;
   	margin-right: auto;
@@ -35,7 +34,7 @@ float: right;
 }
 #quitar{
 	color:transparent;
-	width: 150px;
+	width: 100px;
 	height: 30px;
 }
 
@@ -52,10 +51,11 @@ float: right;
     border-radius: 20px 20px 20px 20px;
     border: 1px solid green;
     max-width: 80%;
-} 
+ 
 }
 #vol{
 	position: absolute;
 	top: 5px;
 	left: 5px;
+}
 }

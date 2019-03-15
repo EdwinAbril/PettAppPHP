@@ -31,7 +31,7 @@
 	    		<label>Direccion</label><input type="text" name="direccion" class="form-control">
 	    		<label>Correo Electronico</label><input type="email" name="correo" class="form-control">
    		        <label>Foto de Perfil</label><div id="padre">
-   		        <input type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" id="quitar"></div>
+   		        <input type="file" name="imagen" id="quitar" accept="image/png,image/jpeg,image/jpg" class="form-control-file" ></div>
 
 		    		<div class="form-group" id="bot">
 			    		<input type="submit" name="consulta" value="Insertar Nuevo Ciudadano"  class="btn btn-primary">

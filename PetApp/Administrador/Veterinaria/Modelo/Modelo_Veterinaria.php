@@ -34,7 +34,28 @@ class MetodoVeterinaria{
 	return $consulta;
 	}
 
-	public function  Insertarveterinaria($ni,$t,$nom,$d,$cl){
+	public function InsertarDatos($us,$con,$fot){
+		$conectar=new conectarproyecto();
+		$conexion=$conectar->conexion();
+		$result=$this->Mostrar_1_Veterinaria($us);
+		if ($result->num_rows>0) {
+			$mensa="La Veterinaria ya ha sido registrada";
+		}
+		else{
+			$sql="call inser_admin_Admin(?,?,?,?)";
+			$consulta=$conexion->prepare($sql);
+			$consulta->bind_param('ssis',$us_p,$con_p,$rol_p,$fot);
+			$us_p=$us;
+			$con_p=$con;
+			$rol_p=2;
+			$fot_p=$fot;
+			$consulta->execute();
+			$mensa="Funcionario Ingresado Correctamente";
+		}
+		return $mensa;
+	}
+
+	public function  Insertarveterinaria($ni,$t,$nom,$d){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		$result=$this->Mostrar_1_Veterinaria($ni);
@@ -43,15 +64,13 @@ class MetodoVeterinaria{
 		
 		}
 		else{
-			$sql="call inser_veter_Admin(?,?,?,?,?,?)";
+			$sql="call inser_veter_Admin(?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('sssssi',$n_p,$t_p,$no_p,$d_p,$cl_p,$r_p);
+			$consulta->bind_param('ssss',$n_p,$t_p,$no_p,$d_p);
 			$n_p=$ni;
 			$t_p=$t;
 			$no_p=$nom;
 			$d_p=$d;
-			$cl_p=$cl;
-			$r_p=3;
 			$consulta->execute();
 			$mensa="Veterinaria insertada correctamente";
 		}

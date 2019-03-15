@@ -81,19 +81,18 @@ class MetodoPostulacion{
 		return $mensa;
 
 	}
-	public function Insertarseguimiento($cp,$tel,$dir,$fij,$cl,$fot,$est,$cre,$ubi,$tvi,$pun,$rep,$ce,$ca){
+	public function Insertarseguimiento($cp,$tel,$dir,$fij,$fot,$est,$cre,$ubi,$tvi,$pun,$rep,$ce,$ca){
 		$conectar=new conectarproyecto();
 		$conexion=$conectar->conexion();
 		
-			$sql="call FunInsertar_Seguimiento(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			$sql="call FunInsertar_Seguimiento(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			$consulta=$conexion->prepare($sql);
-			$consulta->bind_param('isssssiississi',$cp_p,$tel_p,$dir_p,$fij_p,$cl_p,$fot_p,$est_p,$cre_p,$ubi_p,$tvi_p,$pun_p,$rep_p,$ce_p,$ca_p);
+			$consulta->bind_param('issssiississi',$cp_p,$tel_p,$dir_p,$fij_p,$cl_p,$fot_p,$est_p,$cre_p,$ubi_p,$tvi_p,$pun_p,$rep_p,$ce_p,$ca_p);
 
 			$cp_p=$cp;
 			$tel_p=$tel;
 			$dir_p=$dir;
 			$fij_p=$fij;
-			$cl_p=$cl;
 			$fot_p=$fot;
 			$est_p=$est;
 			$cre_p=$cre;

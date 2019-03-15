@@ -6,19 +6,17 @@ if (isset($_POST['consulta'])){
 }
 
 function insertar(){
-	$use=$_POST['user'];
-	$con=$_POST['con'];
 	$ced=$_POST['cedula'];
 	$tel=$_POST['telefono'];
 	$nom=$_POST['nombre'];
 	$cor=$_POST['correo'];
-	$car=$_POST['cargo'];
+	$car="Funcionario";
 	$dep=$_POST['depen'];
 	$nombre=$_FILES['fo']['name'];
 	$tipo=$_FILES['fo']['type'];
 	$tamaño=$_FILES['fo']['size'];
 	if ($nombre!=null && $tamaño<=1000000) {
-        $nombre=$use;
+        $nombre=$ced;
         $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Usuarios_Fotos/';
         move_uploaded_file($_FILES['fo']['tmp_name'],$carpeta_destino.$nombre);
         
@@ -26,7 +24,7 @@ function insertar(){
 
 	require_once("../Modelo/Modelo_Funcionario.php");
 	$mostrar=new MetodoFuncionario();
-	$result=$mostrar->InsertarDatos($use,$con,$nombre);
+	$result=$mostrar->InsertarDatos($ced,$ced,$nombre);
 	$result=$mostrar->InsertarFuncionario($ced,$tel,$nom,$cor,$car,$dep);
 	
 	return $result;

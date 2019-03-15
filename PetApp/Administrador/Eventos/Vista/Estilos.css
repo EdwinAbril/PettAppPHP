@@ -1,7 +1,14 @@
 #fondox{
 	background-image: url("Imagenes/Administrador.jpg")
 }
-
+#fot{
+	width: 100px;
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: transparent;
+    position: relative;
+}
 #vol{
 float: left;	
 }

@@ -32,8 +32,6 @@
     }
     ?>
 
-|
-
 	<form action="../../Menu/Vista/Funcionario.php">
   		<input type="submit" name="volver" value="Volver" class="btn btn-outline-dark" id="vol">
 	</form>

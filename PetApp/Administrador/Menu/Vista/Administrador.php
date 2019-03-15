@@ -9,15 +9,10 @@
 
     <link href="../../../Bst/3.3.7/CSS/bootstrap.css" rel="stylesheet">
     <link href="../../../Bst/3.3.7/CSS/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../Bst/3.3.7/CSS/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="Estilo.css">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <script src="../../../Bst/3.3.7/js/jquery-3.3.1.min.js"></script>
     <script src="../../../Bst/3.3.7/js/jquery.min.js"></script>
     <script src="../../../Bst/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../../../Bst/3.3.7/js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="Estilo.css">
+    <script src="JS/jquery-3.3.1.min.js"></script>
     <script src="../Vista/JS/main.js"></script>
     <script type="text/javascript">history.forward();</script>
 
@@ -61,6 +56,18 @@
     <h2>GESTIONAR</h2>
   </div>
    
+<form action="../../Perfil/Vista/Vista_Perfil.php">
+<div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center" id="divciudadano">
+        <div class="panel-heading" id="verde">
+          <h1>Perfil</h1>
+        </div>
+        <div class="panel-body"><center>
+          <input type="image" name="Veterinaria" src="logos/Usuario.png"  class="img-responsive slideanim" id="logoimagen"></center>
+        </div>
+      </div>      
+    </div>
+  </form>
 
   <form action="../../Administrador/Vista/Vista_Administrador.php">
 <div class="col-sm-4 col-xs-12">
@@ -155,18 +162,7 @@
   </form>
 
 
-<form action="../../USUARIOS/USUARIOS.php">
-<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center" id="divciudadano">
-        <div class="panel-heading" id="verde">
-          <h1>Usuarios</h1>
-        </div>
-        <div class="panel-body"><center>
-          <input type="image" name="Veterinaria" src="logos/Usuario.png"  class="img-responsive slideanim" id="logoimagen"></center>
-        </div>
-      </div>      
-    </div>
-  </form>
+
 
 <form action="../../Veterinaria/Vista/Vista_Veterinaria.php">
 <div class="col-sm-4 col-xs-12">

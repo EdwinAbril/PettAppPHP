@@ -9,7 +9,7 @@
         <script src="../../../Bst/4.3.1/js/jquery.min.js"></script>
         <script src="../../../Bst/4.3.1/js/bootstrap.min.js"></script>
         <script src="../../../Bst/4.3.1/js/scripts.js"></script>
-        <link rel="stylesheet" href="Estilosmod.css">
+        <link rel="stylesheet" href="../Vista/Estilosmod.css">
 
         
         <title>Mascotas</title>
