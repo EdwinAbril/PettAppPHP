@@ -10,7 +10,7 @@
       <script src="../../../Bst/4.3.1/js/jquery.min.js"></script>
       <script src="../../../Bst/4.3.1/js/bootstrap.min.js"></script>
       <script src="../../../Bst/4.3.1/js/scripts.js"></script>
-      <link rel="stylesheet" type="text/css" href="Estilos.css">
+      <link rel="stylesheet" type="text/css" href="Estilo.css">
       <title>PetApp</title>
       <script type="text/javascript">history.forward();
       </script>
@@ -70,7 +70,7 @@
     <h1>Ciudadano</h1>
     <?php
     echo "
-    <img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' class='fotomod' style='width:250px;height:250px;border-radius:200px 200px;'>";}?>
+    <img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' id='Avatar' style='border-radius:200px 200px;'>";}?>
     <h2><?php echo "".$usuar.""?></h2>
     </header>
 
