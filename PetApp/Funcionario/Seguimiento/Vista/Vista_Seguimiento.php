@@ -88,45 +88,41 @@ while($Seg=mysqli_fetch_row($resultado)){
                 <th>Telefono Fijo</th>
                 <th>".$Seg[4]."</th>
                 </tr>
-                  <tr>
-                <th>Certificado Laboral</th>
-                <th><a href='../../../Administrador/Certficados/".$Seg[5]."'>".$Seg[5]."</a></th>
-                </tr>
-                  <tr>
+                <tr>
                 <th>Fotocopia de Cedula</th>
-                <th><a href='../../../Uploads/Cedulapdf/".$Seg[6]."'>".$Seg[6]."</a></th>
+                <th><a href='../../../Uploads/Cedulapdf/".$Seg[5]."'>".$Seg[5]."</a></th>
                 </tr>
                 <tr>
                 <th>Estrato</th>
-                <th>".$Seg[7]."</th>
+                <th>".$Seg[6]."</th>
                 </tr>
                 <tr>
                 <th>Canditad de Residentes</th>
-                <th>".$Seg[8]."</th>
+                <th>".$Seg[7]."</th>
                 </tr>
                 <tr>
                 <th>Ubicacion del Hogar</th>
-                <th>".$Seg[9]."</th>
+                <th>".$Seg[8]."</th>
                 </tr>
                 <tr>
                 <th>Tipo de Vivienda</th>
-                <th>".$Seg[10]."</th>
+                <th>".$Seg[9]."</th>
                 </tr>
                 <tr>
                 <th>Puntaje de Encuesta</th>
-                <th>".$Seg[11]."/20</th>
+                <th>".$Seg[10]."/20</th>
                 </tr>
                 <tr>
                 <th>Recibo Publico</th>
-                <th><a href='../../../Administrador/Recibos/".$Seg[12]."'>".$Seg[12]."</a></th>
+                <th><a href='../../../Administrador/Recibos/".$Seg[11]."'>".$Seg[11]."</a></th>
                 </tr>
                 <tr>
                 <th>Cedula del Postulante</th>
-                <th>".$Seg[13]."</th>
+                <th>".$Seg[12]."</th>
                 </tr>
                 <tr>
                 <th>Codigo del Animal</th>
-                <th>".$Seg[14]."</th>
+                <th>".$Seg[13]."</th>
                 </tr>
                 <tr>
 
@@ -152,8 +148,8 @@ while($Seg=mysqli_fetch_row($resultado)){
   <?php
 echo"
 <form method='POST' action='../../Respuestas/Vista/Vista_RespuestaPositiva.php'>
-<input type='hidden' name='celuda' value='".$Seg[13]."'>
-<input type='hidden' name='aimal' value='".$Seg[14]."'>
+<input type='hidden' name='celuda' value='".$Seg[12]."'>
+<input type='hidden' name='aimal' value='".$Seg[13]."'>
 
 <th><input type='submit' name='aceptar' class='btn btn-primary' value='Aceptar'></th>
 </form> 
@@ -162,7 +158,7 @@ echo"
 <?php
 echo "<form method='POST' action='../Controlador/Controlador_Rechazar.php'>
 <th><input type='submit' name='rechazar2' class='btn btn-danger' value='Rechazar'></th>
-<input type='hidden' name='ced' value='".$Seg[13]."'>
+<input type='hidden' name='ced' value='".$Seg[12]."'>
 <input type='hidden' name='pos' value='".$Seg[1]."'>
 <input type='hidden' name='mensarecha' value='El proceso de Adopcion no fue aceptado en el Menu principal encontrara informacion de contacto'>
 </form>

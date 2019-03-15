@@ -61,8 +61,13 @@
   	
   	<div id="ubi">
 	<h3 class="display-4">Citaciones</h3>
-		<?php
-		require_once("../Controlador/Controlador_Citacion.php");
+        <?php
+        require_once("../Controlador/Controlador_Cedula2.php");
+        while($Ced=mysqli_fetch_row($resultadod)){
+          echo'
+          <input type="hidden" name="cedula" value="'.$Ced[0].'">                  
+          ';
+        require_once("../Controlador/Controlador_Citacion.php");
 		while($Ciu=mysqli_fetch_row($resultado)){
 		?>
 			<div id="centro">
@@ -88,14 +93,15 @@
 			<tr>
 		        <tr>
 		        <th>Mensaje</th>
-		        <th>".$Ciu[2]."</th>
+		        <th>".$Ciu[1]."</th>
 		        </tr>
 		        <tr>
 		        <th>Fecha</th>            
-		        <th>".$Ciu[3]."</th>
+		        <th>".$Ciu[2]."</th>
 		        </tr>
 		        <tr>";
             }
+        }
 			?>
 
 		

@@ -21,12 +21,11 @@ function Insertar(){
     $aniseg=$_POST["aniseg"];
     $feccit=$_POST["citafec"];
     $horcit=$_POST["horafec"];
-	$horfec=$feccit.$horcit;
 	$mensaj="Se realizara la visita en:".$feccit." en el horario de ".$horcit.".";
 	require_once("../Modelo/Modelo_Citacion.php");
 	$mostrar=new MetodoCitacion();
-	$result=$mostrar->Insertarcitacion($cedseg,$mensaj,$horfec);
-	$result=$mostrar->Insertarseguimiento($pos,$tel,$dir,$fij,$cer,$fot,$est,$cre,$ubi,$tvi,$pun,$rec,$ce,$ca);
+	$result=$mostrar->Insertarcitacion($cedseg,$mensaj,$feccit,$horcit);
+	$result=$mostrar->Insertarseguimiento($posseg,$telseg,$dirseg,$fijseg,$eceseg,$estseg,$resseg,$ubiseg,$vivseg,$punseg,$recseg,$cedseg,$aniseg);
 	return $result;
 	
 }
