@@ -21,8 +21,8 @@ body {
 }
 
 #Avatar{
-	margin-top:25px;
-	align-self:center;
+	height: 250px;
+	width: 250px;
 
 }
 
@@ -117,7 +117,7 @@ footer{
 @media screen and (max-width:740px) {
 
 #icono{
-	margin-top: 100px;
+	margin-top: 30px;
 }
 
 #icono2{
@@ -148,11 +148,19 @@ footer{
 	height: 80px;
 	width:  80px;
 }
+   
+#Avatar{
+	height: 130px;
+	width: 130px;
 
 }
-@media screen and (max-width:1024px) and (min-width:640px) {
-    /* reglas CSS */
+
 }
+
+@media screen and (max-width:1024px) and (min-width:640px) {
+
+}
+
 @media screen and (min-width:1024px) {
     /* reglas CSS */
 }
