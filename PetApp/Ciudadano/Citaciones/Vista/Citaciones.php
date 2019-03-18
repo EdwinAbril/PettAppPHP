@@ -32,13 +32,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-top">
-               
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="navbar-toggler-icon"></span>
-                    </button> <a class="navbar-brand" href="../../Login/Vista/login.php">PetApp</a>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="navbar-nav ml-md-auto">
-                            <a class="navbar-brand" href="../../../Login/Vista/login.php">Usuario: <?php echo "".$usuar.""?></a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="navbar-toggler-icon"></span>
+                      </button> 
+                        <a class="navbar-brand" href="../../Login/Vista/login.php">PetApp</a>
+                          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="navbar-nav ml-md-auto">
+                              <a class="navbar-brand" href="../../../Login/Vista/login.php">Usuario: <?php echo "".$usuar.""?>
+                              </a>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><input type="image" src="../../Imagenes/perros.jpg" height="40" width="40" id="imgcir"></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -68,52 +69,50 @@
           <input type="hidden" name="cedula" value="'.$Ced[0].'">                  
           ';
         require_once("../Controlador/Controlador_Citacion.php");
-		while($Ciu=mysqli_fetch_row($resultado)){
-		?>
-			<div id="centro">
-        	<div class="caja1">
-			<?php
-				echo '
-				
-                <table class="table">
+		    while($Ciu=mysqli_fetch_row($resultado)){
+		    ?>
+        <?php
+        echo "
+          <div id='centro'>
+            <div class='caja1'>
+				      <table class='table'>
                 <tr>
-                <thead class="thead-dark">
-                <th>'.$Ciu[1].'</th>
-                </thead>
+                  <thead class='thead-dark'>
+                    <th>".$Ciu[1]."</th>
+                  </thead>
                 </tr>
-                </table>
-            	';
-				?>
-				</div>
-				<div class='caja2'>
-            <table class='table'>
-            	
-			<?php
-			echo "
-			<tr>
-		        <tr>
-		        <th>Mensaje</th>
-		        <th>".$Ciu[1]."</th>
-		        </tr>
-		        <tr>
-		        <th>Fecha</th>            
-		        <th>".$Ciu[2]."</th>
-		        </tr>
-		        <tr>";
+              </table>
+    		    </div>
+				    <div class='caja2'>
+              <table class='table'>
+                <tr>
+                  <th>Mensaje</th>
+  		            <th>".$Ciu[1]."</th>
+  		          </tr>
+  		          <tr>
+  		            <th>Fecha</th>            
+  		            <th>".$Ciu[2]."</th>
+  		          </tr>
+                <tr>  
+                  <form method='POST' action='../Controlador/Controlador_Validar.php'>
+                    <input type='hidden' name='val' value='".$Ciu[5]."'>
+                    <th>
+                      <input type='submit' name='Aceptar' value='Aceptar' class='btn btn-info'>
+                    </th>
+                    <th>
+                      <input type='submit' name='Denegar' value='Denegar' class='btn btn-danger'>
+                    </th>
+                  </form>
+                </tr>
+              </table>
+		        </div>
+		      </div>
+
+              ";
             }
         }
-			?>
-
-		
-
-			</table>
-		    </div>
-
-		    </div>
-			
-	
-	</div>
+      ?>
     </div>
-	
+  </div>
 </body>
 </html>
