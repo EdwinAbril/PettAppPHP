@@ -7,20 +7,33 @@
     -webkit-border-radius: 200px 200px 200px 200px;
     border: 0px solid #000000;
 }
-h1{
+
+#titulo{
 	margin-top: 60px;
 }
+
+#nombre{
+	font-weight: bold;
+	margin-top: 25px;
+}
+
+#ges{
+	margin-top: 30px;
+}
+
 body{
 	font-family:Rockwell;
 	color: white;
 }
 
 body { 
-	background: url('Imagenes/FondoCiudadano.jpeg');
+
+	background-image: url(Imagenes/FondoAnimal.jpg);
 	background-attachment: fixed;
 }
 
 #Avatar{
+	margin-top: 30px;
 	height: 250px;
 	width: 250px;
 
@@ -48,16 +61,16 @@ header{
 }
 
 #icono{
-	margin-top: 100px;
+	margin-top: 10px;
 }
 
 #icono2{
-	margin-top: 100px;
+	margin-top: 10px;
 }
 
 #eventos{
-	height: 250px;
-	width: 250px;
+	height: 200px;
+	width: 200px;
 	margin-top: 50px;
 	border-radius: 200px 200px 200px 200px;
 	-moz-border-radius: 200px 200px 200px 200px;
@@ -66,8 +79,8 @@ header{
 }
 
 #animales{
-	height: 250px;
-	width: 250px;
+	height: 200px;
+	width: 200px;
 	margin-top: 50px;
 	border-radius: 200px 200px 200px 200px;
 	-moz-border-radius: 200px 200px 200px 200px;
@@ -76,8 +89,8 @@ header{
 }
 
 #denuncia{
-	height: 250px;
-	width: 250px;
+	height: 200px;
+	width: 200px;
 	margin-top: 50px;
 	border-radius: 200px 200px 200px 200px;
 	-moz-border-radius: 200px 200px 200px 200px;
@@ -86,8 +99,8 @@ header{
 }
 
 #mascota{
-	height: 250px;
-	width: 250px;
+	height: 200px;
+	width: 200px;
 	margin-top: 50px;
 	border-radius: 200px 200px 200px 200px;
 	-moz-border-radius: 200px 200px 200px 200px;
@@ -96,8 +109,8 @@ header{
 }
 
 #datos{
-	height: 250px;
-	width: 250px;
+	height: 200px;
+	width: 200px;
 	margin-top: 50px;
 	border-radius: 200px 200px 200px 200px;
 	-moz-border-radius: 200px 200px 200px 200px;
@@ -116,8 +129,16 @@ footer{
 
 @media screen and (max-width:740px) {
 
+#titulo{
+	margin-top: 25px;
+}
+
+#ges{
+	margin-top: 0px;
+}
+
 #icono{
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 #icono2{

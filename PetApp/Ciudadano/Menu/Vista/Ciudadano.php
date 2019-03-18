@@ -69,11 +69,11 @@
     
     <header id="encabezado">
 
-    <h1>Ciudadano</h1>
+    <h1 id="titulo">Ciudadano</h1>
     <?php
     echo "
     <img src='../../../Uploads/Usuarios_Fotos/".$Usu[3]."' id='Avatar' style='border-radius:200px 200px;'>";}?>
-    <h2><?php echo "".$usuar.""?></h2>
+    <h2 id="nombre"><?php echo "".$usuar.""?></h2>
     </header>
 
 
@@ -81,12 +81,12 @@
     <div id="pricing" class="container-fluid">
     <div class="text-center">
 
-    <h2>GESTIONAR</h2>
+    <h2 id="ges">GESTIONAR</h2>
      
         <div class="row" id="icono">
           <div class="col">
               <form action="../../Eventos/Vista/Vista_Eventos.php">
-                <input type="image" name="eventoss" src="logos/evento.png" height="250" width="250" id="eventos"> 
+                <input type="image" name="eventoss" src="logos/evento.png" height="200" width="200" id="eventos"> 
               </form>
           </div>
 
