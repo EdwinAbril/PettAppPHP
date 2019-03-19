@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width,  user-scalabe=no, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="assets/css/Footer-white.css">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="Estilo.css">
+  <link rel="stylesheet" href="Estilos.css">
   <link href="../../../Bst/4.3.1/CSS/bootstrap.css" rel="stylesheet">
   <link href="../../../Bst/4.3.1/CSS/bootstrap.min.css" rel="stylesheet">
   <link href="../../../Bst/4.3.1/CSS/style.css" rel="stylesheet">
@@ -104,43 +104,46 @@ while($Eve=mysqli_fetch_row($resultado)){
 echo'
 
         
-          <div class="col">
-            <div class="panel panel-default text-center">
-              <div class="panel-heading" id="panel">
-                <img src="Imagenes/info.png" height="30" width="30" class="info">
-                  <h1 id="Adopcion">'.$Eve[1].'</h1>
-                    <h5>'.$Eve[2].'</h5>
-              </div>
-            </div>
-            <div class="caja1">
-              <br>
-                <p>Fecha: '.$Eve[1].'</p>
-                <p>Lugar: '.$Eve[2].'</p>
-                <p>Hora: '.$Eve[3].'</p>
-                <p>Descripcion: '.$Eve[4].'</p>
-              <br><br><br>
-            </div>
+    <div class="row" id="modulos">
 
-            <div class="caja2">
-              <img src="../../../Uploads/Eventos_fotos/'.$Eve[5].'" class="img-responsive slideanim" id="imagenadopcion">
-            </div>
-          </div>
+        <div class="col" class="caja1" >
+            <div class="panel panel-default text-center">
+              	<div class="panel-heading" id="panel">
+              	<img src="Imagenes/info.png" height="30" width="30" class="info">
+              	<h1 id="Adopcion">'.$Eve[1].'</h1>
+                    <h5>'.$Eve[2].'</h5>
+              	</div>
+
+            	<div class="caja2">
+	              <br>
+	                <p>Fecha:  '.$Eve[1].'</p>
+	                <p>Lugar:  '.$Eve[2].'</p>
+	                <p>Hora:  '.$Eve[3].'</p>
+	                <p>Descripcion:  '.$Eve[4].'</p>
+	              <br><br><br>
+            	</div>
+
+	            <div class="panel-body">
+	            <div class="img">
+	              <img src="../../../Uploads/Eventos_fotos/'.$Eve[5].'" class="img-responsive slideanim" id="imageneve" >
+	            </div>
+	            </div>
+
+        	</div>
+    	</div>
+
+    </div>
+
 
 
           ';}      
   
-  
-          
-
-  
-  
+ 
 ?>
+
 </div>
 
-  
-
-
-    <footer id="myFooter">
+<footer id="myFooter">
         <div class="container">
             <ul>
                 <li><a href="#">Alcaldia de Mosquera</a></li>

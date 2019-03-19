@@ -1,16 +1,27 @@
 #myFooter{
-    background: #1e7000;
-    background: -moz-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #1e7000), color-stop(100%, #6ab029));
-    background: -webkit-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -o-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -ms-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: linear-gradient(to right, #1e7000 0%, #6ab029 100%);
+
+    margin-top: 100px;
+      
+    background: #79edaf;
+    background: -moz-linear-gradient(left, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #79edaf), color-stop(41%, #52de96), color-stop(100%, #20d46b));
+    background: -webkit-linear-gradient(left, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    background: -o-linear-gradient(left, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    background: -ms-linear-gradient(left, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    background: linear-gradient(to right, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79edaf', endColorstr='#20d46b', GradientType=1 );
+
     
 }
+
+li{
+    color: white;
+}
+
+
 #alt{
-    height: 400px;
-    background: white;
+    text-align: center;
+    display: flex;
 }
 #imgcir{
     border-radius: 200px 200px 200px 200px;
@@ -221,48 +232,6 @@ h1{
     width: 100%;
 }
 
-.imagen{
-    
-	position: relative;
-    
-    background: #1e7000;
-    background: -moz-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #1e7000), color-stop(100%, #6ab029));
-    background: -webkit-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -o-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -ms-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: linear-gradient(to right, #1e7000 0%, #6ab029 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e7000', endColorstr='#6ab029', GradientType=1 );
-
-}
-#imagen2{
-	position: relative;
-    
-    background: #1e7000;
-    background: -moz-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #1e7000), color-stop(100%, #6ab029));
-    background: -webkit-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -o-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -ms-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: linear-gradient(to right, #1e7000 0%, #6ab029 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e7000', endColorstr='#6ab029', GradientType=1 );
-
-}
-
-#imagen3{
-	position: relative;
-    
-    background: #1e7000;
-    background: -moz-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #1e7000), color-stop(100%, #6ab029));
-    background: -webkit-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -o-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: -ms-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-    background: linear-gradient(to right, #1e7000 0%, #6ab029 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e7000', endColorstr='#6ab029', GradientType=1 );
-
-}
-
 #panel{
     border: solid 10px green ;
     
@@ -277,74 +246,55 @@ h1{
 
 }
 
+#panel{
+    width: 370px;
+}
+
 #Adopcion{
-	margin-left: 45px;
+	text-align: center;
+}
+
+#modulos{
+    margin-left: 30px
+    padding: 10px;
+}
+
+.caja1{
+    background-color: white;
+    height: 270px;
+    width: 350px;
+    text-align: center;
+}
+
+.info{
+    cursor: pointer;
+    margin-top:3px;
+    float: center;
 }
 
 .caja2{
     background-color: white; 
-    width: auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
+    height: 270px;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
 }
 
-#imagenadopcion{
-	width: 350px;
+.img{
+    height: 270px;
+    width: 350px;
+    text-align: center;
+    padding: 5px;
 }
 
-#Veterinaria{
-	margin-left: 40px;
+#imageneve{
+    display: block;
+    text-align: center;
+    height: 240px;
+    width: 335px;
 }
 
-#caja4{
-    background-color: white; 
-    width: auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-}
 
-#imagenveterinaria{
-	width: 420px;
-}
-
-#Eventos{
-	margin-left: 40px;
-}
-
-#caja6{
-    background-color: white; 
-    width: auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-}
-
-#imageneventos{
-	width: 420px;
-}
-
-#info{
-	cursor: pointer;
-	margin-top:20px;
-	margin-right:15px;
-	float: right;
-}
-
-#info2{
-	cursor: pointer;
-	margin-right:15px;
-	margin-top:20px;
-	float: right;
-}
-
-#info3{
-	cursor: pointer;
-	margin-right:15px;
-	margin-top:20px;
-	float: right;
-}
 
 a{	
 	cursor: pointer;
@@ -354,34 +304,6 @@ a{
 p{
         text-align:left;
 }
-
-#caja2{
-    background-color: white; 
-    width:auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-    font-size: 16px;
-    border: 5px;   
-}
-
-#caja4{
-    background-color: white; 
-    width:auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-    font-size: 16px;
-}
-
-#caja6{
-    background-color: white; 
-    width:auto;
-    height:300px;
-    padding: 15px;
-    position: relative;
-    font-size: 16px;
-} 
 
 #contenedor1{
 	position: absolute;
@@ -418,14 +340,23 @@ p{
 }
 
 .panel-body{
-    
-    padding:0px;
-    background-color:#DFF4BA;
+    width: 370px;
+
+    background: #1e7000;
+    background: -moz-linear-gradient(left, #1e7000 0%, #6ab029 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #1e7000), color-stop(100%, #6ab029));
+    background: -webkit-linear-gradient(left, #1e7000 0%, #6ab029 100%);
+    background: -o-linear-gradient(left, #1e7000 0%, #6ab029 100%);
+    background: -ms-linear-gradient(left, #1e7000 0%, #6ab029 100%);
+    background: linear-gradient(to right, #1e7000 0%, #6ab029 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e7000', endColorstr='#6ab029', GradientType=1 );
 }
 
 #modulos{
-	padding: 10px;
+    margin-left: 10px;
+	padding:30px;
 }
+
 
 .img-responsive slideanim{
     max-width:100%;
@@ -433,16 +364,16 @@ p{
 }
 
 .footer-social{
-    
-background: #1e7000;
-background: -moz-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, #1e7000), color-stop(100%, #6ab029));
-background: -webkit-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-background: -o-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-background: -ms-linear-gradient(left, #1e7000 0%, #6ab029 100%);
-background: linear-gradient(to right, #1e7000 0%, #6ab029 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e7000', endColorstr='#6ab029', GradientType=1 );
-    
+        
+    background: #79edaf;
+    background: -moz-linear-gradient(left, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #79edaf), color-stop(41%, #52de96), color-stop(100%, #20d46b));
+    background: -webkit-linear-gradient(left, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    background: -o-linear-gradient(left, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    background: -ms-linear-gradient(left, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    background: linear-gradient(to right, #79edaf 0%, #52de96 41%, #20d46b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79edaf', endColorstr='#20d46b', GradientType=1 );
+       
 }
 
 @keyframes cambio{
@@ -476,7 +407,7 @@ overflow: hidden;
 	height: 250px;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 740px){
 
 .slider{
 width: 100%;
@@ -491,71 +422,74 @@ overflow: hidden;
 	height: 200px;
 }
 
+
+
+#panel{
+    width: 270px;
+}
+
+#Adopcion{
+    text-align: center;
+}
+
+#modulos{
+    margin-left: 10px
+    padding: 10px;
+}
+
+#Adopcion{
+    font-size: 10px;
+}
+
+.caja1{
+    background-color: white;
+    height: 170px;
+    width: 250px;
+    padding: 5px;
+    text-align: center;
+    font-size: 8px;
+}
+
+.panel-body{
+    width: 270px;
+}
+
 #caja2{
     background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
+    width: 250;
+    height:170px;
+    padding: 7.5px;
     position: relative;
-    font-size: 14px;
+    font-size: 10px;
 }
 
-#imagenadopcion{
-	width: 320px;
+.info{
+    cursor: pointer;
+    margin-top:3px;
+    float: center;
 }
 
-#caja3{
-	margin-top: 50px;
-}
-
-#caja4{
+.caja2{
     background-color: white; 
-    width: auto;
-    height:270px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-    
+    height: 170px;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
 }
 
-#imagenveterinaria{
-	width: 320px;
+p{
 }
 
-#caja5{
-	margin-top: 50px;
+.img{
+    height: 170px;
+    width: 250px;
+    text-align: center;
 }
 
-#caja6{
-    background-color: white; 
-    width: auto;
-    height:320px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imageneventos{
-	width: 320px;
-}
-
-}
-
-#caja5{
-	margin-top: 50px;
-}
-
-#caja6{
-    background-color: white; 
-    width: auto;
-    height:320px;
-    padding: 15px;
-    position: relative;
-    font-size: 14px;
-}
-
-#imageneventos{
-	width: 320px;
+#imageneve{
+    height: 150px;
+    width: 250px;
 }
 
 }
