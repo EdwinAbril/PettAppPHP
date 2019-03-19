@@ -4,10 +4,10 @@ require_once ("../../../Conexion.php");
 
 class MetodoFuncionario{
 	
-	public function MostrarFuncionario(){
+	public function MostrarFuncionario($ced){
 	$conectar= new conectarproyecto();
 	$conexion= $conectar->conexion();
-	$sql="select * from funcionario";
+	$sql="select * from funcionario where cedula_funcionario <> '$ced'";
 	$consulta=mysqli_query($conexion,$sql);
 	return $consulta;
 	}

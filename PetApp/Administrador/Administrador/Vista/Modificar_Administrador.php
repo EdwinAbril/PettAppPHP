@@ -41,8 +41,14 @@
             </div>
             <input type='hidden' name='usu' value='".$Adm[0]."'>
             <input type='hidden' name='fotosi' value='".$Adm[3]."'>   
-            <p>Clave</p>
-            <input type='password' name='clave'  value='".$Adm[1]."'><BR></BR>
+            <p>
+                <label for='clave' class='form-label'>Clave</label>
+                <input type='password' class='form-control' name='clave' id='clave' value='".$Adm[1]."' required='' minlength='8' axlength='20' title='Minimo 8 Caracteres'>
+            </p>
+            <p>
+                <label for='confirmar' class='form-label'>Confirmar Contraseña</label>
+                <input type='password' class='form-control' name='confirmar' id='confirmar' value='".$Adm[1]."' required='' minlength='8' maxlength='20' title='Minimo 8 Caracteres'>
+            </p>
             <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
         </form>
         ";

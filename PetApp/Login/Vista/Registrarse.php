@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>PetApp</title>
 	
-    <link rel="stylesheet" href="css/EstiloRegistro.css">
+    <link rel="stylesheet" href="../Vista/css/EstiloRegistro.css">
 	<link href="../../Bst/4.3.1/CSS/bootstrap.css" rel="stylesheet">
 	<link href="../../Bst/4.3.1/CSS/bootstrap.min.css" rel="stylesheet">
 	<link href="../../Bst/4.3.1/CSS/style.css" rel="stylesheet">
@@ -14,17 +14,22 @@
 	<script src="../Vista/JS/main.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
 </head>
 
-<body background="Imagenes/Registro2.jpg">
+<body background="../Vista/Imagenes/Registro2.jpg">
 
 
 	<div id="padre">
     	<div id="insertar" class="form-group">
 			<form action="../Controlador/Controlador_Insertar.php" method="Post" enctype="multipart/form-data">
-				<label>Nombre de Usuario</label><input type="text" name="usuario" maxlength="15" title="Maximo 15 Caracteres" class="form-control">
-	        	<label>Clave</label><input type="password" name="clave" class="form-control" minlength="8" maxlength="20" title="Minimo 8 Caracteres">
+				<label>Nombre de Usuario</label>
+					<input type="text" name="usuario" maxlength="15" title="Maximo 15 Caracteres" class="form-control">
+	        	<label for="clave" class="form-label">Contraseña</label>
+	        		<input type="password" class="form-control" name="clave" id="clave" required="" minlength="8" maxlength="20" title="Minimo 8 Caracteres">
+	        	<label for="confirmar" class="form-label">Confirmar Contraseña</label>
+	        		<input type="password" class="form-control" name="confirmar" id="confirmar" required="" minlength="8" maxlength="20" title="Minimo 8 Caracteres">
 	        	<label>Cedula</label><input type="text" name="cedula" pattern="[0-9]{8,10}"  class="form-control">
 	    		<label>Nombre</label><input type="text" name="nombre" pattern="[a-z A-Z]{1,30}" class="form-control" >
 	    		<label>Celular</label><input type="text" name="telefono" pattern="[0-9]{10}" class="form-control">

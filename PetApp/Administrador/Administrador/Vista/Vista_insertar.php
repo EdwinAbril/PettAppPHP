@@ -28,8 +28,10 @@ require_once("../Controlador/Controlador_insertar.php");
         <div id="padre">
           <input type="file" name="fo" accept="image/png,image/jpeg,image/jpg" id="quitar">
         </div>
-        <label>Clave</label>
-        <input type="password" name="clave" required="" class="form-control">
+        <label for="clave" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" name="clave" id="clave" required="" minlength="8" maxlength="20" title="Minimo 8 Caracteres">
+        <label for="confirmar" class="form-label">Confirmar Contraseña</label>
+          <input type="password" class="form-control" name="confirmar" id="confirmar" required="" minlength="8" maxlength="20" title="Minimo 8 Caracteres">
         <div class="form-group" id="bot">
           <input type="submit" name="consulta" value="Insertar Nuevo Usuario" class="btn btn-primary">
         </div>
