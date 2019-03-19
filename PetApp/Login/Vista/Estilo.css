@@ -296,6 +296,11 @@ p{
     max-height:100%;
 }
 
+#myFooter{
+
+    margin-top: 100px;
+    
+}
 
 
 @keyframes cambio{
@@ -311,6 +316,14 @@ p{
 	75%{margin-left:-300%;}
 	100%{margin-left:-300%;}
 }
+
+
+
+
+
+
+
+
 @media screen and (max-width: 700px){
 
 
