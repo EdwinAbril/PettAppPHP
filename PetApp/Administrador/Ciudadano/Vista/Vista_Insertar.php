@@ -25,7 +25,10 @@ require_once("../Controlador/Controlador_Ciudadano.php");
             <h1>Insertar Ciudadano</h1>
             <form action="../Controlador/Controlador_Ciudadano.php" method="Post" enctype="multipart/form-data">
                 <label>Nombre de Usuario</label><input type="text" name="usuario" class="form-control">
-                <label>Clave</label><input type="password" name="clave" class="form-control">
+                <label for="clave" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" name="clave" id="clave" required="" minlength="8" maxlength="20" title="Minimo 8 Caracteres">
+                <label for="confirmar" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" name="confirmar" id="confirmar" required="" minlength="8" maxlength="20" title="Minimo 8 Caracteres">
                 <label>Cedula</label><input type="number" name="cedula" class="form-control">
                 <label>Nombre</label><input type="text" name="nombre" class="form-control">
                 <label>Telefono</label><input type="number" name="telefono" class="form-control">

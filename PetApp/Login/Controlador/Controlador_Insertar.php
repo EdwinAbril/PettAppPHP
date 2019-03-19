@@ -3,7 +3,7 @@
 <?php
 if (isset($_POST['consulta'])){
 	$result=insertar();
-	header('Location: ../Vista/Registrarse.php');	
+	require_once('../Vista/Registrarse.php');	
 }
 
 function insertar(){
@@ -16,9 +16,11 @@ function insertar(){
 	$cor=$_POST['correo'];
 	$us=$_POST['usuario'];
 	$cl=$_POST['clave'];
+	$co=$_POST['confirmar'];
 	$nombre=$_FILES['imagen']['name'];
     $tipo=$_FILES['imagen']['type'];
     $tamaño=$_FILES['imagen']['size'];
+	if ($cl == $co){
 	if ($nombre!=null && $tamaño<=1000000) {
         $hoy=date("d_m_y");
         $nombre=$ced.$us;
@@ -32,9 +34,11 @@ function insertar(){
 	$resulta=$mostrar->InsertarUsuario($us,$cl,$nombre);
 	$resulta=$mostrar->InsertarCiudadano($ced,$nom,$tel,$dir,$cor,$us);
     }
+	}
+	else{
+		$resulta="Las contraseñas no coinciden";
+	}
 	
-	
-
-return $resulta;
+	return $resulta;
 }
 ?>
