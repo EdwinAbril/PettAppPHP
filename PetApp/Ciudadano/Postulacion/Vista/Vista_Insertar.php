@@ -82,44 +82,63 @@
            </br>
         </br>
 
-        <label>Celular</label><input type="tel" name="telefono" pattern="[0-9]{10}" required="telefono" 
-        class="form-control">
-    	<label>Direccion</label><input type="text" name="direccion" class="form-control">
-    	<label>Telefono Fijo</label><input type="tel" name="fijo" pattern="[0-9]{7}" class="form-control">
-        <label>Fotocopia de Cedula</label><input type="file" name="cedulapdf" accept="application/pdf" id="cedp" class="form-control-file">
-        <label>Estrato</label><input type="number" name="estrato" required="estrato" class="form-control">
-        <label>Cantidad de personas con las que vive</label><input type="number" name="residentes" required="residentes" id="resi" class="form-control">
-        <label>Ubicacion de su vivienda</label><select name="ubicacion" class="form-control" required="">
-         <option>Ubicacion</option>
+        <label>Celular</label>
+        <input type="tel" name="telefono" pattern="[0-9]{10}" required="telefono" 
+        class="form-control"><br>
+
+    	<label>Direccion</label>
+        <input type="text" name="direccion" class="form-control"><br>
+
+    	<label>Telefono Fijo</label>
+        <input type="tel" name="fijo" pattern="[0-9]{7}" class="form-control"><br>
+
+        <label>Fotocopia de Cedula</label>
+        <input type="file" name="cedulapdf" accept="application/pdf" id="quitar" class="form-control-file" id="ocultar"><br>
+        <label>Estrato</label>
+         <input type="text" name="estrato" pattern="[1-6]{1}" required="estrato" class="form-control"><br>
+
+        <label>Cantidad de personas con las que vive</label>
+        <input type="text" name="residentes" pattern="[1-9]{1}" required="residentes" id="resi" class="form-control"><br>
+
+        <label>Ubicacion de su vivienda</label>
+        <select name="ubicacion" class="form-control" required=""><br>
+
+         <option>Ubicacion</option><br>
          <option value="Urbano">Urbano</option>
          <option value="Rural">Rural</option>
-        </select>
+        </select><br>
+
         <label>Tipo de Vivienda</label><select name="vivienda" class="form-control" required="">
          <option>Tipo</option>
          <option value="Casa">Casa</option>
          <option value="Apartamento">Apartamento</option>
          <option value="Finca">Finca</option>
-        </select>
+        </select><br>
 
-        <label>Recibo Publico</label><input type="file" name="recibo" accept="application/pdf" id="reci" class="form-control-file">
-        <input type="submit" name="consulta" value="Postularme" class="btn btn-primary">  
-    <?php
-    require_once("../Controlador/Controlador_Cedula.php");
-    while($Ced=mysqli_fetch_row($resultado)){
-        echo"
-        <input type='hidden' name='cedula' value='".$Ced[0]."'>";
-    require_once("../Controlador/Controlador_Respuesta.php");
-    while($Res=mysqli_fetch_row($resultado)){
-        echo "
-        <input type='hidden' name='puntos' value='".$Res[1]."'>";}}
-        echo "
-        <input type='hidden' name='codi'  value='".$cod."'>";
-    
-        ?>  
-    </form>
-</div>
+        <label>Recibo Publico</label>
+        <input type="file" name="recibo" accept="application/pdf" id="quitar" class="form-control-file"><br>
+        <input type="submit" name="consulta" value="Postularme" class="btn btn-primary"><br>
+
 
     <?php
+
+        require_once("../Controlador/Controlador_Cedula.php");
+        while($Ced=mysqli_fetch_row($resultado)){
+            echo"
+            <input type='hidden' name='cedula' value='".$Ced[0]."'>";
+        require_once("../Controlador/Controlador_Respuesta.php");
+        while($Res=mysqli_fetch_row($resultado)){
+            echo "
+            <input type='hidden' name='puntos' value='".$Res[1]."'>";}}
+            echo "
+            <input type='hidden' name='codi'  value='".$cod."'>";
+        
+            ?>  
+        </form>
+        </div>
+
+    <?php
+
         if(isset($_POST['consulta']))
         {
         	echo "<script type='text/javascript'>;

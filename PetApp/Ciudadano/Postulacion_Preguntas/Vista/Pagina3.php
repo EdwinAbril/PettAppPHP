@@ -15,9 +15,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="Estilos.css">
 
   </head>
   <body>
+
+  	<!--
   	<?php
     session_start();
     if (!$_SESSION) {
@@ -49,9 +52,11 @@
 	echo $c;
 	?>
 
+	-->
+
     <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12" id="preguntas">
 			<h1>Encuesta</h1>
                         <form action="Pagina4.php" method="Post">
 			<div class="row">
@@ -160,7 +165,7 @@
 					";
 					?>
                     
-                    </form>
+                    </form><br>
                     <input type='submit' name='volve' value='Volver' class='btn btn-danger btn-sm'>
                 </div>
 	</div>

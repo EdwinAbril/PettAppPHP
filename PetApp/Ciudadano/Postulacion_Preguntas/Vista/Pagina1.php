@@ -11,6 +11,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="Estilos.css">
+
 </head>
 <body>
 
@@ -32,8 +34,8 @@
 	?>
     <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12">
-			<h1>Encuesta</h1>
+		<div class="col-md-12" id="preguntas">
+			<h1>Encuesta</h1><br>
                         <form action="Pagina2.php" method="Post">
 			<div class="row">
 				<div class="col-md-6">
@@ -130,7 +132,7 @@
 						 ";
 						}
 						?>
-                        </form>
+                        </form><br>
                     <input type='submit' name='volve' value='Volver' class='btn btn-danger btn-sm'>
                 </div>
 	</div>

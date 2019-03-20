@@ -15,9 +15,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="Estilos.css">
 
   </head>
   <body>
+
+  	<!-- PHP
   	<?php
     session_start();
     if (!$_SESSION) {
@@ -41,13 +44,16 @@
 	$r6=$_POST["res6"];
 	$c=$_POST["ced"];
 
+	
 	echo $c;
     ?>
 
+	-->
+	
     <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12">
-			<h1>Encuesta</h1>
+		<div class="col-md-12" id="preguntas">
+			<h1>Encuesta</h1><br>
                         <form action="Pagina3.php" method="Post">
 			<div class="row">
 				<div class="col-md-6">
@@ -148,7 +154,7 @@
 						 <input type='hidden' name='codi' value='".$cod."'>
 						 ";
 						?>
-                    </form>
+                    </form><br>
                     <input type='submit' name='volve' value='Volver' class='btn btn-danger btn-sm'>
                 </div>
 	</div>
