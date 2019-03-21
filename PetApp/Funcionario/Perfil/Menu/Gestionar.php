@@ -3,12 +3,7 @@
 <head>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../../Bst/3.3.7/CSS/bootstrap.css" rel="stylesheet">
-    <link href="../../Bst/3.3.7/CSS/bootstrap.min.css" rel="stylesheet">
-    <link href="../../Bst/3.3.7/CSS/style.css" rel="stylesheet">
- <script src="../../Bst/3.3.7/js/jquery.min.js"></script>
-    <script src="../../Bst/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../../Bst/3.3.7/js/scripts.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="Estilo.css">
 	<title>PetApp</title>
@@ -22,8 +17,9 @@
 	<div id="pricing" class="container-fluid" >
   <div class="text-center">
 
-    <br><h2>GESTIONAR</h2><br><br>
-    <br>
+    <h1>Gestionar Funcionario</h1>
+    <img src="logos/Funcionario.png" id="Avatar"><BR><BR><BR><BR>
+    
   </div> 
   <div class="row ">
     <div class="col-sm-3 col-xs-12" >
@@ -36,17 +32,19 @@
           <input type="image" name="Funcionario" src="logos/Insertar.png" class="img-responsive slideanim"  id="logoinsertar"></center>
         </div>
       </div>      
-    </div>     
+    </div>
+    <form action="../Vista/Vista_Funcionario.php" method="Post">     
     <div class="col-sm-3 col-xs-12">
       <div class="panel panel-default text-center"  id="divconsulta">
         <div class="panel-heading">
           <h1>Consultar</h1>
         </div>
         <div class="panel-body"><center>
-          <input type="image" name="Veterinaria" src="logos/Consultar.png"  class="img-responsive slideanim"  id="logoconsultar"></center>
+          <input type="image" name="Consultar" src="logos/Consultar.png"  class="img-responsive slideanim"  id="logoconsultar"></center>
         </div>
       </div>      
-    </div>       
+    </div>
+    </form>       
     <div class="col-sm-3 col-xs-12">
       <div class="panel panel-default text-center"  id="divactuali">
         <div class="panel-heading">

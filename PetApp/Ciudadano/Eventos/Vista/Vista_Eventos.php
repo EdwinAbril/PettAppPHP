@@ -106,6 +106,9 @@ echo "
                         <th>Descripcion</th>
                         <th>".$Eve[4]."</th>
                         </tr>
+                        <tr>
+                            <th colspan=2><img src='../../../Uploads/Eventos_fotos/".$Eve[5]."' width='300' heigth='300'></th>
+                        </tr>
                        
 				</table>
                 </div>

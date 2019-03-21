@@ -15,6 +15,7 @@ function Insertar(){
 	$tip=$_POST['tipofinal'];
 	$eda=$_POST['edadfinal'];
 	$raz=$_POST['razafinal'];
+	$fot=$_POST['fotofinal'];
 	$tam=$_POST['tamañofinal'];
 	$gen=$_POST['generofinal'];
 	$col=$_POST['colorfinal'];
@@ -24,7 +25,7 @@ function Insertar(){
 	$result=$mostrar->InsertarPositivo($icon,$ced,$men,$enc);
 	$result=$mostrar->InsertarAdopciones($icon,$ani,$ced,$men,$enc);
 	$result=$mostrar->EliminarAnimal($ani);
-	$result=$mostrar->InsertarMascotas($nom,$tip,$eda,$raz,$tam,$gen,$col,$ced);
+	$result=$mostrar->InsertarMascotas($nom,$tip,$eda,$raz,$fot,$tam,$gen,$col,$ced);
 
 	return $result;
 }

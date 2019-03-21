@@ -104,9 +104,8 @@ while($Mas=mysqli_fetch_row($resultado)){
                     <table class='table'>
                 <?php
 					echo "
-                        <p><img src='../../../Uploads/Mascotas_fotos/".$Mas[5]."' width='300px' heigth='300px'></p>
+                        <p><img src='../../../Uploads/Animales_fotos/".$Mas[5]."' width='300px' heigth='300px'></p>
 					    <tr>
-                   
                         <th>Nombre</th>
                         <th>".$Mas[1]."</th>
                         </tr>

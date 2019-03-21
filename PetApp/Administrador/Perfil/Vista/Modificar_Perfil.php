@@ -35,7 +35,7 @@
                 <p>Foto</p>
                 <label class='botonModi'>
                     <img src='../../../Uploads/Usuarios_Fotos/".$Adm[3]."' id='fotomod'style='width:150px;height:150px;border-radius: 150px;'>
-                    <input type='file' class='file' name='fo' accept='image/jpeg,image/png'>
+                    <input type='file' class='file' name='fo' accept='image/jpeg,image/png,image/jpg'>
                     <img src='../Vista/Imagenes/Icono.png' width='40' heigth='40'>
                 </label>
             </div>

@@ -7,6 +7,8 @@ if (isset($_POST['consulta'])){
 }
 
 function insertar(){
+	require_once("../Modelo/Modelo_Animal.php");
+	$mostrar=new MetodoAnimal();
 	$na=$_POST['nombre'];
 	$ta=$_POST['tipo'];
 	$ea=$_POST['edad'];
@@ -19,18 +21,19 @@ function insertar(){
     $col=$_POST['color'];
 	if ($nombre!=null && $tamaño<=1000000) {
         $hoy=date("d_m_y");
-        $nombre=$hoy.$nombre;
-
-        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Animales_fotos/';
-
-        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Animales_fotos/';
-
+        $nombre=$na.$ra.$ea;
+        $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Animales_fotos/';
+        $carpeta_destinoO=$_SERVER['DOCUMENT_ROOT'].'/PettAppPHP/PetApp/Uploads/Mascotas_fotos/';
         move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destino.$nombre);
+        move_uploaded_file($_FILES['imagen']['tmp_name'],$carpeta_destinoO.$nombre);
+        $resulta=$mostrar->InsertarAnimal($na,$ta,$ea,$ra,$nombre,$tam,$gen,$col);
+		$resulta=$mostrar->InsertarAdoptado($na,$ta,$ea,$ra,$nombre,$tam,$gen,$col);
     }
-	require_once("../Modelo/Modelo_Animal.php");
-	$mostrar=new MetodoAnimal();
+	else{
+	$nombre="animal_defecto.jpg";
 	$resulta=$mostrar->InsertarAnimal($na,$ta,$ea,$ra,$nombre,$tam,$gen,$col);
-
+	$resulta=$mostrar->InsertarAdoptado($na,$ta,$ea,$ra,$nombre,$tam,$gen,$col);
+	}
 	return $resulta;
 }
 

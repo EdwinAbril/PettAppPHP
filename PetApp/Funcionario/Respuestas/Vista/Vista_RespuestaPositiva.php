@@ -52,7 +52,8 @@
          <input type='hidden' name='tipofinal' value='".$Anim[2]."'>
          <input type='hidden' name='edadfinal' value='".$Anim[3]."'>
          <input type='hidden' name='razafinal' value='".$Anim[4]."'>
-         <input type='hidden' name='tamañofinal' value='".$Anim[5]."'>
+         <input type='hidden' name='fotofinal' value='".$Anim[5]."'>
+         <input type='hidden' name='tamañofinal' value='".$Anim[6]."'>
          <input type='hidden' name='generofinal' value='".$Anim[7]."'>
          <input type='hidden' name='colorfinal' value='".$Anim[8]."'>
          ";   

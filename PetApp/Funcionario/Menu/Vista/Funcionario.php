@@ -3,6 +3,10 @@
 <head>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../../../Bst/4.3.1/CSS/bootstrap.css" rel="stylesheet">
+  <link href="../../../Bst/4.3.1/CSS/bootstrap.min.css" rel="stylesheet">
+  <script src="../../../Bst/4.3.1/js/jquery.min.js"></script>
+  <script src="../../../Bst/4.3.1/js/bootstrap.min.js"></script>
   <link href="../../../Bst/3.3.7/CSS/bootstrap.css" rel="stylesheet">
   <link href="../../../Bst/3.3.7/CSS/bootstrap.min.css" rel="stylesheet">
   <script src="../../../Bst/3.3.7/js/jquery.min.js"></script>
@@ -29,10 +33,22 @@
     <form action="../../../Login/Vista/registro.php">
     <input type="submit" name="cerrar" value="Cerrar Sesion" class="btn btn-light" id="sal">
     </form>
+    
+    <?php
+    require_once("../Controlador/Controlador_Administrador.php");
+    while($Adm=mysqli_fetch_row($resultado)){
+    ?>
 
 		<h1>Funcionario</h1>
-		<img src="Logos/Admin2.png" id="Avatar2" >
-	</header>
+		<?php
+      echo "
+      <p><img src='../../../Uploads/Usuarios_Fotos/".$Adm[3]."' class='fotomod' style='width:250px; height:250px; border-radius: 200px 200px;'></p>";}?>
+    <p>
+    <form action="../../Perfil/Vista/Vista_Funcionario.php">
+    <input type="submit" value="Perfil" class="btn btn-dark" id='tam'>
+    </form>
+    </p>
+  </header>
 
   
 
@@ -44,8 +60,6 @@
     <br>
   </div>
    
-
-  
 
   <form action="../../Adopciones/Vista/Vista_Adopciones.php">
 <div class="col-sm-4 col-xs-12">

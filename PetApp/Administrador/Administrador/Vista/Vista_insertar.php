@@ -12,6 +12,7 @@ require_once("../Controlador/Controlador_insertar.php");
   <script src="../../../Bst/4.3.1/js/bootstrap.min.js"></script>
   <script src="../../../Bst/4.3.1/js/scripts.js"></script>
   <link rel="stylesheet" type="text/css" href="Estilo.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body id="fondox">

@@ -109,7 +109,7 @@ while($Pos=mysqli_fetch_row($resultado)){
                 </tr>
                 <tr>
                 <th>Recibo Publico</th>
-                <th><a href='../../../Administrador/Recibos/".$Pos[10]."'>".$Pos[10]."</a></th>
+                <th><a href='../../../Uploads/Recibos/".$Pos[10]."'>".$Pos[10]."</a></th>
                 </tr>
                 <th>Cedula</th>
                 <th>".$Pos[11]."</th>

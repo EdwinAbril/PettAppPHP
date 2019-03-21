@@ -14,7 +14,7 @@
 </head>
 
 <form action="../login.php" method="post" id="volver">
-        <input type="submit" name="inicio" value="inicio" class="btn btn-light" id="">
+        <input type="submit" name="inicio" value="Inicio" class="btn btn-light" id="">
 </form>
 
 <div id="contenedor">
@@ -34,7 +34,7 @@
 	</article>
 
 <form action="../registro.php" method="post" id="adopta">
-        <input type="image" src="Adopta.png" height="70" width="70">
+        <p><input type="image" src="Adopta.png" height="70" width="70"></p>
 </form>
 
 </body>

@@ -91,10 +91,17 @@
     <input type='hidden' name='nombre' value='".$Ciu[1]."'>  
 
     <p>Nombre</p><p>".$Ciu[1]."</p>  
-    <p>Celular</p><input type='text' name='tel' pattern='[0-9]{10}' value='".$Ciu[2]."'>
-    <p>Direccion</p><input type='text' name='dir'  value='".$Ciu[3]."'>
-    <p>Correo</p><input type='email' name='cor'  value='".$Ciu[4]."'>
-    <p>Clave</p><input type='password' name='cla'  value='".$Usu[1]."'>
+    <p>Celular<input type='text' name='tel' pattern='[0-9]{10}' value='".$Ciu[2]."' class='form-control'></p>
+    <p>Direccion<input type='text' name='dir' value='".$Ciu[3]."' class='form-control'></p>
+    <p>Correo<input type='email' name='cor' value='".$Ciu[4]."' class='form-control'></p>
+    <p>
+        <label for='clave' class='form-label'>Clave</label>
+        <input type='password' class='form-control' name='clave' id='clave' value='".$Usu[1]."' required='' minlength='8' axlength='20' title='Minimo 8 Caracteres'>
+    </p>
+    <p>
+        <label for='confirmar' class='form-label'>Confirmar Contraseña</label>
+        <input type='password' class='form-control' name='confirmar' id='confirmar' value='".$Usu[1]."' required='' minlength='8' maxlength='20' title='Minimo 8 Caracteres'>
+    </p>
     <br>
     <input type='submit' name='botonfunci' value='Modificar' class='btn btn-primary'>
 

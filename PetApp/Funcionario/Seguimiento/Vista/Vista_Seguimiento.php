@@ -114,7 +114,7 @@ while($Seg=mysqli_fetch_row($resultado)){
                 </tr>
                 <tr>
                 <th>Recibo Publico</th>
-                <th><a href='../../../Administrador/Recibos/".$Seg[11]."'>".$Seg[11]."</a></th>
+                <th><a href='../../../Uploads/Recibos/".$Seg[11]."'>".$Seg[11]."</a></th>
                 </tr>
                 <tr>
                 <th>Cedula del Postulante</th>
